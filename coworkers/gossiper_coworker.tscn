@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlky3g7f8u8te"]
+
+[ext_resource type="PackedScene" uid="uid://duoy6gyavf5ce" path="res://a coworker.tscn" id="1_p5bfw"]
+
+[node name="a coworker" instance=ExtResource("1_p5bfw")]
+coworker_title = "Gossiper"
+
+[node name="gossiperWalkPath" type="Line2D" parent="." index="2"]
+points = PackedVector2Array(36, -167, 309, -285, 451, -70, 693, 44, 813, 136, 762, 306, 654, 392, 440, 453, 226, 477, -8, 463, -182, 393, -288, 284, -269, 137, -196, 192, -195, 256, -119, 292, -5, 342, 106, 382, 322, 389, 536, 368, 627, 305, 633, 113, 433, 39, 266, -59, 156, -122, 55, -151)

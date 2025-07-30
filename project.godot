@@ -15,6 +15,11 @@ run/main_scene="uid://qsik2t73jxj1"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+
 [input]
 
 move_up={

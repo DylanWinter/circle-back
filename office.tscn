@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://qsik2t73jxj1"]
+
+[ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_g3mwp"]
+[ext_resource type="PackedScene" uid="uid://dlky3g7f8u8te" path="res://coworkers/gossiper_coworker.tscn" id="2_ei2s5"]
+
+[node name="office" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_g3mwp")]
+position = Vector2(425, 161)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="a coworker" parent="." instance=ExtResource("2_ei2s5")]
+position = Vector2(201, -69)
