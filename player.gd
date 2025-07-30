@@ -23,4 +23,5 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		
 		if Input.is_action_just_pressed("interact"):
-			GameManager.closest_interactable_npc.start_dialogue()
+			if GameManager.closest_interactable_npc:
+				GameManager.closest_interactable_npc.start_dialogue()
