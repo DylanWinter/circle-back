@@ -1,14 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://qsik2t73jxj1"]
+[gd_scene load_steps=5 format=3 uid="uid://dicqxqywyogt3"]
 
-[ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_g3mwp"]
-[ext_resource type="PackedScene" uid="uid://dlky3g7f8u8te" path="res://coworkers/gossiper_coworker.tscn" id="2_ei2s5"]
+[ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
+[ext_resource type="Script" uid="uid://bthxsrn2bf4nd" path="res://a_coworker.gd" id="2_43ocd"]
+[ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="2_u8nhc"]
 
-[node name="office" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ei2s5"]
+radius = 17.1172
 
-[node name="player" parent="." instance=ExtResource("1_g3mwp")]
+[node name="root" type="Node2D"]
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(425, 161)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="NPC" type="Area2D" parent="."]
+position = Vector2(175, 96)
+script = ExtResource("2_43ocd")
 
-[node name="a coworker" parent="." instance=ExtResource("2_ei2s5")]
-position = Vector2(201, -69)
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+scale = Vector2(0.275, 0.275)
+texture = ExtResource("2_u8nhc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+shape = SubResource("CircleShape2D_ei2s5")
+
+[connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
+[connection signal="body_exited" from="NPC" to="NPC" method="_on_body_exited"]
