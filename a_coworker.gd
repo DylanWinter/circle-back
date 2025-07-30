@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-# dialogue here likely not just string but some dialogue component from 
+# dialogue here likely not just string but some dialogue component from
 # dialogue_manager addon with the dialogue included
 func start_dialogue(dialogue: String) -> void: 
 	$dialogue_timer.start()
