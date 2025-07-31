@@ -1,0 +1,11 @@
+~ start
+Boss: Welcome to the office, idiot.
+Boss: Here are some choices.
+- Hi boss.
+	Boss: Idiot.
+- What's my job here?
+	Boss: Idiot.
+- Start again => start
+- End the conversation => END
+Boss: Go do your job.
+=> END
