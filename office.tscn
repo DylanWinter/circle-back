@@ -145,5 +145,11 @@ shape = SubResource("CircleShape2D_hsito")
 position = Vector2(3295, 1979)
 shape = SubResource("CircleShape2D_hsito")
 
+[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(3136, 815, 3135, 11, 3626, 11, 3627, 818, 3408, 815, 3408, 824, 3634, 822, 3631, 10, 3631, 4, 3130, 4, 3130, 823, 3303, 822, 3303, 816)
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(3713, 817, 3919, 816, 3919, 823, 3706, 823, 3706, 3, 4174, 3, 4175, 821, 4015, 823, 4014, 816, 4168, 817, 4168, 11, 3714, 9)
+
 [connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
 [connection signal="body_exited" from="NPC" to="NPC" method="_on_body_exited"]
