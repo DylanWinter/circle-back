@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=7 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Texture2D" uid="uid://brh1rgsoowuue" path="res://assets/Office_map.png" id="4_43ocd"]
+[ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_hsito"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_43ocd"]
 radius = 83.863
@@ -138,3 +139,34 @@ polygon = PackedVector2Array(3713, 817, 3919, 816, 3919, 823, 3706, 823, 3706, 3
 
 [node name="NPC" parent="." instance=ExtResource("3_u8nhc")]
 position = Vector2(545, 510)
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("4_hsito")
+timer = 5.0
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Timer" type="RichTextLabel" parent="UI/Control"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

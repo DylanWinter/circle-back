@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dss1xdm3708gm"]
+
+[ext_resource type="Script" uid="uid://b7apyychtfggv" path="res://speech_bubble.gd" id="1_gm1uq"]
+[ext_resource type="Texture2D" uid="uid://dj7glii8ti5lx" path="res://rectangle-empty-outline-cartoon-speech-bubble-735811697036574g5asqkyqsg.png" id="2_hxg5a"]
+
+[node name="SpeechBubble" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gm1uq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_hxg5a")
+region_rect = Rect2(69.1613, 85.2443, 661.677, 597.347)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+bbcode_enabled = true
+fit_content = true

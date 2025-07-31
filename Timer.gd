@@ -1,0 +1,13 @@
+extends CanvasLayer
+
+@export var timer : float = 120.0
+@onready var label = $Control/Timer
+
+func _process(delta: float) -> void:
+	timer -= delta
+	var minutes : int = int(timer) / 60
+	var seconds : int = int(timer) % 60
+	label.text = "%01d:%02d" % [minutes, seconds]
+	
+	if (timer <= 0.0):
+		get_tree().change_scene_to_file("res://meeting.tscn")
