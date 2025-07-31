@@ -1,0 +1,19 @@
+~ start
+Boss: Our rival company, Bed, Bathe & Before, recently celebrated their 1 millionth successful demon ritual.
+set GameManager.currentTurn = "randomEmployee"
+Random Employee: Show offs
+set GameManager.currentTurn = "boss"
+Boss: I want us to get 2 million by the end of the month! MC what are the projected sales for our new candle based on our current customer data?
+- Um... A lot, Sir?
+	Boss: fail
+- The DATA is is ON FIRE with no EXTINGUISHER
+	Boss: pass
+	set GameManager.currentTurn = "player"
+- We expect to sell 50% more candles
+	Boss: fail
+set GameManager.currentTurn = "boss"
+Boss: Hello
+
+
+
+=> END

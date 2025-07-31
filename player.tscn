@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://q4wofjpvnanm"]
 
-[ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="1_4flbx"]
-[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://dss1lixccm7qx" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="SpriteFrames" uid="uid://itejf362u30a" path="res://dialogue/playerWalkSprites.tres" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(128, 128)
@@ -9,10 +9,14 @@ size = Vector2(128, 128)
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4flbx")
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.12, 0.12)
+sprite_frames = ExtResource("2_onrkg")
+animation = &"walk"
+frame = 24
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4flbx")
-
-[node name="Camera2D" type="Camera2D" parent="."]

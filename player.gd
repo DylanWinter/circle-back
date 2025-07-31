@@ -15,9 +15,12 @@ func _physics_process(delta: float) -> void:
 	
 	if can_move:
 		if input_direction != Vector2.ZERO:
+			if not $AnimatedSprite2D.is_playing():
+				$AnimatedSprite2D.play("walk")
 			input_direction = input_direction.normalized()
 			velocity = input_direction * SPEED
 		else:
+			$AnimatedSprite2D.stop()
 			velocity = velocity.move_toward(Vector2.ZERO, SPEED)
 	
 		move_and_slide()

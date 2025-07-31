@@ -1,8 +1,295 @@
-[gd_scene load_steps=4 format=3 uid="uid://bidh5wjmp6br2"]
+[gd_scene load_steps=10 format=3 uid="uid://bidh5wjmp6br2"]
 
 [ext_resource type="Script" uid="uid://db5a8c6ok1b1t" path="res://dialogue_ui.gd" id="1_rqp7v"]
 [ext_resource type="Texture2D" uid="uid://bytofr570c6n6" path="res://assets/BOSS_PROTOTYPE_1.png" id="2_xv1e8"]
 [ext_resource type="Texture2D" uid="uid://ck0h8g1ic5ec8" path="res://assets/PLAYER_PROTOTYPE_1.png" id="3_he8gr"]
+[ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="4_he8gr"]
+
+[sub_resource type="Animation" id="Animation_he8gr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(805, 281)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("boss:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("boss:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.65, 0.65)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("randomEmployee:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("randomEmployee:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xv1e8"]
+resource_name = "setPlayerTurn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(803, 323), Vector2(805, 281), Vector2(805, 281)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.65, 0.65)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("boss:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.336608, 0.336608, 0.336608, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("boss:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.5, 0.5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("randomEmployee:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_irygu"]
+resource_name = "setBossTurn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boss:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.337255, 0.337255, 0.337255, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("boss:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.55, 0.55)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("randomEmployee:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ntrs3"]
+resource_name = "setRandomEmpTurn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("randomEmployee:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("randomEmployee:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.337255, 0.337255, 0.337255, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("boss:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.337255, 0.337255, 0.337255, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_he8gr"]
+_data = {
+&"RESET": SubResource("Animation_he8gr"),
+&"setBossTurn": SubResource("Animation_irygu"),
+&"setPlayerTurn": SubResource("Animation_xv1e8"),
+&"setRandomEmpTurn": SubResource("Animation_ntrs3")
+}
 
 [node name="dialogue_UI" type="Control"]
 layout_mode = 3
@@ -21,108 +308,37 @@ offset_right = 980.0
 offset_bottom = 611.0
 color = Color(0.509286, 0.509286, 0.509286, 1)
 
-[node name="char2" type="Sprite2D" parent="."]
-position = Vector2(182, 405)
-scale = Vector2(-0.685, 0.685)
-texture = ExtResource("2_xv1e8")
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -141.0
-offset_top = -95.0
-offset_right = 1113.0
-offset_bottom = 649.0
+[node name="ColorRect4" type="ColorRect" parent="."]
+visible = false
+offset_left = 1412.0
+offset_top = -200.0
+offset_right = 4138.0
+offset_bottom = 1372.0
 color = Color(0, 0, 0, 0.380392)
 
-[node name="char1" type="Sprite2D" parent="."]
-position = Vector2(789, 205)
-scale = Vector2(0.685, 0.685)
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = -669.0
+offset_top = -379.0
+offset_right = 1446.0
+offset_bottom = 973.0
+color = Color(0, 0, 0, 0.380392)
+
+[node name="boss" type="Sprite2D" parent="."]
+position = Vector2(182, 405)
+scale = Vector2(-0.65, 0.65)
+texture = ExtResource("2_xv1e8")
+
+[node name="player" type="Sprite2D" parent="."]
+position = Vector2(805, 281)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_he8gr")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -15.0
-offset_top = 400.0
-offset_right = 960.0
-offset_bottom = 587.0
-color = Color(0.498039, 0.52549, 1, 1)
+[node name="randomEmployee" type="Sprite2D" parent="."]
+position = Vector2(532, 164)
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("4_he8gr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -479.0
-offset_top = -136.0
-offset_right = 481.0
-offset_bottom = 45.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="dialogueLabel" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -480.0
-offset_top = -134.0
-offset_right = 474.0
-offset_bottom = 38.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="speakerName1" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.024
-anchor_top = 0.681
-anchor_right = 0.097
-anchor_bottom = 0.772
-offset_left = 10.96
-offset_top = -2.74002
-offset_right = 10.88
-offset_bottom = -2.88
-text = "Player
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="speakerName2" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.024
-anchor_top = 0.681
-anchor_right = 0.097
-anchor_bottom = 0.772
-offset_left = 10.96
-offset_top = -2.74002
-offset_right = 10.88
-offset_bottom = -2.88
-text = "Boss
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="dialogueTimer" type="Timer" parent="."]
-wait_time = 0.05
-one_shot = true
-
-[node name="NextButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.756
-anchor_top = 0.876
-anchor_right = 0.995
-anchor_bottom = 1.178
-offset_left = -1.76001
-offset_top = -56.04
-offset_right = -2.20007
-offset_bottom = -56.1201
-text = "Next"
-
-[connection signal="timeout" from="dialogueTimer" to="." method="_on_dialogue_timer_timeout"]
-[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_he8gr")
+}

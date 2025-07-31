@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://blwamtdbsvr18"
+path="res://.godot/imported/BossQuestions1.dialogue-eafcd41a54d8709e37a1920a3056afb3.tres"
+
+[deps]
+
+source_file="res://dialogue/BossQuestions1.dialogue"
+dest_files=["res://.godot/imported/BossQuestions1.dialogue-eafcd41a54d8709e37a1920a3056afb3.tres"]
+
+[params]
+
+defaults=true

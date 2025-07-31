@@ -1,30 +1,39 @@
 extends Control
 
 
-var dialogue : String = "Hello this is some dialogue! "
-var charIndex : int = 0
-@onready var dialogueLabel : Label = $dialogueLabel
-var currentTurn : String = "right"
-# Called when the node enters the scene tree for the first time.
+var dialogueDict = {
+	"bossFirstQ" : load("res://dialogue/BossQuestions1.dialogue"),
+	"playerFirstR" : load("res://dialogue/PlayerResponse1.dialogue"),
+	"randomEmpFirst" : load("res://dialogue/PlayerResponse1.dialogue")
+	
+}
+var trackedTurn : String = "boss"
 func _ready() -> void:
-	$dialogueTimer.start()
+	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
+	$AnimationPlayer.play("setBossTurn")
+	start_dialogue(dialogueDict.get("bossFirstQ"))
+	
+func start_dialogue(dialogue) -> void:
+	DialogueManager.show_dialogue_balloon(dialogue)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-
-func _on_dialogue_timer_timeout() -> void:
-	print(charIndex)
-	if charIndex < len(dialogue):
-		dialogueLabel.text = dialogueLabel.text + dialogue[charIndex]
-		charIndex += 1
-		$dialogueTimer.start()
+	if GameManager.currentTurn != trackedTurn:
+		trackedTurn = GameManager.currentTurn
+		if trackedTurn == "player":
+			$AnimationPlayer.play("setPlayerTurn")
+		elif trackedTurn == "boss":
+			$AnimationPlayer.play("setBossTurn")
+		elif trackedTurn == "randomEmployee":
+			$AnimationPlayer.play("setRandomEmpTurn")
+		
+	
+func _on_dialogue_ended(resource) -> void:
+	
+	
+	if GameManager.endedConversation == false:
+		pass
+		
 	else:
-		charIndex = 0
-		$dialogueTimer.stop()
-
-
-func _on_next_button_pressed() -> void:
-	pass # Replace with function body.
+		#end game
+		print("endedmeeting")
+		
