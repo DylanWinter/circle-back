@@ -8,6 +8,7 @@ func _ready() -> void:
 
 	
 func _physics_process(delta: float) -> void:
+	self.z_index = position.y
 	var input_direction := Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")

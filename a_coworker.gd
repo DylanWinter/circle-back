@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	self.z_index = position.y
 	
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
