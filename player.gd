@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var can_move : bool = true
-const SPEED = 300.0
+var SPEED = 300.0
 
 func _ready() -> void:
 	GameManager.player = self

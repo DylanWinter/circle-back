@@ -1,15 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=6 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="Script" uid="uid://bthxsrn2bf4nd" path="res://a_coworker.gd" id="2_43ocd"]
+[ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="3_u8nhc"]
 [ext_resource type="Texture2D" uid="uid://brh1rgsoowuue" path="res://assets/Office_map.png" id="4_43ocd"]
-[ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="4_hsito"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ei2s5"]
-radius = 44.0114
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_43ocd"]
-size = Vector2(22, 12)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_43ocd"]
 radius = 83.863
@@ -33,24 +26,8 @@ texture = ExtResource("4_43ocd")
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(127, 154)
 
-[node name="NPC" type="Area2D" parent="."]
+[node name="NPC" parent="." instance=ExtResource("3_u8nhc")]
 position = Vector2(175, 96)
-script = ExtResource("2_43ocd")
-
-[node name="MiniNpc1Prototype1" type="Sprite2D" parent="NPC"]
-position = Vector2(3.99999, -34)
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("4_hsito")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
-position = Vector2(1, 0)
-shape = SubResource("CircleShape2D_ei2s5")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="NPC"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/StaticBody2D"]
-position = Vector2(1, 24)
-shape = SubResource("RectangleShape2D_43ocd")
 
 [node name="walls" type="StaticBody2D" parent="."]
 
@@ -161,6 +138,3 @@ polygon = PackedVector2Array(3136, 815, 3135, 11, 3626, 11, 3627, 818, 3408, 815
 
 [node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="walls"]
 polygon = PackedVector2Array(3713, 817, 3919, 816, 3919, 823, 3706, 823, 3706, 3, 4174, 3, 4175, 821, 4015, 823, 4014, 816, 4168, 817, 4168, 11, 3714, 9)
-
-[connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
-[connection signal="body_exited" from="NPC" to="NPC" method="_on_body_exited"]
