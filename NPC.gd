@@ -4,6 +4,20 @@ var test = load("res://dialogue/test.dialogue")
 @export var coworker_title : String
 @export var walk_path : Line2D
 
+var walkSpeed : int = 30
+var lastPosition : Vector2
+
+func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
+	var direction : Vector2
+	direction = currentPosition - lastPosition
+	
+	var shouldFlip = false
+	if currentPosition.x - lastPosition.x < 0 and sprite.scale.x>0:
+		shouldFlip = true
+	elif currentPosition.x - lastPosition.x > 0 and sprite.scale.x<0:
+		shouldFlip = true
+	return shouldFlip
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
@@ -11,8 +25,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	self.z_index = position.y
+	lastPosition = $StaticBody2D.position
+
+	$Path2D/PathFollow2D.progress += walkSpeed*delta
+	$StaticBody2D.position = $Path2D/PathFollow2D.position
 	
+	z_index = $StaticBody2D.global_position.y
+	
+	if shouldFlipBasedOnMovement(lastPosition, $StaticBody2D.position,$StaticBody2D/npcSprite):
+		$StaticBody2D/npcSprite.scale.x *= -1.0
+
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
 	DialogueManager.show_dialogue_balloon(test)

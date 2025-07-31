@@ -6,7 +6,6 @@ var SPEED = 300.0
 func _ready() -> void:
 	GameManager.player = self
 
-	
 func _physics_process(delta: float) -> void:
 	self.z_index = position.y
 	var input_direction := Vector2(

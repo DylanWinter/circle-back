@@ -9,8 +9,10 @@ func _ready() -> void:
 	$bossAnimPlayer.play("setBossTurnOn")
 	start_dialogue(meetingQuestions)
 
+
 func start_dialogue(dialogue) -> void:
 	DialogueManager.show_dialogue_balloon(dialogue)
+
 
 func _process(delta: float) -> void:
 	if GameManager.currentTurn != trackedTurn:
