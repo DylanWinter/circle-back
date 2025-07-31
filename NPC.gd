@@ -7,11 +7,16 @@ var test = load("res://dialogue/test.dialogue")
 var walkSpeed : int = 30
 var lastPosition : Vector2
 
-func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2) -> bool:
-	if currentPosition.x - lastPosition.x < 0:
-		return true
-	else:
-		return false
+func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
+	var direction : Vector2
+	direction = currentPosition - lastPosition
+	
+	var shouldFlip = false
+	if currentPosition.x - lastPosition.x < 0 and sprite.scale.x>0:
+		shouldFlip = true
+	elif currentPosition.x - lastPosition.x > 0 and sprite.scale.x<0:
+		shouldFlip = true
+	return shouldFlip
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,15 +26,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	lastPosition = $StaticBody2D.position
-	print(lastPosition)
+
 	$Path2D/PathFollow2D.progress += walkSpeed*delta
 	$StaticBody2D.position = $Path2D/PathFollow2D.position
-	print($StaticBody2D.position)
 	
-		
 	z_index = $StaticBody2D.global_position.y
 	
-		
+	if shouldFlipBasedOnMovement(lastPosition, $StaticBody2D.position,$StaticBody2D/npcSprite):
+		$StaticBody2D/npcSprite.scale.x *= -1.0
 
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
@@ -47,9 +51,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if (body.is_in_group("Player") and GameManager.closest_interactable_npc == self):
 		GameManager.closest_interactable_npc = null
-
-
-func _on_flip_timer_timeout() -> void:
-	if shouldFlipBasedOnMovement(lastPosition, $StaticBody2D.position):
-		print("flip")
-		$StaticBody2D/npcSprite.scale.x *= -1.0
