@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b5ciruyujtwaq"]
 
-[ext_resource type="Script" path="res://dialogue_ui.gd" id="1_4560a"]
+[ext_resource type="Script" uid="uid://db5a8c6ok1b1t" path="res://dialogue_ui.gd" id="1_4560a"]
 [ext_resource type="Texture2D" uid="uid://bytofr570c6n6" path="res://assets/BOSS_PROTOTYPE_1.png" id="2_3cc8j"]
 [ext_resource type="Texture2D" uid="uid://ck0h8g1ic5ec8" path="res://assets/PLAYER_PROTOTYPE_1.png" id="3_agtgf"]
 [ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="4_yxcpv"]
