@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	label.text = "%01d:%02d" % [minutes, seconds]
 	
 	if (timer <= 0.0):
-		get_tree().change_scene_to_file("res://meeting.tscn")
+		SceneTransition.change_scene("res://meeting.tscn")

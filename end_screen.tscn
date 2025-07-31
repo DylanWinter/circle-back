@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dmtnbxgo315fc"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Result" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 367.0
+offset_top = 223.0
+offset_right = 613.0
+offset_bottom = 306.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "You win!"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = 135.0
+offset_right = 46.5
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Circle Back"

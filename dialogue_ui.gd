@@ -33,9 +33,5 @@ func _process(delta: float) -> void:
 		trackedTurn = GameManager.currentTurn
 
 func _on_dialogue_ended(resource) -> void:
-	if GameManager.endedConversation == false:
-		pass
-	else:
-		#end game
-		print("endedmeeting")
+	SceneTransition.change_scene("res://office.tscn")
 		
