@@ -4,7 +4,8 @@ extends CanvasLayer
 @onready var label = $Control/Timer
 
 func _process(delta: float) -> void:
-	timer -= delta
+	if not GameManager.is_in_conversation:
+		timer -= delta
 	var minutes : int = int(timer) / 60
 	var seconds : int = int(timer) % 60
 	label.text = "%01d:%02d" % [minutes, seconds]
