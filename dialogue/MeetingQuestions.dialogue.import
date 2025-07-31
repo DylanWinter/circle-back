@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://blwamtdbsvr18"
+path="res://.godot/imported/MeetingQuestions.dialogue-1c459f9e62f0431d9f096fef616d4f84.tres"
+
+[deps]
+
+source_file="res://dialogue/MeetingQuestions.dialogue"
+dest_files=["res://.godot/imported/MeetingQuestions.dialogue-1c459f9e62f0431d9f096fef616d4f84.tres"]
+
+[params]
+
+defaults=true

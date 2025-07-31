@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://itejf362u30a" path="res://dialogue/playerWalkSprites.tres" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(128, 128)
+size = Vector2(38, 30)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
@@ -19,4 +19,5 @@ frame = 24
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 29)
 shape = SubResource("RectangleShape2D_4flbx")

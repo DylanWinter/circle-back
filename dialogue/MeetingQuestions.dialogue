@@ -1,0 +1,39 @@
+~ start
+Boss: Our rival company, Bed, Bathe & Before, recently celebrated their 1 millionth successful demon ritual.
+set GameManager.currentTurn = "randomEmployee"
+Random Employee: Show offs
+set GameManager.currentTurn = "boss"
+Boss: I want us to get 2 million by the end of the month! MC what are the projected sales for our new candle based on our current customer data?
+- Um... A lot, Sir?
+	Boss: fail
+- The DATA is is ON FIRE with no EXTINGUISHER
+	set GameManager.currentTurn = "player"
+	Boss: pass
+- We expect to sell 50% more candles
+	Boss: fail
+set GameManager.currentTurn = "boss"
+Boss: Moving on, this new product is like no other
+set GameManager.currentTurn = "randomEmployee"
+Random Employee: .
+set GameManager.currentTurn = "boss"
+Boss: “BLAH BLAH! MC, What are demons saying about our current candles?
+- Nothing that we don’t know
+	Boss: fail
+- Customers RAVE about them but DEMAND something fresh
+	Boss: pass
+- Customers seem to enjoy our products.
+	Boss: fail
+Boss: I know that you all have worked hard and long hours.
+set GameManager.currentTurn = "randomEmployee"
+Random Employee: I haven’t seen the sun for 5 days.
+set GameManager.currentTurn = "boss"
+Boss: And it will be 7 if you keep talking. MC, when can we expect to roll out our new scented candles?
+- Next month should work.
+	Boss: fail
+- The BEST day of the year, ALL HALLOWS EYE.
+	Boss: pass
+- Summer, what demon doesn't like the heat?
+	Boss: fail
+
+
+=> END
