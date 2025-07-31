@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd2ym0b2i014k"]
+[gd_scene load_steps=4 format=3 uid="uid://bd2ym0b2i014k"]
 
 [ext_resource type="Script" uid="uid://bthxsrn2bf4nd" path="res://NPC.gd" id="1_xxcha"]
-[ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_kh24r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ocd"]
 size = Vector2(22, 12)
@@ -17,11 +16,6 @@ script = ExtResource("1_xxcha")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1, 24)
 shape = SubResource("RectangleShape2D_43ocd")
-
-[node name="MiniNpc1Prototype1" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(3.99999, -34)
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("2_kh24r")
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D"]
 

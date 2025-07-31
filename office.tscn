@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="3_u8nhc"]
+[ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Texture2D" uid="uid://brh1rgsoowuue" path="res://assets/Office_map.png" id="4_43ocd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_43ocd"]
@@ -25,9 +25,6 @@ texture = ExtResource("4_43ocd")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(127, 154)
-
-[node name="NPC" parent="." instance=ExtResource("3_u8nhc")]
-position = Vector2(175, 96)
 
 [node name="walls" type="StaticBody2D" parent="."]
 
@@ -138,3 +135,6 @@ polygon = PackedVector2Array(3136, 815, 3135, 11, 3626, 11, 3627, 818, 3408, 815
 
 [node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="walls"]
 polygon = PackedVector2Array(3713, 817, 3919, 816, 3919, 823, 3706, 823, 3706, 3, 4174, 3, 4175, 821, 4015, 823, 4014, 816, 4168, 817, 4168, 11, 3714, 9)
+
+[node name="NPC" parent="." instance=ExtResource("3_u8nhc")]
+position = Vector2(545, 510)

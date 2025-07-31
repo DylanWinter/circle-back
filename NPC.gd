@@ -4,6 +4,8 @@ var test = load("res://dialogue/test.dialogue")
 @export var coworker_title : String
 @export var walk_path : Line2D
 
+var walkSpeed = 30
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
@@ -12,7 +14,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.z_index = position.y
-	
+	$Path2D/PathFollow2D.progress += walkSpeed*delta
+	$StaticBody2D.position = $Path2D/PathFollow2D.position
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
 	DialogueManager.show_dialogue_balloon(test)
