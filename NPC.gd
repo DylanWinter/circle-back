@@ -31,11 +31,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not GameManager.is_in_conversation:
 		lastPosition = $npcSprite.position
-		$Path2D/PathFollow2D.progress += walkSpeed*delta
-		$npcSprite.position = $Path2D/PathFollow2D.position
+		if has_node("Path2D/PathFollow2D"):
+			$Path2D/PathFollow2D.progress += walkSpeed*delta
+			$npcSprite.position = $Path2D/PathFollow2D.position
+			if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
+				$npcSprite.scale.x *= -1.0
 		z_index = $npcSprite/groundPos.global_position.y
-		if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
-			$npcSprite.scale.x *= -1.0
+		
 	'''
 	# format: time|x|y
 	for conversateTime in conversationTimes:
