@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=61 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://shaders/lava.gdshader" id="1_hsito"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
 [ext_resource type="PackedScene" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
+[ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
+[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Script" uid="uid://ca06iucxfs3fl" path="res://door.gd" id="14_gxl1f"]
 
 [sub_resource type="Gradient" id="Gradient_hsito"]
 
@@ -158,6 +162,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 14, 0, 0, 0, 0, -19, 17)
 }
 point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
+size = Vector2(133.4, 235)
 
 [node name="root" type="Node2D"]
 
@@ -398,6 +405,43 @@ coworker_title = "gossiper"
 position = Vector2(473, -229)
 coworker_title = "tonyHR"
 
+[node name="key" parent="." instance=ExtResource("11_70x1r")]
+position = Vector2(-580, 767)
+scale = Vector2(0.25, 0.25)
+coworker_title = "key"
+dialogueScenePaths = ["res://key.tscn"]
+
+[node name="npcSprite" parent="key" index="0"]
+texture = ExtResource("12_knsl5")
+script = ExtResource("13_s0aar")
+
+[node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
+position = Vector2(0, 25)
+
+[node name="door" parent="." instance=ExtResource("11_70x1r")]
+position = Vector2(3244, 3101)
+rotation = 1.5708
+coworker_title = "door"
+dialogueScenePaths = ["res://door_dialogue.tscn"]
+
+[node name="npcSprite" parent="door" index="0"]
+position = Vector2(-2079, 1898)
+scale = Vector2(3, 0.2)
+texture = ExtResource("12_knsl5")
+script = ExtResource("14_gxl1f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="door/npcSprite" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door/npcSprite/StaticBody2D"]
+position = Vector2(3.69995, 2.5)
+shape = SubResource("RectangleShape2D_g68bc")
+
+[node name="Area2D" parent="door/npcSprite" index="2"]
+scale = Vector2(1, 5.79998)
+
+[node name="CollisionShape2D" parent="door/npcSprite/Area2D" index="0"]
+scale = Vector2(0.1, 0.1)
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -405,3 +449,5 @@ coworker_title = "tonyHR"
 [editable path="boss"]
 [editable path="sAcquisitionManager"]
 [editable path="janitor"]
+[editable path="key"]
+[editable path="door"]

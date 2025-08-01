@@ -1,0 +1,5 @@
+~ start
+if not GameManager.found_key:
+	Key: You found the storage room key!
+	set GameManager.found_key = true
+=> END

@@ -21,7 +21,8 @@ var convoDialogueDict = {
 	"Something about apples" : load("res://dialogue/applesConvoExample.dialogue")
 }
 
-
+var found_key : bool = false
+var door_open: bool = false
 
 #timer
 var timerMinutes = 999.0
