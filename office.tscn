@@ -1,9 +1,36 @@
-[gd_scene load_steps=41 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=48 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
+[ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://lava.gdshader" id="1_hsito"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
+
+[sub_resource type="Gradient" id="Gradient_hsito"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hsito"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lcnwv"]
+width = 1000
+height = 1000
+seamless = true
+color_ramp = SubResource("Gradient_hsito")
+noise = SubResource("FastNoiseLite_hsito")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lcnwv"]
+noise_type = 3
+frequency = 0.1351
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hsito"]
+width = 1410
+height = 1780
+seamless = true
+noise = SubResource("FastNoiseLite_lcnwv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcnwv"]
+shader = ExtResource("1_hsito")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_lcnwv")
+shader_parameter/noise_tex2 = SubResource("NoiseTexture2D_hsito")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -117,11 +144,11 @@ size = Vector2(819.875, 29.25)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -3000
-offset_left = -13134.0
-offset_top = -7190.0
-offset_right = 27189.0
-offset_bottom = 19261.0
-metadata/_edit_lock_ = true
+material = SubResource("ShaderMaterial_lcnwv")
+offset_left = -2197.0
+offset_top = -2516.0
+offset_right = 3187.0
+offset_bottom = 1800.0
 
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
@@ -286,7 +313,6 @@ shape = SubResource("RectangleShape2D_6jtqa")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("4_43ocd")
-timer = 5.0
 
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3

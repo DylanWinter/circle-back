@@ -7,6 +7,10 @@ var test = load("res://dialogue/test.dialogue")
 var walkSpeed : int = 30
 var lastPosition : Vector2
 
+
+# string time array
+@export var conversationTimes : Array
+
 func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition
@@ -27,12 +31,25 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not GameManager.is_in_conversation:
 		lastPosition = $StaticBody2D.position
-		$Path2D/PathFollow2D.progress += walkSpeed*delta
-		$StaticBody2D.position = $Path2D/PathFollow2D.position
+		#$Path2D/PathFollow2D.progress += walkSpeed*delta
+		#$StaticBody2D.position = $Path2D/PathFollow2D.position
 		z_index = $StaticBody2D.global_position.y
-		if shouldFlipBasedOnMovement(lastPosition, $StaticBody2D.position,$StaticBody2D/npcSprite):
-			$StaticBody2D/npcSprite.scale.x *= -1.0
-
+		#if shouldFlipBasedOnMovement(lastPosition, $StaticBody2D.position,$StaticBody2D/npcSprite):
+		#	$StaticBody2D/npcSprite.scale.x *= -1.0
+	
+	# format: time|x|y
+	for conversateTime in conversationTimes:
+		var parts = conversateTime.split("|")
+		var time_parts = parts[0].split(":")
+		var converseMinute = int(time_parts[0])
+		var converseSecond = int(time_parts[1])
+		var x = float(parts[1])
+		var y = float(parts[2])
+		
+		if converseMinute == GameManager.timerMinutes and converseSecond == GameManager.timerSeconds:
+			position = Vector2(x,y)
+			
+		
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
 	GameManager.is_in_conversation = true

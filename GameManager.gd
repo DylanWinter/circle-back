@@ -17,3 +17,7 @@ var wordFoundDict = {
 	"word5": false,
 	"word6": false,	
 }
+
+#timer
+var timerMinutes = 999.0
+var timerSeconds = 999.0
