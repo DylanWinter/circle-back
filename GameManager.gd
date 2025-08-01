@@ -24,7 +24,6 @@ var convoDialogueDict = {
 
 
 
-
 #timer
 var timerMinutes = 999.0
 var timerSeconds = 999.0

@@ -1,5 +1,6 @@
 ~ start
 Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+set currentTurn = "player"
 Nathan: Here are some choices.
 - First one
 	Nathan: You picked the first one.

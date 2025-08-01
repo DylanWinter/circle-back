@@ -19,7 +19,7 @@ position = Vector2(-144.444, -55.5556)
 position = Vector2(-33.3334, 311.111)
 
 [node name="groundPos" parent="npcSprite" index="2"]
-position = Vector2(-22.2222, 722.222)
+position = Vector2(-22.2222, 744.444)
 
 [node name="Path2D" type="Path2D" parent="." index="1"]
 
