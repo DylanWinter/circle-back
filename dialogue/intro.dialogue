@@ -1,0 +1,8 @@
+~ start
+if GameManager.first_loop:
+	Tony: Howdy, welcome to your first day at SCS!
+	Tony: Take your time, meet your coworkers.
+	Tony: Oh, and you've got an [shake]important meeting[/shake] with the boss in 3 minutes.
+	Tony: Good luck!
+	set GameManager.first_loop = false
+=> END
