@@ -1,7 +1,7 @@
-[gd_scene load_steps=56 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=53 format=4 uid="uid://dicqxqywyogt3"]
 
+[ext_resource type="Texture2D" uid="uid://csigk0d0uayn4" path="res://assets/background.png" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://shaders/lava.gdshader" id="1_hsito"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
@@ -10,32 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
 [ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://ij64yjrdk56g" path="res://conversationEvent.tscn" id="11_70x1r"]
 
-[sub_resource type="Gradient" id="Gradient_hsito"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70x1r"]
+texture = ExtResource("1_70x1r")
+texture_region_size = Vector2i(1000, 1000)
+0:0/0 = 0
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_hsito"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lcnwv"]
-width = 1000
-height = 1000
-seamless = true
-color_ramp = SubResource("Gradient_hsito")
-noise = SubResource("FastNoiseLite_hsito")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_lcnwv"]
-noise_type = 3
-frequency = 0.1351
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hsito"]
-width = 1410
-height = 1780
-seamless = true
-noise = SubResource("FastNoiseLite_lcnwv")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcnwv"]
-shader = ExtResource("1_hsito")
-shader_parameter/noise_tex = SubResource("NoiseTexture2D_lcnwv")
-shader_parameter/noise_tex2 = SubResource("NoiseTexture2D_hsito")
+[sub_resource type="TileSet" id="TileSet_3xqf3"]
+tile_size = Vector2i(1000, 1000)
+sources/0 = SubResource("TileSetAtlasSource_70x1r")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -145,7 +129,7 @@ size = Vector2(2309.5, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c3wu"]
 size = Vector2(819.875, 29.25)
 
-[sub_resource type="Curve2D" id="Curve2D_hsito"]
+[sub_resource type="Curve2D" id="Curve2D_3xqf3"]
 
 [sub_resource type="Curve2D" id="Curve2D_70x1r"]
 _data = {
@@ -161,13 +145,11 @@ point_count = 2
 
 [node name="root" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="backgroundBlueprintTiles" type="TileMapLayer" parent="."]
 z_index = -3000
-material = SubResource("ShaderMaterial_lcnwv")
-offset_left = -2197.0
-offset_top = -2516.0
-offset_right = 3187.0
-offset_bottom = 1800.0
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAD/////AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAP7/AAAAAAAAAAD///7/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAABAP7/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAADAP7/AAAAAAAAAAADAP3/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_3xqf3")
 
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
@@ -350,21 +332,27 @@ theme_override_font_sizes/normal_font_size = 40
 scroll_active = false
 autowrap_mode = 0
 
+[node name="conversationEvent" parent="." instance=ExtResource("11_70x1r")]
+position = Vector2(-238, 573)
+
 [node name="boss" parent="." instance=ExtResource("6_lcnwv")]
 position = Vector2(1458, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
 
 [node name="Path2D" parent="boss" index="1"]
-curve = SubResource("Curve2D_hsito")
+curve = SubResource("Curve2D_3xqf3")
 
 [node name="PathFollow2D" parent="boss/Path2D" index="0"]
-position = Vector2(69.1011, 3.93259)
-rotation = 3.06408
+position = Vector2(-190.449, 11.236)
+rotation = -1.56724
 
 [node name="sAcquisitionManager" parent="." instance=ExtResource("6_4i814")]
 position = Vector2(743, 654)
 coworker_title = "sAcquisitionManager"
+
+[node name="CollisionShape2D" parent="sAcquisitionManager/npcSprite/Area2D" index="0"]
+position = Vector2(33.3333, 433.333)
 
 [node name="Path2D" type="Path2D" parent="sAcquisitionManager"]
 curve = SubResource("Curve2D_70x1r")
