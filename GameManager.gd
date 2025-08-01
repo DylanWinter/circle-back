@@ -12,10 +12,7 @@ var currentTurn = "boss"
 var wordFoundDict = {
 	"word1": false,
 	"word2": false,
-	"word3": false,
-	"word4": false,
-	"word5": false,
-	"word6": false,	
+	"word3": false
 }
 
 var convoDialogueDict = {

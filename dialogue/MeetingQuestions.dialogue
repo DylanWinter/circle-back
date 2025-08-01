@@ -9,6 +9,7 @@ Boss: I want us to get 2 million by the end of the month! MC what are the projec
 - The DATA is is ON FIRE with no EXTINGUISHER
 	set GameManager.currentTurn = "player"
 	Boss: pass
+	set GameManager.wordFoundDict["word1"] = true
 - We expect to sell 50% more candles
 	Boss: fail
 set GameManager.currentTurn = "boss"
@@ -21,6 +22,7 @@ Boss: “BLAH BLAH! MC, What are demons saying about our current candles?
 	Boss: fail
 - Customers RAVE about them but DEMAND something fresh
 	Boss: pass
+	set GameManager.wordFoundDict["word2"] = true
 - Customers seem to enjoy our products.
 	Boss: fail
 Boss: I know that you all have worked hard and long hours.
@@ -32,6 +34,7 @@ Boss: And it will be 7 if you keep talking. MC, when can we expect to roll out o
 	Boss: fail
 - The BEST day of the year, ALL HALLOWS EYE.
 	Boss: pass
+	set GameManager.wordFoundDict["word3"] = true
 - Summer, what demon doesn't like the heat?
 	Boss: fail
 => END
