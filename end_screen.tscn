@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dmtnbxgo315fc"]
+[gd_scene load_steps=2 format=3 uid="uid://dmtnbxgo315fc"]
+
+[ext_resource type="Script" uid="uid://dooeuw2bf3is2" path="res://end_screen.gd" id="1_my301"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_my301")
 
 [node name="Result" type="RichTextLabel" parent="."]
 layout_mode = 2
@@ -37,3 +40,5 @@ offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Circle Back"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

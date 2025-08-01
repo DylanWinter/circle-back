@@ -286,7 +286,7 @@ shape = SubResource("RectangleShape2D_6jtqa")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("4_43ocd")
-timer = 20.0
+timer = 5.0
 
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3

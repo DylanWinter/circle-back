@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnp1j7wu06m7e"]
+
+[ext_resource type="Script" uid="uid://bhtmn3ikx3exu" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="2_7vrkn"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="title" type="RichTextLabel" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = -154.0
+offset_top = -36.0
+offset_right = -114.0
+offset_bottom = 4.0
+theme_override_font_sizes/normal_font_size = 48
+text = "Let's Circle Back"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 91.0
+offset_right = 25.0
+offset_bottom = 122.0
+text = "Play!"
+
+[node name="Gmtk" type="Sprite2D" parent="."]
+position = Vector2(3, 206)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_7vrkn")
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]

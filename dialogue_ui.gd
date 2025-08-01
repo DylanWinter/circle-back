@@ -33,5 +33,5 @@ func _process(delta: float) -> void:
 		trackedTurn = GameManager.currentTurn
 
 func _on_dialogue_ended(resource) -> void:
-	SceneTransition.change_scene("res://office.tscn")
+	SceneTransition.change_scene("res://end_screen.tscn")
 		
