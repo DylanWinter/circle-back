@@ -1,7 +1,7 @@
-[gd_scene load_steps=55 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=56 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://lava.gdshader" id="1_hsito"]
+[ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://shaders/lava.gdshader" id="1_hsito"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
 [ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
-[ext_resource type="PackedScene" uid="uid://ij64yjrdk56g" path="res://conversationEvent.tscn" id="11_70x1r"]
 
 [sub_resource type="Gradient" id="Gradient_hsito"]
 
@@ -147,10 +146,18 @@ size = Vector2(2309.5, 29)
 size = Vector2(819.875, 29.25)
 
 [sub_resource type="Curve2D" id="Curve2D_hsito"]
+
+[sub_resource type="Curve2D" id="Curve2D_70x1r"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -23.0337, 39.8876, 0, 0, 0, 0, -171.348, 41.0112, 0, 0, 0, 0, -215.169, -133.146, 0, 0, 0, 0, 111.236, -133.146)
+"points": PackedVector2Array(0, 0, 0, 0, 6, 13, 0, 0, 0, 0, 25, 16)
 }
-point_count = 4
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_knsl5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 14, 0, 0, 0, 0, -19, 17)
+}
+point_count = 2
 
 [node name="root" type="Node2D"]
 
@@ -346,34 +353,55 @@ autowrap_mode = 0
 [node name="boss" parent="." instance=ExtResource("6_lcnwv")]
 position = Vector2(1458, 436)
 scale = Vector2(1.78, 1.78)
+coworker_title = "boss"
 
 [node name="Path2D" parent="boss" index="1"]
 curve = SubResource("Curve2D_hsito")
 
 [node name="PathFollow2D" parent="boss/Path2D" index="0"]
-position = Vector2(-23.0337, 39.8876)
-rotation = 3.13402
+position = Vector2(69.1011, 3.93259)
+rotation = 3.06408
+
+[node name="sAcquisitionManager" parent="." instance=ExtResource("6_4i814")]
+position = Vector2(743, 654)
+coworker_title = "sAcquisitionManager"
+
+[node name="Path2D" type="Path2D" parent="sAcquisitionManager"]
+curve = SubResource("Curve2D_70x1r")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="sAcquisitionManager/Path2D"]
+position = Vector2(6, 13)
+rotation = 0.156602
 loop = false
 
-[node name="sAqcuisitionManager" parent="." instance=ExtResource("6_4i814")]
-position = Vector2(772, 654)
-
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
-position = Vector2(857, 658)
+position = Vector2(863, 654)
+coworker_title = "janitor"
+
+[node name="Path2D" type="Path2D" parent="janitor"]
+curve = SubResource("Curve2D_knsl5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="janitor/Path2D"]
+position = Vector2(0, 14)
+rotation = 2.98499
+loop = false
 
 [node name="projectManager" parent="." instance=ExtResource("8_wruqr")]
 position = Vector2(749, 799)
+coworker_title = "projectManager"
 
 [node name="gossiper" parent="." instance=ExtResource("3_u8nhc")]
 position = Vector2(187, -222)
+coworker_title = "gossiper"
 
 [node name="tonyHR" parent="." instance=ExtResource("10_3xqf3")]
 position = Vector2(473, -229)
+coworker_title = "tonyHR"
 
-[node name="conversationEvent" parent="." instance=ExtResource("11_70x1r")]
-position = Vector2(817, 657)
-
-[node name="conversationEvent2" parent="." instance=ExtResource("11_70x1r")]
-position = Vector2(-294, -95)
+[connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
 
 [editable path="boss"]
+[editable path="sAcquisitionManager"]
+[editable path="janitor"]

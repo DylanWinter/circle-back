@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://cppw4dokqggbj" path="res://conversation_event.gd" id="1_ekulb"]
 [ext_resource type="SpriteFrames" uid="uid://dqk6bv66niylu" path="res://assets/speechBubbleSprites.tres" id="2_1qly1"]
 
+[sub_resource type="Animation" id="Animation_6fkbg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.15, 0.15)]
+}
+
 [sub_resource type="Animation" id="Animation_1qly1"]
 resource_name = "sizeBubbleDown"
 length = 0.25
@@ -17,21 +32,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0.15, 0.15), Vector2(0.075, 0.075)]
-}
-
-[sub_resource type="Animation" id="Animation_6fkbg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.15, 0.15)]
 }
 
 [sub_resource type="Animation" id="Animation_ujwto"]
@@ -59,6 +59,7 @@ _data = {
 
 [node name="conversationEvent" type="Node2D"]
 script = ExtResource("1_ekulb")
+convoCharacters = [null]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../speechBubbleRotater/speechBubbleFarAwayAnim")

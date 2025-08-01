@@ -3,18 +3,21 @@ extends Node2D
 var test = load("res://dialogue/test.dialogue")
 @export var coworker_title : String
 @export var walk_path : Line2D
+@export var dialogueScenePaths : Array
+var currentScenePathIndex = 0
+
 
 var walkSpeed : int = 30
 var lastPosition : Vector2
 
-
 # string time array
 @export var conversationTimes : Array
+
+@onready var speechBubbleSprite : AnimatedSprite2D = $npcSprite/AnimatedSprite2D
 
 func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition
-	
 	var shouldFlip = false
 	if currentPosition.x - lastPosition.x < 0 and sprite.scale.x>0:
 		shouldFlip = true
@@ -24,9 +27,17 @@ func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
+	#DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
+	speechBubbleSprite.frame = 1
+	pass
 
+func startConvo(topic : String):
+	$npcSprite/SpeechBubbleUnselected.visible = true
 
+func stopConvo(topic : String):
+	$npcSprite/SpeechBubbleUnselected.visible = false
+
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not GameManager.is_in_conversation:
@@ -37,6 +48,10 @@ func _process(delta: float) -> void:
 			if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
 				$npcSprite.scale.x *= -1.0
 		z_index = $npcSprite/groundPos.global_position.y
+		if dialogueScenePaths.size()>0:
+			speechBubbleSprite.visible = true
+		else:
+			speechBubbleSprite.visible = false
 		
 	'''
 	# format: time|x|y
@@ -53,19 +68,32 @@ func _process(delta: float) -> void:
 	'''
 		
 func start_dialogue() -> void:
-	GameManager.player.can_move = false
-	GameManager.is_in_conversation = true
-	DialogueManager.show_dialogue_balloon(test)
-
+	#GameManager.player.can_move = false
+	#GameManager.is_in_conversation = true
+	#DialogueManager.show_dialogue_balloon(test)
+	if dialogueScenePaths.size()>currentScenePathIndex:
+		var dialogueScene = load(dialogueScenePaths[currentScenePathIndex]).instantiate()
+		
+		get_parent().add_child(dialogueScene)
+		currentScenePathIndex+=1
+		dialogueScene.start_dialogue()
+		
+		
+'''
 func _on_dialogue_ended(resource) -> void:
-	GameManager.player.can_move = true
-	GameManager.is_in_conversation = false
+	#GameManager.player.can_move = true
+	#GameManager.is_in_conversation = false
+'''
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.is_in_group("Player")):
 		GameManager.closest_interactable_npc = self
+		if speechBubbleSprite.visible == true:
+			speechBubbleSprite.frame=0
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if (body.is_in_group("Player") and GameManager.closest_interactable_npc == self):
 		GameManager.closest_interactable_npc = null
+		if speechBubbleSprite.visible == true:
+			speechBubbleSprite.frame=1

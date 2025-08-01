@@ -1,0 +1,11 @@
+~ start
+Janitor: Hello.
+Janitor: Heard about apples?
+
+=> END
+
+~ start2
+Janitor: Helloworl.
+Janitor: Heard about oranges?
+
+=> END

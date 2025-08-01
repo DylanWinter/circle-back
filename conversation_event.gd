@@ -15,15 +15,17 @@ var distConsideredClose : float = 1000
 var speechBubbleLarge = false
 
 
+@export var convoCharacters : Array
+@export var convoTopic : String
 
 func _ready() -> void:
 	if playerDistToConvo <= distConsideredClose:
 		speechBubbleLarge = false
 	elif playerDistToConvo > distConsideredClose:
 		speechBubbleLarge = true
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	var screen_size = get_window().size
 	if GameManager.player.global_position.x + screen_size.x/2.0 < global_position.x - gapInSpeechBubbleVision:
 		isAway = true
@@ -44,8 +46,7 @@ func _process(delta: float) -> void:
 		$speechBubbleRotater.global_rotation = angleToSpeechPoint
 		
 		playerDistToConvo = self.global_position.distance_to(GameManager.player.global_position)
-		#print(playerDistToConvo)
-		
+	
 		if playerDistToConvo <= distConsideredClose and speechBubbleLarge == false:
 			speechBubbleLarge = true
 			$AnimationPlayer.play("sizeBubbleUp")
