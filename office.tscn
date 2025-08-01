@@ -333,6 +333,3 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 40
 scroll_active = false
 autowrap_mode = 0
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-177, -453)
