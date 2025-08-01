@@ -1,12 +1,16 @@
-[gd_scene load_steps=51 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=55 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://lava.gdshader" id="1_hsito"]
+[ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://ij64yjrdk56g" path="res://conversationEvent.tscn" id="11_70x1r"]
 
 [sub_resource type="Gradient" id="Gradient_hsito"]
 
@@ -355,6 +359,18 @@ loop = false
 position = Vector2(772, 654)
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
-position = Vector2(902, 719)
+position = Vector2(857, 658)
+
+[node name="projectManager" parent="." instance=ExtResource("8_wruqr")]
+position = Vector2(749, 799)
+
+[node name="gossiper" parent="." instance=ExtResource("3_u8nhc")]
+position = Vector2(187, -222)
+
+[node name="tonyHR" parent="." instance=ExtResource("10_3xqf3")]
+position = Vector2(473, -229)
+
+[node name="conversationEvent" parent="." instance=ExtResource("11_70x1r")]
+position = Vector2(817, 657)
 
 [editable path="boss"]

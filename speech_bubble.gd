@@ -1,6 +1,8 @@
 extends Control
 var target: Node2D
 
+
+'''
 @onready var label = $NinePatchRect/RichTextLabel
 var offset : Vector2 = Vector2(0, -40)
 
@@ -21,3 +23,6 @@ func _process(delta: float) -> void:
 			var inv = cam_transform.affine_inverse()
 			var screen_pos = inv.basis_xform(target.global_position - inv.get_origin())
 			position = screen_pos + offset
+'''
+
+	

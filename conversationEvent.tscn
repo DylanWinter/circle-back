@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ij64yjrdk56g"]
+
+[ext_resource type="Script" uid="uid://cppw4dokqggbj" path="res://conversation_event.gd" id="1_ekulb"]
+[ext_resource type="SpriteFrames" uid="uid://dqk6bv66niylu" path="res://assets/speechBubbleSprites.tres" id="2_1qly1"]
+
+[node name="conversationEvent" type="Node2D"]
+script = ExtResource("1_ekulb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+sprite_frames = ExtResource("2_1qly1")
+autoplay = "default"
+frame_progress = 0.586438

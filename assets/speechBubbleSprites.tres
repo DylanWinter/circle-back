@@ -1,0 +1,26 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dqk6bv66niylu"]
+
+[ext_resource type="Texture2D" uid="uid://djcqwlp5rfp23" path="res://assets/speechBubble/speechBubble.png" id="1_2o5lf"]
+[ext_resource type="Texture2D" uid="uid://c261gnycvlajy" path="res://assets/speechBubble/speechBubbleOneDot.png" id="2_ve4nv"]
+[ext_resource type="Texture2D" uid="uid://bijnd2brmug0n" path="res://assets/speechBubble/speechBubbleThreeDot.png" id="3_un6vy"]
+[ext_resource type="Texture2D" uid="uid://dmr3nsq5weofk" path="res://assets/speechBubble/speechBubbleTwoDot.png" id="4_r4fs0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2o5lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ve4nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r4fs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_un6vy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]

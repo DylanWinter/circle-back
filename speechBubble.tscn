@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://4s0a3uc6hwks"]
+[gd_scene load_steps=3 format=3 uid="uid://4s0a3uc6hwks"]
 
-[node name="speechBubble" type="Sprite2D"]
+[ext_resource type="Script" uid="uid://b7apyychtfggv" path="res://speech_bubble.gd" id="1_4f0ys"]
+[ext_resource type="SpriteFrames" uid="uid://dqk6bv66niylu" path="res://assets/speechBubbleSprites.tres" id="1_b1mf2"]
+
+[node name="speechBubble" type="Node2D"]
+script = ExtResource("1_4f0ys")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_b1mf2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -228.0
+offset_right = 308.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 41
+text = "Hello I am now talking!"
+horizontal_alignment = 1
+vertical_alignment = 1
