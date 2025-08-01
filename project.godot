@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GameManager="*res://GameManager.gd"
+SpeechBubbleManager="*res://SpeechBubbleManager.gd"
+SceneTransition="*res://scene_transition.tscn"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://dialogue/balloon.tscn"
 
 [display]
 

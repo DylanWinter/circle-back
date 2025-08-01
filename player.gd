@@ -28,3 +28,6 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("interact"):
 			if GameManager.closest_interactable_npc:
 				GameManager.closest_interactable_npc.start_dialogue()
+	else:
+		$AnimatedSprite2D.stop()
+		
