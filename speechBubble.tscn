@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://4s0a3uc6hwks"]
+
+[node name="speechBubble" type="Sprite2D"]

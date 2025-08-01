@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbocflb3wlyfa"]
+
+[ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="1_5hfv0"]
+[ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="2_0bhed"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MapPrototype1" type="Sprite2D" parent="."]
+z_index = -2999
+position = Vector2(198, -374)
+texture = ExtResource("1_5hfv0")
+
+[node name="player" parent="." instance=ExtResource("2_0bhed")]
+position = Vector2(249, -104)

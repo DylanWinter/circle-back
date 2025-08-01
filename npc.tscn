@@ -1,27 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd2ym0b2i014k"]
+[gd_scene load_steps=3 format=3 uid="uid://bd2ym0b2i014k"]
 
 [ext_resource type="Script" uid="uid://bthxsrn2bf4nd" path="res://NPC.gd" id="1_xxcha"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_43ocd"]
-size = Vector2(22, 12)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei2s5"]
-radius = 44.0114
+radius = 480.416
 
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_xxcha")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="npcSprite" type="Sprite2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, 24)
-shape = SubResource("RectangleShape2D_43ocd")
+[node name="Area2D" type="Area2D" parent="npcSprite"]
 
-[node name="Area2D" type="Area2D" parent="StaticBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcSprite/Area2D"]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_ei2s5")
 
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="groundPos" type="Node2D" parent="npcSprite"]
+
+[connection signal="body_entered" from="npcSprite/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="npcSprite/Area2D" to="." method="_on_area_2d_body_exited"]

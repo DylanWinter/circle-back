@@ -30,13 +30,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not GameManager.is_in_conversation:
-		lastPosition = $StaticBody2D.position
-		#$Path2D/PathFollow2D.progress += walkSpeed*delta
-		#$StaticBody2D.position = $Path2D/PathFollow2D.position
-		z_index = $StaticBody2D.global_position.y
-		#if shouldFlipBasedOnMovement(lastPosition, $StaticBody2D.position,$StaticBody2D/npcSprite):
-		#	$StaticBody2D/npcSprite.scale.x *= -1.0
-	
+		lastPosition = $npcSprite.position
+		$Path2D/PathFollow2D.progress += walkSpeed*delta
+		$npcSprite.position = $Path2D/PathFollow2D.position
+		z_index = $npcSprite/groundPos.global_position.y
+		if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
+			$npcSprite.scale.x *= -1.0
+	'''
 	# format: time|x|y
 	for conversateTime in conversationTimes:
 		var parts = conversateTime.split("|")
@@ -48,7 +48,7 @@ func _process(delta: float) -> void:
 		
 		if converseMinute == GameManager.timerMinutes and converseSecond == GameManager.timerSeconds:
 			position = Vector2(x,y)
-			
+	'''
 		
 func start_dialogue() -> void:
 	GameManager.player.can_move = false

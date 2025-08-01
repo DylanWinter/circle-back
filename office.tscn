@@ -1,10 +1,10 @@
-[gd_scene load_steps=48 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=49 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://lava.gdshader" id="1_hsito"]
-[ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
+[ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 
 [sub_resource type="Gradient" id="Gradient_hsito"]
 
@@ -140,6 +140,12 @@ size = Vector2(2309.5, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c3wu"]
 size = Vector2(819.875, 29.25)
 
+[sub_resource type="Curve2D" id="Curve2D_hsito"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -23.0337, 39.8876, 0, 0, 0, 0, -171.348, 41.0112, 0, 0, 0, 0, -215.169, -133.146, 0, 0, 0, 0, 111.236, -133.146)
+}
+point_count = 4
+
 [node name="root" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -157,9 +163,6 @@ texture = ExtResource("4_hsito")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(127, 154)
-
-[node name="NPC" parent="." instance=ExtResource("3_u8nhc")]
-position = Vector2(545, 510)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -333,3 +336,17 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 40
 scroll_active = false
 autowrap_mode = 0
+
+[node name="NPC2" parent="." instance=ExtResource("6_lcnwv")]
+position = Vector2(1458, 436)
+scale = Vector2(1.78, 1.78)
+
+[node name="Path2D" parent="NPC2" index="1"]
+curve = SubResource("Curve2D_hsito")
+
+[node name="PathFollow2D" parent="NPC2/Path2D" index="0"]
+position = Vector2(-23.0337, 39.8876)
+rotation = 3.13402
+loop = false
+
+[editable path="NPC2"]
