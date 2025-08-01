@@ -15,6 +15,12 @@ var wordFoundDict = {
 	"word3": false
 }
 
+var convoDialogueDict = {
+	"Something about apples" : load("res://dialogue/applesConvoExample.dialogue")
+}
+
+
+
 #timer
 var timerMinutes = 999.0
 var timerSeconds = 999.0

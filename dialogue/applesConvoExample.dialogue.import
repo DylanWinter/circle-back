@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8qf3w3a7s82l"
+path="res://.godot/imported/applesConvoExample.dialogue-9174e7e9d0e50b980c996dff59674ff1.tres"
+
+[deps]
+
+source_file="res://dialogue/applesConvoExample.dialogue"
+dest_files=["res://.godot/imported/applesConvoExample.dialogue-9174e7e9d0e50b980c996dff59674ff1.tres"]
+
+[params]
+
+defaults=true

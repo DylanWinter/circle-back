@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://croi87rtnc5xn"]
+
+[ext_resource type="Script" uid="uid://cisnrttgsasyi" path="res://visualNovelOfficeScenes/vis_novel_scene.gd" id="1_vaue0"]
+
+[node name="VisNovelScene" type="Node2D"]
+script = ExtResource("1_vaue0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -2534.0
+offset_top = -1138.0
+offset_right = 2830.0
+offset_bottom = 1773.0
+color = Color(0.314316, 0.314316, 0.314316, 0.392157)

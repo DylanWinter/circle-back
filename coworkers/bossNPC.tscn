@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dglc7sq6v53mf"]
+
+[ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_fcoua"]
+[ext_resource type="Texture2D" uid="uid://bxxcjxcgai5cn" path="res://assets/boss/MINI BOSS PROTOTYPE 2.png" id="2_01k04"]
+
+[node name="NPC" instance=ExtResource("1_fcoua")]
+dialogueScenePaths = ["res://visualNovelOfficeScenes/bossConvo1.tscn"]
+
+[node name="npcSprite" parent="." index="0"]
+position = Vector2(3, -28)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_01k04")
+
+[node name="AnimatedSprite2D" parent="npcSprite" index="0"]
+visible = true
+position = Vector2(-144.444, -55.5556)
+
+[node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
+position = Vector2(-33.3334, 311.111)
+
+[node name="groundPos" parent="npcSprite" index="2"]
+position = Vector2(-22.2222, 744.444)
+
+[node name="Path2D" type="Path2D" parent="." index="1"]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+position = Vector2(-30.337, 3.37079)
+rotation = 3.10123

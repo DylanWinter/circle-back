@@ -12,11 +12,17 @@ point_count = 7
 [node name="NPC" instance=ExtResource("1_5pbqx")]
 conversationTimes = ["1:20|-598.0|-445.0", "0:30|-177.0|-453.0"]
 
-[node name="npcSprite" type="Sprite2D" parent="StaticBody2D" index="0"]
-position = Vector2(-3, -36)
-rotation = -0.134566
+[node name="npcSprite" parent="." index="0"]
+self_modulate = Color(0, 0.486115, 0.94226, 1)
+position = Vector2(1, -35)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_7o45b")
+
+[node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
+position = Vector2(33.3333, 377.777)
+
+[node name="groundPos" parent="npcSprite" index="1"]
+position = Vector2(33.3333, 700)
 
 [node name="Path2D" type="Path2D" parent="." index="1"]
 curve = SubResource("Curve2D_5pbqx")

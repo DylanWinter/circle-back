@@ -5,8 +5,8 @@ void vertex() {
 }
 
 void fragment() {
-	
-	if (COLOR.r>=0.7 && COLOR.g>=0.7 && COLOR.b>=0.7) 
+
+	if (COLOR.r>=0.7 && COLOR.g>=0.7 && COLOR.b>=0.7)
 	{
 		COLOR.a = 0.0;
 	}
