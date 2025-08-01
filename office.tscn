@@ -373,4 +373,7 @@ position = Vector2(473, -229)
 [node name="conversationEvent" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(817, 657)
 
+[node name="conversationEvent2" parent="." instance=ExtResource("11_70x1r")]
+position = Vector2(-294, -95)
+
 [editable path="boss"]
