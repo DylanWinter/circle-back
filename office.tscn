@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
-[ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
-[ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
-[ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
+[ext_resource type="PackedScene" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="PackedScene" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
 
 [sub_resource type="Gradient" id="Gradient_hsito"]
 

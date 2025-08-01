@@ -1,5 +1,7 @@
 extends Node
 
+var first_loop : bool = true
+
 var player: Node                   = null
 var closest_interactable_npc: Node = null
 
