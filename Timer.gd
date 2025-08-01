@@ -9,6 +9,8 @@ func _process(delta: float) -> void:
 	var minutes : int = int(timer) / 60
 	var seconds : int = int(timer) % 60
 	label.text = "%01d:%02d" % [minutes, seconds]
+	GameManager.timerMinutes = minutes
+	GameManager.timerSeconds = seconds
 	
 	if (timer <= 0.0):
 		get_tree().change_scene_to_file("res://meeting.tscn")
