@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=54 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://csigk0d0uayn4" path="res://assets/background.png" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://ij64yjrdk56g" path="res://conversationEvent.tscn" id="11_70x1r"]
+[ext_resource type="Texture2D" uid="uid://e4kdn74av05c" path="res://assets/Illustration138.png" id="12_knsl5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70x1r"]
 texture = ExtResource("1_70x1r")
@@ -129,13 +130,17 @@ size = Vector2(2309.5, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c3wu"]
 size = Vector2(819.875, 29.25)
 
-[sub_resource type="Curve2D" id="Curve2D_3xqf3"]
+[sub_resource type="Curve2D" id="Curve2D_s0aar"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 74.7612, -54.4944, 0, 0, 0, 0, -97.1489, -46.6292, 0, 0, 0, 0, -365.688, -40.4494, 0, 0, 0, 0, -452.205, 32.5843, 0, 0, 0, 0, -537.598, 87.6404, 0, 0, 0, 0, -662.879, 125.281, 0, 0, 0, 0, -761.194, 129.775, 0, 0, 0, 0, -888.16, 132.584, 0, 0, 0, 0, -987.598, 133.708, 0, 0, 0, 0, -1076.92, 131.461, 0, 0, 0, 0, -1157.82, 119.101, 0, 0, 0, 0, -1202.21, -57.8652, 0, 0, 0, 0, -1230.86, -101.124, 0, 0, 0, 0, -1316.81, -83.1461, 0, 0, 0, 0, -1374.68, -123.034, 0, 0, 0, 0, -1412.88, -165.169, 0, 0, 0, 0, -1446.59, -232.584, 0, 0, 0, 0, -1402.21, -230.337, 0, 0, 0, 0, -1330.86, -215.73, 0, 0, 0, 0, -1240.97, -226.404, 0, 0, 0, 0, -1185.35, -272.472, 0, 0, 0, 0, -1050.52, -312.921, 0, 0, 0, 0, -958.947, -321.348, 0, 0, 0, 0, -805.014, -333.708, 0, 0, 0, 0, -624.115, -321.348, 0, 0, 0, 0, -631.419, -471.91, 0, 0, 0, 0, -539.846, -498.876, 0, 0, 0, 0, -543.778, -578.09, 0, 0, 0, 0, -552.205, -635.955)
+}
+point_count = 29
 
 [sub_resource type="Curve2D" id="Curve2D_70x1r"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 6, 13, 0, 0, 0, 0, 25, 16)
+"points": PackedVector2Array(0, 0, 0, 0, 6, 13, 0, 0, 0, 0, 25, 16, 0, 0, 0, 0, 60, -157, 0, 0, 0, 0, 103, -298, 0, 0, 0, 0, 141, -354, 0, 0, 0, 0, 210, -538, 0, 0, 0, 0, 52, -642)
 }
-point_count = 2
+point_count = 7
 
 [sub_resource type="Curve2D" id="Curve2D_knsl5"]
 _data = {
@@ -336,23 +341,30 @@ autowrap_mode = 0
 position = Vector2(-238, 573)
 
 [node name="boss" parent="." instance=ExtResource("6_lcnwv")]
-position = Vector2(1458, 436)
+position = Vector2(1476.93, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
 
+[node name="npcSprite" parent="boss" index="0"]
+position = Vector2(93.8624, -101.685)
+
+[node name="AnimatedSprite2D" parent="boss/npcSprite" index="0"]
+position = Vector2(-93.6332, -49.9375)
+
+[node name="CollisionShape2D" parent="boss/npcSprite/Area2D" index="0"]
+metadata/_edit_lock_ = true
+
 [node name="Path2D" parent="boss" index="1"]
-curve = SubResource("Curve2D_3xqf3")
+curve = SubResource("Curve2D_s0aar")
 
 [node name="PathFollow2D" parent="boss/Path2D" index="0"]
-position = Vector2(-190.449, 11.236)
-rotation = -1.56724
+position = Vector2(74.7612, -54.4944)
+rotation = 3.09587
+loop = false
 
 [node name="sAcquisitionManager" parent="." instance=ExtResource("6_4i814")]
 position = Vector2(743, 654)
 coworker_title = "sAcquisitionManager"
-
-[node name="CollisionShape2D" parent="sAcquisitionManager/npcSprite/Area2D" index="0"]
-position = Vector2(33.3333, 433.333)
 
 [node name="Path2D" type="Path2D" parent="sAcquisitionManager"]
 curve = SubResource("Curve2D_70x1r")
@@ -385,6 +397,10 @@ coworker_title = "gossiper"
 [node name="tonyHR" parent="." instance=ExtResource("10_3xqf3")]
 position = Vector2(473, -229)
 coworker_title = "tonyHR"
+
+[node name="Illustration138" type="Sprite2D" parent="."]
+position = Vector2(-255, -457)
+texture = ExtResource("12_knsl5")
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]
