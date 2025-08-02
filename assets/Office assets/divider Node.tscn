@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg7v0mm1c45w0"]
+
+[ext_resource type="PackedScene" uid="uid://cogcyh2h5uupc" path="res://assets/Office assets/Cubicle Node.tscn" id="1_nf43i"]
+
+[node name="Cubicle" type="Node2D"]
+
+[node name="Cubicle" parent="." instance=ExtResource("1_nf43i")]

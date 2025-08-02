@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://cogcyh2h5uupc"]
+
+[ext_resource type="Texture2D" uid="uid://cwa5iqhiskcn0" path="res://assets/Office assets/Table 1.png" id="1_7vwlc"]
+[ext_resource type="Texture2D" uid="uid://cy4ictp6wb003" path="res://assets/Office assets/Table 1 flipped.png" id="2_53cgd"]
+[ext_resource type="Texture2D" uid="uid://stmobowhsnsx" path="res://assets/Office assets/Divider.png" id="3_pcxrq"]
+[ext_resource type="Texture2D" uid="uid://cx4syyd0c30hg" path="res://assets/Office assets/Tables 2.png" id="4_f5qep"]
+[ext_resource type="Texture2D" uid="uid://bp01dpysi43s2" path="res://assets/Office assets/Tables 2 flipped.png" id="5_n6ts5"]
+[ext_resource type="Texture2D" uid="uid://bedg2hu7yv77y" path="res://assets/Office assets/Divider front.png" id="6_ckblm"]
+
+[node name="Cubicle" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(197, 91, 197, 54, 228, 54, 228, -111, 198, -111, 197, -124, 85, -124, 73, -132, 68, -144, 68, -240, 8, -240, 8, -251, -13, -251, -13, -240, -75, -240, -74, -145, -79, -130, -90, -124, -203, -124, -203, -112, -228, -112, -228, 54, -202.488, 54, -203, 91, -196, 101, -196, 135, -90, 135, -78, 143, -73, 160, -73, 251, -13, 251, 8, 251, 68, 251, 68, 157, 74, 139, 83, 134, 190, 134, 190, 100)
+
+[node name="Table1" type="Sprite2D" parent="."]
+position = Vector2(103, -124)
+rotation = -0.0035862
+texture = ExtResource("1_7vwlc")
+
+[node name="Table1Flipped" type="Sprite2D" parent="."]
+position = Vector2(-108, -124)
+texture = ExtResource("2_53cgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_pcxrq")
+
+[node name="Tables2" type="Sprite2D" parent="."]
+position = Vector2(-108, 135)
+texture = ExtResource("4_f5qep")
+
+[node name="Tables2Flipped" type="Sprite2D" parent="."]
+position = Vector2(103, 134)
+texture = ExtResource("5_n6ts5")
+
+[node name="DividerFront" type="Sprite2D" parent="."]
+position = Vector2(-2, 87)
+texture = ExtResource("6_ckblm")

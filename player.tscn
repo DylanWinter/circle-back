@@ -8,7 +8,7 @@
 shader = ExtResource("2_i3pqv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(38, 2.5)
+size = Vector2(55.405, 2.5)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")

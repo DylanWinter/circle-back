@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds54hx6sfj35p"]
+
+[ext_resource type="PackedScene" uid="uid://bg7v0mm1c45w0" path="res://assets/Office assets/divider Node.tscn" id="1_u0txj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Divider" parent="." instance=ExtResource("1_u0txj")]
