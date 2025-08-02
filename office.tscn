@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=64 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
 [ext_resource type="PackedScene" path="res://coworkers/sadManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
+[ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
 [ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
 [ext_resource type="Script" uid="uid://bqxp2xr4udopn" path="res://meeting_room_door.gd" id="14_8qan1"]
@@ -423,11 +424,15 @@ is_static = true
 dialogueScenePaths = ["res://key.tscn"]
 
 [node name="npcSprite" parent="key" index="0"]
-texture = ExtResource("12_knsl5")
+z_index = 4096
+position = Vector2(960, 80)
+texture = ExtResource("11_jktts")
 script = ExtResource("13_s0aar")
 
 [node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
-position = Vector2(0, 25)
+visible = true
+position = Vector2(8, -196)
+scale = Vector2(0.7, 0.7)
 
 [node name="door" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(3244, 3101)
