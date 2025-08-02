@@ -35,6 +35,10 @@ window/size/viewport_height=540
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
+[gui]
+
+theme/custom_font="uid://ig88w7w2ch65"
+
 [input]
 
 move_up={
