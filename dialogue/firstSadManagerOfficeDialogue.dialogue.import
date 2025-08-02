@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cpwsqskeh1e0r"
+path="res://.godot/imported/firstSadManagerOfficeDialogue.dialogue-33d0e907ad940b963cdb6254029832fd.tres"
+
+[deps]
+
+source_file="res://dialogue/firstSadManagerOfficeDialogue.dialogue"
+dest_files=["res://.godot/imported/firstSadManagerOfficeDialogue.dialogue-33d0e907ad940b963cdb6254029832fd.tres"]
+
+[params]
+
+defaults=true

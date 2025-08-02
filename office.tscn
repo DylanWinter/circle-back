@@ -1,9 +1,8 @@
-[gd_scene load_steps=64 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=61 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Script" path="res://office.gd" id="1_jktts"]
-[ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
@@ -135,12 +134,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -10.6741, 7.86516, 0, 0, 0, 0, -141.011, 28.6517, 0, 0, 0, 0, -194.382, 37.6404, 0, 0, 0, 0, -261.236, 58.427, 0, 0, 0, 0, -379.775, 79.2135, 0, 0, 0, 0, -515.168, 98.3146, 0, 0, 0, 0, -630.337, 91.573, 0, 0, 0, 0, -688.202, 85.3932, 0, 0, 0, 0, -765.73, 46.6292, 0, 0, 0, 0, -801.685, 19.6629, 0, 0, 0, 0, -809.551, -44.382, 0, 0, 0, 0, -810.674, -106.18, 0, 0, 0, 0, -816.292, -176.966, 0, 0, 0, 0, -814.045, -224.719, 0, 0, 0, 0, -834.27, -321.91, 0, 0, 0, 0, -884.831, -319.101, 0, 0, 0, 0, -957.865, -314.607, 0, 0, 0, 0, -1140.45, -288.202, 0, 0, 0, 0, -1203.93, -276.404, 0, 0, 0, 0, -1282.02, -256.742, 0, 0, 0, 0, -1321.35, -255.056, 0, 0, 0, 0, -1388.76, -262.921, 0, 0, 0, 0, -1439.33, -291.011, 0, 0, 0, 0, -1376.97, -289.888, 0, 0, 0, 0, -1283.15, -292.697, 0, 0, 0, 0, -1194.94, -317.416, 0, 0, 0, 0, -1032.58, -329.775, 0, 0, 0, 0, -979.775, -337.64, 0, 0, 0, 0, -830.337, -341.573, 0, 0, 0, 0, -662.359, -363.483, 0, 0, 0, 0, -648.315, -412.36, 0, 0, 0, 0, -644.382, -474.719, 0, 0, 0, 0, -676.966, -511.798, 0, 0, 0, 0, -724.157, -523.595, 0, 0, 0, 0, -648.315, -519.663, 0, 0, 0, 0, -587.64, -532.584, 0, 0, 0, 0, -576.404, -564.607, 0, 0, 0, 0, -575.843, -612.359)
 }
 point_count = 38
-
-[sub_resource type="Curve2D" id="Curve2D_70x1r"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 6, 13)
-}
-point_count = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
@@ -365,20 +358,15 @@ loop = false
 [node name="siren" parent="." instance=ExtResource("6_4i814")]
 position = Vector2(740, 658)
 coworker_title = "siren"
+is_static = false
+dialogueScenePaths = ["res://visualNovelOfficeScenes/siren/sirenConvo1.tscn"]
+conversationTimes = ["2:50|0:30"]
 
 [node name="npcSprite" parent="siren" index="0"]
 position = Vector2(-137, 13)
 
 [node name="CollisionShape2D" parent="siren/npcSprite/Area2D" index="0"]
 position = Vector2(66.6666, 377.778)
-
-[node name="Path2D" type="Path2D" parent="siren"]
-curve = SubResource("Curve2D_70x1r")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="siren/Path2D"]
-position = Vector2(6, 13)
-rotation = 0.156602
-loop = false
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(863, 654)
@@ -394,10 +382,13 @@ position = Vector2(33.3334, 377.777)
 
 [node name="managerSpider" parent="." instance=ExtResource("8_o3cd7")]
 position = Vector2(644, 859)
+conversationTimes = ["2:39|1:10"]
 
 [node name="sadManager" parent="." instance=ExtResource("8_wruqr")]
 position = Vector2(408, 710)
 coworker_title = "sadManager"
+dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1.tscn"]
+conversationTimes = ["1:30|0:25"]
 
 [node name="key" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(-580, 767)

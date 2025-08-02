@@ -7,7 +7,7 @@
 is_static = true
 
 [node name="npcSprite" parent="." index="0"]
-modulate = Color(0.212963, 0.698866, 0.94022, 1)
+self_modulate = Color(0.211765, 0.698039, 0.941176, 1)
 position = Vector2(-3, -39)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_8bmfo")
