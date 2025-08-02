@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2lud2a5pann6"]
+[gd_scene load_steps=12 format=3 uid="uid://d2lud2a5pann6"]
 
 [ext_resource type="Script" uid="uid://b55dhame4x35f" path="res://dialogue/balloon.gd" id="1_36de5"]
+[ext_resource type="Texture2D" uid="uid://b1yygpfosio7q" path="res://assets/textbox.png" id="2_0hx7h"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="AudioStream" uid="uid://pmp15b6r4fty" path="res://sound/talk.wav" id="4_3fodd"]
@@ -64,6 +65,13 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_267us")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_267us"]
+texture = ExtResource("2_0hx7h")
+expand_margin_left = 30.0
+expand_margin_top = 425.0
+expand_margin_right = 30.0
+expand_margin_bottom = 15.0
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
@@ -84,7 +92,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -219.0
+offset_left = -1.0
+offset_top = -169.0
+offset_right = -1.0
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -92,9 +103,11 @@ grow_vertical = 0
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_267us")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer"]
 layout_mode = 2
+theme_override_constants/margin_right = 200
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
@@ -104,6 +117,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -113,6 +127,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Dialogue..."
 seconds_per_step = 0.012
 
