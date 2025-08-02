@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=63 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -134,6 +134,14 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -10.6741, 7.86516, 0, 0, 0, 0, -141.011, 28.6517, 0, 0, 0, 0, -194.382, 37.6404, 0, 0, 0, 0, -261.236, 58.427, 0, 0, 0, 0, -379.775, 79.2135, 0, 0, 0, 0, -515.168, 98.3146, 0, 0, 0, 0, -630.337, 91.573, 0, 0, 0, 0, -688.202, 85.3932, 0, 0, 0, 0, -765.73, 46.6292, 0, 0, 0, 0, -801.685, 19.6629, 0, 0, 0, 0, -809.551, -44.382, 0, 0, 0, 0, -810.674, -106.18, 0, 0, 0, 0, -816.292, -176.966, 0, 0, 0, 0, -814.045, -224.719, 0, 0, 0, 0, -834.27, -321.91, 0, 0, 0, 0, -884.831, -319.101, 0, 0, 0, 0, -957.865, -314.607, 0, 0, 0, 0, -1140.45, -288.202, 0, 0, 0, 0, -1203.93, -276.404, 0, 0, 0, 0, -1282.02, -256.742, 0, 0, 0, 0, -1321.35, -255.056, 0, 0, 0, 0, -1388.76, -262.921, 0, 0, 0, 0, -1439.33, -291.011, 0, 0, 0, 0, -1376.97, -289.888, 0, 0, 0, 0, -1283.15, -292.697, 0, 0, 0, 0, -1194.94, -317.416, 0, 0, 0, 0, -1032.58, -329.775, 0, 0, 0, 0, -979.775, -337.64, 0, 0, 0, 0, -830.337, -341.573, 0, 0, 0, 0, -662.359, -363.483, 0, 0, 0, 0, -648.315, -412.36, 0, 0, 0, 0, -644.382, -474.719, 0, 0, 0, 0, -676.966, -511.798, 0, 0, 0, 0, -724.157, -523.595, 0, 0, 0, 0, -648.315, -519.663, 0, 0, 0, 0, -587.64, -532.584, 0, 0, 0, 0, -576.404, -564.607, 0, 0, 0, 0, -575.843, -612.359)
 }
 point_count = 38
+
+[sub_resource type="Curve2D" id="Curve2D_jktts"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -13, 76, 0, 0, 0, 0, -16, 117, 0, 0, 0, 0, -14, 135, 0, 0, 0, 0, -11, 157, 0, 0, 0, 0, -14, 185, 0, 0, 0, 0, -5, 205, 0, 0, 0, 0, 1, 229, 0, 0, 0, 0, 14, 264, 0, 0, 0, 0, 39, 298, 0, 0, 0, 0, 74, 331, 0, 0, 0, 0, 110, 347, 0, 0, 0, 0, 184, 356, 0, 0, 0, 0, 229, 362, 0, 0, 0, 0, 321, 362, 0, 0, 0, 0, 377, 361, 0, 0, 0, 0, 432, 359, 0, 0, 0, 0, 525, 359, 0, 0, 0, 0, 566, 356, 0, 0, 0, 0, 630, 341, 0, 0, 0, 0, 645, 314, 0, 0, 0, 0, 651, 292, 0, 0, 0, 0, 655, 254, 0, 0, 0, 0, 670, 208, 0, 0, 0, 0, 683, 177, 0, 0, 0, 0, 683, 161, 0, 0, 0, 0, 686, 144, 0, 0, 0, 0, 686, 144, 0, 0, 0, 0, 665, 229)
+}
+point_count = 28
+
+[sub_resource type="Curve2D" id="Curve2D_8qan1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
@@ -369,10 +377,10 @@ position = Vector2(-137, 13)
 position = Vector2(66.6666, 377.778)
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
-position = Vector2(863, 654)
+position = Vector2(-1238, -1409)
 coworker_title = "janitor"
 dialogueScenePaths = ["res://visualNovelOfficeScenes/janitor/janitorConvo1.tscn"]
-conversationTimes = ["2:50|0:30"]
+conversationTimes = ["2:55|1:00", "1:25|2:00"]
 
 [node name="npcSprite" parent="janitor" index="0"]
 position = Vector2(-35, -33)
@@ -380,18 +388,35 @@ position = Vector2(-35, -33)
 [node name="CollisionShape2D" parent="janitor/npcSprite/Area2D" index="0"]
 position = Vector2(33.3334, 377.777)
 
+[node name="Path2D" type="Path2D" parent="janitor"]
+curve = SubResource("Curve2D_jktts")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="janitor/Path2D"]
+position = Vector2(-13, 76)
+rotation = 1.64384
+
 [node name="managerSpider" parent="." instance=ExtResource("8_o3cd7")]
 position = Vector2(644, 859)
 conversationTimes = ["2:39|1:10"]
 
 [node name="sadManager" parent="." instance=ExtResource("8_wruqr")]
-position = Vector2(408, 710)
+position = Vector2(221, 382)
 coworker_title = "sadManager"
 dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1.tscn"]
 conversationTimes = ["1:30|0:25"]
 
+[node name="npcSprite" parent="sadManager" index="0"]
+position = Vector2(1360, -209)
+
+[node name="Path2D" type="Path2D" parent="sadManager"]
+curve = SubResource("Curve2D_8qan1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="sadManager/Path2D"]
+position = Vector2(1450, -56)
+rotation = 3.0986
+
 [node name="key" parent="." instance=ExtResource("11_70x1r")]
-position = Vector2(-580, 767)
+position = Vector2(-981, 782)
 scale = Vector2(0.25, 0.25)
 coworker_title = "key"
 is_static = true
@@ -518,6 +543,7 @@ metadata/_edit_lock_ = true
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
+[editable path="sadManager"]
 [editable path="key"]
 [editable path="door"]
 [editable path="meeting_room_door"]
