@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://e37tjwqfw8h8"]
+
+[ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_4qo4u"]
+[ext_resource type="Resource" uid="uid://bqgjug5y3jp7o" path="res://dialogue/bossWaterDialogue.dialogue" id="2_84scg"]
+[ext_resource type="Shader" uid="uid://duuyk741wiwab" path="res://visualNovelOfficeScenes/silhouette.gdshader" id="3_47g7t"]
+[ext_resource type="Texture2D" uid="uid://lyfvql11cf1f" path="res://assets/boss/BOSS PROTOTYPE 3.png" id="4_sbqea"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5ox3"]
+shader = ExtResource("3_47g7t")
+shader_parameter/use_silhouette = false
+
+[node name="VisNovelScene" instance=ExtResource("1_4qo4u")]
+dialogue = ExtResource("2_84scg")
+
+[node name="Boss" type="Sprite2D" parent="CanvasLayer" index="1"]
+material = SubResource("ShaderMaterial_j5ox3")
+position = Vector2(767, 435)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("4_sbqea")

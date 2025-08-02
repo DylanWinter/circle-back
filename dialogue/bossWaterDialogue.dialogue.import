@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bqgjug5y3jp7o"
+path="res://.godot/imported/bossWaterDialogue.dialogue-dd9ea6bce2521bbbf1e2cce286c9f0ca.tres"
+
+[deps]
+
+source_file="res://dialogue/bossWaterDialogue.dialogue"
+dest_files=["res://.godot/imported/bossWaterDialogue.dialogue-dd9ea6bce2521bbbf1e2cce286c9f0ca.tres"]
+
+[params]
+
+defaults=true

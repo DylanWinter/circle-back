@@ -5,22 +5,22 @@
 [ext_resource type="Script" uid="uid://bflkfjnvrd3r3" path="res://office.gd" id="1_jktts"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
-[ext_resource type="PackedScene" path="res://coworkers/sadManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
-[ext_resource type="Script" uid="uid://bqxp2xr4udopn" path="res://meeting_room_door.gd" id="14_8qan1"]
-[ext_resource type="Script" uid="uid://ca06iucxfs3fl" path="res://door.gd" id="14_gxl1f"]
+[ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Script" path="res://meeting_room_door.gd" id="14_8qan1"]
+[ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
 [ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
 [ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
 [ext_resource type="Texture2D" uid="uid://c0n8hbdorp30f" path="res://assets/Office assets/Cork board.png" id="17_4hetp"]
 [ext_resource type="Texture2D" uid="uid://mfhvxurx81jf" path="res://assets/Office assets/Office decoration 1.png" id="18_o3cd7"]
+[ext_resource type="PackedScene" uid="uid://calyt7tdod60b" path="res://coworkers/sadManager.tscn" id="20_8qan1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -341,11 +341,11 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="boss" parent="." instance=ExtResource("6_lcnwv")]
-position = Vector2(1458, 436)
+position = Vector2(1459.82, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
-dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossConvo1.tscn", "res://visualNovelOfficeScenes/boss/bossConvo1.tscn"]
-conversationTimes = ["2:59|0:30", "0:30|0:20"]
+dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossConvo1.tscn", "res://visualNovelOfficeScenes/boss/bossWaterConvo.tscn"]
+conversationTimes = ["2:59|0:30", "1:05|0:40"]
 
 [node name="npcSprite" parent="boss" index="0"]
 position = Vector2(-10.6741, 7.86517)
@@ -354,7 +354,7 @@ position = Vector2(-10.6741, 7.86517)
 position = Vector2(-174.782, -12.4845)
 
 [node name="CollisionShape2D" parent="boss/npcSprite/Area2D" index="0"]
-position = Vector2(-43.6964, 380.774)
+position = Vector2(-11.3615, 387.016)
 
 [node name="Path2D" parent="boss" index="1"]
 curve = SubResource("Curve2D_hsito")
@@ -365,9 +365,8 @@ rotation = 2.98344
 loop = false
 
 [node name="siren" parent="." instance=ExtResource("6_4i814")]
-position = Vector2(740, 658)
+position = Vector2(-1039, -33)
 coworker_title = "siren"
-is_static = false
 dialogueScenePaths = ["res://visualNovelOfficeScenes/siren/sirenConvo1.tscn"]
 conversationTimes = ["2:50|0:30"]
 
@@ -399,22 +398,6 @@ rotation = 1.64384
 [node name="managerSpider" parent="." instance=ExtResource("8_o3cd7")]
 position = Vector2(644, 859)
 conversationTimes = ["2:39|1:10"]
-
-[node name="sadManager" parent="." instance=ExtResource("8_wruqr")]
-position = Vector2(221, 382)
-coworker_title = "sadManager"
-dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1.tscn"]
-conversationTimes = ["1:30|0:25"]
-
-[node name="npcSprite" parent="sadManager" index="0"]
-position = Vector2(1360, -209)
-
-[node name="Path2D" type="Path2D" parent="sadManager"]
-curve = SubResource("Curve2D_8qan1")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="sadManager/Path2D"]
-position = Vector2(1450, -56)
-rotation = 3.0986
 
 [node name="key" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(-981, 782)
@@ -455,9 +438,9 @@ shape = SubResource("RectangleShape2D_g68bc")
 
 [node name="AnimatedSprite2D" parent="door/npcSprite" index="1"]
 visible = true
-position = Vector2(-1, 415.001)
+position = Vector2(16.7156, 499.149)
 rotation = 3.14159
-scale = Vector2(0.2, 2.4)
+scale = Vector2(0.164569, 2.2317)
 
 [node name="Area2D" parent="door/npcSprite" index="2"]
 scale = Vector2(1, 5.79998)
@@ -541,6 +524,10 @@ tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAA
 tile_set = SubResource("TileSet_gxl1f")
 metadata/_edit_lock_ = true
 
+[node name="sadManager" parent="." instance=ExtResource("20_8qan1")]
+position = Vector2(1328, 394)
+scale = Vector2(-0.315, 0.315)
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -552,3 +539,4 @@ metadata/_edit_lock_ = true
 [editable path="key"]
 [editable path="door"]
 [editable path="meeting_room_door"]
+[editable path="sadManager"]

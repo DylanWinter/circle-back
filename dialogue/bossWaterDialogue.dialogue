@@ -1,0 +1,58 @@
+~ start
+As you approach the Boss, you see him obsessively checking his watch.
+Everyone calls him Boss, makes you wonder if its his actual first name.
+
+Or maybe the developers were to lazy to come up with one.
+You know your Boss to be the true embodiment of Greed, a Billy Goat with big plans.
+
+
+Boss: Damn it... I can’t believe I lost another employee to my stupid brother...
+Boss: So what if I didn’t pay his overtime? How else was I suppose to pay for my vacation in the 7th circle?
+Boss: Not that I needed his money... I just wanted it...
+He snickers to himself, a true demon at his core.
+He still hasn't noticed you, even though you’re literally standing right there.
+
+- Is your actual name Boss?
+	Boss: ...
+	His eyes darken, smile fading.
+	Boss: No... Its Bart Oberlin Saint Satan Gruff...
+	Doesn’t that stand for Boss anyway???
+	
+- You’re pure evil!
+	Boss: Thank you Feline Snail thing!! Finally, an employee with 2 eyes!
+	He pats your back, his hands knocking the wind out you in an instant.
+	
+	Boss: I’m sure you’re already in the loop but-
+	You weren’t, you woke up less than three minutes ago.
+	Boss: Our RDC, Rival Demon Company, has been having record sales.
+	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
+	Boss: If we don’t get this presentation approved by the board...
+	Boss: [shake]You’ll just have to try again[/shake].
+	set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = true
+	RDC means Rival Demonic Company!
+
+- Ahem, Good Afternoon Sir! Your Coat is looking especially pink today!
+
+	Boss: I’m sure you’re already in the loop but-
+	You weren’t, you woke up less than three minutes ago.
+	Boss: Our RDC, Rival Demon Company, has been having record sales.
+	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
+	Boss: If we don’t get this presentation approved by the board...
+	Boss: You’ll just have to try again.
+	You have acquired a new word!
+	The Boss seems like they are in a rush, best not to interupt him
+	Boss: Are you sucking up to me..? I... I love it!
+	Boss: Feline Snail thing, you are already proving yourself useful.
+	He combs his hand through his gelled fur, look quite satified
+	
+	Boss: I’m sure you’re already in the loop but-
+	You weren’t, you woke up less than three minutes ago.
+	Boss: Our RDC, Rival Demon Company, has been having record sales.
+	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
+	Boss: If we don’t get this presentation approved by the board...
+	Boss: [shake]You’ll just have to try again[/shake].
+	set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = true
+	RDC means Rival Demonic Company!
+	#RDC (rival demonic company)
+
+=> END

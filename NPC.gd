@@ -14,6 +14,7 @@ var lastPosition : Vector2
 var isStopped : bool = true
 var alreadyStartedDialogue : bool = false
 
+
 # string time array
 @export var conversationTimes : Array
 
@@ -43,6 +44,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	if GameManager.is_in_conversation:
+		$waitTimer.paused = true
+		
+		
 	if not is_static:
 		if not GameManager.is_in_conversation:
 			lastPosition = $npcSprite.position
@@ -81,6 +87,9 @@ func _process(delta: float) -> void:
 				isStopped = true
 				$waitTimer.wait_time = howLongSecond + howLongMinute * 60
 				$waitTimer.start()
+			elif not GameManager.is_in_conversation and $waitTimer.paused == true:
+				$waitTimer.paused = false
+			
 	else: 
 		isStopped = true
 		alreadyStartedDialogue = false

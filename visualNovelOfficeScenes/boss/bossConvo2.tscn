@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsfx4ygi34rna"]
+
+[ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_0nsim"]
+
+[node name="VisNovelScene" instance=ExtResource("1_0nsim")]

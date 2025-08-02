@@ -1,0 +1,12 @@
+~ start
+set GameManager.talkedInKitchen = true
+Boss: hello sad manager
+
+- option 1:
+	Boss: Hey
+	set GameManager.peptalkedsadmanager = true
+	
+- option 2:
+	Boss: Yo
+
+=> END
