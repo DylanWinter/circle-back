@@ -8,7 +8,7 @@ var test = load("res://dialogue/test.dialogue")
 var currentScenePathIndex = 0
 
 
-var walkSpeed : int = 30
+@export var walkSpeed : int = 30
 var lastPosition : Vector2
 
 var isStopped : bool = true
