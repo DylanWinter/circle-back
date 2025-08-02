@@ -335,7 +335,7 @@ autowrap_mode = 0
 position = Vector2(1458, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
-dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossWaterConvo.tscn", "res://visualNovelOfficeScenes/boss/bossConvo1.tscn"]
+dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossConvo1.tscn", "res://visualNovelOfficeScenes/boss/bossWaterConvo.tscn"]
 conversationTimes = ["2:59|0:30", "1:00|0:35"]
 
 [node name="npcSprite" parent="boss" index="0"]

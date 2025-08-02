@@ -27,8 +27,9 @@ He still hasn't noticed you, even though you’re literally standing right there
 	Boss: Our RDC, Rival Demon Company, has been having record sales.
 	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
 	Boss: If we don’t get this presentation approved by the board...
-	Boss: You’ll just have to try again.
+	Boss: [shake]You’ll just have to try again[/shake].
 	set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = true
+	RDC means Rival Demonic Company!
 
 - Ahem, Good Afternoon Sir! Your Coat is looking especially pink today!
 
@@ -49,8 +50,9 @@ He still hasn't noticed you, even though you’re literally standing right there
 	Boss: Our RDC, Rival Demon Company, has been having record sales.
 	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
 	Boss: If we don’t get this presentation approved by the board...
-	Boss: You’ll just have to try again.
+	Boss: [shake]You’ll just have to try again[/shake].
 	set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = true
+	RDC means Rival Demonic Company!
 	#RDC (rival demonic company)
 
 => END
