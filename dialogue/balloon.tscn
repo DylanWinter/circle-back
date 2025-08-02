@@ -144,12 +144,16 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 text = "Response example"
 
+[node name="TalkSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3fodd")
+volume_db = -15.0
+
 [node name="CharacterLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-offset_left = 63.0
-offset_top = 322.0
-offset_right = 963.0
-offset_bottom = 511.0
+offset_left = -307.0
+offset_top = 245.0
+offset_right = 593.0
+offset_bottom = 434.0
 mouse_filter = 1
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 36
@@ -157,10 +161,8 @@ bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
-
-[node name="TalkSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_3fodd")
-volume_db = -15.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="spoke" from="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]
