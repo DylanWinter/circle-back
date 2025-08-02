@@ -52,6 +52,10 @@ func _process(delta: float) -> void:
 				speechBubbleSprite.visible = true
 			else:
 				speechBubbleSprite.visible = false
+		
+		if has_node("Path2D/PathFollow2D"):
+			if ($Path2D/PathFollow2D.progress_ratio == 1):
+				self.queue_free()
 			
 	
 		# format: time of arrival | how long they stay
