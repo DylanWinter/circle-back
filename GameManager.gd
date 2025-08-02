@@ -25,6 +25,7 @@ var convoDialogueDict = {
 
 var found_key : bool = false
 var door_open: bool = false
+var start_meeting_early : bool = false
 
 #timer
 var timerMinutes = 999.0

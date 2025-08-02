@@ -2,6 +2,7 @@ extends Node2D
 
 var test = load("res://dialogue/test.dialogue")
 @export var coworker_title : String
+@export var is_static : bool = false
 @export var walk_path : Line2D
 @export var dialogueScenePaths : Array
 var currentScenePathIndex = 0
@@ -36,39 +37,44 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not GameManager.is_in_conversation:
-		lastPosition = $npcSprite.position
-		if has_node("Path2D/PathFollow2D") and isStopped == false:
-			alreadyStartedDialogue = false
-			$Path2D/PathFollow2D.progress += walkSpeed*delta
-			$npcSprite.position = $Path2D/PathFollow2D.position
-			if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
-				$npcSprite.scale.x *= -1.0
-		z_index = $npcSprite/groundPos.global_position.y
-		
-		if dialogueScenePaths.size()>0 and isStopped == true and alreadyStartedDialogue == false:
-			speechBubbleSprite.visible = true
-		else:
-			speechBubbleSprite.visible = false
-		
-
-	# format: time of arrival | how long they stay
-	for conversateTime in conversationTimes:
-		var parts = conversateTime.split("|")
-		var time_parts1 = parts[0].split(":")
-		var time_parts2 = parts[1].split(":")
-		var arrivalMinute = int(time_parts1[0])
-		var arrivalSecond = int(time_parts1[1])
-		
-		var howLongMinute = int(time_parts2[0])
-		var howLongSecond = int(time_parts2[1])
-		
-		
-		
-		if (arrivalMinute==GameManager.timerMinutes and arrivalSecond==GameManager.timerSeconds):
-			isStopped = true
-			$waitTimer.wait_time = howLongSecond + howLongMinute * 60
-			$waitTimer.start()
+	if not is_static:
+		if not GameManager.is_in_conversation:
+			lastPosition = $npcSprite.position
+			if has_node("Path2D/PathFollow2D") and isStopped == false:
+				alreadyStartedDialogue = false
+				$Path2D/PathFollow2D.progress += walkSpeed*delta
+				$npcSprite.position = $Path2D/PathFollow2D.position
+				if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
+					$npcSprite.scale.x *= -1.0
+			z_index = $npcSprite/groundPos.global_position.y
+			
+			if dialogueScenePaths.size()>0 and isStopped == true and alreadyStartedDialogue == false:
+				speechBubbleSprite.visible = true
+			else:
+				speechBubbleSprite.visible = false
+			
+	
+		# format: time of arrival | how long they stay
+		for conversateTime in conversationTimes:
+			var parts = conversateTime.split("|")
+			var time_parts1 = parts[0].split(":")
+			var time_parts2 = parts[1].split(":")
+			var arrivalMinute = int(time_parts1[0])
+			var arrivalSecond = int(time_parts1[1])
+			
+			var howLongMinute = int(time_parts2[0])
+			var howLongSecond = int(time_parts2[1])
+			
+			
+			
+			if (arrivalMinute==GameManager.timerMinutes and arrivalSecond==GameManager.timerSeconds):
+				isStopped = true
+				$waitTimer.wait_time = howLongSecond + howLongMinute * 60
+				$waitTimer.start()
+	else: 
+		isStopped = true
+		alreadyStartedDialogue = false
+		speechBubbleSprite.visible = true
 			
 		
 func start_dialogue() -> void:

@@ -1,19 +1,20 @@
-[gd_scene load_steps=62 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=63 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
-[ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
-[ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="PackedScene" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
-[ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
+[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Script" uid="uid://bqxp2xr4udopn" path="res://meeting_room_door.gd" id="14_8qan1"]
+[ext_resource type="Script" uid="uid://ca06iucxfs3fl" path="res://door.gd" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
 [ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
 [ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
@@ -393,6 +394,7 @@ coworker_title = "tonyHR"
 position = Vector2(-580, 767)
 scale = Vector2(0.25, 0.25)
 coworker_title = "key"
+is_static = true
 dialogueScenePaths = ["res://key.tscn"]
 
 [node name="npcSprite" parent="key" index="0"]
@@ -406,6 +408,7 @@ position = Vector2(0, 25)
 position = Vector2(3244, 3101)
 rotation = 1.5708
 coworker_title = "door"
+is_static = true
 dialogueScenePaths = ["res://door_dialogue.tscn"]
 
 [node name="npcSprite" parent="door" index="0"]
@@ -430,6 +433,38 @@ scale = Vector2(0.2, 2.4)
 scale = Vector2(1, 5.79998)
 
 [node name="CollisionShape2D" parent="door/npcSprite/Area2D" index="0"]
+scale = Vector2(0.1, 0.1)
+
+[node name="meeting_room_door" parent="." instance=ExtResource("11_70x1r")]
+position = Vector2(2613, 1384)
+rotation = 1.5708
+coworker_title = "meeting_room_door"
+is_static = true
+dialogueScenePaths = ["res://meeting_room_door_dialogue.tscn"]
+
+[node name="npcSprite" parent="meeting_room_door" index="0"]
+position = Vector2(-1966.99, 2146.01)
+rotation = -1.5708
+scale = Vector2(3, 0.2)
+texture = ExtResource("12_knsl5")
+script = ExtResource("14_8qan1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="meeting_room_door/npcSprite" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="meeting_room_door/npcSprite/StaticBody2D"]
+position = Vector2(3.69995, 2.5)
+shape = SubResource("RectangleShape2D_g68bc")
+
+[node name="AnimatedSprite2D" parent="meeting_room_door/npcSprite" index="1"]
+visible = true
+position = Vector2(-1, 415.001)
+rotation = 3.14159
+scale = Vector2(0.2, 2.4)
+
+[node name="Area2D" parent="meeting_room_door/npcSprite" index="2"]
+scale = Vector2(1, 5.79998)
+
+[node name="CollisionShape2D" parent="meeting_room_door/npcSprite/Area2D" index="0"]
 scale = Vector2(0.1, 0.1)
 
 [node name="furniture" type="Node2D" parent="."]
@@ -485,3 +520,4 @@ metadata/_edit_lock_ = true
 [editable path="janitor"]
 [editable path="key"]
 [editable path="door"]
+[editable path="meeting_room_door"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://qije1b7l7vf"
+path="res://.godot/imported/meeting_room_door.dialogue-b9b71f1ef9c938ba046f42321ee3b303.tres"
+
+[deps]
+
+source_file="res://dialogue/meeting_room_door.dialogue"
+dest_files=["res://.godot/imported/meeting_room_door.dialogue-b9b71f1ef9c938ba046f42321ee3b303.tres"]
+
+[params]
+
+defaults=true
