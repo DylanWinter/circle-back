@@ -5,16 +5,16 @@
 [ext_resource type="Script" uid="uid://bflkfjnvrd3r3" path="res://office.gd" id="1_jktts"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
-[ext_resource type="PackedScene" path="res://coworkers/sadManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/sadManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
-[ext_resource type="Script" uid="uid://bqxp2xr4udopn" path="res://meeting_room_door.gd" id="14_8qan1"]
-[ext_resource type="Script" uid="uid://ca06iucxfs3fl" path="res://door.gd" id="14_gxl1f"]
+[ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Script" path="res://meeting_room_door.gd" id="14_8qan1"]
+[ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
 [ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
 [ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
@@ -335,8 +335,8 @@ autowrap_mode = 0
 position = Vector2(1458, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
-dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossConvo1.tscn", "res://visualNovelOfficeScenes/boss/bossConvo1.tscn"]
-conversationTimes = ["2:59|0:30", "0:30|0:20"]
+dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossWaterConvo.tscn", "res://visualNovelOfficeScenes/boss/bossConvo1.tscn"]
+conversationTimes = ["2:59|0:30", "1:00|0:35"]
 
 [node name="npcSprite" parent="boss" index="0"]
 position = Vector2(-10.6741, 7.86517)

@@ -44,3 +44,9 @@ func full_reset():
 	reset_loop()
 	for term in wordFoundDict:
 		wordFoundDict[term] = false
+		
+		
+var curVisibleThings = []
+func changeVisibility(node,boolean):
+	node.visible = boolean
+	

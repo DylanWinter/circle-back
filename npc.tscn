@@ -21,7 +21,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei2s5"]
 radius = 561.798
 
-[node name="NPC" type="Node2D"]
+[node name="NPC2" type="Node2D"]
 script = ExtResource("1_xxcha")
 
 [node name="npcSprite" type="Sprite2D" parent="."]
