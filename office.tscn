@@ -1,7 +1,7 @@
-[gd_scene load_steps=62 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=58 format=4 uid="uid://dicqxqywyogt3"]
 
+[ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://shaders/lava.gdshader" id="1_hsito"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
@@ -15,32 +15,6 @@
 [ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
 [ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
-
-[sub_resource type="Gradient" id="Gradient_hsito"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_hsito"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lcnwv"]
-width = 1000
-height = 1000
-seamless = true
-color_ramp = SubResource("Gradient_hsito")
-noise = SubResource("FastNoiseLite_hsito")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_lcnwv"]
-noise_type = 3
-frequency = 0.1351
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hsito"]
-width = 1410
-height = 1780
-seamless = true
-noise = SubResource("FastNoiseLite_lcnwv")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcnwv"]
-shader = ExtResource("1_hsito")
-shader_parameter/noise_tex = SubResource("NoiseTexture2D_lcnwv")
-shader_parameter/noise_tex2 = SubResource("NoiseTexture2D_hsito")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -167,15 +141,16 @@ point_count = 1
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
 
-[node name="root" type="Node2D"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1y4y"]
+texture = ExtResource("1_2uxut")
+texture_region_size = Vector2i(1000, 1000)
+0:0/0 = 0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = -3000
-material = SubResource("ShaderMaterial_lcnwv")
-offset_left = -2197.0
-offset_top = -2516.0
-offset_right = 3187.0
-offset_bottom = 1800.0
+[sub_resource type="TileSet" id="TileSet_gxl1f"]
+tile_size = Vector2i(1000, 1000)
+sources/0 = SubResource("TileSetAtlasSource_n1y4y")
+
+[node name="root" type="Node2D"]
 
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
@@ -183,7 +158,7 @@ position = Vector2(198, -374)
 texture = ExtResource("4_hsito")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
-position = Vector2(127, 154)
+position = Vector2(-102, 208)
 
 [node name="walls" type="StaticBody2D" parent="."]
 
@@ -453,8 +428,21 @@ scale = Vector2(1, 5.79998)
 [node name="CollisionShape2D" parent="door/npcSprite/Area2D" index="0"]
 scale = Vector2(0.1, 0.1)
 
-[node name="Cubicle" parent="." instance=ExtResource("15_2uxut")]
+[node name="furniture" type="Node2D" parent="."]
+
+[node name="Cubicle" parent="furniture" instance=ExtResource("15_2uxut")]
 position = Vector2(-195, 185)
+
+[node name="Cubicle2" parent="furniture" instance=ExtResource("15_2uxut")]
+position = Vector2(210, 185)
+
+[node name="Cubicle3" parent="furniture" instance=ExtResource("15_2uxut")]
+position = Vector2(615, 185)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -3000
+tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_gxl1f")
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]

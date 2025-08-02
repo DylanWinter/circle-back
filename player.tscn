@@ -1,28 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://q4wofjpvnanm"]
+[gd_scene load_steps=4 format=3 uid="uid://q4wofjpvnanm"]
 
 [ext_resource type="Script" uid="uid://dss1lixccm7qx" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Shader" uid="uid://dxfhwaf4rjtt3" path="res://thresholdWhite.gdshader" id="2_i3pqv"]
 [ext_resource type="SpriteFrames" uid="uid://itejf362u30a" path="res://dialogue/playerWalkSprites.tres" id="2_onrkg"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqtel"]
-shader = ExtResource("2_i3pqv")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(55.405, 2.5)
+size = Vector2(27, 2.5)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.9, 0.9)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-material = SubResource("ShaderMaterial_hqtel")
 scale = Vector2(0.12, 0.12)
 sprite_frames = ExtResource("2_onrkg")
 animation = &"walk"
-frame = 24
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 44)
+position = Vector2(-2.5, 58)
 shape = SubResource("RectangleShape2D_4flbx")

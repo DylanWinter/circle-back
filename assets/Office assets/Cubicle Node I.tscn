@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bp01dpysi43s2" path="res://assets/Office assets/Tables 2 flipped.png" id="5_hx07t"]
 
 [node name="Cubicle" type="Node2D"]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_fhwj5")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
