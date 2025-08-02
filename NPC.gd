@@ -76,7 +76,7 @@ func start_dialogue() -> void:
 		get_parent().add_child(dialogueScene)
 		currentScenePathIndex += 1
 		dialogueScene.start_dialogue()
-	else:
+	elif dialogueScenePaths.size() > 0:
 		var dialogueScene = load(dialogueScenePaths[-1]).instantiate()
 		get_parent().add_child(dialogueScene)
 		dialogueScene.start_dialogue()
