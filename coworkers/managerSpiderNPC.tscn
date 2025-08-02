@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0i4ffr1jntbo"]
+
+[ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_4dehy"]
+[ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_6vl3d"]
+
+[node name="NPC" instance=ExtResource("1_4dehy")]
+is_static = true
+
+[node name="npcSprite" parent="." index="0"]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_6vl3d")
+
+[node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
+position = Vector2(22.2222, 344.444)

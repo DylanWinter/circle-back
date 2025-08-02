@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1xqdkd812rfc"]
+
+[ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_creu3"]
+[ext_resource type="Resource" uid="uid://dtceiyutipblf" path="res://dialogue/firstBossOfficeDialogue.dialogue" id="2_b7cmp"]
+[ext_resource type="Shader" uid="uid://duuyk741wiwab" path="res://visualNovelOfficeScenes/silhouette.gdshader" id="3_33ecn"]
+[ext_resource type="Texture2D" uid="uid://lyfvql11cf1f" path="res://assets/boss/BOSS PROTOTYPE 3.png" id="4_ws4x6"]
+[ext_resource type="Script" uid="uid://bhhy0i17d4nmh" path="res://visualNovelOfficeScenes/boss/bossVisualNovelOffice.gd" id="5_40t2m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h16ss"]
+shader = ExtResource("3_33ecn")
+shader_parameter/use_silhouette = false
+
+[node name="VisNovelScene" instance=ExtResource("1_creu3")]
+dialogue = ExtResource("2_b7cmp")
+
+[node name="ColorRect" parent="CanvasLayer" index="0"]
+offset_left = -2515.0
+offset_top = -1260.0
+offset_right = 2849.0
+offset_bottom = 1651.0
+
+[node name="Boss" type="Sprite2D" parent="CanvasLayer" index="1"]
+material = SubResource("ShaderMaterial_h16ss")
+position = Vector2(767, 435)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("4_ws4x6")
+script = ExtResource("5_40t2m")

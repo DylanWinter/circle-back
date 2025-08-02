@@ -78,7 +78,7 @@ left_click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/MeetingQuestions.dialogue", "res://dialogue/applesConvoExample.dialogue", "res://dialogue/firstBossOfficeDialogue.dialogue", "res://dialogue/intro.dialogue", "res://dialogue/key.dialogue", "res://dialogue/door.dialogue", "res://dialogue/meeting_room_door.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/MeetingQuestions.dialogue", "res://dialogue/applesConvoExample.dialogue", "res://dialogue/firstBossOfficeDialogue.dialogue", "res://dialogue/intro.dialogue", "res://dialogue/key.dialogue", "res://dialogue/door.dialogue", "res://dialogue/meeting_room_door.dialogue", "res://dialogue/firstJanitorOfficeDialogue.dialogue")
 
 [rendering]
 

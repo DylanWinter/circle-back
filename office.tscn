@@ -1,15 +1,14 @@
-[gd_scene load_steps=63 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=61 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
-[ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/sadManagerNPC.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
 [ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
@@ -140,8 +139,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 6, 13)
 }
 point_count = 1
-
-[sub_resource type="Curve2D" id="Curve2D_knsl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
@@ -342,8 +339,7 @@ autowrap_mode = 0
 position = Vector2(1458, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
-is_static = false
-dialogueScenePaths = ["res://visualNovelOfficeScenes/bossConvo1.tscn", "res://visualNovelOfficeScenes/bossConvo1.tscn"]
+dialogueScenePaths = ["res://visualNovelOfficeScenes/boss/bossConvo1.tscn", "res://visualNovelOfficeScenes/boss/bossConvo1.tscn"]
 conversationTimes = ["2:59|0:30", "0:30|0:20"]
 
 [node name="npcSprite" parent="boss" index="0"]
@@ -353,7 +349,7 @@ position = Vector2(-10.6741, 7.86517)
 position = Vector2(-174.782, -12.4845)
 
 [node name="CollisionShape2D" parent="boss/npcSprite/Area2D" index="0"]
-position = Vector2(-37.4534, 343.321)
+position = Vector2(-43.6964, 380.774)
 
 [node name="Path2D" parent="boss" index="1"]
 curve = SubResource("Curve2D_hsito")
@@ -363,14 +359,20 @@ position = Vector2(-10.6741, 7.86516)
 rotation = 2.98344
 loop = false
 
-[node name="sAcquisitionManager" parent="." instance=ExtResource("6_4i814")]
-position = Vector2(743, 654)
-coworker_title = "sAcquisitionManager"
+[node name="siren" parent="." instance=ExtResource("6_4i814")]
+position = Vector2(740, 658)
+coworker_title = "siren"
 
-[node name="Path2D" type="Path2D" parent="sAcquisitionManager"]
+[node name="npcSprite" parent="siren" index="0"]
+position = Vector2(-137, 13)
+
+[node name="CollisionShape2D" parent="siren/npcSprite/Area2D" index="0"]
+position = Vector2(66.6666, 377.778)
+
+[node name="Path2D" type="Path2D" parent="siren"]
 curve = SubResource("Curve2D_70x1r")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="sAcquisitionManager/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="siren/Path2D"]
 position = Vector2(6, 13)
 rotation = 0.156602
 loop = false
@@ -378,27 +380,21 @@ loop = false
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(863, 654)
 coworker_title = "janitor"
+dialogueScenePaths = ["res://visualNovelOfficeScenes/janitor/janitorConvo1.tscn"]
+conversationTimes = ["2:50|0:30"]
 
-[node name="Path2D" type="Path2D" parent="janitor"]
-curve = SubResource("Curve2D_knsl5")
+[node name="npcSprite" parent="janitor" index="0"]
+position = Vector2(-35, -33)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="janitor/Path2D"]
-position = Vector2(0, 14)
-rotation = 2.98499
-loop = false
+[node name="CollisionShape2D" parent="janitor/npcSprite/Area2D" index="0"]
+position = Vector2(33.3334, 377.777)
 
-[node name="projectManager" parent="." instance=ExtResource("8_wruqr")]
-position = Vector2(749, 799)
-coworker_title = "projectManager"
+[node name="managerSpider" parent="." instance=ExtResource("8_o3cd7")]
+position = Vector2(644, 859)
 
-[node name="gossiper" parent="." instance=ExtResource("3_u8nhc")]
-position = Vector2(187, -222)
-coworker_title = "gossiper"
-conversationTimes = []
-
-[node name="tonyHR" parent="." instance=ExtResource("10_3xqf3")]
-position = Vector2(473, -229)
-coworker_title = "tonyHR"
+[node name="sadManager" parent="." instance=ExtResource("8_wruqr")]
+position = Vector2(408, 710)
+coworker_title = "sadManager"
 
 [node name="key" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(-580, 767)
@@ -522,11 +518,11 @@ tile_set = SubResource("TileSet_gxl1f")
 metadata/_edit_lock_ = true
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
 
 [editable path="boss"]
-[editable path="sAcquisitionManager"]
+[editable path="siren"]
 [editable path="janitor"]
 [editable path="key"]
 [editable path="door"]

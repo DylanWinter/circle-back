@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei2s5"]
-radius = 690.321
+radius = 561.798
 
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_xxcha")
@@ -38,5 +38,9 @@ shape = SubResource("CircleShape2D_ei2s5")
 
 [node name="groundPos" type="Node2D" parent="npcSprite"]
 
+[node name="waitTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="body_entered" from="npcSprite/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="npcSprite/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="waitTimer" to="." method="_on_wait_timer_timeout"]
