@@ -30,3 +30,17 @@ var start_meeting_early : bool = false
 #timer
 var timerMinutes = 999.0
 var timerSeconds = 999.0
+
+func reset_loop():
+	closest_interactable_npc = null
+	is_in_conversation = false
+	found_key = false
+	door_open = false
+	start_meeting_early = false
+	timerMinutes = 999.0
+	timerSeconds = 999.0
+	
+func full_reset():
+	reset_loop()
+	for term in wordFoundDict:
+		wordFoundDict[term] = false

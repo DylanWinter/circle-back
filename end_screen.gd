@@ -19,4 +19,14 @@ func _ready() -> void:
 		desc.text = "You collapsed from shame at your failure."
 
 func _on_restart_pressed() -> void:
-	SceneTransition.change_scene("res://office.tscn")
+	var total = 0
+	var correct = 0
+	for term in GameManager.wordFoundDict:
+		total += 1
+		if GameManager.wordFoundDict[term]:
+			correct += 1
+		
+	if correct == total:
+		SceneTransition.change_scene("res://main_menu.tscn")
+	else:
+		SceneTransition.change_scene("res://office.tscn")
