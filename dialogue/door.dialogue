@@ -1,0 +1,7 @@
+~ start
+if GameManager.found_key:
+	Door: You opened the storage room door!
+	set GameManager.door_open = true
+else:
+	Door: Locked...
+=> END

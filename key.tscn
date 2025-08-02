@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://cckx7m3rbtq5u"]
+
+[ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_p0yg6"]
+[ext_resource type="Resource" uid="uid://b5rhgoucxvidu" path="res://dialogue/key.dialogue" id="2_krfvd"]
+[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="3_krfvd"]
+
+[node name="VisNovelScene" instance=ExtResource("1_p0yg6")]
+dialogue = ExtResource("2_krfvd")
+
+[node name="CanvasLayer" parent="." index="0"]
+script = ExtResource("3_krfvd")
