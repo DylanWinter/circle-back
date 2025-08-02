@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+	
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
 	GameManager.is_in_conversation = true

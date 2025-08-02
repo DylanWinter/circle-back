@@ -1,71 +1,59 @@
 ~ start
-#*show silhouette version of siren*
+#show silhouette version of siren*
+
 As you approach the siren, you hear your coworker before you see her. 
-Siren: I know! Isn’t it more tots more exciting than our last deal? A little imp told me some demons may even get samples. That dreary
 
-#*show Siren sprite*
+Siren: I know! Isn’t it tots more exciting than our last deal? A little imp told me some demons may even get samples. Hmm, I wonder if I could ask [i]him[/i] about it…
 
-Like always, they are chatting to some devil on a different floor and completely ignoring you. (IF POSSIBLE, HAVE THIS SHOW UP ONLY THE FIRST TIME YOU INTERACT WITH SIREN) Sometimes, you wonder if she just gets paid to distract the other departments. Siren, your gossipy and envious coworker. 
+#show Siren sprite
 
-Siren: “Don’t worry, if I get lucky enough to receive two, I’ll send you a picture of one.” 
+Like always, they are chatting to some devil on a different floor and completely ignoring you. 
+#IF POSSIBLE, HAVE THE NEXT LINE ONLY SHOW UP THE FIRST TIME YOU INTERACT WITH SIREN. 
+Sometimes, you wonder if she just gets paid to distract the other departments. Siren, your gossipy and envious coworker. 
+
+Siren: Don’t worry, if I get lucky enough to receive two, I’ll send you a picture of one.
 
 You can hear the sounds of laughter as the conversation continues.
 
+- Interrupt
+	[i]Breathes–[/i]
 
+	Siren: One second, babes.
 
-- *continue to listen silently* 
-*Wooow, your pearls are pretty!*
+	Siren: Can’t you see I’m on the phone? If it’s important, then that’s an iss-YOU not and iss-ME.
 
+	She turns around in her container filled with water, making sure to splash water on your shoes. 
 
+	Awesome.
 
-#- *interrupt* 
-#BAD OPTION
+	#END OF INTERACTION
+	#IF POSSIBLE - audio joke: have the player’s steps sound wet after this encounter. Resets after the loop
 
-#*show player left*
-#*show siren right*
-
-- interrupt
-	Siren: “One second, babes.”
-
-	Siren: “Can’t you see I’m on the phone? If it’s important then that’s an iss-YOU not and iss-ME.” 
-	She turns around in her container filled with water, making sure to slash water on your shoes. Great.
-
-#(IF POSSIBLE - audio joke: have the player’s steps sound wet after this encounter. Resets after loop)
-
-
- 	- Continue to listen silently
-
-#*show player left*
-#*show siren right*
-
-
-	Siren: “Oh! So I was tots not overhearing the depressed manger or anything but there’s some else leading the presentation today. Ugh and it wasn’t me. Can you believe that, babes?"
-	Siren: “Sigh, I know! I even know how everything the last presenter knew too.”
-
-
-	*Wooow, your pearls are pretty!*
-#*show player left*
-#*show siren right* 
-
+- Continue to listen silently
+	Siren: Oh! So I was tots not overhearing the manager or anything, but there’s someone else leading the
+	presentation today. No, the sad but in a hot kinda way manager, not the spider one. But Ugh, it wasn’t me.
+	Can you believe that, babes?
+	Siren: Sigh, I know! I even know everything the last presenter knew, too.
+	# Combine with Wow your pearls are pretty!
+	
+- "Wow, your pearls are pretty!"
 	For a moment, your coworker pauses and actually looks at you. Then she grins, showing off her sharp teeth.
 
-	Siren: “Oh these? They’re not anything special. It’s really something simple I got from Asmodeus’ Gems.”
+	Siren: Oh, these? They’re not anything special. Something simple I got from Asmodeus’ Gems.
 
 	Based on the way she placed a hand around the pearl necklace said otherwise. That thing probably cost her 3 paychecks.
 
-	Siren: “But do you need anything? I’m busy you know.”
+	Siren: But do you need anything? I’m busy, you know.
 
-	- Right! Don’t get distracted.
-	- “Is there anything about today’s presentation you can help me with?” 
-	Siren: “Hmm… since you were so sweet…”
+	Right! Don’t get distracted. You go to ask about the presentation, but Siren seems to understand before the words leave your lips.
 
-[Choices meet here.]
+	Siren: Hmm… since you were so sweet…
 
-S: “Our client’s SDR, successful demon ritual, hasn’t been too hot. But they’ll be on FIRE with the new product!”
-S: “Babes, everyone on the sales team won’t shut up about it. Ahhh! I really want to win that sample…”
+	# Combine with Continue to listen silently
+	
+Siren: Our client’s SDR, successful demon ritual, hasn’t been too hot. But they’ll be on FIRE with the new product!
+set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = true
+Siren: Babes, everyone on the sales and data team won’t shut up about it. Ahhh! I really want to win that sample…
 
-(IF POSSIBLE: Have this show up only if the player went with the best option.) S: “I really can’t chat, working and all. But break a leg! Some people would give a fin and an arm to be in your shoes or whatevs.”
-N: Siren proceeds to start talking about something else again to the other demon on the line.
-
-
+Siren proceeds to start talking about something unrelated to the other demon on the line.
 => END

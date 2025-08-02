@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		$npcSprite.position = $Path2D/PathFollow2D.position
 		if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
 			$npcSprite.scale.x *= -1.0
-		
+			
 func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=63 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -141,8 +141,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -13, 76, 0, 0, 0, 0, -16, 117, 0, 0, 0, 0, -14, 135, 0, 0, 0, 0, -11, 157, 0, 0, 0, 0, -14, 185, 0, 0, 0, 0, -5, 205, 0, 0, 0, 0, 1, 229, 0, 0, 0, 0, 14, 264, 0, 0, 0, 0, 39, 298, 0, 0, 0, 0, 74, 331, 0, 0, 0, 0, 110, 347, 0, 0, 0, 0, 184, 356, 0, 0, 0, 0, 229, 362, 0, 0, 0, 0, 321, 362, 0, 0, 0, 0, 377, 361, 0, 0, 0, 0, 432, 359, 0, 0, 0, 0, 525, 359, 0, 0, 0, 0, 566, 356, 0, 0, 0, 0, 630, 341, 0, 0, 0, 0, 645, 314, 0, 0, 0, 0, 651, 292, 0, 0, 0, 0, 655, 254, 0, 0, 0, 0, 670, 208, 0, 0, 0, 0, 683, 177, 0, 0, 0, 0, 683, 161, 0, 0, 0, 0, 686, 144, 0, 0, 0, 0, 686, 144, 0, 0, 0, 0, 665, 229)
 }
 point_count = 28
-
-[sub_resource type="Curve2D" id="Curve2D_8qan1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
@@ -535,7 +533,6 @@ scale = Vector2(-0.315, 0.315)
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
-[editable path="sadManager"]
 [editable path="key"]
 [editable path="door"]
 [editable path="meeting_room_door"]

@@ -15,6 +15,7 @@ var currentTurn = "boss"
 # known words
 var wordFoundDict = {
 	"RDC - Rival Demonic Company": false,
+	"SDR - Successful Demon Ritual":false,
 }
 
 var convoDialogueDict = {
