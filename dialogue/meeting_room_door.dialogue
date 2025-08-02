@@ -1,8 +1,8 @@
 ~ start
 Meeting Room: Start the meeting early?
+- Give me some time.
+	Meeting Room: A wise choice. 
 - I'm ready!
 	Meeting Room: Fortune favours the bold. 
 	set GameManager.start_meeting_early = true
-- Give me some time.
-	Meeting Room: A wise choice. 
 => END
