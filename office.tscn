@@ -5,15 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
-[ext_resource type="PackedScene" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
-[ext_resource type="PackedScene" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
-[ext_resource type="PackedScene" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
+[ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
-[ext_resource type="Script" uid="uid://ca06iucxfs3fl" path="res://door.gd" id="14_gxl1f"]
+[ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 
 [sub_resource type="Gradient" id="Gradient_hsito"]
 
@@ -150,18 +150,18 @@ size = Vector2(2309.5, 29)
 size = Vector2(819.875, 29.25)
 
 [sub_resource type="Curve2D" id="Curve2D_hsito"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -10.6741, 7.86516, 0, 0, 0, 0, -141.011, 28.6517, 0, 0, 0, 0, -194.382, 37.6404, 0, 0, 0, 0, -261.236, 58.427, 0, 0, 0, 0, -379.775, 79.2135, 0, 0, 0, 0, -515.168, 98.3146, 0, 0, 0, 0, -630.337, 91.573, 0, 0, 0, 0, -688.202, 85.3932, 0, 0, 0, 0, -765.73, 46.6292, 0, 0, 0, 0, -801.685, 19.6629, 0, 0, 0, 0, -829.213, -43.8202, 0, 0, 0, 0, -822.472, -82.5843, 0, 0, 0, 0, -824.719, -117.416, 0, 0, 0, 0, -822.472, -153.371, 0, 0, 0, 0, -836.517, -214.045, 0, 0, 0, 0, -847.191, -237.079, 0, 0, 0, 0, -897.191, -257.865, 0, 0, 0, 0, -929.775, -262.921, 0, 0, 0, 0, -1001.69, -270.786, 0, 0, 0, 0, -1050.56, -267.978, 0, 0, 0, 0, -1106.18, -265.73, 0, 0, 0, 0, -1167.98, -260.112, 0, 0, 0, 0, -1282.02, -256.742, 0, 0, 0, 0, -1321.35, -255.056, 0, 0, 0, 0, -1388.76, -262.921, 0, 0, 0, 0, -1439.33, -291.011, 0, 0, 0, 0, -1376.97, -289.888, 0, 0, 0, 0, -1283.15, -292.697, 0, 0, 0, 0, -1194.94, -317.416, 0, 0, 0, 0, -1032.58, -329.775, 0, 0, 0, 0, -979.775, -337.64, 0, 0, 0, 0, -900, -331.461, 0, 0, 0, 0, -830.337, -341.573, 0, 0, 0, 0, -770.786, -336.517, 0, 0, 0, 0, -662.359, -363.483, 0, 0, 0, 0, -648.315, -412.36, 0, 0, 0, 0, -644.382, -474.719, 0, 0, 0, 0, -676.966, -511.798, 0, 0, 0, 0, -724.157, -523.595, 0, 0, 0, 0, -648.315, -519.663, 0, 0, 0, 0, -587.64, -532.584, 0, 0, 0, 0, -576.404, -564.607, 0, 0, 0, 0, -575.843, -612.359)
+}
+point_count = 43
 
 [sub_resource type="Curve2D" id="Curve2D_70x1r"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 6, 13, 0, 0, 0, 0, 25, 16)
+"points": PackedVector2Array(0, 0, 0, 0, 6, 13)
 }
-point_count = 2
+point_count = 1
 
 [sub_resource type="Curve2D" id="Curve2D_knsl5"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 14, 0, 0, 0, 0, -19, 17)
-}
-point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
@@ -361,13 +361,16 @@ autowrap_mode = 0
 position = Vector2(1458, 436)
 scale = Vector2(1.78, 1.78)
 coworker_title = "boss"
+dialogueScenePaths = ["res://visualNovelOfficeScenes/bossConvo1.tscn", "res://visualNovelOfficeScenes/bossConvo1.tscn"]
+conversationTimes = ["2:59|1:00", "1:00|0:20"]
 
 [node name="Path2D" parent="boss" index="1"]
 curve = SubResource("Curve2D_hsito")
 
 [node name="PathFollow2D" parent="boss/Path2D" index="0"]
-position = Vector2(69.1011, 3.93259)
-rotation = 3.06408
+position = Vector2(-10.6741, 7.86516)
+rotation = 2.98344
+loop = false
 
 [node name="sAcquisitionManager" parent="." instance=ExtResource("6_4i814")]
 position = Vector2(743, 654)
@@ -400,6 +403,7 @@ coworker_title = "projectManager"
 [node name="gossiper" parent="." instance=ExtResource("3_u8nhc")]
 position = Vector2(187, -222)
 coworker_title = "gossiper"
+conversationTimes = []
 
 [node name="tonyHR" parent="." instance=ExtResource("10_3xqf3")]
 position = Vector2(473, -229)

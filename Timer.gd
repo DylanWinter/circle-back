@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var timer : float = 120.0
+@export var timer : float = 180.0
 @onready var label = $Control/Timer
 
 func _process(delta: float) -> void:

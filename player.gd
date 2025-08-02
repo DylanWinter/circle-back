@@ -14,6 +14,7 @@ func _physics_process(delta: float) -> void:
 		Input.get_axis("move_up", "move_down")
 	)
 	
+	
 	if can_move:
 		if input_direction != Vector2.ZERO:
 			if not $AnimatedSprite2D.is_playing():
@@ -28,7 +29,8 @@ func _physics_process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed("interact"):
 			if GameManager.closest_interactable_npc:
-				GameManager.closest_interactable_npc.start_dialogue()
+				if GameManager.closest_interactable_npc.isStopped == true and GameManager.closest_interactable_npc.alreadyStartedDialogue == false:
+					GameManager.closest_interactable_npc.start_dialogue()
 	else:
 		$AnimatedSprite2D.stop()
 		
