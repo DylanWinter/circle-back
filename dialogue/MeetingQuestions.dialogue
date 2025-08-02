@@ -1,40 +1,89 @@
 ~ start
-Boss: Hey newbie, what've you got for me?
-Boss: This better be good. 
-- Project Hellfire, sir.
-	Boss: What the hell is that?
-	Boss: Moron.
-- Project Infernum, sir.
-	set GameManager.currentTurn = "player"
-	Boss: Excellent, mwahahaha.
+set GameManager.currentTurn = "boss"
+Boss: Hey newbie. 
+Boss: I hope you're fully up to speed on our company.
+Boss: We work hard and play hard here at SCS.
+set GameManager.currentTurn = "randomEmployee"
+Random Employee: But mostly just work. 
+set GameManager.currentTurn = "boss"
+Boss: You're fired. 
+Boss: Anyway.
+Boss: Our top client's SDR has plateaued. 
+Boss: Do you even know who our top client is? 
+set GameManager.currentTurn = "player"
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: [shake]No?[/shake] Not even close. 
+- <correct>
+	set GameManager.currentTurn = "boss"
+	Boss: Correct. 
 	set GameManager.wordFoundDict["word1"] = true
-- Project Nihil, sir.
-	Boss: What the hell is that? 
-	Boss: Moron.
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: [shake]No?[/shake] Not even close.
 	
 set GameManager.currentTurn = "boss"
-Boss: Moving on, this new product is like no other
+Boss: Anyway.
+Boss: We've got a next-gen solution to their problem. 
+Boss: AI-powered, blockchain-enabled, best-in-class. Truly a disruptive synergistic paradigm shift that leverages a holistic approach to vertical integration to give us a competitive edge.
 set GameManager.currentTurn = "randomEmployee"
-Random Employee: .
+Random Employee: What does that even mean?
 set GameManager.currentTurn = "boss"
-Boss: “BLAH BLAH! MC, What are demons saying about our current candles?
-- Nothing that we don’t know
-	Boss: fail
-- Customers RAVE about them but DEMAND something fresh
-	Boss: pass
-	set GameManager.wordFoundDict["word2"] = true
-- Customers seem to enjoy our products.
-	Boss: fail
-Boss: I know that you all have worked hard and long hours.
-set GameManager.currentTurn = "randomEmployee"
-Random Employee: I haven’t seen the sun for 5 days.
+Boss: You'd better know what I'm talking about. 
+set GameManager.currentTurn = "player"
+- Project Hellfire
+	set GameManager.currentTurn = "boss"
+	Boss: Yes, exactly!
+	set GameManager.wordFoundDict["word2"] = true 
+- Project Infernus
+	set GameManager.currentTurn = "boss"
+	Boss: Why do I even [shake]pay[/shake] you people?
+- Project Diabolus
+	set GameManager.currentTurn = "boss"
+	Boss: Boss: Why do I even [shake]pay[/shake] you people?
+	
 set GameManager.currentTurn = "boss"
-Boss: And it will be 7 if you keep talking. MC, when can we expect to roll out our new scented candles?
-- Next month should work.
-	Boss: fail
-- The BEST day of the year, ALL HALLOWS EYE.
-	Boss: pass
-	set GameManager.wordFoundDict["word3"] = true
-- Summer, what demon doesn't like the heat?
-	Boss: fail
+Boss: [shake][color="orange"]Project Hellfire![/color][/shake]
+Boss: The pinnacle of demonic business! The most diabolical concoction ever devised!
+Boss: The humans won't be able to resist! SDR will go [shake]through the roof![/shake]
+Boss: You...do know what SDR means, right?
+set GameManager.currentTurn = "player"
+- Summoning Demonic Rituals
+	set GameManager.currentTurn = "boss"
+	Boss: Thank Lucifer. Maybe you will hit your KPIs after all. 
+	set GameManager.wordFoundDict["word3"] = true 
+- <incorrect>	
+	set GameManager.currentTurn = "boss"
+	Boss: Why do I even [shake]pay[/shake] you people?
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: Boss: Why do I even [shake]pay[/shake] you people?
+
+set GameManager.currentTurn = "boss"
+Boss: lorem ipsum dolor
+set GameManager.currentTurn = "player"
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: [shake]No?[/shake] Not even close. 
+- <correct>
+	set GameManager.currentTurn = "boss"
+	Boss: Correct. 
+	set GameManager.wordFoundDict["word4"] = true
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: [shake]No?[/shake] Not even close.
+	
+set GameManager.currentTurn = "boss"
+Boss: lorem ipsum dolor
+set GameManager.currentTurn = "player"
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: [shake]No?[/shake] Not even close. 
+- <correct>
+	set GameManager.currentTurn = "boss"
+	Boss: Correct. 
+	set GameManager.wordFoundDict["word5"] = true
+- <incorrect>
+	set GameManager.currentTurn = "boss"
+	Boss: [shake]No?[/shake] Not even close.	
 => END

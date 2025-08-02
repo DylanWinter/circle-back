@@ -174,3 +174,10 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
+	if GameManager.enable_sound:
+		if not letter in [".", " "]:
+			$TalkSound.pitch_scale = randf_range(0.9, 1.0)
+			$TalkSound.play()

@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 			
 		elif GameManager.currentTurn == "boss" and trackedTurn != "randomEmployee":
 			$bossAnimPlayer.play("setBossTurnOn")
+			$playerAnimPlayer.play("setPlayerTurnOff")
 			
 		elif GameManager.currentTurn == "randomEmployee":
 			$randomEmpAnimPlayer.play("setRandomEmpTurnOn")

@@ -1,5 +1,7 @@
 extends Node
 
+var enable_sound = true
+
 var first_loop : bool = true
 
 var player: Node                   = null
