@@ -10,10 +10,12 @@ func _ready() -> void:
 	
 func switch(track : String):
 	if (track == "chill" and curr != "chill"):
+		curr = track
 		$AudioStreamPlayer2D.stop()
 		$AudioStreamPlayer2D.stream = Chill
 		$AudioStreamPlayer2D.play()
 	elif (track == "boss" and curr != "boss"):
+		curr = track
 		$AudioStreamPlayer2D.stop()
 		$AudioStreamPlayer2D.stream = Boss
 		$AudioStreamPlayer2D.play()
