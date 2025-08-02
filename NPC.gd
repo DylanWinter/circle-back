@@ -73,9 +73,12 @@ func start_dialogue() -> void:
 	#DialogueManager.show_dialogue_balloon(test)
 	if dialogueScenePaths.size()>currentScenePathIndex:
 		var dialogueScene = load(dialogueScenePaths[currentScenePathIndex]).instantiate()
-		
 		get_parent().add_child(dialogueScene)
-		currentScenePathIndex+=1
+		currentScenePathIndex += 1
+		dialogueScene.start_dialogue()
+	else:
+		var dialogueScene = load(dialogueScenePaths[-1]).instantiate()
+		get_parent().add_child(dialogueScene)
 		dialogueScene.start_dialogue()
 		
 		

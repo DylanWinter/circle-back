@@ -436,6 +436,12 @@ script = ExtResource("14_gxl1f")
 position = Vector2(3.69995, 2.5)
 shape = SubResource("RectangleShape2D_g68bc")
 
+[node name="AnimatedSprite2D" parent="door/npcSprite" index="1"]
+visible = true
+position = Vector2(-1, 415.001)
+rotation = 3.14159
+scale = Vector2(0.2, 2.4)
+
 [node name="Area2D" parent="door/npcSprite" index="2"]
 scale = Vector2(1, 5.79998)
 
