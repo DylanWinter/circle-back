@@ -1,14 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbocflb3wlyfa"]
+[gd_scene load_steps=6 format=3 uid="uid://c2aultp87pt3o"]
 
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="1_5hfv0"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="2_0bhed"]
+[ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="2_6bw2v"]
+[ext_resource type="PackedScene" uid="uid://kv61a1j0gtk5" path="res://assets/Office assets/Cubicle Node Y2.tscn" id="3_kem5a"]
+[ext_resource type="PackedScene" uid="uid://bnakvys5tpbro" path="res://assets/Office assets/Cubicle Node Y.tscn" id="4_gxmxl"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(6, -57)
 
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
 position = Vector2(198, -374)
 texture = ExtResource("1_5hfv0")
 
+[node name="Cubicle" parent="MapPrototype1" instance=ExtResource("2_6bw2v")]
+position = Vector2(-80, 405)
+
+[node name="Cubicle2" parent="MapPrototype1" instance=ExtResource("3_kem5a")]
+position = Vector2(424, 405)
+
+[node name="Cubicle7" parent="MapPrototype1" instance=ExtResource("4_gxmxl")]
+position = Vector2(-591, 405)
+
+[node name="Cubicle3" parent="MapPrototype1" instance=ExtResource("2_6bw2v")]
+position = Vector2(-77, 953)
+
+[node name="Cubicle4" parent="MapPrototype1" instance=ExtResource("3_kem5a")]
+position = Vector2(427, 953)
+
+[node name="Cubicle8" parent="MapPrototype1" instance=ExtResource("4_gxmxl")]
+position = Vector2(-588, 953)
+
 [node name="player" parent="." instance=ExtResource("2_0bhed")]
-position = Vector2(249, -104)
+position = Vector2(-711, -177)
+scale = Vector2(0.645049, 1.05264)
