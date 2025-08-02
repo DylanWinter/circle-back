@@ -24,7 +24,7 @@ SceneTransition="*res://scene_transition.tscn"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://dialogue/balloon.tscn"
+runtime/balloon_path="uid://d2lud2a5pann6"
 
 [display]
 
