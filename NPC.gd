@@ -10,6 +10,9 @@ var currentScenePathIndex = 0
 var walkSpeed : int = 30
 var lastPosition : Vector2
 
+var isStopped : bool = false
+var alreadyStartedDialogue : bool = false
+
 # string time array
 @export var conversationTimes : Array
 
@@ -18,11 +21,11 @@ var lastPosition : Vector2
 func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition
-	var shouldFlip = false
+	var shouldFlip = true
 	if currentPosition.x - lastPosition.x < 0 and sprite.scale.x>0:
-		shouldFlip = true
+		shouldFlip = false
 	elif currentPosition.x - lastPosition.x > 0 and sprite.scale.x<0:
-		shouldFlip = true
+		shouldFlip = false
 	return shouldFlip
 	
 # Called when the node enters the scene tree for the first time.
@@ -31,41 +34,42 @@ func _ready() -> void:
 	speechBubbleSprite.frame = 1
 	pass
 
-func startConvo(topic : String):
-	$npcSprite/SpeechBubbleUnselected.visible = true
-
-func stopConvo(topic : String):
-	$npcSprite/SpeechBubbleUnselected.visible = false
-
-	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not GameManager.is_in_conversation:
 		lastPosition = $npcSprite.position
-		if has_node("Path2D/PathFollow2D"):
+		if has_node("Path2D/PathFollow2D") and isStopped == false:
+			alreadyStartedDialogue = false
 			$Path2D/PathFollow2D.progress += walkSpeed*delta
 			$npcSprite.position = $Path2D/PathFollow2D.position
 			if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
 				$npcSprite.scale.x *= -1.0
 		z_index = $npcSprite/groundPos.global_position.y
-		if dialogueScenePaths.size()>0:
+		
+		if dialogueScenePaths.size()>0 and isStopped == true and alreadyStartedDialogue == false:
 			speechBubbleSprite.visible = true
 		else:
 			speechBubbleSprite.visible = false
 		
-	'''
-	# format: time|x|y
+
+	# format: time of arrival | how long they stay
 	for conversateTime in conversationTimes:
 		var parts = conversateTime.split("|")
-		var time_parts = parts[0].split(":")
-		var converseMinute = int(time_parts[0])
-		var converseSecond = int(time_parts[1])
-		var x = float(parts[1])
-		var y = float(parts[2])
+		var time_parts1 = parts[0].split(":")
+		var time_parts2 = parts[1].split(":")
+		var arrivalMinute = int(time_parts1[0])
+		var arrivalSecond = int(time_parts1[1])
 		
-		if converseMinute == GameManager.timerMinutes and converseSecond == GameManager.timerSeconds:
-			position = Vector2(x,y)
-	'''
+		var howLongMinute = int(time_parts2[0])
+		var howLongSecond = int(time_parts2[1])
+		
+		
+		
+		if (arrivalMinute==GameManager.timerMinutes and arrivalSecond==GameManager.timerSeconds):
+			isStopped = true
+			$waitTimer.wait_time = howLongSecond + howLongMinute * 60
+			$waitTimer.start()
+			
 		
 func start_dialogue() -> void:
 	#GameManager.player.can_move = false
@@ -80,8 +84,10 @@ func start_dialogue() -> void:
 		var dialogueScene = load(dialogueScenePaths[-1]).instantiate()
 		get_parent().add_child(dialogueScene)
 		dialogueScene.start_dialogue()
-		
-		
+	alreadyStartedDialogue = true
+	speechBubbleSprite.visible = false
+	
+
 '''
 func _on_dialogue_ended(resource) -> void:
 	#GameManager.player.can_move = true
@@ -100,3 +106,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		GameManager.closest_interactable_npc = null
 		if speechBubbleSprite.visible == true:
 			speechBubbleSprite.frame=1
+
+
+func _on_wait_timer_timeout() -> void:
+	isStopped = false

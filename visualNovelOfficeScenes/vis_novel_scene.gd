@@ -20,4 +20,5 @@ func start_dialogue() -> void:
 func _on_dialogue_ended(resource) -> void:
 	GameManager.player.can_move = true
 	GameManager.is_in_conversation = false
+	
 	self.queue_free()
