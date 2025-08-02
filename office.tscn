@@ -1,45 +1,18 @@
-[gd_scene load_steps=61 format=3 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=55 format=3 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
-[ext_resource type="Shader" uid="uid://g3jpc0ianmfv" path="res://shaders/lava.gdshader" id="1_hsito"]
 [ext_resource type="PackedScene" uid="uid://dlpov7v4fmr1x" path="res://coworkers/gossiperNPC.tscn" id="3_u8nhc"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
-[ext_resource type="PackedScene" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
+[ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/SeoulsAcquisitionManagerNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
-[ext_resource type="PackedScene" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
-[ext_resource type="PackedScene" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/projectManagerNPC.tscn" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://g1cjimlmdsb0" path="res://coworkers/tonyHRNPC.tscn" id="10_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
-[ext_resource type="Script" uid="uid://ca06iucxfs3fl" path="res://door.gd" id="14_gxl1f"]
-
-[sub_resource type="Gradient" id="Gradient_hsito"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_hsito"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lcnwv"]
-width = 1000
-height = 1000
-seamless = true
-color_ramp = SubResource("Gradient_hsito")
-noise = SubResource("FastNoiseLite_hsito")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_lcnwv"]
-noise_type = 3
-frequency = 0.1351
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hsito"]
-width = 1410
-height = 1780
-seamless = true
-noise = SubResource("FastNoiseLite_lcnwv")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcnwv"]
-shader = ExtResource("1_hsito")
-shader_parameter/noise_tex = SubResource("NoiseTexture2D_lcnwv")
-shader_parameter/noise_tex2 = SubResource("NoiseTexture2D_hsito")
+[ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -166,15 +139,9 @@ point_count = 1
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
 
-[node name="root" type="Node2D"]
+[sub_resource type="TileSet" id="TileSet_s0aar"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = -3000
-material = SubResource("ShaderMaterial_lcnwv")
-offset_left = -2197.0
-offset_top = -2516.0
-offset_right = 3187.0
-offset_bottom = 1800.0
+[node name="root" type="Node2D"]
 
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
@@ -451,6 +418,9 @@ scale = Vector2(1, 5.79998)
 
 [node name="CollisionShape2D" parent="door/npcSprite/Area2D" index="0"]
 scale = Vector2(0.1, 0.1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_s0aar")
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]
