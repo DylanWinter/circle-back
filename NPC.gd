@@ -10,7 +10,7 @@ var currentScenePathIndex = 0
 var walkSpeed : int = 30
 var lastPosition : Vector2
 
-var isStopped : bool = false
+var isStopped : bool = true
 var alreadyStartedDialogue : bool = false
 
 # string time array
