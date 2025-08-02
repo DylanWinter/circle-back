@@ -27,6 +27,8 @@ func _on_restart_pressed() -> void:
 			correct += 1
 		
 	if correct == total:
+		GameManager.full_reset()
 		SceneTransition.change_scene("res://main_menu.tscn")
 	else:
+		GameManager.reset_loop()
 		SceneTransition.change_scene("res://office.tscn")
