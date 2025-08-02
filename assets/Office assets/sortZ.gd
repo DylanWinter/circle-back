@@ -4,7 +4,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for node in get_children():
-		node.z_index = node.get_node("groundPos").global_position.y
+		if node.has_node("groundPos"):
+			node.z_index = node.get_node("groundPos").global_position.y
 	
 
 

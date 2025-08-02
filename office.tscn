@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=62 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -15,6 +15,10 @@
 [ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
 [ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
+[ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
+[ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
+[ext_resource type="Texture2D" uid="uid://c0n8hbdorp30f" path="res://assets/Office assets/Cork board.png" id="17_4hetp"]
+[ext_resource type="Texture2D" uid="uid://mfhvxurx81jf" path="res://assets/Office assets/Office decoration 1.png" id="18_o3cd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -439,10 +443,38 @@ position = Vector2(210, 185)
 [node name="Cubicle3" parent="furniture" instance=ExtResource("15_2uxut")]
 position = Vector2(615, 185)
 
+[node name="extraDecoration" type="Node2D" parent="furniture"]
+script = ExtResource("15_o3cd7")
+
+[node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/extraDecoration"]
+position = Vector2(-279, 164)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("16_n1y4y")
+
+[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/CorkBoard&ConspiracyPlan"]
+position = Vector2(-8.57145, 81.4286)
+
+[node name="CorkBoard" type="Sprite2D" parent="furniture/extraDecoration"]
+position = Vector2(293, 163)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("17_4hetp")
+
+[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/CorkBoard"]
+position = Vector2(-8.57145, 81.4286)
+
+[node name="OfficeDecoration1" type="Sprite2D" parent="furniture/extraDecoration"]
+position = Vector2(322, 171)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("18_o3cd7")
+
+[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/OfficeDecoration1"]
+position = Vector2(-1.90735e-05, 70)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -3000
 tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gxl1f")
+metadata/_edit_lock_ = true
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="sAcquisitionManager/npcSprite/Area2D" to="sAcquisitionManager" method="_on_area_2d_mouse_entered"]
