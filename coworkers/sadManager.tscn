@@ -26,5 +26,6 @@ curve = SubResource("Curve2D_fei0g")
 metadata/_edit_lock_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(50.7939, 206.349)
 rotates = false
 loop = false

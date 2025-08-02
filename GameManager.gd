@@ -31,6 +31,7 @@ var timerSeconds = 999.0
 
 
 var talkedInKitchen = false
+var peptalkedsadmanager = false
 
 func reset_loop():
 	closest_interactable_npc = null

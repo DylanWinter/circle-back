@@ -508,9 +508,6 @@ metadata/_edit_lock_ = true
 position = Vector2(1328, 394)
 scale = Vector2(-0.315, 0.315)
 
-[node name="PathFollow2D" parent="sadManager/Path2D" index="0"]
-position = Vector2(50.7939, 206.349)
-
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
