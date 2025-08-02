@@ -6,6 +6,7 @@ var trackedTurn : String = "boss"
 
 func _ready() -> void:
 	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
+	Music.switch("boss")
 	$bossAnimPlayer.play("setBossTurnOn")
 	start_dialogue(meetingQuestions)
 
