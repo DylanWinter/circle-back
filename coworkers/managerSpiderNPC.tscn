@@ -4,11 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_6vl3d"]
 
 [node name="NPC" instance=ExtResource("1_4dehy")]
-is_static = true
+coworker_title = "managerSpider"
+dialogueScenePaths = ["res://visualNovelOfficeScenes/managerSpider/managerSpiderConvo1.tscn"]
 
 [node name="npcSprite" parent="." index="0"]
+self_modulate = Color(0.329412, 1, 0.47451, 1)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_6vl3d")
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
 position = Vector2(22.2222, 344.444)
+
+[node name="groundPos" parent="npcSprite" index="2"]
+position = Vector2(33.3333, 711.111)

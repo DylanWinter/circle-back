@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://blafggd5fe2yv"
+path="res://.godot/imported/firstManagerSpiderOfficeDialogue.dialogue-f60d1ee4c4923132f145a49d0ca47010.tres"
+
+[deps]
+
+source_file="res://dialogue/firstManagerSpiderOfficeDialogue.dialogue"
+dest_files=["res://.godot/imported/firstManagerSpiderOfficeDialogue.dialogue-f60d1ee4c4923132f145a49d0ca47010.tres"]
+
+[params]
+
+defaults=true

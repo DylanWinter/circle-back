@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_lfloe"]
 
 [node name="NPC" instance=ExtResource("1_f7swi")]
-is_static = true
 
 [node name="npcSprite" parent="." index="0"]
 self_modulate = Color(1, 0, 0, 1)

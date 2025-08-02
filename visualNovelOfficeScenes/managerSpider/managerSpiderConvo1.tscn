@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnhorn6db45x6"]
+
+[ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_12e0e"]
+[ext_resource type="Resource" uid="uid://blafggd5fe2yv" path="res://dialogue/firstManagerSpiderOfficeDialogue.dialogue" id="2_us5k4"]
+
+[node name="VisNovelScene" instance=ExtResource("1_12e0e")]
+dialogue = ExtResource("2_us5k4")

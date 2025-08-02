@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://kih0xp7b72ym"
+path="res://.godot/imported/firstSirenOfficeDialogue.dialogue-a8d4c367dd5a4a4c0183aedd25e46190.tres"
+
+[deps]
+
+source_file="res://dialogue/firstSirenOfficeDialogue.dialogue"
+dest_files=["res://.godot/imported/firstSirenOfficeDialogue.dialogue-a8d4c367dd5a4a4c0183aedd25e46190.tres"]
+
+[params]
+
+defaults=true
