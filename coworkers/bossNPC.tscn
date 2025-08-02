@@ -27,8 +27,3 @@ position = Vector2(-22.2222, 744.444)
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
 position = Vector2(-30.337, 3.37079)
 rotation = 3.10123
-
-[node name="waitTimer" type="Timer" parent="." index="2"]
-one_shot = true
-
-[connection signal="timeout" from="waitTimer" to="." method="_on_wait_timer_timeout"]

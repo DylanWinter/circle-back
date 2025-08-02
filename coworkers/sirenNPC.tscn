@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_8bmfo"]
 
 [node name="NPC" instance=ExtResource("1_mxgta")]
+is_static = true
 
 [node name="npcSprite" parent="." index="0"]
-modulate = Color(0.498039, 0.678431, 0.67451, 1)
+modulate = Color(0.212963, 0.698866, 0.94022, 1)
 position = Vector2(-3, -39)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_8bmfo")
@@ -14,5 +15,5 @@ texture = ExtResource("2_8bmfo")
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
 position = Vector2(33.3333, 433.333)
 
-[node name="groundPos" parent="npcSprite" index="1"]
+[node name="groundPos" parent="npcSprite" index="2"]
 position = Vector2(33.3333, 700)

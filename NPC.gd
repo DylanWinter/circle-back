@@ -27,11 +27,17 @@ func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2
 		shouldFlip = false
 	elif currentPosition.x - lastPosition.x > 0 and sprite.scale.x<0:
 		shouldFlip = false
+	
 	return shouldFlip
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
+	if is_static == true:
+		isStopped = true
+	else:
+		isStopped = false
+	
 	speechBubbleSprite.frame = 1
 	pass
 
@@ -52,6 +58,10 @@ func _process(delta: float) -> void:
 				speechBubbleSprite.visible = true
 			else:
 				speechBubbleSprite.visible = false
+		
+		if has_node("Path2D/PathFollow2D"):
+			if ($Path2D/PathFollow2D.progress_ratio == 1):
+				self.queue_free()
 			
 	
 		# format: time of arrival | how long they stay

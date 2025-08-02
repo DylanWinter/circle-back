@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b182pp2uqolee"
+path="res://.godot/imported/firstJanitorOfficeDialogue.dialogue-6e47806babcd86dbe9f7b359374b9ba8.tres"
+
+[deps]
+
+source_file="res://dialogue/firstJanitorOfficeDialogue.dialogue"
+dest_files=["res://.godot/imported/firstJanitorOfficeDialogue.dialogue-6e47806babcd86dbe9f7b359374b9ba8.tres"]
+
+[params]
+
+defaults=true
