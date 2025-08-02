@@ -48,6 +48,7 @@ func _process(delta: float) -> void:
 	if GameManager.is_in_conversation:
 		$waitTimer.paused = true
 		
+		
 	if not is_static:
 		if not GameManager.is_in_conversation:
 			lastPosition = $npcSprite.position

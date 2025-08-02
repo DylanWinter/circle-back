@@ -29,6 +29,9 @@ var start_meeting_early : bool = false
 var timerMinutes = 999.0
 var timerSeconds = 999.0
 
+
+var talkedInKitchen = false
+
 func reset_loop():
 	closest_interactable_npc = null
 	is_in_conversation = false

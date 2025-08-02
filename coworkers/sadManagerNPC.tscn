@@ -1,18 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl64amb56l04i"]
 
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_f7swi"]
-[ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_lfloe"]
+[ext_resource type="Texture2D" uid="uid://j7owk6muyowt" path="res://assets/sadManagerSmall.png" id="2_kmea1"]
 
 [node name="NPC" instance=ExtResource("1_f7swi")]
 
 [node name="npcSprite" parent="." index="0"]
 self_modulate = Color(1, 0, 0, 1)
-position = Vector2(-4, -40)
+position = Vector2(3, -32)
 scale = Vector2(0.09, 0.09)
-texture = ExtResource("2_lfloe")
+texture = ExtResource("2_kmea1")
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
-position = Vector2(44.4444, 444.444)
+position = Vector2(-33.3333, 355.556)
 
 [node name="groundPos" parent="npcSprite" index="2"]
-position = Vector2(33.3333, 700)
+position = Vector2(-11.1111, 722.222)

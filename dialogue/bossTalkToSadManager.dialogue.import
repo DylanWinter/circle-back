@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dtceiyutipblf"
+path="res://.godot/imported/bossTalkToSadManager.dialogue-c0b5af80b3bf477ec3dc89daba7a1522.tres"
+
+[deps]
+
+source_file="res://dialogue/bossTalkToSadManager.dialogue"
+dest_files=["res://.godot/imported/bossTalkToSadManager.dialogue-c0b5af80b3bf477ec3dc89daba7a1522.tres"]
+
+[params]
+
+defaults=true

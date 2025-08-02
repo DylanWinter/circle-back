@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c1xqdkd812rfc"]
 
 [ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_creu3"]
-[ext_resource type="Resource" uid="uid://dtceiyutipblf" path="res://dialogue/firstBossOfficeDialogue.dialogue" id="2_b7cmp"]
+[ext_resource type="Resource" uid="uid://dtceiyutipblf" path="res://dialogue/bossTalkToSadManager.dialogue" id="2_b7cmp"]
 [ext_resource type="Shader" uid="uid://duuyk741wiwab" path="res://visualNovelOfficeScenes/silhouette.gdshader" id="3_33ecn"]
 [ext_resource type="Texture2D" uid="uid://lyfvql11cf1f" path="res://assets/boss/BOSS PROTOTYPE 3.png" id="4_ws4x6"]
 [ext_resource type="Script" uid="uid://bhhy0i17d4nmh" path="res://visualNovelOfficeScenes/boss/bossVisualNovelOffice.gd" id="5_40t2m"]

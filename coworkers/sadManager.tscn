@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://calyt7tdod60b"]
+
+[ext_resource type="Texture2D" uid="uid://j7owk6muyowt" path="res://assets/sadManagerSmall.png" id="1_8cq60"]
+[ext_resource type="Script" uid="uid://h3pucb58b5dt" path="res://coworkers/sad_manager.gd" id="1_ohjh7"]
+
+[sub_resource type="Curve2D" id="Curve2D_fei0g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 50.7939, 206.349, 0, 0, 0, 0, 638.095, 625.396, 0, 0, 0, 0, 1123.81, 606.349, 0, 0, 0, 0, 2320.63, 593.651, 0, 0, 0, 0, 2879.36, 546.031, 0, 0, 0, 0, 2958.73, -330.159, 0, 0, 0, 0, 2907.94, -1168.25, 0, 0, 0, 0, 2936.51, -1704.76, 0, 0, 0, 0, 3425.4, -1939.68, 0, 0, 0, 0, 4869.84, -1850.79, 0, 0, 0, 0, 5558.73, -1679.37, 0, 0, 0, 0, 5984.13, -1565.08, 0, 0, 0, 0, 6396.82, -1400, 0, 0, 0, 0, 6692.06, -1292.06, 0, 0, 0, 0, 6803.17, -1276.19, 0, 0, 0, 0, 7244.44, -1276.19, 0, 0, 0, 0, 7657.14, -1304.76)
+}
+point_count = 17
+
+[node name="sadManager" type="Node2D"]
+scale = Vector2(-0.375, 0.375)
+script = ExtResource("1_ohjh7")
+
+[node name="npcSprite" type="Sprite2D" parent="."]
+position = Vector2(50.6667, 205.333)
+scale = Vector2(0.62, 0.62)
+texture = ExtResource("1_8cq60")
+
+[node name="groundPos" type="Node2D" parent="npcSprite"]
+position = Vector2(-25.8065, 713.979)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_fei0g")
+metadata/_edit_lock_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+rotates = false
+loop = false
