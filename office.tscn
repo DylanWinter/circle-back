@@ -150,7 +150,7 @@ size = Vector2(58.675, 140.75)
 script = ExtResource("1_jktts")
 
 [node name="MapPrototype1" parent="." instance=ExtResource("2_n1y4y")]
-position = Vector2(198, -374)
+position = Vector2(198, -377)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(-102, 208)
