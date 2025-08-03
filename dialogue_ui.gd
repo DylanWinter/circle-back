@@ -1,13 +1,12 @@
 extends Control
 
 
-var meetingQuestions = load("res://dialogue/MeetingQuestions.dialogue")
+var meetingQuestions = load("res://dialogue/newMeetingQuestions.dialogue")
 var trackedTurn : String = "boss"
 
 func _ready() -> void:
 	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
 	Music.switch("boss")
-	$bossAnimPlayer.play("setBossTurnOn")
 	start_dialogue(meetingQuestions)
 
 
@@ -16,24 +15,7 @@ func start_dialogue(dialogue) -> void:
 
 
 func _process(delta: float) -> void:
-	if GameManager.currentTurn != trackedTurn:
-		if GameManager.currentTurn != "randomEmployee":
-			$randomEmpAnimPlayer.play("setRandomEmpTurnOff")
-			
-		if GameManager.currentTurn == "player":
-			$bossAnimPlayer.play("setBossTurnOff")
-			$playerAnimPlayer.play("setPlayerTurnOn")
-			
-		elif GameManager.currentTurn == "boss" and trackedTurn != "randomEmployee":
-			$bossAnimPlayer.play("setBossTurnOn")
-			$playerAnimPlayer.play("setPlayerTurnOff")
-			
-		elif GameManager.currentTurn == "randomEmployee":
-			$randomEmpAnimPlayer.play("setRandomEmpTurnOn")
-		
-		
-		trackedTurn = GameManager.currentTurn
-
+	pass
 func _on_dialogue_ended(resource) -> void:
 	SceneTransition.change_scene("res://end_screen.tscn")
 		

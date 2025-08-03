@@ -18,7 +18,8 @@ var wordFoundDict = {
 	"RDC - Rival Demonic Company": false,
 	"SDR - Successful Demon Ritual":false,
 	"SCS - Styx Corporate Soulutions":false,
-	"DHTB- Demon and Human Trend Behavior":false
+	"DHTB- Demon and Human Trend Behavior":false,
+	"BHBBQ - Big human BBQ": false
 }
 
 var convoDialogueDict = {
@@ -32,6 +33,7 @@ var start_meeting_early : bool = false
 #timer
 var timerMinutes = 999.0
 var timerSeconds = 999.0
+
 
 
 var talkedInKitchen = false

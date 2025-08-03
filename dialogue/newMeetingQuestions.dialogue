@@ -1,0 +1,108 @@
+~ start
+
+set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = false
+#set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = false
+set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = false
+set GameManager.wordFoundDict["DHTB- Demon and Human Trend Behavior"] = false
+
+
+
+
+
+Boss: Welcome everyone, I’m sure you’ll all curious about
+the buzz around the office.
+
+#Q1
+Boss: Here to tell us all about it, is our presenter for today. Introduce the company! We are...
+Introduce the company! We are...
+
+- Solving Constant Struggles
+	Boss: Stop messing around! Styx Corporate Soulutions! 
+	Yikes... that wasn’t a great start.
+
+- Styx Corporate Soulutions
+	set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = true
+	Player: We offer solutions even a demon can’t steal.
+	You can see your Boss nod his head in the back.
+
+- Sticks Corporate Solutions
+	Boss: That’s not.... right. It’s [i]Styx[/i] Corporate [b]Soulutions[/b]
+	Uh oh, don’t make that mistake again!
+	
+
+#Q2
+Random Demon: Why are we meeting in this room? This room’s SPCC is broken. It's way too cold!
+
+Boss: Wear a sweater next time. Continue on. 
+
+
+Right. Okay, you can do this. Our Top Client’s SDR has stalled. 
+Our data suggests that the projected sales for their new product... 
+
+- are 20% more! 
+	Boss: 20%?! Did you even read the graph?? 
+	No. But you’re not going to admit that out loud. 
+	Boss: Whatever, just continue.
+	
+- Summoning Demon Rituals will be HIGH!
+	set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = true
+	Boss: Hm...
+	You can feel your boss’ eyes judging you.
+	
+- Successful Demon Rituals will be on FIRE!
+	Player: Our client will have so many souls, they won’t have enough space to store them.
+	You breathe a sigh of relief. Just 3 more to go...
+	
+
+#Q3
+Random demon: What does this have to do with the BHBBQ?
+
+Boss: What?
+
+Random demon: Wait that’s not what this is about? 
+
+Boss: ...
+Anyways, to improve our cilent’s HSB, we plan to...
+
+- Develop Soul Acquiring Equipment!
+	Player: With the new SAE, the plan is to convert SDR into guaranteed Human Soul Binding!
+	Your boss nods his head approvingly. You’re killing it!
+	
+- Host a Big human BBQ!
+	Boss: That’s next Friday. And has nothing to do with this.
+	Looks like you just lost your invite to the BBQ :(
+		
+- Soul Powered Climate Control!
+	Boss: That’s what we use to power the cooling system.
+	His voice got deeper... Better not push your luck.
+	
+	
+#Q4
+
+Random demon: Okay, so the BHBBQ-
+
+Boss: Get out!
+
+The demon leaves muttering something about liking his meat
+medium to raw but no one wrote it down. 
+
+Second to last slide! We at SCS believe this will work since the DHTB 
+data shows...
+
+- An Increase in SDRs!
+	Boss: We’ve already talked about this! Pay Attention.
+	Oops...
+	
+- Humans Want Good Vibes
+	Player: Demons and Humans seem more likely to sign away their souls if the vibe is just right.
+	Siren: Ahh!! They’re about to show it!
+	
+- Soul Powered Climate Control!
+	Janitor: Is it still not working.
+	The boss looks like he’s ready to wrap his hands around your throat. Professionally, of course.
+	
+	 Siren: Ahh!! They’re about to show it!
+ 			Oops...Boss: ...  Anyways, to improve our cilent’s HSB, we plan to...
+
+
+=> END

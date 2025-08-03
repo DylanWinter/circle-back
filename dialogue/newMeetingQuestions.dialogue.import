@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://jdeg3mofve7u"
+path="res://.godot/imported/newMeetingQuestions.dialogue-123a0f5099fc8ac56e8b996fb8410d4b.tres"
+
+[deps]
+
+source_file="res://dialogue/newMeetingQuestions.dialogue"
+dest_files=["res://.godot/imported/newMeetingQuestions.dialogue-123a0f5099fc8ac56e8b996fb8410d4b.tres"]
+
+[params]
+
+defaults=true

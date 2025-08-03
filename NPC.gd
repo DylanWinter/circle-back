@@ -53,6 +53,9 @@ func _process(delta: float) -> void:
 		
 	if GameManager.is_in_conversation:
 		$waitTimer.paused = true
+		var animatedSprite : AnimatedSprite2D = $npcSprite
+		if animatedSprite.is_playing() == true:
+			animatedSprite.pause()
 		
 		
 	if not is_static:
@@ -105,6 +108,8 @@ func _process(delta: float) -> void:
 				
 			elif not GameManager.is_in_conversation and $waitTimer.paused == true:
 				$waitTimer.paused = false
+				var animatedSprite : AnimatedSprite2D = $npcSprite
+				animatedSprite.play()
 			
 	else: 
 		isStopped = true
