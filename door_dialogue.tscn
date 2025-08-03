@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6dapfqsio1v4"]
+[gd_scene load_steps=3 format=3 uid="uid://cyw63vnftjqxb"]
 
 [ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_ivpac"]
 [ext_resource type="Resource" uid="uid://ybtbbfdigwcp" path="res://dialogue/door.dialogue" id="2_avisy"]

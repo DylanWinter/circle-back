@@ -141,7 +141,7 @@ sprite_frames = SubResource("SpriteFrames_u2plm")
 autoplay = "default"
 frame_progress = 0.994647
 
-[node name="Area2D" type="Area2D" parent="npcSprite"]
+[node name="Area2D" type="Area2D" parent="npcSprite" groups=["spider"]]
 position = Vector2(-4, 386)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="npcSprite/Area2D"]

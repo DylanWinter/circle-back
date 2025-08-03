@@ -49,3 +49,13 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		
 	elif body.is_in_group("spider"):
 		$Sprite2D.visible = true
+
+
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if area.is_in_group("spider"):
+		$Sprite2D.visible = false
+
+
+func _on_area_2d_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if area.is_in_group("spider"):
+		$Sprite2D.visible = true

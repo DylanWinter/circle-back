@@ -59,7 +59,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fjtr"]
-radius = 479.841
+radius = 493.392
 
 [node name="NPC" instance=ExtResource("1_fcoua")]
 dialogueScenePaths = ["res://visualNovelOfficeScenes/bossConvo1.tscn"]
@@ -73,10 +73,10 @@ frame_progress = 0.296346
 
 [node name="AnimatedSprite2D" parent="npcSprite" index="0"]
 visible = true
-position = Vector2(-33.3333, -566.667)
+position = Vector2(-33.3333, -688.889)
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
-position = Vector2(-11.1111, 233.333)
+position = Vector2(-11.1111, 155.556)
 shape = SubResource("CircleShape2D_2fjtr")
 
 [node name="groundPos" parent="npcSprite" index="2"]

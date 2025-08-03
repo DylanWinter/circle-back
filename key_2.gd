@@ -1,8 +1,6 @@
 extends StaticBody2D
 
 var playerNear = false
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,6 +11,7 @@ func _process(delta: float) -> void:
 	if playerNear == true and Input.is_action_pressed("interact"):
 		$Sprite2D.visible = false
 		$CollisionShape2D.disabled = true
+		GameManager.found_key=true
 	elif playerNear == true and Input.is_action_pressed("interact"):
 		$Sprite2D.visible = true
 		$CollisionShape2D.disabled = false
