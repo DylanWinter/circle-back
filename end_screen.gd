@@ -4,7 +4,7 @@ extends Control
 @onready var desc = $Description
 
 func _ready() -> void:
-	var total = 0
+	var total = 4
 	
 	
 	'''
