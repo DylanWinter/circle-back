@@ -120,7 +120,7 @@ script = ExtResource("1_ohjh7")
 position = Vector2(50.6667, 205.333)
 sprite_frames = SubResource("SpriteFrames_44e5x")
 autoplay = "default"
-frame_progress = 0.745129
+frame_progress = 0.414207
 
 [node name="groundPos" type="Node2D" parent="npcSprite"]
 position = Vector2(-25.8065, 713.979)

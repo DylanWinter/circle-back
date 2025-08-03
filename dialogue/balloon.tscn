@@ -84,7 +84,17 @@ expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_267us"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_af48w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_af48w"]
+bg_color = Color(0, 0.784314, 0.729412, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0.784314, 0.729412, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5t74j"]
 
@@ -92,7 +102,17 @@ expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kiea"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fd6u7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t74j"]
+bg_color = Color(0.227451, 0.27451, 0.333333, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.227451, 0.27451, 0.333333, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -138,7 +158,8 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.25098, 0.25098, 0.25098, 1)
+theme_override_font_sizes/normal_font_size = 28
 text = "Dialogue..."
 seconds_per_step = 0.012
 
@@ -149,10 +170,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -69.085
-offset_top = 187.005
-offset_right = 177.915
-offset_bottom = 227.005
+offset_left = -120.765
+offset_top = -10.425
+offset_right = 225.235
+offset_bottom = 30.575
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.65, 0.65)
@@ -163,22 +184,22 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="ResponsesMenu"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.279844, 0.602322, 0.727893, 1)
-theme_override_colors/font_color = Color(0.310617, 0.310617, 0.310617, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_hover_color = Color(0.898039, 0.937255, 0.87451, 1)
+theme_override_colors/font_color = Color(0, 0.784314, 0.729412, 1)
+theme_override_colors/font_focus_color = Color(0, 0.784314, 0.729412, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 42
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hp0b2")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5rpkd")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wa6iy")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_im5dd")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0hx7h")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_267us")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_af48w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_af48w")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5t74j")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_w8vuf")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4kiea")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_fd6u7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5t74j")
 text = "Response example"
 
 [node name="TalkSound" type="AudioStreamPlayer2D" parent="."]
@@ -192,7 +213,7 @@ offset_top = 245.0
 offset_right = 593.0
 offset_bottom = 434.0
 mouse_filter = 1
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.252028, 0.252028, 0.252028, 1)
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "Character"
@@ -200,6 +221,7 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="spoke" from="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]

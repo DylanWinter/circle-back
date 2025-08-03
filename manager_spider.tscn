@@ -139,7 +139,7 @@ position = Vector2(5.96046e-08, -49)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_u2plm")
 autoplay = "default"
-frame_progress = 0.0955883
+frame_progress = 0.00558836
 
 [node name="Area2D" type="Area2D" parent="npcSprite"]
 position = Vector2(-4, 386)
