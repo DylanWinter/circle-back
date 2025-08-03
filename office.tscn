@@ -1,10 +1,10 @@
-[gd_scene load_steps=63 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=62 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Script" uid="uid://bflkfjnvrd3r3" path="res://office.gd" id="1_jktts"]
+[ext_resource type="Texture2D" uid="uid://26mdsu7djj65" path="res://assets/MAP_Prototype__Assets-1.png" id="2_jktts"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
-[ext_resource type="Texture2D" uid="uid://cgoaaurtpy5d3" path="res://assets/MAP_Prototype_1.png" id="4_hsito"]
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
@@ -35,7 +35,7 @@ size = Vector2(438.25, 30.25)
 size = Vector2(437.5, 29.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lcnwv"]
-size = Vector2(113, 29)
+size = Vector2(119.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4i814"]
 size = Vector2(29.5, 585)
@@ -65,10 +65,7 @@ size = Vector2(394, 30)
 size = Vector2(348, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1y4y"]
-size = Vector2(30, 683)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8tx5"]
-size = Vector2(215, 17)
+size = Vector2(30, 1259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hetp"]
 size = Vector2(30, 750)
@@ -106,11 +103,8 @@ size = Vector2(304.5, 29.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46so7"]
 size = Vector2(30.625, 394)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bveom"]
-size = Vector2(297, 17)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jtqa"]
-size = Vector2(30.8438, 338)
+size = Vector2(34, 367)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl0r1"]
 size = Vector2(380.922, 29.5)
@@ -128,7 +122,7 @@ size = Vector2(31, 396)
 size = Vector2(2309.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c3wu"]
-size = Vector2(819.875, 29.25)
+size = Vector2(863, 42)
 
 [sub_resource type="Curve2D" id="Curve2D_hsito"]
 _data = {
@@ -141,6 +135,12 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -13, 76, 0, 0, 0, 0, -16, 117, 0, 0, 0, 0, -14, 135, 0, 0, 0, 0, -11, 157, 0, 0, 0, 0, -14, 185, 0, 0, 0, 0, -5, 205, 0, 0, 0, 0, 1, 229, 0, 0, 0, 0, 14, 264, 0, 0, 0, 0, 39, 298, 0, 0, 0, 0, 74, 331, 0, 0, 0, 0, 110, 347, 0, 0, 0, 0, 184, 356, 0, 0, 0, 0, 229, 362, 0, 0, 0, 0, 321, 362, 0, 0, 0, 0, 377, 361, 0, 0, 0, 0, 432, 359, 0, 0, 0, 0, 525, 359, 0, 0, 0, 0, 566, 356, 0, 0, 0, 0, 630, 341, 0, 0, 0, 0, 645, 314, 0, 0, 0, 0, 651, 292, 0, 0, 0, 0, 655, 254, 0, 0, 0, 0, 670, 208, 0, 0, 0, 0, 683, 177, 0, 0, 0, 0, 683, 161, 0, 0, 0, 0, 686, 144, 0, 0, 0, 0, 686, 144, 0, 0, 0, 0, 665, 229)
 }
 point_count = 28
+
+[sub_resource type="Curve2D" id="Curve2D_25m5p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 32, 123, 0, 0, 0, 0, 137, 215, 0, 0, 0, 0, 262, 310, 0, 0, 0, 0, 368, 380, 0, 0, 0, 0, 566, 420, 0, 0, 0, 0, 716, 398, 0, 0, 0, 0, 907, 407, 0, 0, 0, 0, 1036, 469, 0, 0, 0, 0, 1091, 561, 0, 0, 0, 0, 1121, 703, 0, 0, 0, 0, 1144, 837, 0, 0, 0, 0, 1138, 1041, 0, 0, 0, 0, 1146, 1164, 0, 0, 0, 0, 1137, 1280, 0, 0, 0, 0, 1178, 1435, 0, 0, 0, 0, 1292, 1464, 0, 0, 0, 0, 1803, 1508, 0, 0, 0, 0, 2176, 1520, 0, 0, 0, 0, 2118, 1463, 0, 0, 0, 0, 1978, 1425, 0, 0, 0, 0, 1887, 1420, 0, 0, 0, 0, 1784, 1417)
+}
+point_count = 22
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
@@ -160,7 +160,7 @@ script = ExtResource("1_jktts")
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
 position = Vector2(198, -374)
-texture = ExtResource("4_hsito")
+texture = ExtResource("2_jktts")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(-102, 208)
@@ -184,7 +184,7 @@ position = Vector2(-557.75, -1438.75)
 shape = SubResource("RectangleShape2D_o3cd7")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="walls"]
-position = Vector2(113.5, -614.5)
+position = Vector2(113.25, -614)
 shape = SubResource("RectangleShape2D_lcnwv")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="walls"]
@@ -204,11 +204,11 @@ position = Vector2(1448, 80)
 shape = SubResource("RectangleShape2D_3xqf3")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="walls"]
-position = Vector2(2302.5, 691)
+position = Vector2(2300, 809)
 shape = SubResource("RectangleShape2D_70x1r")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="walls"]
-position = Vector2(1848, 453)
+position = Vector2(1861, 436)
 shape = SubResource("RectangleShape2D_knsl5")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="walls"]
@@ -224,12 +224,8 @@ position = Vector2(-573, -614)
 shape = SubResource("RectangleShape2D_2uxut")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="walls"]
-position = Vector2(-762, -632.5)
+position = Vector2(-762, -344.5)
 shape = SubResource("RectangleShape2D_n1y4y")
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="walls"]
-position = Vector2(-639.5, -299.5)
-shape = SubResource("RectangleShape2D_m8tx5")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="walls"]
 position = Vector2(-1053, -600)
@@ -279,12 +275,8 @@ shape = SubResource("RectangleShape2D_hblr6")
 position = Vector2(-1166.69, 434)
 shape = SubResource("RectangleShape2D_46so7")
 
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="walls"]
-position = Vector2(-250.5, -299.5)
-shape = SubResource("RectangleShape2D_bveom")
-
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="walls"]
-position = Vector2(-383.422, -460)
+position = Vector2(-380.922, -451.5)
 shape = SubResource("RectangleShape2D_6jtqa")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="walls"]
@@ -308,11 +300,11 @@ position = Vector2(1586.25, 1216.5)
 shape = SubResource("RectangleShape2D_qt548")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="walls"]
-position = Vector2(1447.06, 825.625)
+position = Vector2(1439.5, 834)
 shape = SubResource("RectangleShape2D_5c3wu")
 
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="walls"]
-position = Vector2(42, -458)
+position = Vector2(38, -449.5)
 shape = SubResource("RectangleShape2D_6jtqa")
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -394,8 +386,24 @@ position = Vector2(-13, 76)
 rotation = 1.64384
 
 [node name="managerSpider" parent="." instance=ExtResource("8_o3cd7")]
-position = Vector2(644, 859)
-conversationTimes = ["2:39|1:10"]
+position = Vector2(-227, -490)
+walkSpeed = 70
+conversationTimes = ["0:59|1:10"]
+
+[node name="npcSprite" parent="managerSpider" index="0"]
+position = Vector2(32, 123)
+
+[node name="CollisionShape2D" parent="managerSpider/npcSprite/Area2D" index="0"]
+position = Vector2(-22.2222, 388.889)
+
+[node name="Path2D" type="Path2D" parent="managerSpider"]
+curve = SubResource("Curve2D_25m5p")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="managerSpider/Path2D"]
+position = Vector2(32, 123)
+rotation = 0.719504
+rotates = false
+loop = false
 
 [node name="key" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(-981, 782)
@@ -526,6 +534,9 @@ metadata/_edit_lock_ = true
 position = Vector2(1328, 394)
 scale = Vector2(-0.315, 0.315)
 
+[node name="npcSprite" parent="sadManager" index="0"]
+scale = Vector2(0.34, 0.34)
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -533,6 +544,7 @@ scale = Vector2(-0.315, 0.315)
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
+[editable path="managerSpider"]
 [editable path="key"]
 [editable path="door"]
 [editable path="meeting_room_door"]

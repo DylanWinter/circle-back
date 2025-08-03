@@ -15,7 +15,6 @@ script = ExtResource("1_ohjh7")
 
 [node name="npcSprite" type="Sprite2D" parent="."]
 position = Vector2(50.6667, 205.333)
-scale = Vector2(0.62, 0.62)
 texture = ExtResource("1_8cq60")
 
 [node name="groundPos" type="Node2D" parent="npcSprite"]
