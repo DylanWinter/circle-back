@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=112 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -47,8 +47,9 @@
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
 [ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
 [ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
-[ext_resource type="PackedScene" uid="uid://lwylo8fuui4b" path="res://walkNPC1.tscn" id="47_vb8hc"]
+[ext_resource type="PackedScene" uid="uid://lwylo8fuui4b" path="res://coworkers/walkNPC1.tscn" id="47_vb8hc"]
 [ext_resource type="PackedScene" uid="uid://70gcj423oawb" path="res://interactVendingMachine.tscn" id="49_5xppq"]
+[ext_resource type="PackedScene" uid="uid://bqg0jhtpu1vor" path="res://coworkers/walkNPC.tscn" id="50_5xppq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -267,6 +268,18 @@ _data = {
 }
 point_count = 22
 
+[sub_resource type="Curve2D" id="Curve2D_5xppq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 81.25, 850, 0, 0, 0, 0, 300, 2768.75, 0, 0, 0, 0, 150, 3593.75, 0, 0, 0, 0, 193.75, 4650, 0, 0, 0, 0, 137.5, 5387.5, 0, 0, 0, 0, 81.25, 6187.5, 0, 0, 0, 0, -68.75, 7012.5, 0, 0, 0, 0, -156.25, 7700, 0, 0, 0, 0, 356.25, 8175, 0, 0, 0, 0, 1275, 8325, 0, 0, 0, 0, 2512.5, 8293.75, 0, 0, 0, 0, 3850, 8306.25, 0, 0, 0, 0, 4693.75, 8412.5, 0, 0, 0, 0, 4968.75, 8850, 0, 0, 0, 0, 4393.75, 9100, 0, 0, 0, 0, 3618.75, 9218.75, 0, 0, 0, 0, 2968.75, 9262.5, 0, 0, 0, 0, 1775, 9262.5, 0, 0, 0, 0, 356.25, 9150, 0, 0, 0, 0, -331.25, 9150, 0, 0, 0, 0, -1112.5, 8987.5, 0, 0, 0, 0, -1618.75, 8262.5, 0, 0, 0, 0, -1750, 7631.25, 0, 0, 0, 0, -2012.5, 6993.75, 0, 0, 0, 0, -2575, 6600, 0, 0, 0, 0, -2781.25, 5962.5, 0, 0, 0, 0, -2943.75, 4856.25, 0, 0, 0, 0, -3000, 4168.75, 0, 0, 0, 0, -2987.5, 3062.5, 0, 0, 0, 0, -2968.75, 2575, 0, 0, 0, 0, -2631.25, 1675, 0, 0, 0, 0, -2443.75, 1412.5, 0, 0, 0, 0, -1587.5, 893.75, 0, 0, 0, 0, -587.5, 793.75, 0, 0, 0, 0, 125, 837.5)
+}
+point_count = 35
+
+[sub_resource type="Curve2D" id="Curve2D_m3tm8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1918.75, 62.5, 0, 0, 0, 0, -2850, -143.75, 0, 0, 0, 0, -3731.25, -287.5, 0, 0, 0, 0, -4368.75, -718.75, 0, 0, 0, 0, -4706.25, -1512.5, 0, 0, 0, 0, -4837.5, -2143.75, 0, 0, 0, 0, -4868.75, -3237.5, 0, 0, 0, 0, -4512.5, -3825, 0, 0, 0, 0, -4531.25, -4518.75, 0, 0, 0, 0, -4675, -5225, 0, 0, 0, 0, -4556.25, -5787.5, 0, 0, 0, 0, -4487.5, -6731.25, 0, 0, 0, 0, -4487.5, -7318.75, 0, 0, 0, 0, -4487.5, -8087.5, 0, 0, 0, 0, -4500, -8781.25, 0, 0, 0, 0, -4350, -9306.25, 0, 0, 0, 0, -4143.75, -9412.5, 0, 0, 0, 0, -3956.25, -9368.75, 0, 0, 0, 0, -3256.25, -9643.75, 0, 0, 0, 0, -2937.5, -9693.75, 0, 0, 0, 0, -2637.5, -9837.5, 0, 0, 0, 0, -2700, -10212.5, 0, 0, 0, 0, -2687.5, -10650, 0, 0, 0, 0, -2718.75, -11012.5, 0, 0, 0, 0, -2687.5, -11200, 0, 0, 0, 0, -2625, -11350, 0, 0, 0, 0, -2212.5, -11356.3, 0, 0, 0, 0, -2050, -11043.8, 0, 0, 0, 0, -2075, -10268.8, 0, 0, 0, 0, -2306.25, -9743.75, 0, 0, 0, 0, -2418.75, -9556.25, 0, 0, 0, 0, -3100, -9406.25, 0, 0, 0, 0, -3700, -9306.25, 0, 0, 0, 0, -3850, -9225, 0, 0, 0, 0, -3962.5, -8450, 0, 0, 0, 0, -4056.25, -7712.5, 0, 0, 0, 0, -4000, -7512.5, 0, 0, 0, 0, -3962.5, -6781.25, 0, 0, 0, 0, -3918.75, -6368.75, 0, 0, 0, 0, -3900, -5018.75, 0, 0, 0, 0, -4056.25, -3950, 0, 0, 0, 0, -3950, -3050, 0, 0, 0, 0, -3837.5, -2268.75, 0, 0, 0, 0, -3806.25, -1343.75, 0, 0, 0, 0, -3400, -975, 0, 0, 0, 0, -2987.5, -743.75, 0, 0, 0, 0, -2525, -756.25, 0, 0, 0, 0, -2150, -881.25, 0, 0, 0, 0, -2087.5, -1268.75, 0, 0, 0, 0, -1387.5, -1287.5, 0, 0, 0, 0, -1200, -537.5, 0, 0, 0, 0, -1581.25, -137.5, 0, 0, 0, 0, -1843.75, -18.75)
+}
+point_count = 53
+
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
 
@@ -457,7 +470,6 @@ position = Vector2(9.25314, 76.6689)
 [node name="CollisionShape2D" parent="Chair24/StaticBody2D" index="0"]
 position = Vector2(-21.15, 29.0811)
 rotation = 0.0
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_vb8hc")
 
 [node name="boss" parent="." instance=ExtResource("6_lcnwv")]
@@ -958,6 +970,33 @@ loop = false
 [node name="Node2D" parent="." instance=ExtResource("49_5xppq")]
 position = Vector2(1249, 41)
 
+[node name="WalkNpc2" parent="." instance=ExtResource("50_5xppq")]
+position = Vector2(886, -373)
+scale = Vector2(0.16, 0.16)
+walkSpeed = 580
+
+[node name="Path2D" parent="WalkNpc2" index="1"]
+curve = SubResource("Curve2D_5xppq")
+
+[node name="PathFollow2D" parent="WalkNpc2/Path2D" index="0"]
+position = Vector2(81.25, 850)
+rotation = 1.45728
+
+[node name="WalkNpc" parent="." instance=ExtResource("50_5xppq")]
+position = Vector2(-249, 505)
+scale = Vector2(0.16, 0.16)
+walkSpeed = 685
+
+[node name="AnimatedSprite2D" parent="WalkNpc" index="0"]
+position = Vector2(-987.5, 181.25)
+
+[node name="Path2D" parent="WalkNpc" index="1"]
+curve = SubResource("Curve2D_m3tm8")
+
+[node name="PathFollow2D" parent="WalkNpc/Path2D" index="0"]
+position = Vector2(-1918.75, 62.5)
+rotates = false
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -990,3 +1029,5 @@ position = Vector2(1249, 41)
 [editable path="NPC3"]
 [editable path="NPC2"]
 [editable path="Node2D"]
+[editable path="WalkNpc2"]
+[editable path="WalkNpc"]

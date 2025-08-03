@@ -1,0 +1,124 @@
+[gd_scene load_steps=27 format=3 uid="uid://bqg0jhtpu1vor"]
+
+[ext_resource type="Script" uid="uid://c8vu1v2yvq3yc" path="res://coworkers/walk_npc.gd" id="1_2kpxv"]
+[ext_resource type="Texture2D" uid="uid://cf6s64wwlbt57" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_001.png" id="1_78sxs"]
+[ext_resource type="Texture2D" uid="uid://be7qtcn4i8qra" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_002.png" id="2_2kpxv"]
+[ext_resource type="Texture2D" uid="uid://oauvagvi7t4d" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_003.png" id="3_i4ft6"]
+[ext_resource type="Texture2D" uid="uid://cc3sdq2p66ahx" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_004.png" id="4_mbxke"]
+[ext_resource type="Texture2D" uid="uid://kgi0lxcp4242" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_005.png" id="5_51ksw"]
+[ext_resource type="Texture2D" uid="uid://b2vm25gj81xtb" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_006.png" id="6_wlcx7"]
+[ext_resource type="Texture2D" uid="uid://b2tr8xw4ky22o" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_007.png" id="7_5o05t"]
+[ext_resource type="Texture2D" uid="uid://ct0g45vpf5bwy" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_008.png" id="8_yt48l"]
+[ext_resource type="Texture2D" uid="uid://cv1jm4hnb5d1g" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_009.png" id="9_8n45d"]
+[ext_resource type="Texture2D" uid="uid://dp5o6cs6ipux0" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_010.png" id="10_ve53f"]
+[ext_resource type="Texture2D" uid="uid://dy5ww622v5fmd" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_011.png" id="11_grkx6"]
+[ext_resource type="Texture2D" uid="uid://dqouwu30escly" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_012.png" id="12_ms3hc"]
+[ext_resource type="Texture2D" uid="uid://cga2myvt4anf6" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_013.png" id="13_d76j3"]
+[ext_resource type="Texture2D" uid="uid://cxn1b2c8cg557" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_014.png" id="14_4aeyo"]
+[ext_resource type="Texture2D" uid="uid://b42slkmbegs71" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_015.png" id="15_v785l"]
+[ext_resource type="Texture2D" uid="uid://jihaygfpdx7c" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_016.png" id="16_46xh5"]
+[ext_resource type="Texture2D" uid="uid://pn1hw6de1ynn" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_017.png" id="17_rpgwi"]
+[ext_resource type="Texture2D" uid="uid://dbqegerjpqvcc" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_018.png" id="18_mn4ia"]
+[ext_resource type="Texture2D" uid="uid://br0pnpgfmd8lb" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_019.png" id="19_fp67o"]
+[ext_resource type="Texture2D" uid="uid://c2lk6qmpvhuoa" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_020.png" id="20_w0crn"]
+[ext_resource type="Texture2D" uid="uid://q6e7pklwaxwt" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_021.png" id="21_s8gqs"]
+[ext_resource type="Texture2D" uid="uid://cyuqu5balg37f" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_022.png" id="22_ikubp"]
+[ext_resource type="Texture2D" uid="uid://ckm8qdyq3pwag" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_023.png" id="23_qo0ih"]
+[ext_resource type="Texture2D" uid="uid://cael2etc5fqt1" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_024.png" id="24_7ebhr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uyy15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_78sxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2kpxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i4ft6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mbxke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_51ksw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wlcx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5o05t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yt48l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8n45d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ve53f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_grkx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ms3hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d76j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4aeyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v785l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_46xh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rpgwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mn4ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fp67o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_w0crn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_s8gqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ikubp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qo0ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7ebhr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 65.0
+}]
+
+[node name="WalkNpc" type="Node2D"]
+script = ExtResource("1_2kpxv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uyy15")
+autoplay = "default"
+frame_progress = 0.0486228
+
+[node name="Path2D" type="Path2D" parent="."]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-987.5, 200)
+rotation = -2.99825
+
+[node name="groundPos" type="Node2D" parent="."]
+position = Vector2(4, 416)
