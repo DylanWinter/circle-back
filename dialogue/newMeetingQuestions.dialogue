@@ -17,6 +17,7 @@ Boss: Here to tell us all about it, is our presenter for today.
 Introduce the company! We are...
 
 - Solving Constant Struggles
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0
 	Boss: Stop messing around! Styx Corporate Soulutions! 
 	Yikes... that wasn’t a great start.
 
@@ -27,6 +28,8 @@ Introduce the company! We are...
 	You can see your Boss nod his head in the back.
 
 - Sticks Corporate Solutions
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0
+	
 	Boss: That’s not.... right. It’s [i]Styx[/i] Corporate [b]Soulutions[/b]
 	Uh oh, don’t make that mistake again!
 	
@@ -41,11 +44,13 @@ Right. Okay, you can do this. Our Top Client’s SDR has stalled.
 Our data suggests that the projected sales for their new product... 
 
 - are 20% more! 
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0
 	Boss: 20%?! Did you even read the graph?? 
 	No. But you’re not going to admit that out loud. 
 	Boss: Whatever, just continue.
 	
 - Summoning Demon Rituals will be HIGH!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0.5
 	Boss: Hm...
 	You can feel your boss’ eyes judging you.
 	
@@ -71,10 +76,12 @@ Anyways, to improve our cilent’s HSB, we plan to...
 	Your boss nods his head approvingly. You’re killing it!
 	
 - Host a Big human BBQ!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0
 	Boss: That’s next Friday. And has nothing to do with this.
 	Looks like you just lost your invite to the BBQ :(
 		
 - Soul Powered Climate Control!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0.5
 	Boss: That’s what we use to power the cooling system.
 	His voice got deeper... Better not push your luck.
 	
@@ -92,6 +99,7 @@ Second to last slide! We at SCS believe this will work since the DHTB
 data shows...
 
 - An Increase in SDRs!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0
 	Boss: We’ve already talked about this! Pay Attention.
 	Oops...
 	
@@ -101,11 +109,26 @@ data shows...
 	Siren: Ahh!! They’re about to show it!
 	
 - Soul Powered Climate Control!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0.5
 	Janitor: Is it still not working.
 	The boss looks like he’s ready to wrap his hands around your throat. Professionally, of course.
+
+You feel the adrenaline coursing through your veins, or whatever your vascular system is made of.
+
+Boss: The RDC.... We will make them crumble under my thumb... What do you think..? 
+
+- Candles are stupid.
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0
+	Boss: Okay. That’s it. You die. 
 	
-	 Siren: Ahh!! They’re about to show it!
- 			Oops...Boss: ...  Anyways, to improve our cilent’s HSB, we plan to...
+- Rival Demon Company
+	set GameManager.correctAnswers = GameManager.correctAnswers + 1
+	Player: Demons and Humans seem more likely to sign away their souls if the vibe is just right.
+
+- Revival Demon Cohilition
+	set GameManager.correctAnswers = GameManager.correctAnswers + 0.5
+	Asmodeus: Ugh... this guy is making me lose brain sells.
+	Boss: Okay. That’s it. You die. 
 
 
 => END

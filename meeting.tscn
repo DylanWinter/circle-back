@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5ciruyujtwaq"]
 
 [ext_resource type="Script" uid="uid://db5a8c6ok1b1t" path="res://dialogue_ui.gd" id="1_4560a"]
-[ext_resource type="Texture2D" uid="uid://dhn3yx87ous08" path="res://assets/Meeting_room.png" id="2_1rolt"]
+[ext_resource type="Texture2D" uid="uid://dt7cienwcx2dl" path="res://assets/splash_art.png" id="2_4560a"]
 [ext_resource type="Texture2D" uid="uid://cl30t2ocwptcn" path="res://assets/smallNPC.png" id="3_rt47e"]
 [ext_resource type="Texture2D" uid="uid://lyfvql11cf1f" path="res://assets/boss/BOSS PROTOTYPE 3.png" id="4_4560a"]
 
@@ -14,10 +14,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4560a")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(507, 247)
-scale = Vector2(1.08302, 1.08302)
-texture = ExtResource("2_1rolt")
+[node name="SplashArt" type="Sprite2D" parent="."]
+position = Vector2(486, 273)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("2_4560a")
 
 [node name="SmallNpc" type="Sprite2D" parent="."]
 position = Vector2(749, 175)
