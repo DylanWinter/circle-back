@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(37, 4.25)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -18,5 +18,5 @@ sprite_frames = ExtResource("2_onrkg")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.5, 76.125)
+position = Vector2(-3, 81)
 shape = SubResource("RectangleShape2D_4flbx")

@@ -4,21 +4,6 @@
 [ext_resource type="Resource" uid="uid://blafggd5fe2yv" path="res://dialogue/firstManagerSpiderOfficeDialogue.dialogue" id="2_us5k4"]
 [ext_resource type="Texture2D" uid="uid://cmyvt183mvs3a" path="res://assets/projmanagerlady.png" id="3_3yvgn"]
 
-[sub_resource type="Animation" id="Animation_3yvgn"]
-resource_name = "bounceAnim"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Projmanagerlady:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.733333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(10, -2), Vector2(26, 796), Vector2(11.095, -800), Vector2(10, -2)]
-}
-
 [sub_resource type="Animation" id="Animation_uoe24"]
 length = 0.001
 tracks/0/type = "value"
@@ -34,6 +19,21 @@ tracks/0/keys = {
 "values": [Vector2(10, -2)]
 }
 
+[sub_resource type="Animation" id="Animation_3yvgn"]
+resource_name = "bounceAnim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Projmanagerlady:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 0.659754, 1),
+"update": 0,
+"values": [Vector2(430, 179), Vector2(430, 220.753), Vector2(430, 111.115), Vector2(430, 179)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uoe24"]
 _data = {
 &"RESET": SubResource("Animation_uoe24"),
@@ -45,7 +45,7 @@ dialogue = ExtResource("2_us5k4")
 
 [node name="Projmanagerlady" type="Sprite2D" parent="." index="1"]
 position = Vector2(10, -2)
-scale = Vector2(2.595, 2.595)
+scale = Vector2(0.52, 0.52)
 texture = ExtResource("3_3yvgn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]

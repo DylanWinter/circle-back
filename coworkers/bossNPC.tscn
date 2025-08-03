@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dglc7sq6v53mf"]
+[gd_scene load_steps=19 format=3 uid="uid://dglc7sq6v53mf"]
 
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_fcoua"]
 [ext_resource type="Texture2D" uid="uid://c7ah2ovl2egwo" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_001.png" id="2_2fjtr"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bppciua324pry" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_010.png" id="11_jh5r6"]
 [ext_resource type="Texture2D" uid="uid://cit7d53uj7md7" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_011.png" id="12_071qb"]
 [ext_resource type="Texture2D" uid="uid://tqw2mle1m0t3" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_012.png" id="13_33vw3"]
+[ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="14_lue4u"]
+[ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="15_oswwu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jthlu"]
 animations = [{
@@ -58,6 +60,20 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ul7y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_lue4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oswwu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fjtr"]
 radius = 493.392
 
@@ -74,6 +90,7 @@ frame_progress = 0.296346
 [node name="AnimatedSprite2D" parent="npcSprite" index="0"]
 visible = true
 position = Vector2(-33.3333, -688.889)
+sprite_frames = SubResource("SpriteFrames_ul7y6")
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
 position = Vector2(-11.1111, 155.556)

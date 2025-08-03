@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://calyt7tdod60b"]
+[gd_scene load_steps=32 format=3 uid="uid://calyt7tdod60b"]
 
 [ext_resource type="Script" uid="uid://h3pucb58b5dt" path="res://coworkers/sad_manager.gd" id="1_ohjh7"]
 [ext_resource type="Texture2D" uid="uid://ckv5ey1hl336y" path="res://assets/MINI_ASMODEUS_Walk/MINI_ASMODEUS_Walk_001.png" id="2_vrpnk"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://imriq61eghpu" path="res://assets/MINI_ASMODEUS_Walk/MINI_ASMODEUS_Walk_022.png" id="23_4pus3"]
 [ext_resource type="Texture2D" uid="uid://dcm54b78pv4ri" path="res://assets/MINI_ASMODEUS_Walk/MINI_ASMODEUS_Walk_023.png" id="24_pnvvc"]
 [ext_resource type="Texture2D" uid="uid://d3uji0qrm8ior" path="res://assets/MINI_ASMODEUS_Walk/MINI_ASMODEUS_Walk_024.png" id="25_wns1p"]
+[ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="26_373ak"]
+[ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="27_g2yxb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_44e5x"]
 animations = [{
@@ -106,11 +108,28 @@ animations = [{
 "speed": 60.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_o1q2m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_373ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_g2yxb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_fei0g"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 707.936, 66.6666, 0, 0, 0, 0, 1253.97, 92.0635, 0, 0, 0, 0, 2533.33, 352.381, 0, 0, 0, 0, 2892.06, 247.619, 0, 0, 0, 0, 2958.73, -330.159, 0, 0, 0, 0, 2907.94, -1168.25, 0, 0, 0, 0, 2936.51, -1704.76, 0, 0, 0, 0, 3425.4, -1939.68, 0, 0, 0, 0, 4869.84, -1850.79, 0, 0, 0, 0, 5558.73, -1679.37, 0, 0, 0, 0, 5984.13, -1565.08, 0, 0, 0, 0, 6050.79, -1063.49, 0, 0, 0, 0, 6076.19, -593.651, 0, 0, 0, 0, 6120.63, -215.873, 0, 0, 0, 0, 6942.86, -184.127, 0, 0, 0, 0, 7238.09, -812.698, 0, 0, 0, 0, 7441.27, -1142.86, 0, 0, 0, 0, 7622.22, -1142.86)
 }
 point_count = 19
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_373ak"]
+radius = 363.43
 
 [node name="sadManager" type="Node2D"]
 scale = Vector2(-0.375, 0.375)
@@ -122,6 +141,11 @@ sprite_frames = SubResource("SpriteFrames_44e5x")
 autoplay = "default"
 frame_progress = 0.414207
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="npcSprite"]
+visible = false
+position = Vector2(-61.778, -727.555)
+sprite_frames = SubResource("SpriteFrames_o1q2m")
+
 [node name="groundPos" type="Node2D" parent="npcSprite"]
 position = Vector2(-25.8065, 713.979)
 
@@ -132,3 +156,12 @@ metadata/_edit_lock_ = true
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 rotates = false
 loop = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 256)
+shape = SubResource("CircleShape2D_373ak")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

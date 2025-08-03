@@ -8,7 +8,7 @@ void vertex() {
 }
 
 void fragment() {
-	
+
 	if (isInteractable == true && COLOR.a>0.1)
 	{
 		COLOR.r =0.0;

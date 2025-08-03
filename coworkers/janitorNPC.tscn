@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://caqx2v8k3kjnb"]
+[gd_scene load_steps=31 format=3 uid="uid://caqx2v8k3kjnb"]
 
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_qqpbg"]
 [ext_resource type="Texture2D" uid="uid://dnqun4vofspsk" path="res://assets/MINI_JANITOR_Walk/MINI_JANITOR_Walk_001.png" id="2_5echm"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://bhu41laf0btq7" path="res://assets/MINI_JANITOR_Walk/MINI_JANITOR_Walk_022.png" id="23_d856y"]
 [ext_resource type="Texture2D" uid="uid://b7d4no744obsr" path="res://assets/MINI_JANITOR_Walk/MINI_JANITOR_Walk_023.png" id="24_uo14c"]
 [ext_resource type="Texture2D" uid="uid://b75jesuw1gky4" path="res://assets/MINI_JANITOR_Walk/MINI_JANITOR_Walk_024.png" id="25_bs4ms"]
+[ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="26_s70vt"]
+[ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="27_ke44x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4bu1s"]
 animations = [{
@@ -106,6 +108,20 @@ animations = [{
 "speed": 60.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ul7y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_s70vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ke44x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5echm"]
 radius = 532.168
 
@@ -119,8 +135,8 @@ autoplay = "default"
 frame_progress = 0.290694
 
 [node name="AnimatedSprite2D" parent="npcSprite" index="0"]
-visible = true
 position = Vector2(-11.1111, -522.222)
+sprite_frames = SubResource("SpriteFrames_ul7y6")
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
 position = Vector2(-11.1111, 144.444)

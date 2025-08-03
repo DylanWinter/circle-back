@@ -38,6 +38,7 @@ func _ready() -> void:
 		isStopped = true
 	else:
 		isStopped = false
+		
 	
 	speechBubbleSprite.frame = 1
 	pass
@@ -45,7 +46,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if coworker_title == "sadManager":
+		if GameManager.peptalkedsadmanager == true:
+			conversationTimes[0] = "1:00|0:00"
+			conversationTimes[1] = "2:00|0:30"
 		
 	if GameManager.is_in_conversation:
 		$waitTimer.paused = true
@@ -54,13 +58,13 @@ func _process(delta: float) -> void:
 	if not is_static:
 		if not GameManager.is_in_conversation:
 			lastPosition = $npcSprite.position
+			
+			
 			if has_node("Path2D/PathFollow2D") and isStopped == false:
-				var animatedSprite : AnimatedSprite2D = $npcSprite
-				if animatedSprite.is_playing() == false:
-					animatedSprite.play("default")
-				
-				
-				
+				if coworker_title == "boss":
+					var animatedSprite : AnimatedSprite2D = $npcSprite
+					if animatedSprite.is_playing() == false:
+						animatedSprite.play("default")
 				alreadyStartedDialogue = false
 				$Path2D/PathFollow2D.progress += walkSpeed*delta
 				$npcSprite.position = $Path2D/PathFollow2D.position

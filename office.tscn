@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=105 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -21,7 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
 [ext_resource type="Texture2D" uid="uid://c0n8hbdorp30f" path="res://assets/Office assets/Cork board.png" id="17_4hetp"]
 [ext_resource type="Texture2D" uid="uid://mfhvxurx81jf" path="res://assets/Office assets/Office decoration 1.png" id="18_o3cd7"]
-[ext_resource type="PackedScene" uid="uid://calyt7tdod60b" path="res://coworkers/sadManager.tscn" id="20_8qan1"]
+[ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="20_qsbda"]
+[ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="21_8ovme"]
 [ext_resource type="PackedScene" uid="uid://bou0t365txxlo" path="res://manager_spider.tscn" id="21_jktts"]
 [ext_resource type="Script" uid="uid://dn4rb1v7c68li" path="res://armless_only_block.gd" id="22_25m5p"]
 [ext_resource type="Script" uid="uid://chmihaerku4v0" path="res://aDoor.gd" id="24_hs4kw"]
@@ -45,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://cxs6a1p3yqne5" path="res://assets/furniture/sadPlant.png" id="43_a0t2l"]
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
 [ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -180,6 +182,20 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/blink_color = Color(0.600435, 0.603895, 0.627459, 1)
 shader_parameter/blink_time_scale = 0.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ul7y6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_qsbda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8ovme")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(117.742, 861.905)
 
@@ -237,6 +253,12 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/blink_color = Color(0.446777, 0.446777, 0.446777, 1)
 shader_parameter/blink_time_scale = 0.0
 
+[sub_resource type="Curve2D" id="Curve2D_qsbda"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.10352e-05, 0, 0, 0, 0, 0, -119.663, -51.1236, 0, 0, 0, 0, -173.034, -51.1236, 0, 0, 0, 0, -256.18, -19.6629, 0, 0, 0, 0, -306.742, 13.4831, 0, 0, 0, 0, -366.292, 55.618, 0, 0, 0, 0, -410.112, 75.8427, 0, 0, 0, 0, -429.775, 82.5843, 0, 0, 0, 0, -462.921, 84.8315, 0, 0, 0, 0, -505.618, 86.5168, 0, 0, 0, 0, -650, 79.7753, 0, 0, 0, 0, -754.494, 79.7753, 0, 0, 0, 0, -837.641, 71.9101, 0, 0, 0, 0, -905.618, 60.1123, 0, 0, 0, 0, -953.371, 50.5618, 0, 0, 0, 0, -1023.03, 34.8315, 0, 0, 0, 0, -1088.2, 4.49435, 0, 0, 0, 0, -1148.88, -42.1348, 0, 0, 0, 0, -1170.22, -113.483, 0, 0, 0, 0, -1198.31, -146.629, 0, 0, 0, 0, -1235.39, -182.584, 0, 0, 0, 0, -1274.72, -200)
+}
+point_count = 22
+
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
 
@@ -245,7 +267,7 @@ z_index = -2999
 position = Vector2(198, -374)
 texture = ExtResource("2_jktts")
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
+[node name="Player" parent="." instance=ExtResource("1_ei2s5")]
 position = Vector2(-102, 208)
 
 [node name="walls" type="StaticBody2D" parent="."]
@@ -506,6 +528,7 @@ script = ExtResource("13_s0aar")
 [node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
 position = Vector2(8, -196)
 scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_ul7y6")
 
 [node name="meeting_room_door" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(2613, 1384)
@@ -530,6 +553,7 @@ shape = SubResource("RectangleShape2D_g68bc")
 position = Vector2(24.001, 1819.99)
 rotation = 3.14159
 scale = Vector2(0.2, 2.4)
+sprite_frames = SubResource("SpriteFrames_ul7y6")
 
 [node name="Area2D" parent="meeting_room_door/npcSprite" index="2"]
 scale = Vector2(1, 5.79998)
@@ -580,13 +604,6 @@ z_index = -3000
 tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gxl1f")
 metadata/_edit_lock_ = true
-
-[node name="sadManager" parent="." instance=ExtResource("20_8qan1")]
-position = Vector2(1328, 394)
-scale = Vector2(-0.315, 0.315)
-
-[node name="npcSprite" parent="sadManager" index="0"]
-scale = Vector2(0.6, 0.6)
 
 [node name="managerSpider" parent="." groups=["spider"] instance=ExtResource("21_jktts")]
 position = Vector2(-198.015, -453.72)
@@ -643,9 +660,10 @@ one_shot = true
 [node name="NPC" parent="." instance=ExtResource("8_o3cd7")]
 z_index = 3961
 position = Vector2(1760, 1080)
-conversationTimes = ["2:43|0:17"]
+conversationTimes = ["2:50|3:00"]
 
 [node name="AnimatedSprite2D" parent="NPC/npcSprite" index="0"]
+visible = true
 position = Vector2(8333.33, -1233.33)
 scale = Vector2(1.3, 1.3)
 
@@ -826,7 +844,6 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Chair20/StaticBody2D" index="0"]
 position = Vector2(-3.50903, 70.2025)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2prrh")
 
 [node name="Chair17" parent="." instance=ExtResource("42_a0t2l")]
@@ -861,7 +878,6 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="Chair21/StaticBody2D" index="0"]
 position = Vector2(-3.50903, 70.2025)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2prrh")
 
 [node name="Chair22" parent="." instance=ExtResource("36_cu40l")]
@@ -896,6 +912,23 @@ z_index = -2775
 position = Vector2(-1159, -1121)
 texture = ExtResource("45_g6veu")
 
+[node name="NPC2" parent="." instance=ExtResource("47_qsbda")]
+position = Vector2(1272, 463)
+scale = Vector2(1.78, 1.78)
+coworker_title = "sadManager"
+dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1.tscn", "res://visualNovelOfficeScenes/sadManager/sadManagerConvo1.tscn"]
+walkSpeed = 60
+conversationTimes = ["2:59|4:00", "2:00|0:30"]
+
+[node name="Path2D" type="Path2D" parent="NPC2"]
+curve = SubResource("Curve2D_qsbda")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="NPC2/Path2D"]
+position = Vector2(-6.10352e-05, 0)
+rotation = -2.73783
+rotates = false
+loop = false
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -913,7 +946,6 @@ texture = ExtResource("45_g6veu")
 [editable path="janitor"]
 [editable path="key"]
 [editable path="meeting_room_door"]
-[editable path="sadManager"]
 [editable path="managerSpider"]
 [editable path="NPC"]
 [editable path="Chair3"]
@@ -925,3 +957,4 @@ texture = ExtResource("45_g6veu")
 [editable path="Chair20"]
 [editable path="Chair18"]
 [editable path="Chair21"]
+[editable path="NPC2"]
