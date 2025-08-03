@@ -107,7 +107,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5echm"]
-radius = 967.688
+radius = 966.731
 
 [node name="NPC" instance=ExtResource("1_qqpbg")]
 

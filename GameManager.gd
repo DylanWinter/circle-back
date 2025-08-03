@@ -12,11 +12,13 @@ var is_in_conversation: bool = false
 # meeting room stuff
 var currentTurn = "boss"
 var talkedToSiren = false
+
 # known words
 var wordFoundDict = {
 	"RDC - Rival Demonic Company": false,
 	"SDR - Successful Demon Ritual":false,
 	"SCS - Styx Corporate Soulutions":false,
+	"DHTB- Demon and Human Trend Behavior":false
 }
 
 var convoDialogueDict = {

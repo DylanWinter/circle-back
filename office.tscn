@@ -474,6 +474,7 @@ conversationTimes = ["2:55|1:00", "1:25|2:00"]
 
 [node name="npcSprite" parent="janitor" index="0"]
 position = Vector2(-35, -33)
+scale = Vector2(0.16, 0.16)
 
 [node name="CollisionShape2D" parent="janitor/npcSprite/Area2D" index="0"]
 position = Vector2(-11.111, -33.3329)
