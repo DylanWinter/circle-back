@@ -46,11 +46,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	'''
 	if coworker_title == "sadManager":
 		if GameManager.peptalkedsadmanager == true:
 			conversationTimes[0] = "2:30|0:01"
 			conversationTimes[1] = "2:00|0:30"
-		
+	'''
 	if GameManager.is_in_conversation:
 		$waitTimer.paused = true
 		var animatedSprite : AnimatedSprite2D = $npcSprite

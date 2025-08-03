@@ -3,5 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_0cepx"]
 [ext_resource type="Resource" uid="uid://qije1b7l7vf" path="res://dialogue/meeting_room_door.dialogue" id="2_0cepx"]
 
-[node name="VisNovelScene" instance=ExtResource("1_0cepx")]
+[node name="VisNovelScene2" instance=ExtResource("1_0cepx")]
 dialogue = ExtResource("2_0cepx")

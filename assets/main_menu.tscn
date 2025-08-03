@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cw3dssj8bnx4t" path="res://Play.png" id="4_eys0w"]
 [ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="5_8i00l"]
 [ext_resource type="Texture2D" uid="uid://cdjc81pg14cvv" path="res://assets/godot.png" id="6_diro3"]
-[ext_resource type="Texture2D" uid="uid://u75q42pp0s4w" path="res://logo.png" id="7_lw4iv"]
+[ext_resource type="Texture2D" uid="uid://36qmdjr7flo5" path="res://Logo.png" id="7_lw4iv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dy7ct"]
 
@@ -30,7 +30,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mg3m2"]
 
-[node name="main_menu" type="Control"]
+[node name="main_menu2" type="Control"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -43,6 +43,7 @@ script = ExtResource("1_lw4iv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 1157.0
 offset_top = -325.0
 offset_right = 1197.0
