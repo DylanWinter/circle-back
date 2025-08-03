@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=106 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -199,6 +199,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(117.742, 861.905)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ovme"]
+size = Vector2(973.338, 759.984)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1y4y"]
 texture = ExtResource("1_2uxut")
 texture_region_size = Vector2i(1000, 1000)
@@ -271,7 +274,6 @@ texture = ExtResource("2_jktts")
 position = Vector2(-102, 208)
 
 [node name="walls" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
 position = Vector2(-1271, -239.5)
@@ -546,7 +548,7 @@ script = ExtResource("14_8qan1")
 [node name="StaticBody2D" type="StaticBody2D" parent="meeting_room_door/npcSprite" index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="meeting_room_door/npcSprite/StaticBody2D"]
-position = Vector2(2.00098, -200.011)
+position = Vector2(-1.33235, -510.011)
 shape = SubResource("RectangleShape2D_g68bc")
 
 [node name="AnimatedSprite2D" parent="meeting_room_door/npcSprite" index="1"]
@@ -559,7 +561,9 @@ sprite_frames = SubResource("SpriteFrames_ul7y6")
 scale = Vector2(1, 5.79998)
 
 [node name="CollisionShape2D" parent="meeting_room_door/npcSprite/Area2D" index="0"]
+position = Vector2(5.00073, 6.03259)
 scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_8ovme")
 
 [node name="furniture" type="Node2D" parent="."]
 
