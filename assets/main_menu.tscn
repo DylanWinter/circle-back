@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://cx7s0ijh8l5ys"]
 
 [ext_resource type="Script" uid="uid://bhtmn3ikx3exu" path="res://main_menu.gd" id="1_lw4iv"]
-[ext_resource type="Texture2D" uid="uid://dd25xjtrlhf6f" path="res://assets/Introduction2.png" id="2_l1r4b"]
+[ext_resource type="Texture2D" uid="uid://hirort6neh5g" path="res://assets/mainmenubg.png" id="2_lw4iv"]
 [ext_resource type="FontFile" uid="uid://ig88w7w2ch65" path="res://assets/Mabook.ttf" id="3_bjyh5"]
 [ext_resource type="Texture2D" uid="uid://cw3dssj8bnx4t" path="res://Play.png" id="4_eys0w"]
 [ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="5_8i00l"]
@@ -52,11 +52,12 @@ scale = Vector2(-59.651, 16.0454)
 color = Color(1, 1, 1, 0.737255)
 
 [node name="Introduction2" type="Sprite2D" parent="."]
-position = Vector2(29, -21)
-scale = Vector2(1.06711, 1.06711)
-texture = ExtResource("2_l1r4b")
+position = Vector2(86, -12)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_lw4iv")
 
 [node name="title" type="RichTextLabel" parent="."]
+visible = false
 clip_contents = false
 layout_mode = 0
 offset_left = -154.0
@@ -71,10 +72,10 @@ autowrap_mode = 0
 [node name="play_button" type="Button" parent="."]
 z_index = 10
 layout_mode = 0
-offset_left = -88.0
-offset_top = 122.0
-offset_right = 85.0
-offset_bottom = 204.0
+offset_left = 108.0
+offset_top = 76.0
+offset_right = 281.0
+offset_bottom = 158.0
 theme_override_fonts/font = ExtResource("3_bjyh5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0o4t1")
@@ -103,8 +104,8 @@ texture = ExtResource("6_diro3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 10
-position = Vector2(-1, -57)
-scale = Vector2(0.81, 0.81)
+position = Vector2(166, -115)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_lw4iv")
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
