@@ -1,7 +1,65 @@
-[gd_scene load_steps=3 format=3 uid="uid://dglc7sq6v53mf"]
+[gd_scene load_steps=16 format=3 uid="uid://dglc7sq6v53mf"]
 
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_fcoua"]
-[ext_resource type="Texture2D" uid="uid://bxxcjxcgai5cn" path="res://assets/boss/MINI BOSS PROTOTYPE 2.png" id="2_01k04"]
+[ext_resource type="Texture2D" uid="uid://c7ah2ovl2egwo" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_001.png" id="2_2fjtr"]
+[ext_resource type="Texture2D" uid="uid://db1lv261evjxd" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_002.png" id="3_t7fxx"]
+[ext_resource type="Texture2D" uid="uid://c86h4gk4gpi0k" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_003.png" id="4_lue4u"]
+[ext_resource type="Texture2D" uid="uid://e2crhit45h" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_004.png" id="5_oswwu"]
+[ext_resource type="Texture2D" uid="uid://8lqdq0u1eheo" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_005.png" id="6_0r7m6"]
+[ext_resource type="Texture2D" uid="uid://cka3y8xcsls6" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_006.png" id="7_y3nqt"]
+[ext_resource type="Texture2D" uid="uid://c3uu6v0mank6k" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_007.png" id="8_28ebb"]
+[ext_resource type="Texture2D" uid="uid://dggpugrr1nq0c" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_008.png" id="9_6n3v3"]
+[ext_resource type="Texture2D" uid="uid://b1bpbysf4qakt" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_009.png" id="10_fvxrc"]
+[ext_resource type="Texture2D" uid="uid://bppciua324pry" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_010.png" id="11_jh5r6"]
+[ext_resource type="Texture2D" uid="uid://cit7d53uj7md7" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_011.png" id="12_071qb"]
+[ext_resource type="Texture2D" uid="uid://tqw2mle1m0t3" path="res://assets/MINI_BOSS_WALK/MINI_BOSS_WALK_012.png" id="13_33vw3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jthlu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2fjtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t7fxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lue4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oswwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0r7m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y3nqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_28ebb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6n3v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fvxrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jh5r6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_071qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_33vw3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2fjtr"]
+radius = 479.841
 
 [node name="NPC" instance=ExtResource("1_fcoua")]
 dialogueScenePaths = ["res://visualNovelOfficeScenes/bossConvo1.tscn"]
@@ -10,14 +68,16 @@ conversationTimes = ["2:50|1:00"]
 [node name="npcSprite" parent="." index="0"]
 position = Vector2(3, -28)
 scale = Vector2(0.09, 0.09)
-texture = ExtResource("2_01k04")
+sprite_frames = SubResource("SpriteFrames_jthlu")
+frame_progress = 0.296346
 
 [node name="AnimatedSprite2D" parent="npcSprite" index="0"]
 visible = true
-position = Vector2(-11.1111, -277.778)
+position = Vector2(-33.3333, -566.667)
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
-position = Vector2(-33.3334, 311.111)
+position = Vector2(-11.1111, 233.333)
+shape = SubResource("CircleShape2D_2fjtr")
 
 [node name="groundPos" parent="npcSprite" index="2"]
 position = Vector2(-22.2222, 744.444)

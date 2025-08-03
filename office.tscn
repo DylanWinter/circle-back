@@ -12,8 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
 [ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="9_ga26y"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
-[ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
-[ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
 [ext_resource type="Texture2D" uid="uid://d377ctbnko4ww" path="res://assets/Divider_Door_close.png" id="13_hs4kw"]
 [ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
 [ext_resource type="Script" path="res://meeting_room_door.gd" id="14_8qan1"]
@@ -147,11 +145,25 @@ size = Vector2(2309.5, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c3wu"]
 size = Vector2(863, 42)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ei2s5"]
+radius = 611.111
+
 [sub_resource type="Curve2D" id="Curve2D_hsito"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -10.6741, 7.86516, 0, 0, 0, 0, -167.315, -45.5056, 0, 0, 0, 0, -255.517, -61.236, 0, 0, 0, 0, -343.157, -20.2247, 0, 0, 0, 0, -447.09, 36.5168, 0, 0, 0, 0, -562.258, 65.1685, 0, 0, 0, 0, -651.584, 68.5393, 0, 0, 0, 0, -740.348, 55.0562, 0, 0, 0, 0, -782.483, 40.4494, 0, 0, 0, 0, -801.685, 19.6629, 0, 0, 0, 0, -809.551, -44.382, 0, 0, 0, 0, -810.674, -106.18, 0, 0, 0, 0, -816.292, -176.966, 0, 0, 0, 0, -802.708, -267.978, 0, 0, 0, 0, -838.663, -320.786, 0, 0, 0, 0, -884.73, -330.899, 0, 0, 0, 0, -960.011, -320.786, 0, 0, 0, 0, -1142.6, -296.629, 0, 0, 0, 0, -1204.95, -285.393, 0, 0, 0, 0, -1282.02, -256.742, 0, 0, 0, 0, -1321.35, -255.056, 0, 0, 0, 0, -1388.76, -262.921, 0, 0, 0, 0, -1439.33, -291.011, 0, 0, 0, 0, -1376.97, -289.888, 0, 0, 0, 0, -1283.15, -292.697, 0, 0, 0, 0, -1194.94, -317.416, 0, 0, 0, 0, -1032.58, -329.775, 0, 0, 0, 0, -979.775, -337.64, 0, 0, 0, 0, -830.337, -341.573, 0, 0, 0, 0, -662.359, -363.483, 0, 0, 0, 0, -648.315, -412.36, 0, 0, 0, 0, -644.382, -474.719, 0, 0, 0, 0, -676.966, -511.798, 0, 0, 0, 0, -724.157, -523.595, 0, 0, 0, 0, -648.315, -519.663, 0, 0, 0, 0, -587.64, -532.584, 0, 0, 0, 0, -576.404, -564.607, 0, 0, 0, 0, -575.843, -612.359)
 }
 point_count = 38
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1g0dp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2k2f6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_jktts"]
 _data = {
@@ -408,6 +420,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="boss/npcSprite/Area2D" index="0"]
 position = Vector2(-11.3615, 387.016)
+shape = SubResource("CircleShape2D_ei2s5")
 metadata/_edit_lock_ = true
 
 [node name="Path2D" parent="boss" index="1"]
@@ -427,13 +440,16 @@ conversationTimes = ["2:50|0:30"]
 [node name="npcSprite" parent="siren" index="0"]
 position = Vector2(-137, 13)
 scale = Vector2(0.16, 0.16)
-texture = ExtResource("7_2k2f6")
+sprite_frames = SubResource("SpriteFrames_1g0dp")
+autoplay = "default"
 
 [node name="AnimatedSprite2D" parent="siren/npcSprite" index="0"]
 visible = true
+position = Vector2(-6.25, -256.25)
 
 [node name="CollisionShape2D" parent="siren/npcSprite/Area2D" index="0"]
-position = Vector2(66.6666, 377.778)
+position = Vector2(-6.24976, 431.25)
+shape = SubResource("CircleShape2D_ei2s5")
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(-1238, -1409)
@@ -445,7 +461,8 @@ conversationTimes = ["2:55|1:00", "1:25|2:00"]
 position = Vector2(-35, -33)
 
 [node name="CollisionShape2D" parent="janitor/npcSprite/Area2D" index="0"]
-position = Vector2(33.3334, 377.777)
+position = Vector2(-11.111, -33.3329)
+shape = SubResource("CircleShape2D_ei2s5")
 
 [node name="Path2D" type="Path2D" parent="janitor"]
 curve = SubResource("Curve2D_jktts")
@@ -465,7 +482,6 @@ dialogueScenePaths = ["res://key.tscn"]
 z_index = 4096
 material = SubResource("ShaderMaterial_2k2f6")
 position = Vector2(960, 80)
-texture = ExtResource("11_jktts")
 script = ExtResource("13_s0aar")
 
 [node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
@@ -483,7 +499,6 @@ dialogueScenePaths = ["res://meeting_room_door_dialogue.tscn"]
 position = Vector2(-1966.99, 2146.01)
 rotation = -1.5708
 scale = Vector2(3, 0.2)
-texture = ExtResource("12_knsl5")
 script = ExtResource("14_8qan1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="meeting_room_door/npcSprite" index="0"]
@@ -620,6 +635,7 @@ position = Vector2(-922.222, -633.333)
 
 [node name="CollisionShape2D" parent="NPC/npcSprite/Area2D" index="0"]
 position = Vector2(9288.89, 122.222)
+shape = SubResource("CircleShape2D_ei2s5")
 
 [node name="Table" type="Sprite2D" parent="."]
 position = Vector2(1286, 622.25)

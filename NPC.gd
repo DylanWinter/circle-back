@@ -20,7 +20,7 @@ var alreadyStartedDialogue : bool = false
 
 @onready var speechBubbleSprite : AnimatedSprite2D = $npcSprite/AnimatedSprite2D
 
-func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
+func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition
 	var shouldFlip = true

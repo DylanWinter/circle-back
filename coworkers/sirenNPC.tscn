@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://2xk04aqrapx8"]
+[gd_scene load_steps=5 format=3 uid="uid://2xk04aqrapx8"]
 
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="1_mxgta"]
-[ext_resource type="Texture2D" uid="uid://b1upq7ohcl08k" path="res://assets/MINI_NPC1_PROTOTYPE_1.png" id="2_8bmfo"]
+[ext_resource type="Texture2D" uid="uid://dy84vpqqtjrs1" path="res://assets/sirenSmall.png" id="2_7smfy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v07qh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7smfy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7smfy"]
+radius = 511.232
 
 [node name="NPC" instance=ExtResource("1_mxgta")]
 is_static = true
@@ -9,10 +23,11 @@ is_static = true
 [node name="npcSprite" parent="." index="0"]
 position = Vector2(-3, -39)
 scale = Vector2(0.09, 0.09)
-texture = ExtResource("2_8bmfo")
+sprite_frames = SubResource("SpriteFrames_v07qh")
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
 position = Vector2(33.3333, 433.333)
+shape = SubResource("CircleShape2D_7smfy")
 
 [node name="groundPos" parent="npcSprite" index="2"]
 position = Vector2(33.3333, 1022.22)
