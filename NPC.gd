@@ -55,6 +55,12 @@ func _process(delta: float) -> void:
 		if not GameManager.is_in_conversation:
 			lastPosition = $npcSprite.position
 			if has_node("Path2D/PathFollow2D") and isStopped == false:
+				var animatedSprite : AnimatedSprite2D = $npcSprite
+				if animatedSprite.is_playing() == false:
+					animatedSprite.play("default")
+				
+				
+				
 				alreadyStartedDialogue = false
 				$Path2D/PathFollow2D.progress += walkSpeed*delta
 				$npcSprite.position = $Path2D/PathFollow2D.position
@@ -89,6 +95,10 @@ func _process(delta: float) -> void:
 				isStopped = true
 				$waitTimer.wait_time = howLongSecond + howLongMinute * 60
 				$waitTimer.start()
+				$npcSprite/AnimatedSprite2D.stop()
+				$npcSprite/AnimatedSprite2D.frame = 0
+				
+				
 			elif not GameManager.is_in_conversation and $waitTimer.paused == true:
 				$waitTimer.paused = false
 			

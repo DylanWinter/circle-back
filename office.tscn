@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=101 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://i6eshfk3woit" path="res://assets/furniture/plantWithTeeth.tscn" id="42_a0t2l"]
 [ext_resource type="Texture2D" uid="uid://cxs6a1p3yqne5" path="res://assets/furniture/sadPlant.png" id="43_a0t2l"]
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
+[ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -466,6 +467,9 @@ position = Vector2(-6.25, -256.25)
 position = Vector2(-6.24976, 431.25)
 shape = SubResource("CircleShape2D_ei2s5")
 
+[node name="groundPos" parent="siren/npcSprite" index="2"]
+position = Vector2(6.24974, 718.75)
+
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(-1238, -1409)
 coworker_title = "janitor"
@@ -477,8 +481,7 @@ position = Vector2(-35, -33)
 scale = Vector2(0.16, 0.16)
 
 [node name="CollisionShape2D" parent="janitor/npcSprite/Area2D" index="0"]
-position = Vector2(-11.111, -33.3329)
-shape = SubResource("CircleShape2D_ei2s5")
+position = Vector2(-0.000335693, 162.5)
 
 [node name="Path2D" type="Path2D" parent="janitor"]
 curve = SubResource("Curve2D_jktts")
@@ -887,6 +890,11 @@ material = SubResource("ShaderMaterial_xemgy")
 position = Vector2(-739, 787)
 scale = Vector2(0.385, 0.385)
 texture = ExtResource("11_jktts")
+
+[node name="WaterSpill" type="Sprite2D" parent="."]
+z_index = -2775
+position = Vector2(-1159, -1121)
+texture = ExtResource("45_g6veu")
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
