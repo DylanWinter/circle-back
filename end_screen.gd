@@ -19,14 +19,10 @@ func _ready() -> void:
 		sprite.texture = loss_image
 
 func _on_restart_pressed() -> void:
-	var total = 0
-	var correct = 0
-	for term in GameManager.wordFoundDict:
-		total += 1
-		if GameManager.wordFoundDict[term]:
-			correct += 1
+
+	var total = 4
 		
-	if correct == total:
+	if GameManager.correctAnswers == total:
 		GameManager.full_reset()
 		SceneTransition.change_scene("res://main_menu.tscn")
 	else:
