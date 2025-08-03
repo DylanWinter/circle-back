@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsq1xrxsnuqki"]
+
+[ext_resource type="Script" uid="uid://b1eg5c8d45r3g" path="res://intro.gd" id="1_txq06"]
+[ext_resource type="Texture2D" uid="uid://du4e8ymno10rs" path="res://assets/sleepcharacter.png" id="2_txq06"]
+[ext_resource type="Texture2D" uid="uid://lyfvql11cf1f" path="res://assets/boss/BOSS PROTOTYPE 3.png" id="3_dhl3o"]
+
+[node name="dialogue_UI2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_txq06")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(507, 247)
+scale = Vector2(0.908, 0.908)
+texture = ExtResource("2_txq06")
+
+[node name="BossPrototype3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(256, 461)
+scale = Vector2(-0.6, 0.6)
+texture = ExtResource("3_dhl3o")
