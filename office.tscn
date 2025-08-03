@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=109 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://4qft48ryavin" path="res://assets/furniture/toilet.png" id="34_26ul0"]
 [ext_resource type="PackedScene" uid="uid://b0qtldd3c5iw0" path="res://assets/kitchen/cabinet_1.tscn" id="36_cu40l"]
 [ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
-[ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
 [ext_resource type="PackedScene" uid="uid://m64jarckqopq" path="res://assets/furniture/kitchen_counter.tscn" id="39_g68bc"]
 [ext_resource type="Texture2D" uid="uid://nytjs6m0gbui" path="res://assets/furniture/Kitchen_drawers.png" id="40_jtogi"]
 [ext_resource type="Texture2D" uid="uid://dqi4iuc448jaw" path="res://assets/furniture/fridge.png" id="41_4360s"]
@@ -48,6 +47,8 @@
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
 [ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
 [ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
+[ext_resource type="PackedScene" uid="uid://lwylo8fuui4b" path="res://walkNPC1.tscn" id="47_vb8hc"]
+[ext_resource type="PackedScene" uid="uid://70gcj423oawb" path="res://interactVendingMachine.tscn" id="49_5xppq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -818,9 +819,6 @@ position = Vector2(-431, -661)
 [node name="Chair12" parent="." instance=ExtResource("37_qt548")]
 position = Vector2(-537, -661)
 
-[node name="Chair14" parent="." instance=ExtResource("38_5c3wu")]
-position = Vector2(1276, 22)
-
 [node name="Chair15" parent="." instance=ExtResource("39_g68bc")]
 position = Vector2(1769, 131)
 
@@ -937,6 +935,9 @@ z_index = -2775
 position = Vector2(-1159, -1121)
 texture = ExtResource("45_g6veu")
 
+[node name="NPC3" parent="." instance=ExtResource("47_vb8hc")]
+position = Vector2(462, 701)
+
 [node name="NPC2" parent="." instance=ExtResource("47_qsbda")]
 position = Vector2(1272, 463)
 scale = Vector2(1.78, 1.78)
@@ -953,6 +954,9 @@ position = Vector2(-6.10352e-05, 0)
 rotation = -2.73783
 rotates = false
 loop = false
+
+[node name="Node2D" parent="." instance=ExtResource("49_5xppq")]
+position = Vector2(1249, 41)
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
@@ -983,4 +987,6 @@ loop = false
 [editable path="Chair20"]
 [editable path="Chair18"]
 [editable path="Chair21"]
+[editable path="NPC3"]
 [editable path="NPC2"]
+[editable path="Node2D"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://70gcj423oawb"]
+
+[ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="1_46rjv"]
+[ext_resource type="Texture2D" uid="uid://b677y2yfidgo1" path="res://assets/furniture/Vending_machine.png" id="1_enp7s"]
+[ext_resource type="Script" uid="uid://cvpey8un1k7fa" path="res://vendingMachine.gd" id="2_5dbcp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ipeo1"]
+shader = ExtResource("1_46rjv")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/blink_color = Color(0.481789, 0.481789, 0.481789, 1)
+shader_parameter/blink_time_scale = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enp7s"]
+size = Vector2(173.5, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46rjv"]
+size = Vector2(173, 79)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VendingMachine" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ipeo1")
+texture = ExtResource("1_enp7s")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_5dbcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.25, 87.5)
+shape = SubResource("RectangleShape2D_enp7s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 58.5)
+shape = SubResource("RectangleShape2D_46rjv")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var can_move : bool = true
 var SPEED = 300.0
+var energized = false
 
 func _ready() -> void:
 	GameManager.player = self
@@ -20,7 +21,12 @@ func _physics_process(delta: float) -> void:
 			if not $AnimatedSprite2D.is_playing():
 				$AnimatedSprite2D.play("walk")
 			input_direction = input_direction.normalized()
-			velocity = input_direction * SPEED
+			if energized == false:
+				velocity = input_direction * SPEED
+			else:
+				velocity = input_direction * (SPEED + 100)
+			
+			
 			if input_direction.x>0 and $AnimatedSprite2D.scale.x>0:
 				$AnimatedSprite2D.scale.x *= -1
 			elif input_direction.x<0 and $AnimatedSprite2D.scale.x<0:

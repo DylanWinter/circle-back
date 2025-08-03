@@ -83,7 +83,8 @@ func _process(delta: float) -> void:
 		
 		if has_node("Path2D/PathFollow2D"):
 			if ($Path2D/PathFollow2D.progress_ratio == 1):
-				self.queue_free()
+				if coworker_title != "sadManager":
+					self.queue_free()
 			
 	
 		# format: time of arrival | how long they stay
