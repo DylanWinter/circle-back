@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bnp1j7wu06m7e"]
+[gd_scene load_steps=19 format=3 uid="uid://cx7s0ijh8l5ys"]
 
 [ext_resource type="Script" uid="uid://bhtmn3ikx3exu" path="res://main_menu.gd" id="1_lw4iv"]
 [ext_resource type="Texture2D" uid="uid://dd25xjtrlhf6f" path="res://assets/Introduction2.png" id="2_l1r4b"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cw3dssj8bnx4t" path="res://Play.png" id="4_eys0w"]
 [ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="5_8i00l"]
 [ext_resource type="Texture2D" uid="uid://cdjc81pg14cvv" path="res://assets/godot.png" id="6_diro3"]
-[ext_resource type="Texture2D" uid="uid://chxtibmpqcol7" path="res://Logo.png" id="7_ct4xs"]
+[ext_resource type="Texture2D" uid="uid://u75q42pp0s4w" path="res://logo.png" id="7_lw4iv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dy7ct"]
 
@@ -41,8 +41,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lw4iv")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 1157.0
+offset_top = -325.0
+offset_right = 1197.0
+offset_bottom = -285.0
+scale = Vector2(-59.651, 16.0454)
+color = Color(1, 1, 1, 0.737255)
+
 [node name="Introduction2" type="Sprite2D" parent="."]
-position = Vector2(10, -4)
+position = Vector2(29, -21)
 scale = Vector2(1.06711, 1.06711)
 texture = ExtResource("2_l1r4b")
 
@@ -59,6 +68,7 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="play_button" type="Button" parent="."]
+z_index = 10
 layout_mode = 0
 offset_left = -88.0
 offset_top = 122.0
@@ -79,18 +89,21 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_mg3m2")
 icon = ExtResource("4_eys0w")
 
 [node name="Gmtk" type="Sprite2D" parent="."]
+z_index = 10
 position = Vector2(-416, 204)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_8i00l")
 
 [node name="Godot" type="Sprite2D" parent="."]
+z_index = 10
 position = Vector2(-303, 205)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_diro3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 10
 position = Vector2(-1, -57)
 scale = Vector2(0.81, 0.81)
-texture = ExtResource("7_ct4xs")
+texture = ExtResource("7_lw4iv")
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
