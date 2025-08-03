@@ -15,4 +15,4 @@ texture = ExtResource("2_8bmfo")
 position = Vector2(33.3333, 433.333)
 
 [node name="groundPos" parent="npcSprite" index="2"]
-position = Vector2(33.3333, 700)
+position = Vector2(33.3333, 1022.22)

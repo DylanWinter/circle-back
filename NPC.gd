@@ -94,7 +94,12 @@ func _process(delta: float) -> void:
 			
 	else: 
 		isStopped = true
-		alreadyStartedDialogue = false
+		if coworker_title != "key" or coworker_title != "door":
+			if $npcSprite/AnimatedSprite2D.visible == true:
+				alreadyStartedDialogue = false
+				
+		else:
+			alreadyStartedDialogue = false
 		#speechBubbleSprite.visible = true
 			
 		

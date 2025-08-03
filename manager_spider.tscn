@@ -136,15 +136,16 @@ script = ExtResource("1_1tvcd")
 
 [node name="npcSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(5.96046e-08, -49)
-scale = Vector2(0.12, 0.12)
+scale = Vector2(0.16, 0.16)
 sprite_frames = SubResource("SpriteFrames_u2plm")
 autoplay = "default"
-frame_progress = 0.00558836
+frame_progress = 0.994647
 
 [node name="Area2D" type="Area2D" parent="npcSprite"]
 position = Vector2(-4, 386)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="npcSprite/Area2D"]
+position = Vector2(-21, -254.75)
 shape = SubResource("CircleShape2D_yrjpt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="npcSprite"]
@@ -153,7 +154,7 @@ position = Vector2(-33.3333, -500)
 sprite_frames = SubResource("SpriteFrames_d158u")
 
 [node name="groundPos" type="Node2D" parent="npcSprite"]
-position = Vector2(-16.6667, 458.333)
+position = Vector2(-12.5, 468.75)
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_yrjpt")

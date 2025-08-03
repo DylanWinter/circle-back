@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://m64jarckqopq"]
+
+[ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="1_hvse3"]
+[ext_resource type="Texture2D" uid="uid://c5yes5d0qkwum" path="res://assets/furniture/Kitchen_counter.png" id="2_0x4d6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvse3"]
+size = Vector2(183, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0x4d6"]
+size = Vector2(61, 170)
+
+[node name="Chair1" instance=ExtResource("1_hvse3")]
+texture = ExtResource("2_0x4d6")
+
+[node name="groundPos" parent="." index="0"]
+position = Vector2(-18, -18)
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(3.5, -50)
+rotation = 0.0
+shape = SubResource("RectangleShape2D_hvse3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+position = Vector2(64.5, 0)
+shape = SubResource("RectangleShape2D_0x4d6")

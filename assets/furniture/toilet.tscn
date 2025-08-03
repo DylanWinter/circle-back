@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvq8aiuilrid"]
+
+[ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="1_rodi7"]
+
+[node name="Chair1" instance=ExtResource("1_rodi7")]
+
+[node name="groundPos" parent="." index="0"]
+position = Vector2(-3, 16)
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(-0.0174389, -0.000608981)

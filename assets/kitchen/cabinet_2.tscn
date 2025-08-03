@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwgo6wxs7bhlb"]
+
+[ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="1_5cm6p"]
+[ext_resource type="Texture2D" uid="uid://ch32yd3hjslwb" path="res://assets/furniture/Cabinet_Big.png" id="2_hh0sj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh0sj"]
+size = Vector2(67.8135, 39.8217)
+
+[node name="Chair1" instance=ExtResource("1_5cm6p")]
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(-0.0932655, 104.911)
+rotation = 0.0
+shape = SubResource("RectangleShape2D_hh0sj")
+
+[node name="CabinetBig" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_hh0sj")
