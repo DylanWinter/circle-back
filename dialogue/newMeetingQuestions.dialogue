@@ -9,12 +9,10 @@ set GameManager.correctAnswers = 0
 
 
 
-Boss: Welcome everyone, I’m sure you’ll all curious about
-the buzz around the office.
+Boss: Welcome everyone, I’m sure you’ll all curious about the buzz around the office.
 
 #Q1
-Boss: Here to tell us all about it, is our presenter for today.
-Introduce the company! We are...
+Boss: Here to tell us all about it, is our presenter for today. Introduce the company! We are...
 
 - Solving Constant Struggles
 	set GameManager.correctAnswers = GameManager.correctAnswers + 0
@@ -92,11 +90,10 @@ Random demon: Okay, so the BHBBQ-
 
 Boss: Get out!
 
-The demon leaves muttering something about liking his meat
-medium to raw but no one wrote it down. 
+The demon leaves muttering something about liking his meat medium to raw but no one wrote it down. 
 
-Second to last slide! We at SCS believe this will work since the DHTB 
-data shows...
+
+Second to last slide! We at SCS believe this will work since the DHTB data shows...
 
 - An Increase in SDRs!
 	set GameManager.correctAnswers = GameManager.correctAnswers + 0
