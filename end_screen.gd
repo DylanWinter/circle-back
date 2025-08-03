@@ -5,7 +5,6 @@ extends Control
 
 func _ready() -> void:
 	var total = 0
-	var correct = 0
 	
 	
 	'''
@@ -15,7 +14,7 @@ func _ready() -> void:
 			correct += 1
 	'''
 	
-	if correct == total:
+	if GameManager.correctAnswers == total:
 		label.text = "You win!"
 		desc.text = "You kept your job for one more day. Is that good?"
 	else:

@@ -1,11 +1,11 @@
 ~ start
 
-set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = false
+#set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = false
 #set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = false
-set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = false
-set GameManager.wordFoundDict["DHTB- Demon and Human Trend Behavior"] = false
+#set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = false
+#set GameManager.wordFoundDict["DHTB- Demon and Human Trend Behavior"] = false
 
-
+set GameManager.correctAnswers = 0
 
 
 
@@ -21,7 +21,8 @@ Introduce the company! We are...
 	Yikes... that wasn’t a great start.
 
 - Styx Corporate Soulutions
-	set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = true
+	set GameManager.correctAnswers = GameManager.correctAnswers + 1
+	
 	Player: We offer solutions even a demon can’t steal.
 	You can see your Boss nod his head in the back.
 
@@ -45,11 +46,11 @@ Our data suggests that the projected sales for their new product... 
 	Boss: Whatever, just continue.
 	
 - Summoning Demon Rituals will be HIGH!
-	set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = true
 	Boss: Hm...
 	You can feel your boss’ eyes judging you.
 	
 - Successful Demon Rituals will be on FIRE!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 1
 	Player: Our client will have so many souls, they won’t have enough space to store them.
 	You breathe a sigh of relief. Just 3 more to go...
 	
@@ -65,6 +66,7 @@ Boss: ...
 Anyways, to improve our cilent’s HSB, we plan to...
 
 - Develop Soul Acquiring Equipment!
+	set GameManager.correctAnswers = GameManager.correctAnswers + 1
 	Player: With the new SAE, the plan is to convert SDR into guaranteed Human Soul Binding!
 	Your boss nods his head approvingly. You’re killing it!
 	
@@ -94,6 +96,7 @@ data shows...
 	Oops...
 	
 - Humans Want Good Vibes
+	set GameManager.correctAnswers = GameManager.correctAnswers + 1
 	Player: Demons and Humans seem more likely to sign away their souls if the vibe is just right.
 	Siren: Ahh!! They’re about to show it!
 	

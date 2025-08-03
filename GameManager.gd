@@ -13,6 +13,8 @@ var is_in_conversation: bool = false
 var currentTurn = "boss"
 var talkedToSiren = false
 
+var correctAnswers : int = 0
+
 # known words
 var wordFoundDict = {
 	"RDC - Rival Demonic Company": false,
