@@ -16,6 +16,7 @@ var talkedToSiren = false
 var wordFoundDict = {
 	"RDC - Rival Demonic Company": false,
 	"SDR - Successful Demon Ritual":false,
+	"SCS - Styx Corporate Soulutions":false,
 }
 
 var convoDialogueDict = {

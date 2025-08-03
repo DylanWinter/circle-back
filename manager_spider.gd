@@ -4,8 +4,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+var moveSpeed = 250.0
 
-			
 func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition
@@ -23,8 +23,19 @@ func _process(delta: float) -> void:
 	$npcSprite.z_index=$npcSprite/groundPos.global_position.y
 	var lastPosition = $npcSprite.position
 	
-	$Path2D/PathFollow2D.progress += 100*delta
+	$Path2D/PathFollow2D.progress += moveSpeed*delta
 	$npcSprite.position = $Path2D/PathFollow2D.position
+	
+	
 	
 	#if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
 	#	$npcSprite.scale.x *= -1.0
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass
+		
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

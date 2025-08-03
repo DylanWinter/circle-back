@@ -1,4 +1,53 @@
 ~ start
-Manager Spider: This is manager spider first dialogue.
+#Player picks up key and opens door*
+
+After the door creaks open, you see one of the managers. She’s an older spider, having been at SCS, Styx Corporate Soulutions, for years.
+
+set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = true
+
+She was muttering to herself in the corner, a cigarette tucked away like a secret. 
+
+Charlotte: These legs aren’t as strong as they used to be.. If it were 30 years ago, I could have ripped that door off its hinges.
+
+
+She stopped her muttering as you got closer. In the corner of your eye, you see something tossed into a corner. Before you can look, Charlotte speaks up.
+
+#If possible, we can have, like, a dot on the ground that can be interacted with. When interacted with, it would say “a crumpled-up cigarette.”
+
+Charlotte: Finally! The door’s open. Geez, took someone long enough. I’ve been locked in here for the longest minute of my life!
+
+
+- “Why didn’t you use your phone?”
+#BAD OPTION
+
+	Charlotte: Do you know how expensive minutes are in this circle of hell?
+	Charlotte: I’d rather build a new web in here first.
+	Before you could speak up, you hear the sound of 8 legs pushing past you.
+	#End Interaction
+
+
+- Move quietly out of the way
+
+	Charlotte paused after you moved to the side.
+	Charlotte: …You’re the one who took over for the fool who was fired. Seems like not every young demon these days is rude.
+	All you did was move to the side; it wasn’t that serious. But Charlotte looks like she’s about to cry.
+	#Combine with Uh, you’re welcome
+
+
+- ”Uh, you're welcome??” 
+
+	You hear the older spider huff, but you do receive a small nod. 
+	It’s the closest thing to “thank you” you’ve ever gotten.
+	Charlotte: You aren’t as useless as the last one. Just don’t tell anyone else about this.
+
+
+	Charlotte: Just don’t forget that about the BHBBQ next Friday!
+
+	set GameManager.wordFoundDict["BHBBQ - Big human BBQ"] = true
+
+	The sound of 8 legs could be heard ahead of you as Charlotte made as much distance between you two as possible.
+
+#end interaction
+
 
 => END

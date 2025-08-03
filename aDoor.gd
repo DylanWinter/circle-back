@@ -13,18 +13,26 @@ func _process(delta: float) -> void:
 	if playerNear == true and Input.is_action_pressed("interact") and GameManager.found_key == true:
 		$Sprite2D.visible = false
 		$CollisionShape2D.disabled = true
-	elif playerNear == true and Input.is_action_pressed("interact") and GameManager.found_key == true:
+		
+	elif playerNear == true and Input.is_action_pressed("interact") and $Timer.is_stopped() == false and GameManager.found_key == false and GameManager.is_in_conversation == false:
 		start_dialogue()
-
+		
+		
+		
 func start_dialogue() -> void:
 	GameManager.player.can_move = false
 	GameManager.is_in_conversation = true
+	print("locked")
 	DialogueManager.show_dialogue_balloon(dialogue)
+	
 
 func _on_dialogue_ended(resource) -> void:
 	GameManager.player.can_move = true
 	GameManager.is_in_conversation = false
-
+	$Timer.start()
+	
+	
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		playerNear = true
@@ -32,10 +40,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 	elif body.is_in_group("spider"):
 		$Sprite2D.visible = false
-
 		
-	
-
+		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		playerNear = false

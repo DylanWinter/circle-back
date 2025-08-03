@@ -1,9 +1,112 @@
-[gd_scene load_steps=8 format=3 uid="uid://bou0t365txxlo"]
+[gd_scene load_steps=32 format=3 uid="uid://bou0t365txxlo"]
 
 [ext_resource type="Script" uid="uid://b5a8abtvtuivu" path="res://manager_spider.gd" id="1_1tvcd"]
 [ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="2_h5wlb"]
-[ext_resource type="Texture2D" uid="uid://bfqgea4t5yvjk" path="res://assets/tinySpider.png" id="2_yrjpt"]
+[ext_resource type="Texture2D" uid="uid://bh3180g48hltx" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_001.png" id="2_r6f7o"]
+[ext_resource type="Texture2D" uid="uid://btojx64sgqicb" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_002.png" id="3_57kdf"]
 [ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="3_yrjpt"]
+[ext_resource type="Texture2D" uid="uid://7gagqhejmewd" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_003.png" id="4_j5v1o"]
+[ext_resource type="Texture2D" uid="uid://drrywiu66dmic" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_004.png" id="5_cu46k"]
+[ext_resource type="Texture2D" uid="uid://bugjp3n3e1b7q" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_005.png" id="6_42ssb"]
+[ext_resource type="Texture2D" uid="uid://d2cn56cjfa6hc" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_006.png" id="7_opu2p"]
+[ext_resource type="Texture2D" uid="uid://bvd7w502yjv1e" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_007.png" id="8_eb6qa"]
+[ext_resource type="Texture2D" uid="uid://dkb24t3d2e5i1" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_008.png" id="9_aibpm"]
+[ext_resource type="Texture2D" uid="uid://dj8s2kcpukexm" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_009.png" id="10_a6egf"]
+[ext_resource type="Texture2D" uid="uid://djaxcl0lfrr5" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_010.png" id="11_18lq8"]
+[ext_resource type="Texture2D" uid="uid://1ir3cjirwmck" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_011.png" id="12_f38l8"]
+[ext_resource type="Texture2D" uid="uid://cticpsgp1070" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_012.png" id="13_jd63h"]
+[ext_resource type="Texture2D" uid="uid://cc446v35x0ffb" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_013.png" id="14_0yjpb"]
+[ext_resource type="Texture2D" uid="uid://b55c07qy5lcdu" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_014.png" id="15_dockb"]
+[ext_resource type="Texture2D" uid="uid://brxy8eo1dxm35" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_015.png" id="16_dl4li"]
+[ext_resource type="Texture2D" uid="uid://cjun6esjj6jfu" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_016.png" id="17_fwanu"]
+[ext_resource type="Texture2D" uid="uid://bt3phehyuij8" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_017.png" id="18_04xc7"]
+[ext_resource type="Texture2D" uid="uid://f7ejcqcxhwoq" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_018.png" id="19_qyx0v"]
+[ext_resource type="Texture2D" uid="uid://cgg41e05mvsm0" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_019.png" id="20_qm5pj"]
+[ext_resource type="Texture2D" uid="uid://dv0s0s6c1ko2a" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_020.png" id="21_1x0qh"]
+[ext_resource type="Texture2D" uid="uid://c3rgrbq35dkdb" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_021.png" id="22_a06ec"]
+[ext_resource type="Texture2D" uid="uid://cjj8fpnjdc2i8" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_022.png" id="23_tjfvw"]
+[ext_resource type="Texture2D" uid="uid://mo1004uu6h52" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_023.png" id="24_ls6vm"]
+[ext_resource type="Texture2D" uid="uid://b637ogkyh8pit" path="res://assets/MINI_CHARLOTTE_Walk/MINI_CHARLOTTE_Walk_024.png" id="25_2bcb4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u2plm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r6f7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_57kdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j5v1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cu46k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_42ssb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_opu2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eb6qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aibpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a6egf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_18lq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f38l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jd63h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0yjpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dockb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dl4li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fwanu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_04xc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qyx0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qm5pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1x0qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_a06ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tjfvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ls6vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2bcb4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 80.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yrjpt"]
 radius = 481.0
@@ -24,17 +127,19 @@ animations = [{
 
 [sub_resource type="Curve2D" id="Curve2D_yrjpt"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0.166748, -3.11133, 0, 0, 0, 0, 26.0078, 93.788, 0, 0, 0, 0, 89.9899, 213.103, 0, 0, 0, 0, 206.957, 268.716, 0, 0, 0, 0, 314.927, 287.928, 0, 0, 0, 0, 445.89, 302.084, 0, 0, 0, 0, 573.855, 319.273, 0, 0, 0, 0, 717.814, 334.44, 0, 0, 0, 0, 825.784, 345.563, 0, 0, 0, 0, 1010.73, 420.388, 0, 0, 0, 0, 1060.72, 476.001, 0, 0, 0, 0, 1087.71, 535.658, 0, 0, 0, 0, 1089.71, 615.539, 0, 0, 0, 0, 1093.71, 696.43, 0, 0, 0, 0, 1084.71, 749.01, 0, 0, 0, 0, 1055.72, 956.294, 0, 0, 0, 0, 1030.73, 1043.25, 0, 0, 0, 0, 1013.73, 1140.32, 0, 0, 0, 0, 989.738, 1220.2, 0, 0, 0, 0, 998.736, 1320.31, 0, 0, 0, 0, 1006.73, 1376.93, 0, 0, 0, 0, 1036.73, 1448.72, 0, 0, 0, 0, 1085.71, 1485.12, 0, 0, 0, 0, 1210.68, 1509.39, 0, 0, 0, 0, 1274.66, 1517.48, 0, 0, 0, 0, 1703.54, 1524.56, 0, 0, 0, 0, 1821.51, 1526.58, 0, 0, 0, 0, 1902.48, 1534.67, 0, 0, 0, 0, 1936.47, 1513.44, 0, 0, 0, 0, 1926.48, 1481.08, 0, 0, 0, 0, 1876.49, 1450.74, 0, 0, 0, 0, 1855.5, 1445.69)
+"points": PackedVector2Array(0, 0, 0, 0, 0.166748, -3.11133, 0, 0, 0, 0, 26.0078, 93.788, 0, 0, 0, 0, 89.9899, 213.103, 0, 0, 0, 0, 206.957, 268.716, 0, 0, 0, 0, 314.927, 287.928, 0, 0, 0, 0, 445.89, 302.084, 0, 0, 0, 0, 573.855, 319.273, 0, 0, 0, 0, 717.814, 334.44, 0, 0, 0, 0, 825.784, 345.563, 0, 0, 0, 0, 1010.73, 420.388, 0, 0, 0, 0, 1060.72, 476.001, 0, 0, 0, 0, 1087.71, 535.658, 0, 0, 0, 0, 1089.71, 615.539, 0, 0, 0, 0, 1093.71, 696.43, 0, 0, 0, 0, 1084.71, 749.01, 0, 0, 0, 0, 1055.72, 956.294, 0, 0, 0, 0, 1030.73, 1043.25, 0, 0, 0, 0, 1013.73, 1140.32, 0, 0, 0, 0, 989.738, 1220.2, 0, 0, 0, 0, 998.736, 1320.31, 0, 0, 0, 0, 1006.73, 1376.93, 0, 0, 0, 0, 1036.73, 1448.72, 0, 0, 0, 0, 1085.71, 1485.12, 0, 0, 0, 0, 1210.68, 1509.39, 0, 0, 0, 0, 1274.66, 1517.48, 0, 0, 0, 0, 1703.54, 1524.56, 0, 0, 0, 0, 1821.51, 1526.58, 0, 0, 0, 0, 1902.48, 1534.67, 0, 0, 0, 0, 2278.38, 1558.94, 0, 0, 0, 0, 2422.34, 1550.85, 0, 0, 0, 0, 2535.31, 1541.75, 0, 0, 0, 0, 2699.26, 1528.6)
 }
 point_count = 32
 
 [node name="managerSpider" type="Node2D"]
 script = ExtResource("1_1tvcd")
 
-[node name="npcSprite" type="Sprite2D" parent="."]
+[node name="npcSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(5.96046e-08, -49)
 scale = Vector2(0.12, 0.12)
-texture = ExtResource("2_yrjpt")
+sprite_frames = SubResource("SpriteFrames_u2plm")
+autoplay = "default"
+frame_progress = 0.0955883
 
 [node name="Area2D" type="Area2D" parent="npcSprite"]
 position = Vector2(-4, 386)
@@ -44,10 +149,11 @@ shape = SubResource("CircleShape2D_yrjpt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="npcSprite"]
 visible = false
+position = Vector2(-33.3333, -500)
 sprite_frames = SubResource("SpriteFrames_d158u")
 
 [node name="groundPos" type="Node2D" parent="npcSprite"]
-position = Vector2(-16, 717)
+position = Vector2(-16.6667, 458.333)
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_yrjpt")
@@ -55,3 +161,6 @@ curve = SubResource("Curve2D_yrjpt")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(0.166748, -3.11133)
 rotation = 1.31018
+
+[connection signal="body_entered" from="npcSprite/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="npcSprite/Area2D" to="." method="_on_area_2d_body_exited"]

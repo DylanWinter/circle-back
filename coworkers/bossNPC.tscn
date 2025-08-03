@@ -14,7 +14,7 @@ texture = ExtResource("2_01k04")
 
 [node name="AnimatedSprite2D" parent="npcSprite" index="0"]
 visible = true
-position = Vector2(-144.444, -55.5556)
+position = Vector2(-11.1111, -277.778)
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
 position = Vector2(-33.3334, 311.111)

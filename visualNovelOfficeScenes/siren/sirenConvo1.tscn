@@ -43,9 +43,6 @@ _data = {
 [node name="VisNovelScene" instance=ExtResource("1_bkd8v")]
 dialogue = ExtResource("2_2v78i")
 
-[node name="ColorRect" parent="CanvasLayer" index="0"]
-color = Color(0.156417, 0.624046, 0.805498, 0.392157)
-
 [node name="SirenFull" type="Sprite2D" parent="CanvasLayer" index="1"]
 position = Vector2(682, 179)
 scale = Vector2(0.45, 0.45)

@@ -2,6 +2,9 @@ extends Node2D
 
 
 var startedWalking = false
+
+@export var walkSpeed = 500
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,12 +19,12 @@ func _process(delta: float) -> void:
 		startedWalking = true
 		
 	if startedWalking == true and $Path2D/PathFollow2D.progress_ratio<1 and GameManager.is_in_conversation==false:
-		$Path2D/PathFollow2D.progress += 100*delta
+		$Path2D/PathFollow2D.progress += walkSpeed*delta
 		$npcSprite.position = $Path2D/PathFollow2D.position
 		if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
 			$npcSprite.scale.x *= -1.0
 			
-func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite : Sprite2D) -> bool:
+func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2, sprite) -> bool:
 	var direction : Vector2
 	direction = currentPosition - lastPosition
 	var shouldFlip = true
