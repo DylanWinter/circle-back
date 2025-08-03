@@ -48,7 +48,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if coworker_title == "sadManager":
 		if GameManager.peptalkedsadmanager == true:
-			conversationTimes[0] = "1:00|0:00"
+			conversationTimes[0] = "2:30|0:01"
 			conversationTimes[1] = "2:00|0:30"
 		
 	if GameManager.is_in_conversation:
