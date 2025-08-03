@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=109 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
 [ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
 [ext_resource type="PackedScene" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
+[ext_resource type="Texture2D" uid="uid://c7bq3jl6qs72q" path="res://assets/Illustration142.png" id="49_vb8hc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -427,9 +428,10 @@ layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+offset_left = -21.0
+offset_top = 39.0
+offset_right = 19.0
+offset_bottom = 79.0
 grow_horizontal = 2
 
 [node name="Timer" type="RichTextLabel" parent="UI/Control"]
@@ -439,8 +441,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 40
+text = "0:00"
 scroll_active = false
 autowrap_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Control"]
+z_index = -1
+layout_mode = 0
+offset_left = -118.0
+offset_top = -51.0
+offset_right = 842.0
+offset_bottom = 399.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("49_vb8hc")
 
 [node name="Chair24" parent="." instance=ExtResource("30_5bs7n")]
 position = Vector2(179, -649)
