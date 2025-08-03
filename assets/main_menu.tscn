@@ -1,11 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://bnp1j7wu06m7e"]
+[gd_scene load_steps=19 format=3 uid="uid://bnp1j7wu06m7e"]
 
-[ext_resource type="Script" uid="uid://bhtmn3ikx3exu" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="2_7vrkn"]
-[ext_resource type="FontFile" uid="uid://ig88w7w2ch65" path="res://assets/Mabook.ttf" id="2_nlkkf"]
-[ext_resource type="Texture2D" uid="uid://cdjc81pg14cvv" path="res://assets/godot.png" id="3_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://cw3dssj8bnx4t" path="res://Play.png" id="3_qe12f"]
-[ext_resource type="Texture2D" uid="uid://chxtibmpqcol7" path="res://Logo.png" id="6_8qtwp"]
+[ext_resource type="Script" uid="uid://bhtmn3ikx3exu" path="res://main_menu.gd" id="1_lw4iv"]
+[ext_resource type="Texture2D" uid="uid://dd25xjtrlhf6f" path="res://assets/Introduction2.png" id="2_l1r4b"]
+[ext_resource type="FontFile" uid="uid://ig88w7w2ch65" path="res://assets/Mabook.ttf" id="3_bjyh5"]
+[ext_resource type="Texture2D" uid="uid://cw3dssj8bnx4t" path="res://Play.png" id="4_eys0w"]
+[ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="5_8i00l"]
+[ext_resource type="Texture2D" uid="uid://cdjc81pg14cvv" path="res://assets/godot.png" id="6_diro3"]
+[ext_resource type="Texture2D" uid="uid://chxtibmpqcol7" path="res://Logo.png" id="7_ct4xs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dy7ct"]
 
@@ -38,7 +39,12 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06t4h")
+script = ExtResource("1_lw4iv")
+
+[node name="Introduction2" type="Sprite2D" parent="."]
+position = Vector2(10, -4)
+scale = Vector2(1.06711, 1.06711)
+texture = ExtResource("2_l1r4b")
 
 [node name="title" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -58,7 +64,7 @@ offset_left = -88.0
 offset_top = 122.0
 offset_right = 85.0
 offset_bottom = 204.0
-theme_override_fonts/font = ExtResource("2_nlkkf")
+theme_override_fonts/font = ExtResource("3_bjyh5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0o4t1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_0k4wn")
@@ -70,21 +76,21 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g8g3n")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8u0te")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_oiatc")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mg3m2")
-icon = ExtResource("3_qe12f")
+icon = ExtResource("4_eys0w")
 
 [node name="Gmtk" type="Sprite2D" parent="."]
 position = Vector2(-416, 204)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_7vrkn")
+texture = ExtResource("5_8i00l")
 
 [node name="Godot" type="Sprite2D" parent="."]
 position = Vector2(-303, 205)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_fu7sn")
+texture = ExtResource("6_diro3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -57)
 scale = Vector2(0.81, 0.81)
-texture = ExtResource("6_8qtwp")
+texture = ExtResource("7_ct4xs")
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]

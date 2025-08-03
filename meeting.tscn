@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2xjfr84wop50"]
+[gd_scene load_steps=3 format=3 uid="uid://d2xjfr84wop50"]
 
 [ext_resource type="Script" uid="uid://db5a8c6ok1b1t" path="res://dialogue_ui.gd" id="1_4560a"]
+[ext_resource type="Texture2D" uid="uid://dhn3yx87ous08" path="res://assets/Meeting_room.png" id="2_1rolt"]
 
 [node name="dialogue_UI" type="Control"]
 layout_mode = 3
@@ -10,3 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4560a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(507, 247)
+scale = Vector2(1.08302, 1.08302)
+texture = ExtResource("2_1rolt")
