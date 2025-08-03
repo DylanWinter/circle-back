@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bou0t365txxlo"]
+
+[ext_resource type="Script" uid="uid://b5a8abtvtuivu" path="res://manager_spider.gd" id="1_1tvcd"]
+[ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="2_h5wlb"]
+[ext_resource type="Texture2D" uid="uid://bfqgea4t5yvjk" path="res://assets/tinySpider.png" id="2_yrjpt"]
+[ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="3_yrjpt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yrjpt"]
+radius = 481.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d158u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h5wlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yrjpt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_yrjpt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0.166748, -3.11133, 0, 0, 0, 0, 1444.61, 2119.11, 0, 0, 0, 0, 2022.39, 2996.89, 0, 0, 0, 0, 3555.72, 3552.44, 0, 0, 0, 0, 4722.39, 3852.44, 0, 0, 0, 0, 5566.83, 3863.56, 0, 0, 0, 0, 7844.61, 3863.56, 0, 0, 0, 0, 9266.83, 3774.67, 0, 0, 0, 0, 11166.8, 4519.11, 0, 0, 0, 0, 11277.9, 5052.44, 0, 0, 0, 0, 11966.8, 6241.33, 0, 0, 0, 0, 12211.3, 6974.67, 0, 0, 0, 0, 12222.4, 9741.33, 0, 0, 0, 0, 11989.1, 12452.4, 0, 0, 0, 0, 11889.1, 13974.7, 0, 0, 0, 0, 11911.3, 15019.1, 0, 0, 0, 0, 12322.4, 15830.2, 0, 0, 0, 0, 13133.5, 16230.2, 0, 0, 0, 0, 14511.3, 16230.2, 0, 0, 0, 0, 18344.6, 16163.6, 0, 0, 0, 0, 20389.1, 16163.6, 0, 0, 0, 0, 19611.3, 15330.2)
+}
+point_count = 22
+
+[node name="managerSpider" type="Node2D"]
+script = ExtResource("1_1tvcd")
+
+[node name="npcSprite" type="Sprite2D" parent="."]
+position = Vector2(4, -386)
+texture = ExtResource("2_yrjpt")
+
+[node name="Area2D" type="Area2D" parent="npcSprite"]
+position = Vector2(-4, 386)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcSprite/Area2D"]
+shape = SubResource("CircleShape2D_yrjpt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="npcSprite"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_d158u")
+
+[node name="groundPos" type="Node2D" parent="npcSprite"]
+position = Vector2(-16, 717)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_yrjpt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(0.166748, -3.11133)
+rotation = 0.97319

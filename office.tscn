@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=64 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
@@ -21,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://c0n8hbdorp30f" path="res://assets/Office assets/Cork board.png" id="17_4hetp"]
 [ext_resource type="Texture2D" uid="uid://mfhvxurx81jf" path="res://assets/Office assets/Office decoration 1.png" id="18_o3cd7"]
 [ext_resource type="PackedScene" uid="uid://calyt7tdod60b" path="res://coworkers/sadManager.tscn" id="20_8qan1"]
+[ext_resource type="PackedScene" uid="uid://bou0t365txxlo" path="res://manager_spider.tscn" id="21_jktts"]
+[ext_resource type="Script" uid="uid://dn4rb1v7c68li" path="res://armless_only_block.gd" id="22_25m5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -136,12 +137,6 @@ _data = {
 }
 point_count = 28
 
-[sub_resource type="Curve2D" id="Curve2D_25m5p"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 32, 123, 0, 0, 0, 0, 137, 215, 0, 0, 0, 0, 262, 310, 0, 0, 0, 0, 368, 380, 0, 0, 0, 0, 566, 420, 0, 0, 0, 0, 716, 398, 0, 0, 0, 0, 907, 407, 0, 0, 0, 0, 1036, 469, 0, 0, 0, 0, 1091, 561, 0, 0, 0, 0, 1121, 703, 0, 0, 0, 0, 1144, 837, 0, 0, 0, 0, 1138, 1041, 0, 0, 0, 0, 1146, 1164, 0, 0, 0, 0, 1137, 1280, 0, 0, 0, 0, 1178, 1435, 0, 0, 0, 0, 1292, 1464, 0, 0, 0, 0, 1803, 1508, 0, 0, 0, 0, 2176, 1520, 0, 0, 0, 0, 2118, 1463, 0, 0, 0, 0, 1978, 1425, 0, 0, 0, 0, 1887, 1420, 0, 0, 0, 0, 1784, 1417)
-}
-point_count = 22
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(133.4, 235)
 
@@ -153,6 +148,12 @@ texture_region_size = Vector2i(1000, 1000)
 [sub_resource type="TileSet" id="TileSet_gxl1f"]
 tile_size = Vector2i(1000, 1000)
 sources/0 = SubResource("TileSetAtlasSource_n1y4y")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bveom"]
+size = Vector2(58.675, 140.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtogi"]
+size = Vector2(75, 123)
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
@@ -385,26 +386,6 @@ curve = SubResource("Curve2D_jktts")
 position = Vector2(-13, 76)
 rotation = 1.64384
 
-[node name="managerSpider" parent="." instance=ExtResource("8_o3cd7")]
-position = Vector2(-227, -490)
-walkSpeed = 70
-conversationTimes = ["0:59|1:10"]
-
-[node name="npcSprite" parent="managerSpider" index="0"]
-position = Vector2(32, 123)
-
-[node name="CollisionShape2D" parent="managerSpider/npcSprite/Area2D" index="0"]
-position = Vector2(-22.2222, 388.889)
-
-[node name="Path2D" type="Path2D" parent="managerSpider"]
-curve = SubResource("Curve2D_25m5p")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="managerSpider/Path2D"]
-position = Vector2(32, 123)
-rotation = 0.719504
-rotates = false
-loop = false
-
 [node name="key" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(-981, 782)
 scale = Vector2(0.25, 0.25)
@@ -537,15 +518,33 @@ scale = Vector2(-0.315, 0.315)
 [node name="npcSprite" parent="sadManager" index="0"]
 scale = Vector2(0.34, 0.34)
 
+[node name="managerSpider" parent="." instance=ExtResource("21_jktts")]
+position = Vector2(-198.015, -453.72)
+scale = Vector2(0.09, 0.09)
+
+[node name="armlessOnlyBlock" type="Area2D" parent="."]
+script = ExtResource("22_25m5p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="armlessOnlyBlock"]
+position = Vector2(-1010, -1036)
+shape = SubResource("RectangleShape2D_bveom")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="armlessOnlyBlock"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="armlessOnlyBlock/StaticBody2D"]
+position = Vector2(-1075.5, -1006.5)
+shape = SubResource("RectangleShape2D_jtogi")
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
+[connection signal="area_entered" from="armlessOnlyBlock" to="." method="_on_armless_only_block_area_entered"]
 
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
-[editable path="managerSpider"]
 [editable path="key"]
 [editable path="door"]
 [editable path="meeting_room_door"]
 [editable path="sadManager"]
+[editable path="managerSpider"]

@@ -1,8 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv7516kgpaemp"]
+[gd_scene load_steps=7 format=3 uid="uid://dv7516kgpaemp"]
 
 [ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_bkd8v"]
 [ext_resource type="Resource" uid="uid://kih0xp7b72ym" path="res://dialogue/firstSirenOfficeDialogue.dialogue" id="2_2v78i"]
 [ext_resource type="Texture2D" uid="uid://bhh7dtflwdckq" path="res://assets/sirenFull.png" id="3_dh16c"]
+
+[sub_resource type="Animation" id="Animation_dh16c"]
+resource_name = "bounce_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/SirenFull:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 0.659754, 1),
+"update": 0,
+"values": [Vector2(682, 179), Vector2(682, 220.753), Vector2(682, 111.115), Vector2(682, 179)]
+}
+
+[sub_resource type="Animation" id="Animation_xix3o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/SirenFull:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(682, 179)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8sqgl"]
+_data = {
+&"RESET": SubResource("Animation_xix3o"),
+&"bounce_up": SubResource("Animation_dh16c")
+}
 
 [node name="VisNovelScene" instance=ExtResource("1_bkd8v")]
 dialogue = ExtResource("2_2v78i")
@@ -14,3 +50,9 @@ color = Color(0.156417, 0.624046, 0.805498, 0.392157)
 position = Vector2(682, 179)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_dh16c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_8sqgl")
+}
+autoplay = "bounce_up"
