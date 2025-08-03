@@ -1,49 +1,21 @@
-[gd_scene load_steps=95 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=57 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Script" uid="uid://bflkfjnvrd3r3" path="res://office.gd" id="1_jktts"]
-[ext_resource type="Texture2D" uid="uid://26mdsu7djj65" path="res://assets/MAP_Prototype__Assets-1.png" id="2_jktts"]
+[ext_resource type="PackedScene" uid="uid://d2tjnxe6h7a8n" path="res://map_prototype_1.tscn" id="2_n1y4y"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
 [ext_resource type="Texture2D" uid="uid://dy84vpqqtjrs1" path="res://assets/sirenSmall.png" id="7_2k2f6"]
-[ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
-[ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
-[ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="9_ga26y"]
+[ext_resource type="PackedScene" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="PackedScene" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
-[ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Texture2D" uid="uid://d377ctbnko4ww" path="res://assets/Divider_Door_close.png" id="13_hs4kw"]
-[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
-[ext_resource type="Script" path="res://meeting_room_door.gd" id="14_8qan1"]
-[ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
-[ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
-[ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
-[ext_resource type="Texture2D" uid="uid://c0n8hbdorp30f" path="res://assets/Office assets/Cork board.png" id="17_4hetp"]
-[ext_resource type="Texture2D" uid="uid://mfhvxurx81jf" path="res://assets/Office assets/Office decoration 1.png" id="18_o3cd7"]
+[ext_resource type="Script" uid="uid://bqxp2xr4udopn" path="res://meeting_room_door.gd" id="14_8qan1"]
 [ext_resource type="PackedScene" uid="uid://calyt7tdod60b" path="res://coworkers/sadManager.tscn" id="20_8qan1"]
 [ext_resource type="PackedScene" uid="uid://bou0t365txxlo" path="res://manager_spider.tscn" id="21_jktts"]
-[ext_resource type="Script" uid="uid://dn4rb1v7c68li" path="res://armless_only_block.gd" id="22_25m5p"]
-[ext_resource type="Script" uid="uid://chmihaerku4v0" path="res://aDoor.gd" id="24_hs4kw"]
-[ext_resource type="Resource" uid="uid://ybtbbfdigwcp" path="res://dialogue/door.dialogue" id="25_2uru3"]
-[ext_resource type="Texture2D" uid="uid://u61wjr32r57g" path="res://assets/furniture/table.png" id="28_nl0r1"]
-[ext_resource type="Script" uid="uid://b6m480202hi0t" path="res://visualNovelOfficeScenes/managerSpider/furniture.gd" id="29_26ul0"]
-[ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="30_5bs7n"]
-[ext_resource type="Texture2D" uid="uid://cs0pt567ur06x" path="res://assets/furniture/chair1.png" id="31_cu40l"]
-[ext_resource type="Texture2D" uid="uid://c0oebgjkm7aeg" path="res://assets/furniture/chair2.png" id="32_qt548"]
-[ext_resource type="PackedScene" uid="uid://dvq8aiuilrid" path="res://assets/furniture/toilet.tscn" id="33_5c3wu"]
-[ext_resource type="PackedScene" uid="uid://cv4rpy6thdyod" path="res://assets/furniture/toilet1.tscn" id="34_5bs7n"]
-[ext_resource type="Texture2D" uid="uid://4qft48ryavin" path="res://assets/furniture/toilet.png" id="34_26ul0"]
-[ext_resource type="PackedScene" uid="uid://b0qtldd3c5iw0" path="res://assets/kitchen/cabinet_1.tscn" id="36_cu40l"]
-[ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
-[ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
-[ext_resource type="PackedScene" uid="uid://m64jarckqopq" path="res://assets/furniture/kitchen_counter.tscn" id="39_g68bc"]
-[ext_resource type="Texture2D" uid="uid://nytjs6m0gbui" path="res://assets/furniture/Kitchen_drawers.png" id="40_jtogi"]
-[ext_resource type="Texture2D" uid="uid://dqi4iuc448jaw" path="res://assets/furniture/fridge.png" id="41_4360s"]
-[ext_resource type="PackedScene" uid="uid://i6eshfk3woit" path="res://assets/furniture/plantWithTeeth.tscn" id="42_a0t2l"]
-[ext_resource type="Texture2D" uid="uid://cxs6a1p3yqne5" path="res://assets/furniture/sadPlant.png" id="43_a0t2l"]
-[ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
+[ext_resource type="Script" path="res://armless_only_block.gd" id="22_25m5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -159,12 +131,6 @@ _data = {
 }
 point_count = 18
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2k2f6"]
-shader = ExtResource("9_ga26y")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/blink_color = Color(0.600435, 0.603895, 0.627459, 1)
-shader_parameter/blink_time_scale = 0.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
 size = Vector2(117.742, 861.905)
 
@@ -180,43 +146,11 @@ sources/0 = SubResource("TileSetAtlasSource_n1y4y")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bveom"]
 size = Vector2(58.675, 140.75)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hs4kw"]
-shader = ExtResource("9_ga26y")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/blink_color = Color(0.41598, 0.41598, 0.41598, 1)
-shader_parameter/blink_time_scale = 0.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1g0dp"]
-size = Vector2(15, 391.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4360s"]
-size = Vector2(106.625, 371)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jjrr"]
-size = Vector2(163.31, 269.772)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q30t1"]
-size = Vector2(23.3555, 66.0493)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0t2l"]
-size = Vector2(93.8729, 135.057)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xemgy"]
-size = Vector2(189, 79)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6veu"]
-size = Vector2(32.247, 44.6363)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2prrh"]
-size = Vector2(41.1921, 47.2903)
-
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
 
-[node name="MapPrototype1" type="Sprite2D" parent="."]
-z_index = -2999
+[node name="MapPrototype1" parent="." instance=ExtResource("2_n1y4y")]
 position = Vector2(198, -374)
-texture = ExtResource("2_jktts")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_ei2s5")]
 position = Vector2(-102, 208)
@@ -454,24 +388,6 @@ curve = SubResource("Curve2D_jktts")
 position = Vector2(-13, 76)
 rotation = 1.64384
 
-[node name="key" parent="." instance=ExtResource("11_70x1r")]
-position = Vector2(-981, 782)
-scale = Vector2(0.25, 0.25)
-coworker_title = "key"
-is_static = true
-dialogueScenePaths = ["res://key.tscn"]
-
-[node name="npcSprite" parent="key" index="0"]
-z_index = 4096
-material = SubResource("ShaderMaterial_2k2f6")
-position = Vector2(960, 80)
-texture = ExtResource("11_jktts")
-script = ExtResource("13_s0aar")
-
-[node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
-position = Vector2(8, -196)
-scale = Vector2(0.7, 0.7)
-
 [node name="meeting_room_door" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(2613, 1384)
 rotation = 1.5708
@@ -502,44 +418,6 @@ scale = Vector2(1, 5.79998)
 
 [node name="CollisionShape2D" parent="meeting_room_door/npcSprite/Area2D" index="0"]
 scale = Vector2(0.1, 0.1)
-
-[node name="furniture" type="Node2D" parent="."]
-
-[node name="Cubicle" parent="furniture" instance=ExtResource("15_2uxut")]
-position = Vector2(-195, 185)
-
-[node name="Cubicle2" parent="furniture" instance=ExtResource("15_2uxut")]
-position = Vector2(210, 185)
-
-[node name="Cubicle3" parent="furniture" instance=ExtResource("15_2uxut")]
-position = Vector2(615, 185)
-
-[node name="extraDecoration" type="Node2D" parent="furniture"]
-script = ExtResource("15_o3cd7")
-
-[node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/extraDecoration"]
-position = Vector2(-279, 164)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("16_n1y4y")
-
-[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/CorkBoard&ConspiracyPlan"]
-position = Vector2(-8.57145, 81.4286)
-
-[node name="CorkBoard" type="Sprite2D" parent="furniture/extraDecoration"]
-position = Vector2(293, 163)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("17_4hetp")
-
-[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/CorkBoard"]
-position = Vector2(-8.57145, 81.4286)
-
-[node name="OfficeDecoration1" type="Sprite2D" parent="furniture/extraDecoration"]
-position = Vector2(322, 171)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("18_o3cd7")
-
-[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/OfficeDecoration1"]
-position = Vector2(-1.90735e-05, 70)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -3000
@@ -578,34 +456,6 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="armlessOnlyBlock/StaticBody2D"]
 position = Vector2(-1075.5, -1006.5)
 
-[node name="Door" type="StaticBody2D" parent="."]
-z_index = 3785
-position = Vector2(1854, 1034)
-script = ExtResource("24_hs4kw")
-dialogue = ExtResource("25_2uru3")
-
-[node name="Sprite2D" type="Sprite2D" parent="Door"]
-material = SubResource("ShaderMaterial_hs4kw")
-position = Vector2(14, -21)
-scale = Vector2(0.445, 0.445)
-texture = ExtResource("13_hs4kw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
-position = Vector2(13.5, -20.25)
-shape = SubResource("RectangleShape2D_1g0dp")
-
-[node name="Area2D" type="Area2D" parent="Door"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
-position = Vector2(-6, -3)
-shape = SubResource("RectangleShape2D_4360s")
-metadata/_edit_lock_ = true
-
-[node name="Timer" type="Timer" parent="Door"]
-wait_time = 0.5
-one_shot = true
-
 [node name="NPC" parent="." instance=ExtResource("8_o3cd7")]
 z_index = 3961
 position = Vector2(1760, 1080)
@@ -621,242 +471,14 @@ position = Vector2(-922.222, -633.333)
 [node name="CollisionShape2D" parent="NPC/npcSprite/Area2D" index="0"]
 position = Vector2(9288.89, 122.222)
 
-[node name="Table" type="Sprite2D" parent="."]
-position = Vector2(1286, 622.25)
-scale = Vector2(1, 0.996815)
-texture = ExtResource("28_nl0r1")
-script = ExtResource("29_26ul0")
-
-[node name="groundPos" type="Node2D" parent="Table"]
-position = Vector2(0, 101.072)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Table"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Table/StaticBody2D"]
-position = Vector2(-3.65356, 0.404175)
-rotation = -1.53589
-shape = SubResource("RectangleShape2D_5jjrr")
-
-[node name="Chair1" parent="." instance=ExtResource("30_5bs7n")]
-position = Vector2(1112, 552)
-texture = ExtResource("31_cu40l")
-
-[node name="Chair2" type="Sprite2D" parent="."]
-position = Vector2(1447, 694)
-texture = ExtResource("32_qt548")
-script = ExtResource("29_26ul0")
-
-[node name="groundPos" type="Node2D" parent="Chair2"]
-position = Vector2(-3, 57)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Chair2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chair2/StaticBody2D"]
-position = Vector2(2.01648, 47.245)
-rotation = -1.53589
-shape = SubResource("RectangleShape2D_q30t1")
-
-[node name="Chair4" parent="." instance=ExtResource("33_5c3wu")]
-position = Vector2(-435, -1141)
-
-[node name="Chair5" parent="." instance=ExtResource("33_5c3wu")]
-position = Vector2(-1380, -1148)
-scale = Vector2(-1, 1)
-
-[node name="Chair6" parent="." instance=ExtResource("33_5c3wu")]
-position = Vector2(-1373, -1330)
-scale = Vector2(-1, 1)
-
-[node name="Chair7" parent="." instance=ExtResource("33_5c3wu")]
-position = Vector2(-528, -244)
-scale = Vector2(-1, 1)
-
-[node name="Chair3" parent="." instance=ExtResource("34_5bs7n")]
-position = Vector2(-456, -1356)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="Chair3" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="Chair3" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair3/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair8" parent="." instance=ExtResource("34_5bs7n")]
-position = Vector2(-446, -1156)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="Chair8" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="Chair8" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair8/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair9" parent="." instance=ExtResource("34_5bs7n")]
-position = Vector2(-1358, -1340)
-scale = Vector2(-0.4, 0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="Chair9" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="Chair9" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair9/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair10" parent="." instance=ExtResource("34_5bs7n")]
-position = Vector2(-1364, -1126)
-scale = Vector2(-0.4, 0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="Chair10" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="Chair10" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair10/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair11" parent="." instance=ExtResource("36_cu40l")]
-position = Vector2(-713, -662)
-
-[node name="Chair13" parent="." instance=ExtResource("36_cu40l")]
-position = Vector2(-431, -661)
-
-[node name="Chair12" parent="." instance=ExtResource("37_qt548")]
-position = Vector2(-537, -661)
-
-[node name="Chair14" parent="." instance=ExtResource("38_5c3wu")]
-position = Vector2(1276, 22)
-
-[node name="Chair15" parent="." instance=ExtResource("39_g68bc")]
-position = Vector2(1769, 131)
-
-[node name="KitchenDrawers" type="Sprite2D" parent="."]
-position = Vector2(1745, -42)
-texture = ExtResource("40_jtogi")
-
-[node name="Chair16" parent="." instance=ExtResource("30_5bs7n")]
-position = Vector2(1540, 58)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("41_4360s")
-
-[node name="groundPos" parent="Chair16" index="0"]
-position = Vector2(-1.53854, 124.615)
-
-[node name="CollisionShape2D" parent="Chair16/StaticBody2D" index="0"]
-position = Vector2(-0.5, 109.5)
-rotation = 0.0
-shape = SubResource("RectangleShape2D_xemgy")
-
-[node name="Chair19" parent="." instance=ExtResource("30_5bs7n")]
-position = Vector2(-1412, -214)
-scale = Vector2(0.515, 0.515)
-texture = ExtResource("43_a0t2l")
-
-[node name="groundPos" parent="Chair19" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="Chair19" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair19/StaticBody2D" index="0"]
-position = Vector2(3.43323e-05, 59.7222)
-shape = SubResource("RectangleShape2D_g6veu")
-
-[node name="Chair20" parent="." instance=ExtResource("30_5bs7n")]
-position = Vector2(-1415, 172)
-scale = Vector2(0.43, 0.43)
-texture = ExtResource("43_xemgy")
-
-[node name="groundPos" parent="Chair20" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="Chair20" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair20/StaticBody2D" index="0"]
-position = Vector2(-3.50903, 70.2025)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_2prrh")
-
-[node name="Chair17" parent="." instance=ExtResource("42_a0t2l")]
-position = Vector2(-739.985, 771.52)
-scale = Vector2(0.5, 0.5)
-
-[node name="Chair18" parent="." instance=ExtResource("30_5bs7n")]
-position = Vector2(-1122, -261)
-scale = Vector2(0.72, 0.72)
-texture = ExtResource("43_a0t2l")
-
-[node name="groundPos" parent="Chair18" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="Chair18" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair18/StaticBody2D" index="0"]
-position = Vector2(3.43323e-05, 59.7222)
-shape = SubResource("RectangleShape2D_g6veu")
-
-[node name="Chair21" parent="." instance=ExtResource("30_5bs7n")]
-position = Vector2(-1107, 537)
-scale = Vector2(0.355, 0.355)
-texture = ExtResource("43_xemgy")
-
-[node name="groundPos" parent="Chair21" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="Chair21" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="Chair21/StaticBody2D" index="0"]
-position = Vector2(-3.50903, 70.2025)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_2prrh")
-
-[node name="Chair22" parent="." instance=ExtResource("36_cu40l")]
-position = Vector2(-328, -661)
-
-[node name="Chair23" parent="." instance=ExtResource("37_qt548")]
-position = Vector2(-233, -661)
-
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
-[connection signal="body_entered" from="key/npcSprite/Area2D" to="key/npcSprite" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="key/npcSprite/Area2D" to="key/npcSprite" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Door/Area2D" to="Door" method="_on_area_2d_body_exited"]
 
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
-[editable path="key"]
 [editable path="meeting_room_door"]
 [editable path="sadManager"]
 [editable path="managerSpider"]
 [editable path="NPC"]
-[editable path="Chair3"]
-[editable path="Chair8"]
-[editable path="Chair9"]
-[editable path="Chair10"]
-[editable path="Chair16"]
-[editable path="Chair19"]
-[editable path="Chair20"]
-[editable path="Chair18"]
-[editable path="Chair21"]

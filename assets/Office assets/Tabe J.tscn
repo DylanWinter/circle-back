@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv7cdyx44pey1"]
+
+[ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="1_qjbqx"]
+[ext_resource type="Texture2D" uid="uid://cy4ictp6wb003" path="res://assets/Office assets/Table 1 flipped.png" id="6_5jmqi"]
+
+[node name="Tabe J" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_qjbqx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+position = Vector2(137, -91)
+polygon = PackedVector2Array(-42, 208, -42, -26, -104, -26, -104, 69, -109, 83, -120, 92, -232, 92, -232, 172, -219, 173, -219, 208)
+
+[node name="Table1Flipped" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(0, 1.52588e-05)
+texture = ExtResource("6_5jmqi")
+
+[node name="groundPos" type="Node2D" parent="StaticBody2D3"]
+position = Vector2(-19, -113)

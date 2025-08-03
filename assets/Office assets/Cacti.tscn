@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://majhxclqutpa"]
+
+[ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="1_p7ghh"]
+[ext_resource type="Texture2D" path="res://assets/Office assets/Furniture/Cacti.png" id="2_nmaln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmaln"]
+size = Vector2(61.4286, 28.5714)
+
+[node name="Cacti" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_p7ghh")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-108, 130)
+
+[node name="Table1Flipped" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(0, 1.52588e-05)
+texture = ExtResource("2_nmaln")
+
+[node name="groundPos" type="Node2D" parent="StaticBody2D3"]
+position = Vector2(-3.42857, 88.5714)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-2.71429, 77.1429)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_nmaln")
