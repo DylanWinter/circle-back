@@ -55,5 +55,7 @@ Siren: Our client’s SDR, successful demon ritual, hasn’t been too hot. But t
 set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = true
 Siren: Babes, everyone on the sales and data team won’t shut up about it. Ahhh! I really want to win that sample…
 
+
 Siren proceeds to start talking about something unrelated to the other demon on the line.
+set GameManager.talkedToSiren=true
 => END

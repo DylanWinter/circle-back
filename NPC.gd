@@ -41,10 +41,12 @@ func _ready() -> void:
 	
 	speechBubbleSprite.frame = 1
 	pass
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
+		
 	if GameManager.is_in_conversation:
 		$waitTimer.paused = true
 		
@@ -93,7 +95,7 @@ func _process(delta: float) -> void:
 	else: 
 		isStopped = true
 		alreadyStartedDialogue = false
-		speechBubbleSprite.visible = true
+		#speechBubbleSprite.visible = true
 			
 		
 func start_dialogue() -> void:

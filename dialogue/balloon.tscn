@@ -149,9 +149,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -66.195
+offset_left = -69.085
 offset_top = 187.005
-offset_right = 147.805
+offset_right = 177.915
 offset_bottom = 227.005
 grow_horizontal = 2
 grow_vertical = 2
@@ -163,11 +163,11 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="ResponsesMenu"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.0472137, 0.363394, 0.344114, 1)
+theme_override_colors/font_hover_color = Color(0.279844, 0.602322, 0.727893, 1)
 theme_override_colors/font_color = Color(0.310617, 0.310617, 0.310617, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hp0b2")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5rpkd")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wa6iy")

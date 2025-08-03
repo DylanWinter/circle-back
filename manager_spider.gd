@@ -25,5 +25,6 @@ func _process(delta: float) -> void:
 	
 	$Path2D/PathFollow2D.progress += 100*delta
 	$npcSprite.position = $Path2D/PathFollow2D.position
-	if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
-		$npcSprite.scale.x *= -1.0
+	
+	#if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
+	#	$npcSprite.scale.x *= -1.0

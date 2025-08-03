@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=72 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -7,13 +7,15 @@
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
+[ext_resource type="Texture2D" uid="uid://dy84vpqqtjrs1" path="res://assets/sirenSmall.png" id="7_2k2f6"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
+[ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="9_ga26y"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://ogc2hfam0daa" path="res://icon.svg" id="12_knsl5"]
-[ext_resource type="Script" path="res://key.gd" id="13_s0aar"]
+[ext_resource type="Texture2D" uid="uid://d377ctbnko4ww" path="res://assets/Divider_Door_close.png" id="13_hs4kw"]
+[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
 [ext_resource type="Script" path="res://meeting_room_door.gd" id="14_8qan1"]
-[ext_resource type="Script" path="res://door.gd" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
 [ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
 [ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
@@ -22,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://calyt7tdod60b" path="res://coworkers/sadManager.tscn" id="20_8qan1"]
 [ext_resource type="PackedScene" uid="uid://bou0t365txxlo" path="res://manager_spider.tscn" id="21_jktts"]
 [ext_resource type="Script" uid="uid://dn4rb1v7c68li" path="res://armless_only_block.gd" id="22_25m5p"]
+[ext_resource type="Script" uid="uid://chmihaerku4v0" path="res://aDoor.gd" id="24_hs4kw"]
+[ext_resource type="Resource" uid="uid://ybtbbfdigwcp" path="res://dialogue/door.dialogue" id="25_2uru3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -137,8 +141,14 @@ _data = {
 }
 point_count = 28
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2k2f6"]
+shader = ExtResource("9_ga26y")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/blink_color = Color(0.600435, 0.603895, 0.627459, 1)
+shader_parameter/blink_time_scale = 0.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
-size = Vector2(133.4, 235)
+size = Vector2(117.742, 861.905)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1y4y"]
 texture = ExtResource("1_2uxut")
@@ -154,6 +164,18 @@ size = Vector2(58.675, 140.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jtogi"]
 size = Vector2(75, 123)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hs4kw"]
+shader = ExtResource("9_ga26y")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/blink_color = Color(0.41598, 0.41598, 0.41598, 1)
+shader_parameter/blink_time_scale = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1g0dp"]
+size = Vector2(15, 391.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4360s"]
+size = Vector2(106.625, 371)
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
@@ -189,7 +211,7 @@ position = Vector2(113.25, -614)
 shape = SubResource("RectangleShape2D_lcnwv")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="walls"]
-position = Vector2(183.25, -861.5)
+position = Vector2(182, -892)
 shape = SubResource("RectangleShape2D_4i814")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="walls"]
@@ -257,11 +279,11 @@ position = Vector2(-1053, -1264.5)
 shape = SubResource("RectangleShape2D_hs4kw")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="walls"]
-position = Vector2(269.5, -584)
+position = Vector2(270, -614)
 shape = SubResource("RectangleShape2D_bm8iy")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="walls"]
-position = Vector2(815, -584)
+position = Vector2(808, -614)
 shape = SubResource("RectangleShape2D_2uru3")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="walls"]
@@ -363,6 +385,10 @@ conversationTimes = ["2:50|0:30"]
 
 [node name="npcSprite" parent="siren" index="0"]
 position = Vector2(-137, 13)
+texture = ExtResource("7_2k2f6")
+
+[node name="AnimatedSprite2D" parent="siren/npcSprite" index="0"]
+visible = true
 
 [node name="CollisionShape2D" parent="siren/npcSprite/Area2D" index="0"]
 position = Vector2(66.6666, 377.778)
@@ -395,45 +421,14 @@ dialogueScenePaths = ["res://key.tscn"]
 
 [node name="npcSprite" parent="key" index="0"]
 z_index = 4096
+material = SubResource("ShaderMaterial_2k2f6")
 position = Vector2(960, 80)
 texture = ExtResource("11_jktts")
 script = ExtResource("13_s0aar")
 
 [node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
-visible = true
 position = Vector2(8, -196)
 scale = Vector2(0.7, 0.7)
-
-[node name="door" parent="." instance=ExtResource("11_70x1r")]
-position = Vector2(3244, 3101)
-rotation = 1.5708
-coworker_title = "door"
-is_static = true
-dialogueScenePaths = ["res://door_dialogue.tscn"]
-
-[node name="npcSprite" parent="door" index="0"]
-position = Vector2(-2079, 1898)
-scale = Vector2(3, 0.2)
-texture = ExtResource("12_knsl5")
-script = ExtResource("14_gxl1f")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="door/npcSprite" index="0"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door/npcSprite/StaticBody2D"]
-position = Vector2(3.69995, 2.5)
-shape = SubResource("RectangleShape2D_g68bc")
-
-[node name="AnimatedSprite2D" parent="door/npcSprite" index="1"]
-visible = true
-position = Vector2(16.7156, 499.149)
-rotation = 3.14159
-scale = Vector2(0.164569, 2.2317)
-
-[node name="Area2D" parent="door/npcSprite" index="2"]
-scale = Vector2(1, 5.79998)
-
-[node name="CollisionShape2D" parent="door/npcSprite/Area2D" index="0"]
-scale = Vector2(0.1, 0.1)
 
 [node name="meeting_room_door" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(2613, 1384)
@@ -452,12 +447,12 @@ script = ExtResource("14_8qan1")
 [node name="StaticBody2D" type="StaticBody2D" parent="meeting_room_door/npcSprite" index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="meeting_room_door/npcSprite/StaticBody2D"]
-position = Vector2(3.69995, 2.5)
+position = Vector2(2.00098, -200.011)
 shape = SubResource("RectangleShape2D_g68bc")
 
 [node name="AnimatedSprite2D" parent="meeting_room_door/npcSprite" index="1"]
 visible = true
-position = Vector2(-1, 415.001)
+position = Vector2(24.001, 1819.99)
 rotation = 3.14159
 scale = Vector2(0.2, 2.4)
 
@@ -518,9 +513,16 @@ scale = Vector2(-0.315, 0.315)
 [node name="npcSprite" parent="sadManager" index="0"]
 scale = Vector2(0.34, 0.34)
 
-[node name="managerSpider" parent="." instance=ExtResource("21_jktts")]
+[node name="managerSpider" parent="." groups=["spider"] instance=ExtResource("21_jktts")]
 position = Vector2(-198.015, -453.72)
-scale = Vector2(0.09, 0.09)
+
+[node name="Path2D" parent="managerSpider" index="1"]
+position = Vector2(-4.66257e-05, -0.0342929)
+scale = Vector2(1.00028, 0.988978)
+
+[node name="PathFollow2D" parent="managerSpider/Path2D" index="0"]
+rotates = false
+loop = false
 
 [node name="armlessOnlyBlock" type="Area2D" parent="."]
 script = ExtResource("22_25m5p")
@@ -535,16 +537,41 @@ shape = SubResource("RectangleShape2D_bveom")
 position = Vector2(-1075.5, -1006.5)
 shape = SubResource("RectangleShape2D_jtogi")
 
+[node name="Door" type="StaticBody2D" parent="."]
+z_index = 3785
+position = Vector2(1276, 1032)
+script = ExtResource("24_hs4kw")
+dialogue = ExtResource("25_2uru3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Door"]
+material = SubResource("ShaderMaterial_hs4kw")
+position = Vector2(14, -21)
+scale = Vector2(0.445, 0.445)
+texture = ExtResource("13_hs4kw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(13.5, -20.25)
+shape = SubResource("RectangleShape2D_1g0dp")
+
+[node name="Area2D" type="Area2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
+position = Vector2(-6, -3)
+shape = SubResource("RectangleShape2D_4360s")
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
+[connection signal="body_entered" from="key/npcSprite/Area2D" to="key/npcSprite" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="key/npcSprite/Area2D" to="key/npcSprite" method="_on_area_2d_body_exited"]
 [connection signal="area_entered" from="armlessOnlyBlock" to="." method="_on_armless_only_block_area_entered"]
+[connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Door/Area2D" to="Door" method="_on_area_2d_body_exited"]
 
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
 [editable path="key"]
-[editable path="door"]
 [editable path="meeting_room_door"]
 [editable path="sadManager"]
 [editable path="managerSpider"]

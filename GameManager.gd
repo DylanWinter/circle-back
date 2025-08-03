@@ -11,7 +11,7 @@ var is_in_conversation: bool = false
 
 # meeting room stuff
 var currentTurn = "boss"
-
+var talkedToSiren = false
 # known words
 var wordFoundDict = {
 	"RDC - Rival Demonic Company": false,
@@ -42,6 +42,8 @@ func reset_loop():
 	start_meeting_early = false
 	timerMinutes = 999.0
 	timerSeconds = 999.0
+	talkedToSiren=false
+	talkedInKitchen=false
 	
 func full_reset():
 	reset_loop()
