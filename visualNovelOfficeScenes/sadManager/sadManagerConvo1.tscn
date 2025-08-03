@@ -28,7 +28,7 @@ _data = {
 dialogue = ExtResource("2_4iaoj")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" index="1"]
-position = Vector2(430, 259)
+position = Vector2(365, 249)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_xgg8v")
 
