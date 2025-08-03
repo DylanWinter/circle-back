@@ -49,6 +49,9 @@
 [ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
 [ext_resource type="PackedScene" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
 [ext_resource type="Texture2D" uid="uid://c7bq3jl6qs72q" path="res://assets/Illustration142.png" id="49_vb8hc"]
+[ext_resource type="PackedScene" uid="uid://cl64amb56l04i" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
+[ext_resource type="PackedScene" uid="uid://lwylo8fuui4b" path="res://walkNPC1.tscn" id="47_vb8hc"]
+[ext_resource type="PackedScene" uid="uid://70gcj423oawb" path="res://interactVendingMachine.tscn" id="49_5xppq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)

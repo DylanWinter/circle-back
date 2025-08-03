@@ -16,7 +16,6 @@ func _process(delta: float) -> void:
 		$Sprite2D.visible = true
 		$CollisionShape2D.disabled = false
 		
-	print("playerNear")
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

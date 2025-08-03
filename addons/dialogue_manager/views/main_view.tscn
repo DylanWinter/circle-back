@@ -21,10 +21,10 @@ data = {
 "width": 16
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_rxfpk"]
+[sub_resource type="ImageTexture" id="ImageTexture_xv2j4"]
 image = SubResource("Image_mpdoc")
 
-[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_xv2j4"]
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_mpdoc"]
 script = ExtResource("7_necsa")
 
 [node name="MainView" type="Control"]
@@ -57,6 +57,7 @@ metadata/_edit_layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+dragger_visibility = 1
 
 [node name="SidePanel" type="VBoxContainer" parent="Margin/Content"]
 custom_minimum_size = Vector2(150, 0)
@@ -70,77 +71,92 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Start a new file"
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="OpenButton" type="MenuButton" parent="Margin/Content/SidePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Open a file"
-icon = SubResource("ImageTexture_rxfpk")
-item_count = 17
+icon = SubResource("ImageTexture_xv2j4")
+item_count = 22
 popup/item_0/text = "Open..."
-popup/item_0/icon = SubResource("ImageTexture_rxfpk")
+popup/item_0/icon = SubResource("ImageTexture_xv2j4")
 popup/item_0/id = 100
 popup/item_1/text = "Quick open..."
-popup/item_1/icon = SubResource("ImageTexture_rxfpk")
+popup/item_1/icon = SubResource("ImageTexture_xv2j4")
 popup/item_1/id = 101
 popup/item_2/id = -1
 popup/item_2/separator = true
-popup/item_3/text = "res://dialogue/firstBossOfficeDialogue.dialogue"
-popup/item_3/icon = SubResource("ImageTexture_rxfpk")
+popup/item_3/text = "res://dialogue/applesConvoExample.dialogue"
+popup/item_3/icon = SubResource("ImageTexture_xv2j4")
 popup/item_3/id = 3
-popup/item_4/text = "res://dialogue/applesConvoExample.dialogue"
-popup/item_4/icon = SubResource("ImageTexture_rxfpk")
+popup/item_4/text = "res://dialogue/MeetingQuestions.dialogue"
+popup/item_4/icon = SubResource("ImageTexture_xv2j4")
 popup/item_4/id = 4
-popup/item_5/text = "res://dialogue/MeetingQuestions.dialogue"
-popup/item_5/icon = SubResource("ImageTexture_rxfpk")
+popup/item_5/text = "res://dialogue/firstManagerSpiderOfficeDialogue.dialogue"
+popup/item_5/icon = SubResource("ImageTexture_xv2j4")
 popup/item_5/id = 5
-popup/item_6/text = "res://dialogue/firstSadManagerOfficeDialogue.dialogue"
-popup/item_6/icon = SubResource("ImageTexture_rxfpk")
+popup/item_6/text = "res://dialogue/newMeetingQuestions.dialogue"
+popup/item_6/icon = SubResource("ImageTexture_xv2j4")
 popup/item_6/id = 6
-popup/item_7/text = "res://dialogue/firstManagerSpiderOfficeDialogue.dialogue"
-popup/item_7/icon = SubResource("ImageTexture_rxfpk")
+popup/item_7/text = "res://dialogue/firstSadManagerOfficeDialogue.dialogue"
+popup/item_7/icon = SubResource("ImageTexture_xv2j4")
 popup/item_7/id = 7
-popup/item_8/text = "res://dialogue/firstSirenOfficeDialogue.dialogue"
-popup/item_8/icon = SubResource("ImageTexture_rxfpk")
+popup/item_8/text = "res://dialogue/firstJanitorOfficeDialogue.dialogue"
+popup/item_8/icon = SubResource("ImageTexture_xv2j4")
 popup/item_8/id = 8
-popup/item_9/text = "res://dialogue/firstJanitorOfficeDialogue.dialogue"
-popup/item_9/icon = SubResource("ImageTexture_rxfpk")
+popup/item_9/text = "res://dialogue/firstSirenOfficeDialogue.dialogue"
+popup/item_9/icon = SubResource("ImageTexture_xv2j4")
 popup/item_9/id = 9
-popup/item_10/text = "res://dialogue/applesConvoExample.dialogue"
-popup/item_10/icon = SubResource("ImageTexture_rxfpk")
+popup/item_10/text = "res://dialogue/door.dialogue"
+popup/item_10/icon = SubResource("ImageTexture_xv2j4")
 popup/item_10/id = 10
-popup/item_11/text = "res://dialogue/test.dialogue"
-popup/item_11/icon = SubResource("ImageTexture_rxfpk")
+popup/item_11/text = "res://dialogue/bossWaterDialogue.dialogue"
+popup/item_11/icon = SubResource("ImageTexture_xv2j4")
 popup/item_11/id = 11
-popup/item_12/text = "res://dialogue/MeetingQuestions.dialogue"
-popup/item_12/icon = SubResource("ImageTexture_rxfpk")
+popup/item_12/text = "res://dialogue/bossTalkToSadManager.dialogue"
+popup/item_12/icon = SubResource("ImageTexture_xv2j4")
 popup/item_12/id = 12
-popup/item_13/text = "res://dialogue/MeetingQuestions.dialogue"
-popup/item_13/icon = SubResource("ImageTexture_rxfpk")
+popup/item_13/text = "res://dialogue/intro.dialogue"
+popup/item_13/icon = SubResource("ImageTexture_xv2j4")
 popup/item_13/id = 13
-popup/item_14/text = "res://dialogue/MeetingQuestions.dialogue"
-popup/item_14/icon = SubResource("ImageTexture_rxfpk")
+popup/item_14/text = "res://dialogue/bossTalkToSadManager.dialogue"
+popup/item_14/icon = SubResource("ImageTexture_xv2j4")
 popup/item_14/id = 14
-popup/item_15/id = -1
-popup/item_15/separator = true
-popup/item_16/text = "Clear recent files"
-popup/item_16/id = 102
+popup/item_15/text = "res://dialogue/applesConvoExample.dialogue"
+popup/item_15/icon = SubResource("ImageTexture_xv2j4")
+popup/item_15/id = 15
+popup/item_16/text = "res://dialogue/test.dialogue"
+popup/item_16/icon = SubResource("ImageTexture_xv2j4")
+popup/item_16/id = 16
+popup/item_17/text = "res://dialogue/MeetingQuestions.dialogue"
+popup/item_17/icon = SubResource("ImageTexture_xv2j4")
+popup/item_17/id = 17
+popup/item_18/text = "res://dialogue/MeetingQuestions.dialogue"
+popup/item_18/icon = SubResource("ImageTexture_xv2j4")
+popup/item_18/id = 18
+popup/item_19/text = "res://dialogue/MeetingQuestions.dialogue"
+popup/item_19/icon = SubResource("ImageTexture_xv2j4")
+popup/item_19/id = 19
+popup/item_20/id = -1
+popup/item_20/separator = true
+popup/item_21/text = "Clear recent files"
+popup/item_21/id = 102
 
 [node name="SaveAllButton" type="Button" parent="Margin/Content/SidePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "All"
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="FindInFilesButton" type="Button" parent="Margin/Content/SidePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Find in files..."
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="Bookmarks" type="VSplitContainer" parent="Margin/Content/SidePanel"]
@@ -149,6 +165,7 @@ size_flags_vertical = 3
 
 [node name="FilesList" parent="Margin/Content/SidePanel/Bookmarks" instance=ExtResource("2_npj2k")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="FilesPopupMenu" type="PopupMenu" parent="Margin/Content/SidePanel/Bookmarks/FilesList"]
@@ -156,6 +173,7 @@ unique_name_in_owner = true
 
 [node name="TitleList" parent="Margin/Content/SidePanel/Bookmarks" instance=ExtResource("2_onb4i")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="CodePanel" type="VBoxContainer" parent="Margin/Content"]
@@ -169,73 +187,75 @@ layout_mode = 2
 [node name="InsertButton" type="MenuButton" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
+disabled = true
 text = "Insert"
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 item_count = 15
 popup/item_0/text = "Wave BBCode"
-popup/item_0/icon = SubResource("ImageTexture_rxfpk")
+popup/item_0/icon = SubResource("ImageTexture_xv2j4")
 popup/item_0/id = 0
 popup/item_1/text = "Shake BBCode"
-popup/item_1/icon = SubResource("ImageTexture_rxfpk")
+popup/item_1/icon = SubResource("ImageTexture_xv2j4")
 popup/item_1/id = 1
 popup/item_2/id = -1
 popup/item_2/separator = true
 popup/item_3/text = "Typing pause"
-popup/item_3/icon = SubResource("ImageTexture_rxfpk")
+popup/item_3/icon = SubResource("ImageTexture_xv2j4")
 popup/item_3/id = 3
 popup/item_4/text = "Typing speed change"
-popup/item_4/icon = SubResource("ImageTexture_rxfpk")
+popup/item_4/icon = SubResource("ImageTexture_xv2j4")
 popup/item_4/id = 4
 popup/item_5/text = "Auto advance"
-popup/item_5/icon = SubResource("ImageTexture_rxfpk")
+popup/item_5/icon = SubResource("ImageTexture_xv2j4")
 popup/item_5/id = 5
 popup/item_6/text = "Templates"
 popup/item_6/id = -1
 popup/item_6/separator = true
 popup/item_7/text = "Title"
-popup/item_7/icon = SubResource("ImageTexture_rxfpk")
+popup/item_7/icon = SubResource("ImageTexture_xv2j4")
 popup/item_7/id = 6
 popup/item_8/text = "Dialogue"
-popup/item_8/icon = SubResource("ImageTexture_rxfpk")
+popup/item_8/icon = SubResource("ImageTexture_xv2j4")
 popup/item_8/id = 7
 popup/item_9/text = "Response"
-popup/item_9/icon = SubResource("ImageTexture_rxfpk")
+popup/item_9/icon = SubResource("ImageTexture_xv2j4")
 popup/item_9/id = 8
 popup/item_10/text = "Random lines"
-popup/item_10/icon = SubResource("ImageTexture_rxfpk")
+popup/item_10/icon = SubResource("ImageTexture_xv2j4")
 popup/item_10/id = 9
 popup/item_11/text = "Random text"
-popup/item_11/icon = SubResource("ImageTexture_rxfpk")
+popup/item_11/icon = SubResource("ImageTexture_xv2j4")
 popup/item_11/id = 10
 popup/item_12/text = "Actions"
 popup/item_12/id = -1
 popup/item_12/separator = true
 popup/item_13/text = "Jump to title"
-popup/item_13/icon = SubResource("ImageTexture_rxfpk")
+popup/item_13/icon = SubResource("ImageTexture_xv2j4")
 popup/item_13/id = 11
 popup/item_14/text = "End dialogue"
-popup/item_14/icon = SubResource("ImageTexture_rxfpk")
+popup/item_14/icon = SubResource("ImageTexture_xv2j4")
 popup/item_14/id = 12
 
 [node name="TranslationsButton" type="MenuButton" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
+disabled = true
 text = "Translations"
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 item_count = 5
 popup/item_0/text = "Generate line IDs"
-popup/item_0/icon = SubResource("ImageTexture_rxfpk")
+popup/item_0/icon = SubResource("ImageTexture_xv2j4")
 popup/item_0/id = 100
 popup/item_1/id = -1
 popup/item_1/separator = true
 popup/item_2/text = "Save character names to CSV..."
-popup/item_2/icon = SubResource("ImageTexture_rxfpk")
+popup/item_2/icon = SubResource("ImageTexture_xv2j4")
 popup/item_2/id = 201
 popup/item_3/text = "Save lines to CSV..."
-popup/item_3/icon = SubResource("ImageTexture_rxfpk")
+popup/item_3/icon = SubResource("ImageTexture_xv2j4")
 popup/item_3/id = 202
 popup/item_4/text = "Import line changes from CSV..."
-popup/item_4/icon = SubResource("ImageTexture_rxfpk")
+popup/item_4/icon = SubResource("ImageTexture_xv2j4")
 popup/item_4/id = 203
 
 [node name="Separator" type="VSeparator" parent="Margin/Content/CodePanel/Toolbar"]
@@ -245,8 +265,9 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Search for text"
+disabled = true
 toggle_mode = true
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="Separator2" type="VSeparator" parent="Margin/Content/CodePanel/Toolbar"]
@@ -256,14 +277,16 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Test dialogue from start of file"
-icon = SubResource("ImageTexture_rxfpk")
+disabled = true
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="TestLineButton" type="Button" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Test dialogue from current line"
-icon = SubResource("ImageTexture_rxfpk")
+disabled = true
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="Spacer2" type="Control" parent="Margin/Content/CodePanel/Toolbar"]
@@ -275,7 +298,7 @@ unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Support Dialogue Manager"
 text = "Sponsor"
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="Separator4" type="VSeparator" parent="Margin/Content/CodePanel/Toolbar"]
@@ -285,7 +308,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Docs"
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 flat = true
 
 [node name="VersionLabel" type="Label" parent="Margin/Content/CodePanel/Toolbar"]
@@ -306,6 +329,7 @@ layout_mode = 2
 
 [node name="CodeEdit" parent="Margin/Content/CodePanel" instance=ExtResource("2_f73fm")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -316,11 +340,18 @@ theme_override_fonts/font = ExtResource("7_mpdoc")
 theme_override_font_sizes/font_size = 13
 theme_override_colors/bookmark_color = Color(1, 0.333333, 0.333333, 1)
 text = "~ start
-Boss: Dialogue with sad manager
+Janitor: Hello.
+Janitor: Heard about apples?
+
+=> END
+
+~ start2
+Janitor: Helloworl.
+Janitor: Heard about oranges?
 
 => END"
 scroll_smooth = true
-syntax_highlighter = SubResource("SyntaxHighlighter_xv2j4")
+syntax_highlighter = SubResource("SyntaxHighlighter_mpdoc")
 
 [node name="ErrorsPanel" parent="Margin/Content/CodePanel" instance=ExtResource("7_5cvl4")]
 unique_name_in_owner = true
@@ -328,7 +359,6 @@ layout_mode = 2
 
 [node name="Banner" type="CenterContainer" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -359,14 +389,14 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "New Dialogue..."
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 
 [node name="BannerQuickOpen" type="Button" parent="Banner/PanelContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Quick open..."
-icon = SubResource("ImageTexture_rxfpk")
+icon = SubResource("ImageTexture_xv2j4")
 
 [node name="BannerExamples" type="Button" parent="Banner/PanelContainer/HBoxContainer"]
 unique_name_in_owner = true
