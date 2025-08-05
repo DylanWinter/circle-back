@@ -1,9 +1,9 @@
-[gd_scene load_steps=116 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=118 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
 [ext_resource type="Script" uid="uid://bflkfjnvrd3r3" path="res://office.gd" id="1_jktts"]
-[ext_resource type="Texture2D" uid="uid://26mdsu7djj65" path="res://assets/MAP_Prototype__Assets-1.png" id="2_jktts"]
+[ext_resource type="Texture2D" uid="uid://mtkl1sthav14" path="res://assets/MAP_Prototype__Assets-2.png" id="2_6rmj5"]
 [ext_resource type="Script" uid="uid://c82qy1jdgmqq8" path="res://Timer.gd" id="4_43ocd"]
 [ext_resource type="PackedScene" uid="uid://2xk04aqrapx8" path="res://coworkers/sirenNPC.tscn" id="6_4i814"]
 [ext_resource type="PackedScene" uid="uid://dglc7sq6v53mf" path="res://coworkers/bossNPC.tscn" id="6_lcnwv"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://d377ctbnko4ww" path="res://assets/Divider_Door_close.png" id="13_hs4kw"]
-[ext_resource type="Script" uid="uid://b8arxkr10gb8w" path="res://key.gd" id="13_s0aar"]
 [ext_resource type="Script" uid="uid://bqxp2xr4udopn" path="res://meeting_room_door.gd" id="14_8qan1"]
 [ext_resource type="PackedScene" uid="uid://b2qtg7m37g3gg" path="res://assets/Office assets/Cubicle Node I.tscn" id="15_2uxut"]
 [ext_resource type="Script" uid="uid://mfuto6jwlvpi" path="res://assets/Office assets/sortZ.gd" id="15_o3cd7"]
@@ -34,13 +33,13 @@
 [ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="30_5bs7n"]
 [ext_resource type="Texture2D" uid="uid://cs0pt567ur06x" path="res://assets/furniture/chair1.png" id="31_cu40l"]
 [ext_resource type="Texture2D" uid="uid://c0oebgjkm7aeg" path="res://assets/furniture/chair2.png" id="32_qt548"]
-[ext_resource type="PackedScene" uid="uid://dvq8aiuilrid" path="res://assets/furniture/toilet.tscn" id="33_5c3wu"]
 [ext_resource type="PackedScene" uid="uid://cv4rpy6thdyod" path="res://assets/furniture/toilet1.tscn" id="34_5bs7n"]
 [ext_resource type="Texture2D" uid="uid://4qft48ryavin" path="res://assets/furniture/toilet.png" id="34_26ul0"]
 [ext_resource type="PackedScene" uid="uid://b0qtldd3c5iw0" path="res://assets/kitchen/cabinet_1.tscn" id="36_cu40l"]
 [ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
 [ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
 [ext_resource type="PackedScene" uid="uid://m64jarckqopq" path="res://assets/furniture/kitchen_counter.tscn" id="39_g68bc"]
+[ext_resource type="Script" uid="uid://c82ylkso44mf3" path="res://furniture.gd" id="40_0td1f"]
 [ext_resource type="Texture2D" uid="uid://nytjs6m0gbui" path="res://assets/furniture/Kitchen_drawers.png" id="40_jtogi"]
 [ext_resource type="Texture2D" uid="uid://dqi4iuc448jaw" path="res://assets/furniture/fridge.png" id="41_4360s"]
 [ext_resource type="PackedScene" uid="uid://i6eshfk3woit" path="res://assets/furniture/plantWithTeeth.tscn" id="42_a0t2l"]
@@ -55,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://dbgiwfwd5w3bn" path="res://assets/furniture/Small_box.png" id="52_0td1f"]
 [ext_resource type="PackedScene" uid="uid://c7bnx65b4lrgu" path="res://npc1.tscn" id="54_mkmg8"]
 [ext_resource type="Texture2D" uid="uid://bk1vgc28v15uy" path="res://assets/furniture/Toilet_with_pie.png" id="55_f2u8t"]
+[ext_resource type="Script" uid="uid://e0vqgclih0v7" path="res://toilet_with_pie.gd" id="57_6rmj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -93,7 +93,7 @@ size = Vector2(30, 776)
 size = Vector2(30, 555)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxl1f"]
-size = Vector2(394, 30)
+size = Vector2(546, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uxut"]
 size = Vector2(348, 30)
@@ -136,9 +136,6 @@ size = Vector2(304.5, 29.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46so7"]
 size = Vector2(30.625, 394)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jtqa"]
-size = Vector2(34, 367)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl0r1"]
 size = Vector2(380.922, 29.5)
@@ -187,11 +184,8 @@ _data = {
 }
 point_count = 18
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2k2f6"]
-shader = ExtResource("9_ga26y")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/blink_color = Color(0.600435, 0.603895, 0.627459, 1)
-shader_parameter/blink_time_scale = 0.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
+size = Vector2(117.742, 861.905)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ul7y6"]
 animations = [{
@@ -207,29 +201,32 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g68bc"]
-size = Vector2(117.742, 861.905)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ovme"]
 size = Vector2(973.338, 759.984)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jjrr"]
-size = Vector2(163.31, 269.772)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q30t1"]
-size = Vector2(23.3555, 66.0493)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0t2l"]
 size = Vector2(93.8729, 135.057)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmj5"]
+size = Vector2(33.8027, 856.338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5jjrr"]
+size = Vector2(163.31, 269.772)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3igeq"]
+size = Vector2(38.9001, 75.6174)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q30t1"]
+size = Vector2(23.3555, 66.0493)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xemgy"]
 size = Vector2(189, 79)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6veu"]
-size = Vector2(32.247, 44.6363)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2prrh"]
 size = Vector2(41.1921, 47.2903)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6veu"]
+size = Vector2(32.247, 44.6363)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1y4y"]
 texture = ExtResource("1_2uxut")
@@ -279,13 +276,22 @@ _data = {
 }
 point_count = 12
 
+[sub_resource type="Curve2D" id="Curve2D_6rmj5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -260, -4, 0, 0, 0, 0, -471, 47, 0, 0, 0, 0, -516, 253, 0, 0, 0, 0, -513, 347, 0, 0, 0, 0, -481, 482, 0, 0, 0, 0, -512, 625, 0, 0, 0, 0, -510, 782, 0, 0, 0, 0, -487, 920, 0, 0, 0, 0, -477, 1038, 0, 0, 0, 0, -502, 1215, 0, 0, 0, 0, -613, 1199, 0, 0, 0, 0, -681, 1151, 0, 0, 0, 0, -657, 1333, 0, 0, 0, 0, -489, 1446, 0, 0, 0, 0, -320, 1472, 0, 0, 0, 0, -213, 1342, 0, 0, 0, 0, -145, 1246, 0, 0, 0, 0, -91, 1118, 0, 0, 0, 0, -22, 1043, 0, 0, 0, 0, 36, 1005, 0, 0, 0, 0, 161, 1005, 0, 0, 0, 0, 260, 1024, 0, 0, 0, 0, 315, 1047, 0, 0, 0, 0, 338, 1125, 0, 0, 0, 0, 332, 1175, 0, 0, 0, 0, 304, 1178, 0, 0, 0, 0, 278, 1177, 0, 0, 0, 0, 265, 1175, 0, 0, 0, 0, 347, 1175, 0, 0, 0, 0, 360, 1209, 0, 0, 0, 0, 351, 1250, 0, 0, 0, 0, 347, 1360, 0, 0, 0, 0, 353, 1490, 0, 0, 0, 0, 209, 1565, 0, 0, 0, 0, 123, 1537, 0, 0, 0, 0, 31, 1519, 0, 0, 0, 0, -49, 1494, 0, 0, 0, 0, -102, 1445, 0, 0, 0, 0, -209, 1372, 0, 0, 0, 0, -292, 1446, 0, 0, 0, 0, -318, 1466, 0, 0, 0, 0, -659, 1328, 0, 0, 0, 0, -476, 1042, 0, 0, 0, 0, -474, 65, 0, 0, 0, 0, -280, 6, 0, 0, 0, 0, -267, 6)
+}
+point_count = 46
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0td1f"]
+size = Vector2(80, 147.5)
+
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
 
 [node name="MapPrototype1" type="Sprite2D" parent="."]
 z_index = -2999
 position = Vector2(198, -374)
-texture = ExtResource("2_jktts")
+texture = ExtResource("2_6rmj5")
 
 [node name="Player" parent="." instance=ExtResource("1_ei2s5")]
 position = Vector2(-102, 208)
@@ -341,7 +347,7 @@ position = Vector2(2727, 953.5)
 shape = SubResource("RectangleShape2D_s0aar")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="walls"]
-position = Vector2(-171, -614)
+position = Vector2(-205, -614)
 shape = SubResource("RectangleShape2D_gxl1f")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="walls"]
@@ -400,10 +406,6 @@ shape = SubResource("RectangleShape2D_hblr6")
 position = Vector2(-1166.69, 434)
 shape = SubResource("RectangleShape2D_46so7")
 
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="walls"]
-position = Vector2(-380.922, -451.5)
-shape = SubResource("RectangleShape2D_6jtqa")
-
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="walls"]
 position = Vector2(-967.461, 616)
 shape = SubResource("RectangleShape2D_nl0r1")
@@ -427,10 +429,6 @@ shape = SubResource("RectangleShape2D_qt548")
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="walls"]
 position = Vector2(1439.5, 834)
 shape = SubResource("RectangleShape2D_5c3wu")
-
-[node name="CollisionShape2D37" type="CollisionShape2D" parent="walls"]
-position = Vector2(38, -449.5)
-shape = SubResource("RectangleShape2D_6jtqa")
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("4_43ocd")
@@ -467,18 +465,18 @@ offset_bottom = 399.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("49_vb8hc")
 
-[node name="Chair24" parent="." instance=ExtResource("30_5bs7n")]
+[node name="waterCooler" parent="." instance=ExtResource("30_5bs7n")]
 position = Vector2(179, -649)
 scale = Vector2(0.7565, 0.7565)
 texture = ExtResource("7_8ovme")
 
-[node name="groundPos" parent="Chair24" index="0"]
+[node name="groundPos" parent="waterCooler" index="0"]
 position = Vector2(-17.1844, 152.016)
 
-[node name="StaticBody2D" parent="Chair24" index="1"]
+[node name="StaticBody2D" parent="waterCooler" index="1"]
 position = Vector2(9.25314, 76.6689)
 
-[node name="CollisionShape2D" parent="Chair24/StaticBody2D" index="0"]
+[node name="CollisionShape2D" parent="waterCooler/StaticBody2D" index="0"]
 position = Vector2(-21.15, 29.0811)
 rotation = 0.0
 shape = SubResource("RectangleShape2D_vb8hc")
@@ -557,24 +555,6 @@ curve = SubResource("Curve2D_jktts")
 position = Vector2(-13, 76)
 rotation = 1.64384
 
-[node name="key" parent="." instance=ExtResource("11_70x1r")]
-position = Vector2(-981, 782)
-scale = Vector2(0.25, 0.25)
-coworker_title = "key"
-is_static = true
-dialogueScenePaths = ["res://key.tscn"]
-
-[node name="npcSprite" parent="key" index="0"]
-z_index = 4096
-material = SubResource("ShaderMaterial_2k2f6")
-position = Vector2(960, 80)
-script = ExtResource("13_s0aar")
-
-[node name="AnimatedSprite2D" parent="key/npcSprite" index="0"]
-position = Vector2(8, -196)
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_ul7y6")
-
 [node name="meeting_room_door" parent="." instance=ExtResource("11_70x1r")]
 position = Vector2(2613, 1384)
 rotation = 1.5708
@@ -610,314 +590,337 @@ shape = SubResource("RectangleShape2D_8ovme")
 
 [node name="furniture" type="Node2D" parent="."]
 
-[node name="Cubicle" parent="furniture" instance=ExtResource("15_2uxut")]
+[node name="bathroom" type="Node2D" parent="furniture"]
+
+[node name="toilet4" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
+position = Vector2(-456, -1356)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("34_26ul0")
+
+[node name="groundPos" parent="furniture/bathroom/toilet4" index="0"]
+position = Vector2(-20, 130.003)
+
+[node name="StaticBody2D" parent="furniture/bathroom/toilet4" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/bathroom/toilet4/StaticBody2D" index="0"]
+position = Vector2(-23.5104, 114.296)
+shape = SubResource("RectangleShape2D_a0t2l")
+
+[node name="toilet5" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
+position = Vector2(-446, -1156)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("34_26ul0")
+
+[node name="groundPos" parent="furniture/bathroom/toilet5" index="0"]
+position = Vector2(-20, 130.003)
+
+[node name="StaticBody2D" parent="furniture/bathroom/toilet5" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/bathroom/toilet5/StaticBody2D" index="0"]
+position = Vector2(-23.5104, 114.296)
+shape = SubResource("RectangleShape2D_a0t2l")
+
+[node name="toilet6" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
+position = Vector2(-1358, -1340)
+rotation = -3.14159
+scale = Vector2(0.4, -0.4)
+texture = ExtResource("34_26ul0")
+
+[node name="groundPos" parent="furniture/bathroom/toilet6" index="0"]
+position = Vector2(-20, 130.003)
+
+[node name="StaticBody2D" parent="furniture/bathroom/toilet6" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/bathroom/toilet6/StaticBody2D" index="0"]
+position = Vector2(-23.5104, 114.296)
+shape = SubResource("RectangleShape2D_a0t2l")
+
+[node name="toilet" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
+position = Vector2(-1364, -1126)
+rotation = -3.14159
+scale = Vector2(0.4, -0.4)
+texture = ExtResource("34_26ul0")
+
+[node name="groundPos" parent="furniture/bathroom/toilet" index="0"]
+position = Vector2(-20, 130.003)
+
+[node name="StaticBody2D" parent="furniture/bathroom/toilet" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/bathroom/toilet/StaticBody2D" index="0"]
+position = Vector2(-23.5104, 114.296)
+shape = SubResource("RectangleShape2D_a0t2l")
+
+[node name="DividerDoorClose" type="Sprite2D" parent="furniture/bathroom"]
+position = Vector2(-600, -1456)
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("13_hs4kw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="furniture/bathroom/DividerDoorClose"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/bathroom/DividerDoorClose/StaticBody2D"]
+shape = SubResource("RectangleShape2D_6rmj5")
+metadata/_edit_lock_ = true
+
+[node name="DividerDoorClose2" type="Sprite2D" parent="furniture/bathroom"]
+position = Vector2(-706, -1456)
+scale = Vector2(0.355, 0.355)
+texture = ExtResource("13_hs4kw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="furniture/bathroom/DividerDoorClose2"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/bathroom/DividerDoorClose2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_6rmj5")
+metadata/_edit_lock_ = true
+
+[node name="cubicles" type="Node2D" parent="furniture"]
+
+[node name="Cubicle" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(-195, 185)
 
-[node name="Cubicle2" parent="furniture" instance=ExtResource("15_2uxut")]
+[node name="Cubicle2" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(210, 185)
 
-[node name="Cubicle3" parent="furniture" instance=ExtResource("15_2uxut")]
+[node name="Cubicle3" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(615, 185)
 
-[node name="extraDecoration" type="Node2D" parent="furniture"]
+[node name="cubicleDecor" type="Node2D" parent="furniture"]
 script = ExtResource("15_o3cd7")
 
-[node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/extraDecoration"]
+[node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/cubicleDecor"]
 position = Vector2(-279, 164)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("16_n1y4y")
 
-[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/CorkBoard&ConspiracyPlan"]
+[node name="groundPos" type="Node2D" parent="furniture/cubicleDecor/CorkBoard&ConspiracyPlan"]
 position = Vector2(-8.57145, 81.4286)
 
-[node name="CorkBoard" type="Sprite2D" parent="furniture/extraDecoration"]
+[node name="CorkBoard" type="Sprite2D" parent="furniture/cubicleDecor"]
 position = Vector2(293, 163)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("17_4hetp")
 
-[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/CorkBoard"]
+[node name="groundPos" type="Node2D" parent="furniture/cubicleDecor/CorkBoard"]
 position = Vector2(-8.57145, 81.4286)
 
-[node name="OfficeDecoration1" type="Sprite2D" parent="furniture/extraDecoration"]
+[node name="OfficeDecoration1" type="Sprite2D" parent="furniture/cubicleDecor"]
 position = Vector2(322, 171)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("18_o3cd7")
 
-[node name="groundPos" type="Node2D" parent="furniture/extraDecoration/OfficeDecoration1"]
+[node name="groundPos" type="Node2D" parent="furniture/cubicleDecor/OfficeDecoration1"]
 position = Vector2(-1.90735e-05, 70)
 
-[node name="Table" type="Sprite2D" parent="furniture"]
+[node name="kitchen" type="Node2D" parent="furniture"]
+
+[node name="Table" type="Sprite2D" parent="furniture/kitchen"]
 position = Vector2(1286, 622.25)
 scale = Vector2(1, 0.996815)
 texture = ExtResource("28_nl0r1")
 script = ExtResource("29_26ul0")
 
-[node name="groundPos" type="Node2D" parent="furniture/Table"]
+[node name="groundPos" type="Node2D" parent="furniture/kitchen/Table"]
 position = Vector2(0, 101.072)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="furniture/Table"]
+[node name="StaticBody2D" type="StaticBody2D" parent="furniture/kitchen/Table"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/Table/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/kitchen/Table/StaticBody2D"]
 position = Vector2(-3.65356, 0.404175)
 rotation = -1.53589
 shape = SubResource("RectangleShape2D_5jjrr")
 
-[node name="Chair1" parent="furniture" instance=ExtResource("30_5bs7n")]
+[node name="Chair1" parent="furniture/kitchen" instance=ExtResource("30_5bs7n")]
 position = Vector2(1112, 552)
 texture = ExtResource("31_cu40l")
 
-[node name="Chair2" type="Sprite2D" parent="furniture"]
+[node name="CollisionShape2D" parent="furniture/kitchen/Chair1/StaticBody2D" index="0"]
+position = Vector2(2.97876, 45.6072)
+shape = SubResource("RectangleShape2D_3igeq")
+
+[node name="Chair2" type="Sprite2D" parent="furniture/kitchen"]
 position = Vector2(1447, 694)
 texture = ExtResource("32_qt548")
 script = ExtResource("29_26ul0")
 
-[node name="groundPos" type="Node2D" parent="furniture/Chair2"]
+[node name="groundPos" type="Node2D" parent="furniture/kitchen/Chair2"]
 position = Vector2(-3, 57)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="furniture/Chair2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="furniture/kitchen/Chair2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/Chair2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/kitchen/Chair2/StaticBody2D"]
 position = Vector2(2.01648, 47.245)
 rotation = -1.53589
 shape = SubResource("RectangleShape2D_q30t1")
 
-[node name="Chair4" parent="furniture" instance=ExtResource("33_5c3wu")]
-position = Vector2(-435, -1141)
-
-[node name="Chair5" parent="furniture" instance=ExtResource("33_5c3wu")]
-position = Vector2(-1380, -1148)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Chair6" parent="furniture" instance=ExtResource("33_5c3wu")]
-position = Vector2(-1373, -1330)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Chair7" parent="furniture" instance=ExtResource("33_5c3wu")]
-position = Vector2(-528, -244)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Chair3" parent="furniture" instance=ExtResource("34_5bs7n")]
-position = Vector2(-456, -1356)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="furniture/Chair3" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="furniture/Chair3" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair3/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair8" parent="furniture" instance=ExtResource("34_5bs7n")]
-position = Vector2(-446, -1156)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="furniture/Chair8" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="furniture/Chair8" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair8/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair9" parent="furniture" instance=ExtResource("34_5bs7n")]
-position = Vector2(-1358, -1340)
-rotation = 3.14159
-scale = Vector2(0.4, -0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="furniture/Chair9" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="furniture/Chair9" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair9/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair10" parent="furniture" instance=ExtResource("34_5bs7n")]
-position = Vector2(-1364, -1126)
-rotation = 3.14159
-scale = Vector2(0.4, -0.4)
-texture = ExtResource("34_26ul0")
-
-[node name="groundPos" parent="furniture/Chair10" index="0"]
-position = Vector2(-20, 130.003)
-
-[node name="StaticBody2D" parent="furniture/Chair10" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair10/StaticBody2D" index="0"]
-position = Vector2(-23.5104, 114.296)
-shape = SubResource("RectangleShape2D_a0t2l")
-
-[node name="Chair11" parent="furniture" instance=ExtResource("36_cu40l")]
-position = Vector2(-713, -662)
-
-[node name="Chair13" parent="furniture" instance=ExtResource("36_cu40l")]
-position = Vector2(-431, -661)
-
-[node name="Chair12" parent="furniture" instance=ExtResource("37_qt548")]
-position = Vector2(-537, -661)
-
-[node name="Chair14" parent="furniture" instance=ExtResource("38_5c3wu")]
-position = Vector2(1276, 22)
-
-[node name="Chair15" parent="furniture" instance=ExtResource("39_g68bc")]
+[node name="kitchenCounter" parent="furniture/kitchen" instance=ExtResource("39_g68bc")]
 position = Vector2(1769, 131)
 
-[node name="KitchenDrawers" type="Sprite2D" parent="furniture"]
+[node name="KitchenDrawers" type="Sprite2D" parent="furniture/kitchen"]
 position = Vector2(1745, -42)
 texture = ExtResource("40_jtogi")
 
-[node name="Chair16" parent="furniture" instance=ExtResource("30_5bs7n")]
+[node name="fridge" parent="furniture/kitchen" instance=ExtResource("30_5bs7n")]
 position = Vector2(1540, 58)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("41_4360s")
 
-[node name="groundPos" parent="furniture/Chair16" index="0"]
+[node name="groundPos" parent="furniture/kitchen/fridge" index="0"]
 position = Vector2(-1.53854, 124.615)
 
-[node name="CollisionShape2D" parent="furniture/Chair16/StaticBody2D" index="0"]
+[node name="CollisionShape2D" parent="furniture/kitchen/fridge/StaticBody2D" index="0"]
 position = Vector2(-0.5, 109.5)
 rotation = 0.0
 shape = SubResource("RectangleShape2D_xemgy")
 
-[node name="Chair19" parent="furniture" instance=ExtResource("30_5bs7n")]
-position = Vector2(-1412, -214)
-texture = ExtResource("43_a0t2l")
+[node name="officeTopLeftCorner" type="Node2D" parent="furniture"]
 
-[node name="groundPos" parent="furniture/Chair19" index="0"]
-position = Vector2(1.3889, 69.4444)
+[node name="tinyBookshelf_1" parent="furniture/officeTopLeftCorner" instance=ExtResource("36_cu40l")]
+position = Vector2(-713, -662)
 
-[node name="StaticBody2D" parent="furniture/Chair19" index="1"]
-metadata/_edit_lock_ = true
+[node name="tinyBookshelf_2" parent="furniture/officeTopLeftCorner" instance=ExtResource("36_cu40l")]
+position = Vector2(-431, -661)
 
-[node name="CollisionShape2D" parent="furniture/Chair19/StaticBody2D" index="0"]
-position = Vector2(3.43323e-05, 59.7222)
-shape = SubResource("RectangleShape2D_g6veu")
-
-[node name="Chair20" parent="furniture" instance=ExtResource("30_5bs7n")]
-position = Vector2(-1388, 121)
-texture = ExtResource("43_xemgy")
-
-[node name="groundPos" parent="furniture/Chair20" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="furniture/Chair20" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair20/StaticBody2D" index="0"]
-position = Vector2(-3.50903, 70.2025)
-shape = SubResource("RectangleShape2D_2prrh")
-
-[node name="Chair17" parent="furniture" instance=ExtResource("42_a0t2l")]
-position = Vector2(-739.985, 771.52)
-scale = Vector2(0.5, 0.5)
-
-[node name="Chair18" parent="furniture" instance=ExtResource("30_5bs7n")]
-position = Vector2(-1122, -261)
-texture = ExtResource("43_a0t2l")
-
-[node name="groundPos" parent="furniture/Chair18" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="furniture/Chair18" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair18/StaticBody2D" index="0"]
-position = Vector2(3.43323e-05, 59.7222)
-shape = SubResource("RectangleShape2D_g6veu")
-
-[node name="Chair21" parent="furniture" instance=ExtResource("30_5bs7n")]
-position = Vector2(-1104, 499)
-texture = ExtResource("43_xemgy")
-
-[node name="groundPos" parent="furniture/Chair21" index="0"]
-position = Vector2(1.3889, 69.4444)
-
-[node name="StaticBody2D" parent="furniture/Chair21" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" parent="furniture/Chair21/StaticBody2D" index="0"]
-position = Vector2(-3.50903, 70.2025)
-shape = SubResource("RectangleShape2D_2prrh")
-
-[node name="Chair22" parent="furniture" instance=ExtResource("36_cu40l")]
+[node name="tinyBookshelf_3" parent="furniture/officeTopLeftCorner" instance=ExtResource("36_cu40l")]
 position = Vector2(-328, -661)
 
-[node name="Chair23" parent="furniture" instance=ExtResource("37_qt548")]
+[node name="libraryWithBooks" parent="furniture/officeTopLeftCorner" instance=ExtResource("37_qt548")]
+position = Vector2(-537, -661)
+
+[node name="libraryWithBooks2" parent="furniture/officeTopLeftCorner" instance=ExtResource("37_qt548")]
 position = Vector2(-233, -661)
 
-[node name="Table1Flipped" type="Sprite2D" parent="furniture"]
-position = Vector2(-1146, 113)
+[node name="vendingMachine" parent="furniture" instance=ExtResource("38_5c3wu")]
+position = Vector2(1276, 22)
+
+[node name="lobby" type="Node2D" parent="furniture"]
+position = Vector2(-1412, -214)
+
+[node name="happyPlant" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(24, 335)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant/StaticBody2D" index="0"]
+position = Vector2(-3.50903, 70.2025)
+shape = SubResource("RectangleShape2D_2prrh")
+
+[node name="sadPlant" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="piranhaPlant" parent="furniture/lobby" instance=ExtResource("42_a0t2l")]
+position = Vector2(672.015, 985.52)
+scale = Vector2(0.5, 0.5)
+
+[node name="sadPlant2" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(290, -47)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant2" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant2" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant2/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="happyPlant2" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(308, 713)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant2" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant2" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant2/StaticBody2D" index="0"]
+position = Vector2(-3.50903, 70.2025)
+shape = SubResource("RectangleShape2D_2prrh")
+
+[node name="Table1Flipped" type="Sprite2D" parent="furniture/lobby"]
+position = Vector2(266, 327)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("50_5xppq")
+script = ExtResource("40_0td1f")
 
-[node name="Tables2" type="Sprite2D" parent="furniture"]
-position = Vector2(-1147, -45)
+[node name="Tables2" type="Sprite2D" parent="furniture/lobby"]
+position = Vector2(265, 169)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("51_m3tm8")
-
-[node name="SmallBox2" type="Sprite2D" parent="furniture"]
-position = Vector2(2248, 990)
-texture = ExtResource("52_0td1f")
-
-[node name="SmallBox" type="Sprite2D" parent="furniture"]
-position = Vector2(1948, 915)
-texture = ExtResource("52_0td1f")
-
-[node name="BigBox" type="Sprite2D" parent="furniture"]
-position = Vector2(2232, 882)
-texture = ExtResource("51_f2u8t")
-
-[node name="Chair25" type="Sprite2D" parent="furniture"]
-position = Vector2(2351, 880)
-texture = ExtResource("31_cu40l")
-
-[node name="Chair26" type="Sprite2D" parent="furniture"]
-position = Vector2(2351, 867)
-texture = ExtResource("31_cu40l")
-
-[node name="Chair27" type="Sprite2D" parent="furniture"]
-position = Vector2(2352, 853)
-texture = ExtResource("31_cu40l")
-
-[node name="Chair28" type="Sprite2D" parent="furniture"]
-position = Vector2(2640, 1129)
-texture = ExtResource("32_qt548")
-
-[node name="Chair29" type="Sprite2D" parent="furniture"]
-position = Vector2(2640, 1117)
-texture = ExtResource("32_qt548")
-
-[node name="Chair30" type="Sprite2D" parent="furniture"]
-position = Vector2(2617, 878)
-texture = ExtResource("32_qt548")
-
-[node name="Chair31" type="Sprite2D" parent="furniture"]
-position = Vector2(2617, 867)
-texture = ExtResource("32_qt548")
-
-[node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture"]
-position = Vector2(2409, 624)
-scale = Vector2(3.48, 3.48)
-texture = ExtResource("16_n1y4y")
 
 [node name="WaterSpill" type="Sprite2D" parent="furniture"]
 z_index = -2775
 position = Vector2(-1159, -1121)
 texture = ExtResource("45_g6veu")
+
+[node name="storageRoom" type="Node2D" parent="furniture"]
+
+[node name="Chair31" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2617, 867)
+texture = ExtResource("32_qt548")
+
+[node name="SmallBox2" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2244, 974)
+texture = ExtResource("52_0td1f")
+
+[node name="SmallBox" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2001, 958)
+texture = ExtResource("52_0td1f")
+
+[node name="BigBox" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2232, 882)
+texture = ExtResource("51_f2u8t")
+
+[node name="Chair25" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2351, 880)
+texture = ExtResource("31_cu40l")
+
+[node name="Chair26" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2351, 867)
+texture = ExtResource("31_cu40l")
+
+[node name="Chair27" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2352, 853)
+texture = ExtResource("31_cu40l")
+
+[node name="Chair28" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2640, 1129)
+texture = ExtResource("32_qt548")
+
+[node name="Chair29" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2640, 1117)
+texture = ExtResource("32_qt548")
+
+[node name="Chair30" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2617, 878)
+texture = ExtResource("32_qt548")
+
+[node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2409, 624)
+scale = Vector2(3.48, 3.48)
+texture = ExtResource("16_n1y4y")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -3000
@@ -1049,58 +1052,95 @@ rotation = -2.73783
 rotates = false
 loop = false
 
-[node name="NPC3" parent="." node_paths=PackedStringArray("stopTimer") instance=ExtResource("54_mkmg8")]
+[node name="NPCs" type="Node2D" parent="."]
 position = Vector2(-420, 564)
+
+[node name="NPC3" parent="NPCs" node_paths=PackedStringArray("stopTimer") instance=ExtResource("54_mkmg8")]
 stopTimer = NodePath("Timer")
 
-[node name="AnimatedSprite2D" parent="NPC3" index="0"]
+[node name="AnimatedSprite2D" parent="NPCs/NPC3" index="0"]
 position = Vector2(-129, -183)
 
-[node name="Path2D" parent="NPC3" index="1"]
+[node name="Path2D" parent="NPCs/NPC3" index="1"]
 curve = SubResource("Curve2D_f2u8t")
 
-[node name="PathFollow2D" parent="NPC3/Path2D" index="0"]
+[node name="PathFollow2D" parent="NPCs/NPC3/Path2D" index="0"]
 position = Vector2(-141, -132)
 rotation = -1.87097
 rotates = false
 
-[node name="Timer" type="Timer" parent="NPC3"]
+[node name="groundPos" parent="NPCs/NPC3" index="2"]
+position = Vector2(-129, -109)
+
+[node name="Timer" type="Timer" parent="NPCs/NPC3"]
+wait_time = 4.0
+one_shot = true
+
+[node name="NPC4" parent="NPCs" node_paths=PackedStringArray("stopTimer") instance=ExtResource("54_mkmg8")]
+position = Vector2(60, -1642)
+stopTimer = NodePath("Timer")
+
+[node name="AnimatedSprite2D" parent="NPCs/NPC4" index="0"]
+position = Vector2(-249, -77)
+frame_progress = 0.254907
+
+[node name="Path2D" parent="NPCs/NPC4" index="1"]
+modulate = Color(0.740479, 0.333253, 0.0885674, 1)
+curve = SubResource("Curve2D_6rmj5")
+
+[node name="PathFollow2D" parent="NPCs/NPC4/Path2D" index="0"]
+position = Vector2(-260, -4)
+rotation = -1.87097
+rotates = false
+
+[node name="groundPos" parent="NPCs/NPC4" index="2"]
+position = Vector2(-249, -5)
+
+[node name="Timer" type="Timer" parent="NPCs/NPC4"]
 wait_time = 4.0
 one_shot = true
 
 [node name="ToiletWithPie" type="Sprite2D" parent="."]
 position = Vector2(-654, -1391)
 texture = ExtResource("55_f2u8t")
+script = ExtResource("57_6rmj5")
+
+[node name="Area2D" type="Area2D" parent="ToiletWithPie"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToiletWithPie/Area2D"]
+position = Vector2(0, 25)
+shape = SubResource("RectangleShape2D_0td1f")
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
-[connection signal="body_entered" from="key/npcSprite/Area2D" to="key/npcSprite" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="key/npcSprite/Area2D" to="key/npcSprite" method="_on_area_2d_body_exited"]
 [connection signal="area_shape_entered" from="Door/Area2D" to="Door" method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_exited" from="Door/Area2D" to="Door" method="_on_area_2d_area_shape_exited"]
 [connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Door/Area2D" to="Door" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="key2/Area2D" to="key2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="key2/Area2D" to="key2" method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="NPC3/Timer" to="NPC3" method="_on_timer_timeout"]
+[connection signal="timeout" from="NPCs/NPC3/Timer" to="NPCs/NPC3" method="_on_timer_timeout"]
+[connection signal="timeout" from="NPCs/NPC4/Timer" to="NPCs/NPC4" method="_on_timer_timeout"]
 
-[editable path="Chair24"]
+[editable path="waterCooler"]
 [editable path="boss"]
 [editable path="siren"]
 [editable path="janitor"]
-[editable path="key"]
 [editable path="meeting_room_door"]
-[editable path="furniture/Chair3"]
-[editable path="furniture/Chair8"]
-[editable path="furniture/Chair9"]
-[editable path="furniture/Chair10"]
-[editable path="furniture/Chair16"]
-[editable path="furniture/Chair19"]
-[editable path="furniture/Chair20"]
-[editable path="furniture/Chair18"]
-[editable path="furniture/Chair21"]
+[editable path="furniture/bathroom/toilet4"]
+[editable path="furniture/bathroom/toilet5"]
+[editable path="furniture/bathroom/toilet6"]
+[editable path="furniture/bathroom/toilet"]
+[editable path="furniture/kitchen/Chair1"]
+[editable path="furniture/kitchen/fridge"]
+[editable path="furniture/officeTopLeftCorner/libraryWithBooks2"]
+[editable path="furniture/lobby/happyPlant"]
+[editable path="furniture/lobby/sadPlant"]
+[editable path="furniture/lobby/sadPlant2"]
+[editable path="furniture/lobby/happyPlant2"]
 [editable path="managerSpider"]
 [editable path="NPC"]
 [editable path="NPC2"]
-[editable path="NPC3"]
+[editable path="NPCs/NPC3"]
+[editable path="NPCs/NPC4"]
