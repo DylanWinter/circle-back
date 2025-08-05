@@ -7,4 +7,3 @@ func _ready():
 func _process(delta: float) -> void:
 	#print(GameManager.wordFoundDict["RDC - Rival Demonic Company"])
 	pass
-	

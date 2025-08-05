@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk1vgc28v15uy"
-path="res://.godot/imported/Toilet_with_pie.png-314ce1f06e28db3a270d5d0368b59741.ctex"
+uid="uid://dcewhf844ikf7"
+path="res://.godot/imported/MINI_NPC2_Walk_011.png-81cb6cd186405849a815effdf2bea40b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/Toilet_with_pie.png"
-dest_files=["res://.godot/imported/Toilet_with_pie.png-314ce1f06e28db3a270d5d0368b59741.ctex"]
+source_file="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_011.png"
+dest_files=["res://.godot/imported/MINI_NPC2_Walk_011.png-81cb6cd186405849a815effdf2bea40b.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
