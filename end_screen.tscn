@@ -58,6 +58,7 @@ pivot_offset = Vector2(175, 20)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 31
 text = "You managed to keep your job!"
 scroll_active = false
 autowrap_mode = 0

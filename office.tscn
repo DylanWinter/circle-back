@@ -877,6 +877,37 @@ texture = ExtResource("45_g6veu")
 
 [node name="storageRoom" type="Node2D" parent="furniture"]
 
+[node name="BigBox2" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(1949, 844)
+texture = ExtResource("51_f2u8t")
+
+[node name="BigBox3" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2109, 1122)
+texture = ExtResource("51_f2u8t")
+
+[node name="SmallBox3" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2110, 1052)
+texture = ExtResource("52_0td1f")
+
+[node name="SmallBox4" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(2115, 873)
+texture = ExtResource("52_0td1f")
+
+[node name="Table2" type="Sprite2D" parent="furniture/storageRoom"]
+position = Vector2(1286, 622.25)
+scale = Vector2(1, 0.996815)
+script = ExtResource("29_26ul0")
+
+[node name="groundPos" type="Node2D" parent="furniture/storageRoom/Table2"]
+position = Vector2(0, 101.072)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="furniture/storageRoom/Table2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/storageRoom/Table2/StaticBody2D"]
+position = Vector2(-3.65356, 0.404175)
+rotation = -1.53589
+shape = SubResource("RectangleShape2D_5jjrr")
+
 [node name="Chair31" type="Sprite2D" parent="furniture/storageRoom"]
 position = Vector2(2617, 867)
 texture = ExtResource("32_qt548")
@@ -886,11 +917,11 @@ position = Vector2(2244, 974)
 texture = ExtResource("52_0td1f")
 
 [node name="SmallBox" type="Sprite2D" parent="furniture/storageRoom"]
-position = Vector2(2001, 958)
+position = Vector2(1950, 781)
 texture = ExtResource("52_0td1f")
 
 [node name="BigBox" type="Sprite2D" parent="furniture/storageRoom"]
-position = Vector2(2232, 882)
+position = Vector2(2148, 912)
 texture = ExtResource("51_f2u8t")
 
 [node name="Chair25" type="Sprite2D" parent="furniture/storageRoom"]
@@ -1012,22 +1043,6 @@ position = Vector2(-705, 532)
 position = Vector2(-34, 249)
 shape = SubResource("CircleShape2D_a0t2l")
 
-[node name="BigBox" type="Sprite2D" parent="key2/Area2D"]
-position = Vector2(2654, 312)
-texture = ExtResource("51_f2u8t")
-
-[node name="BigBox2" type="Sprite2D" parent="key2/Area2D"]
-position = Vector2(2811, 595)
-texture = ExtResource("51_f2u8t")
-
-[node name="SmallBox" type="Sprite2D" parent="key2/Area2D"]
-position = Vector2(2798, 516)
-texture = ExtResource("52_0td1f")
-
-[node name="SmallBox2" type="Sprite2D" parent="key2/Area2D"]
-position = Vector2(2820, 341)
-texture = ExtResource("52_0td1f")
-
 [node name="Sprite2D" type="Sprite2D" parent="key2"]
 z_index = -30
 material = SubResource("ShaderMaterial_xemgy")
@@ -1035,7 +1050,7 @@ position = Vector2(-739, 787)
 scale = Vector2(0.385, 0.385)
 texture = ExtResource("11_jktts")
 
-[node name="NPC2" parent="." instance=ExtResource("47_qsbda")]
+[node name="Asmodeus" parent="." instance=ExtResource("47_qsbda")]
 position = Vector2(1272, 463)
 scale = Vector2(1.78, 1.78)
 coworker_title = "sadManager"
@@ -1043,10 +1058,10 @@ dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1
 walkSpeed = 60
 conversationTimes = ["2:59|4:00", "2:00|0:30"]
 
-[node name="Path2D" type="Path2D" parent="NPC2"]
+[node name="Path2D" type="Path2D" parent="Asmodeus"]
 curve = SubResource("Curve2D_qsbda")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="NPC2/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Asmodeus/Path2D"]
 position = Vector2(-6.10352e-05, 0)
 rotation = -2.73783
 rotates = false
@@ -1141,6 +1156,6 @@ shape = SubResource("RectangleShape2D_0td1f")
 [editable path="furniture/lobby/happyPlant2"]
 [editable path="managerSpider"]
 [editable path="NPC"]
-[editable path="NPC2"]
+[editable path="Asmodeus"]
 [editable path="NPCs/NPC3"]
 [editable path="NPCs/NPC4"]
