@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=119 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -39,7 +39,6 @@
 [ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
 [ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
 [ext_resource type="PackedScene" uid="uid://m64jarckqopq" path="res://assets/furniture/kitchen_counter.tscn" id="39_g68bc"]
-[ext_resource type="Script" uid="uid://c82ylkso44mf3" path="res://furniture.gd" id="40_0td1f"]
 [ext_resource type="Texture2D" uid="uid://nytjs6m0gbui" path="res://assets/furniture/Kitchen_drawers.png" id="40_jtogi"]
 [ext_resource type="Texture2D" uid="uid://dqi4iuc448jaw" path="res://assets/furniture/fridge.png" id="41_4360s"]
 [ext_resource type="PackedScene" uid="uid://i6eshfk3woit" path="res://assets/furniture/plantWithTeeth.tscn" id="42_a0t2l"]
@@ -205,7 +204,7 @@ animations = [{
 size = Vector2(973.338, 759.984)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0t2l"]
-size = Vector2(93.8729, 135.057)
+size = Vector2(59.7936, 233.243)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmj5"]
 size = Vector2(33.8027, 856.338)
@@ -227,6 +226,12 @@ size = Vector2(41.1921, 47.2903)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6veu"]
 size = Vector2(32.247, 44.6363)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2u8t"]
+size = Vector2(190, 118.572)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmg8"]
+size = Vector2(182.857, 115.714)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1y4y"]
 texture = ExtResource("1_2uxut")
@@ -478,7 +483,6 @@ position = Vector2(9.25314, 76.6689)
 
 [node name="CollisionShape2D" parent="waterCooler/StaticBody2D" index="0"]
 position = Vector2(-21.15, 29.0811)
-rotation = 0.0
 shape = SubResource("RectangleShape2D_vb8hc")
 
 [node name="boss" parent="." instance=ExtResource("6_lcnwv")]
@@ -526,6 +530,7 @@ autoplay = "default"
 
 [node name="AnimatedSprite2D" parent="siren/npcSprite" index="0"]
 visible = true
+z_index = 3930
 position = Vector2(-6.25, -256.25)
 
 [node name="CollisionShape2D" parent="siren/npcSprite/Area2D" index="0"]
@@ -533,7 +538,7 @@ position = Vector2(-6.24976, 431.25)
 shape = SubResource("CircleShape2D_ei2s5")
 
 [node name="groundPos" parent="siren/npcSprite" index="2"]
-position = Vector2(6.24974, 718.75)
+position = Vector2(-0.000259876, 512.5)
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(-1238, -1409)
@@ -605,6 +610,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/bathroom/toilet4/StaticBody2D" index="0"]
 position = Vector2(-23.5104, 114.296)
+rotation = -1.53589
 shape = SubResource("RectangleShape2D_a0t2l")
 
 [node name="toilet5" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
@@ -620,6 +626,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/bathroom/toilet5/StaticBody2D" index="0"]
 position = Vector2(-23.5104, 114.296)
+rotation = -1.53589
 shape = SubResource("RectangleShape2D_a0t2l")
 
 [node name="toilet6" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
@@ -636,6 +643,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/bathroom/toilet6/StaticBody2D" index="0"]
 position = Vector2(-23.5104, 114.296)
+rotation = -1.53589
 shape = SubResource("RectangleShape2D_a0t2l")
 
 [node name="toilet" parent="furniture/bathroom" instance=ExtResource("34_5bs7n")]
@@ -652,6 +660,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/bathroom/toilet/StaticBody2D" index="0"]
 position = Vector2(-23.5104, 114.296)
+rotation = -1.53589
 shape = SubResource("RectangleShape2D_a0t2l")
 
 [node name="DividerDoorClose" type="Sprite2D" parent="furniture/bathroom"]
@@ -774,7 +783,6 @@ position = Vector2(-1.53854, 124.615)
 
 [node name="CollisionShape2D" parent="furniture/kitchen/fridge/StaticBody2D" index="0"]
 position = Vector2(-0.5, 109.5)
-rotation = 0.0
 shape = SubResource("RectangleShape2D_xemgy")
 
 [node name="officeTopLeftCorner" type="Node2D" parent="furniture"]
@@ -859,16 +867,49 @@ metadata/_edit_lock_ = true
 position = Vector2(-3.50903, 70.2025)
 shape = SubResource("RectangleShape2D_2prrh")
 
-[node name="Table1Flipped" type="Sprite2D" parent="furniture/lobby"]
-position = Vector2(266, 327)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("50_5xppq")
-script = ExtResource("40_0td1f")
-
-[node name="Tables2" type="Sprite2D" parent="furniture/lobby"]
-position = Vector2(265, 169)
+[node name="lobbyDesk1" parent="furniture/lobby" instance=ExtResource("34_5bs7n")]
+position = Vector2(306, 166)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("51_m3tm8")
+
+[node name="groundPos" parent="furniture/lobby/lobbyDesk1" index="0"]
+position = Vector2(-4.28571, -141.429)
+
+[node name="StaticBody2D" parent="furniture/lobby/lobbyDesk1" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="0"]
+position = Vector2(65.611, -0.521446)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_a0t2l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="1"]
+position = Vector2(0.5, -57.857)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_f2u8t")
+
+[node name="lobbyDesk2" parent="furniture/lobby" instance=ExtResource("34_5bs7n")]
+position = Vector2(306, 328)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("50_5xppq")
+
+[node name="groundPos" parent="furniture/lobby/lobbyDesk2" index="0"]
+position = Vector2(-4.28572, -372.857)
+
+[node name="StaticBody2D" parent="furniture/lobby/lobbyDesk2" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="0"]
+position = Vector2(65.6111, -0.521454)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_a0t2l")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="1"]
+position = Vector2(-4.28577, 57.8572)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_mkmg8")
+metadata/_edit_lock_ = true
 
 [node name="WaterSpill" type="Sprite2D" parent="furniture"]
 z_index = -2775
@@ -1154,6 +1195,8 @@ shape = SubResource("RectangleShape2D_0td1f")
 [editable path="furniture/lobby/sadPlant"]
 [editable path="furniture/lobby/sadPlant2"]
 [editable path="furniture/lobby/happyPlant2"]
+[editable path="furniture/lobby/lobbyDesk1"]
+[editable path="furniture/lobby/lobbyDesk2"]
 [editable path="managerSpider"]
 [editable path="NPC"]
 [editable path="Asmodeus"]

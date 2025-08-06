@@ -49,4 +49,4 @@ position = Vector2(33.3333, 433.333)
 shape = SubResource("CircleShape2D_7smfy")
 
 [node name="groundPos" parent="npcSprite" index="2"]
-position = Vector2(33.3333, 1022.22)
+position = Vector2(33.3333, 722.222)
