@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=170 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -39,21 +39,69 @@
 [ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
 [ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
 [ext_resource type="PackedScene" uid="uid://m64jarckqopq" path="res://assets/furniture/kitchen_counter.tscn" id="39_g68bc"]
+[ext_resource type="PackedScene" uid="uid://c86a6h4h0x16e" path="res://water_spill.tscn" id="39_rasr3"]
 [ext_resource type="Texture2D" uid="uid://nytjs6m0gbui" path="res://assets/furniture/Kitchen_drawers.png" id="40_jtogi"]
 [ext_resource type="Texture2D" uid="uid://dqi4iuc448jaw" path="res://assets/furniture/fridge.png" id="41_4360s"]
 [ext_resource type="PackedScene" uid="uid://i6eshfk3woit" path="res://assets/furniture/plantWithTeeth.tscn" id="42_a0t2l"]
 [ext_resource type="Texture2D" uid="uid://cxs6a1p3yqne5" path="res://assets/furniture/sadPlant.png" id="43_a0t2l"]
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
-[ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="45_g6veu"]
 [ext_resource type="PackedScene" uid="uid://2ixukrys0lav" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
 [ext_resource type="Texture2D" uid="uid://c7bq3jl6qs72q" path="res://assets/Illustration142.png" id="49_vb8hc"]
 [ext_resource type="Texture2D" uid="uid://cy4ictp6wb003" path="res://assets/Office assets/Table 1 flipped.png" id="50_5xppq"]
 [ext_resource type="Texture2D" uid="uid://bi6783q4vwcvj" path="res://assets/furniture/Big_box.png" id="51_f2u8t"]
 [ext_resource type="Texture2D" uid="uid://cx4syyd0c30hg" path="res://assets/Office assets/Tables 2.png" id="51_m3tm8"]
 [ext_resource type="Texture2D" uid="uid://dbgiwfwd5w3bn" path="res://assets/furniture/Small_box.png" id="52_0td1f"]
+[ext_resource type="Texture2D" uid="uid://wqewh2jlasqs" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_001.png" id="53_5qg4s"]
 [ext_resource type="PackedScene" uid="uid://c7bnx65b4lrgu" path="res://npc1.tscn" id="54_mkmg8"]
+[ext_resource type="Texture2D" uid="uid://xy2b6ua7f62f" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_002.png" id="54_rqlqf"]
+[ext_resource type="Texture2D" uid="uid://cwuxu4vt0nat6" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_003.png" id="55_csuqh"]
 [ext_resource type="Texture2D" uid="uid://bk1vgc28v15uy" path="res://assets/furniture/Toilet_with_pie.png" id="55_f2u8t"]
+[ext_resource type="Texture2D" uid="uid://baaa0wsrhjyoh" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_004.png" id="56_5vds2"]
 [ext_resource type="Script" uid="uid://e0vqgclih0v7" path="res://toilet_with_pie.gd" id="57_6rmj5"]
+[ext_resource type="Texture2D" uid="uid://5rf4d1b3mpqd" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_005.png" id="57_b1xpf"]
+[ext_resource type="Texture2D" uid="uid://daqk1iqu1ga1d" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_006.png" id="58_dehg8"]
+[ext_resource type="Texture2D" uid="uid://b6adtujuycjvn" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_007.png" id="59_uk5k8"]
+[ext_resource type="Texture2D" uid="uid://0nerpy5mng4h" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_008.png" id="60_2v0nf"]
+[ext_resource type="Texture2D" uid="uid://2fu102bhw6q8" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_009.png" id="61_m6qcb"]
+[ext_resource type="Texture2D" uid="uid://6ae1t8lhae4y" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_010.png" id="62_n1qgr"]
+[ext_resource type="Texture2D" uid="uid://wp0r0el83axs" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_011.png" id="63_jheaw"]
+[ext_resource type="Texture2D" uid="uid://wou0le3odcpx" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_012.png" id="64_b6li7"]
+[ext_resource type="Texture2D" uid="uid://dnf5ahaevlu6s" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_013.png" id="65_5jlid"]
+[ext_resource type="Texture2D" uid="uid://b8bs1s3dfc88p" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_014.png" id="66_ok1ok"]
+[ext_resource type="Texture2D" uid="uid://ekb0faqbk62w" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_015.png" id="67_wm32v"]
+[ext_resource type="Texture2D" uid="uid://cv0o1q65f57do" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_016.png" id="68_4jxxi"]
+[ext_resource type="Texture2D" uid="uid://db22f8i7h37j1" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_017.png" id="69_76qor"]
+[ext_resource type="Texture2D" uid="uid://ckl2vheaajoeu" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_018.png" id="70_grklc"]
+[ext_resource type="Texture2D" uid="uid://dbt7b306tjong" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_019.png" id="71_t75b4"]
+[ext_resource type="Texture2D" uid="uid://bpewbtpqpuqx1" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_020.png" id="72_635vn"]
+[ext_resource type="Texture2D" uid="uid://c4857cwm4jwe1" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_021.png" id="73_ard1h"]
+[ext_resource type="Texture2D" uid="uid://qqi7b1ibfvs1" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_022.png" id="74_quwqq"]
+[ext_resource type="Texture2D" uid="uid://djp6g78eruw6w" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_023.png" id="75_8yaq2"]
+[ext_resource type="Texture2D" uid="uid://brcuqc4oi5ojp" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_024.png" id="76_2npbj"]
+[ext_resource type="Texture2D" uid="uid://bxftkx842xs4b" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_001.png" id="77_rasr3"]
+[ext_resource type="Texture2D" uid="uid://db2nyoi0f1p6f" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_002.png" id="78_d820c"]
+[ext_resource type="Texture2D" uid="uid://du11u5qgaltvm" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_003.png" id="79_rcrlv"]
+[ext_resource type="Texture2D" uid="uid://bu1foomx2gg7x" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_004.png" id="80_nwd8h"]
+[ext_resource type="Texture2D" uid="uid://cve4faeus4s6w" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_005.png" id="81_mhxa3"]
+[ext_resource type="Texture2D" uid="uid://34vqsgvkbg6q" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_006.png" id="82_uskqc"]
+[ext_resource type="Texture2D" uid="uid://cxxn3tppeb6yr" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_007.png" id="83_42dtf"]
+[ext_resource type="Texture2D" uid="uid://6uom2u2nsmyw" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_008.png" id="84_q5llg"]
+[ext_resource type="Texture2D" uid="uid://c18cqg3ybkt5x" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_009.png" id="85_g5u4q"]
+[ext_resource type="Texture2D" uid="uid://0552j2o0ws0e" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_010.png" id="86_fcfgb"]
+[ext_resource type="Texture2D" uid="uid://dcewhf844ikf7" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_011.png" id="87_75n5i"]
+[ext_resource type="Texture2D" uid="uid://33umolkvksf0" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_012.png" id="88_lcl6j"]
+[ext_resource type="Texture2D" uid="uid://drp1yrgfo6wik" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_013.png" id="89_y0po8"]
+[ext_resource type="Texture2D" uid="uid://bcukn12mjbg5h" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_014.png" id="90_f675c"]
+[ext_resource type="Texture2D" uid="uid://bx0n8qkwipkkr" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_015.png" id="91_r72o0"]
+[ext_resource type="Texture2D" uid="uid://db2qliflds0x4" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_016.png" id="92_lg4fv"]
+[ext_resource type="Texture2D" uid="uid://bn3w4afxkhwmx" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_017.png" id="93_11c2l"]
+[ext_resource type="Texture2D" uid="uid://07q8h2ij68r1" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_018.png" id="94_5068w"]
+[ext_resource type="Texture2D" uid="uid://be6spt2ryj3xb" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_019.png" id="95_fqkuf"]
+[ext_resource type="Texture2D" uid="uid://drx65jsp8kwmo" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_020.png" id="96_7ho6h"]
+[ext_resource type="Texture2D" uid="uid://bfokc4od1r3m" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_021.png" id="97_gv6tn"]
+[ext_resource type="Texture2D" uid="uid://xtatkoo8ijbn" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_022.png" id="98_asu26"]
+[ext_resource type="Texture2D" uid="uid://btdkavt5n8fka" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_023.png" id="99_h2x2g"]
+[ext_resource type="Texture2D" uid="uid://6wmwui75u7b0" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_024.png" id="100_f34dr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -275,17 +323,260 @@ _data = {
 }
 point_count = 22
 
-[sub_resource type="Curve2D" id="Curve2D_f2u8t"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rasr3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_5qg4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_rqlqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_csuqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_5vds2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_b1xpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_dehg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_uk5k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2v0nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_m6qcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_n1qgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_jheaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_b6li7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_5jlid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ok1ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_wm32v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_4jxxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_76qor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_grklc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_t75b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_635vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ard1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_quwqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_8yaq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_2npbj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 65.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_rasr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_d820c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_rcrlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_nwd8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_mhxa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_uskqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_42dtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_q5llg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_g5u4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_fcfgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_75n5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_lcl6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_y0po8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_f675c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_r72o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_lg4fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_11c2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_5068w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_fqkuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_7ho6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_gv6tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_asu26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_h2x2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_f34dr")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 45.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_ty3gb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -141, -132, 0, 0, 0, 0, -245, -468, 0, 0, 0, 0, -162, -582, 0, 0, 0, 0, -56, -734, 0, 0, 0, 0, 351, -718, 0, 0, 0, 0, 713, -705, 0, 0, 0, 0, 1258, -684, 0, 0, 0, 0, 1341, -271, 0, 0, 0, 0, 1053, -36, 0, 0, 0, 0, 626, 35, 0, 0, 0, 0, 78, 1, 0, 0, 0, 0, -140, -115)
+"points": PackedVector2Array(0, 0, 0, 0, 124, -7, 0, 0, 0, 0, 291, 50, 0, 0, 0, 0, 525, 104, 0, 0, 0, 0, 746, 106, 0, 0, 0, 0, 994, 7, 0, 0, 0, 0, 1201, -101, 0, 0, 0, 0, 1296, -200, 0, 0, 0, 0, 1343, -313, 0, 0, 0, 0, 1312, -570, 0, 0, 0, 0, 1171, -693, 0, 0, 0, 0, 878, -743, 0, 0, 0, 0, 692, -747, 0, 0, 0, 0, 487, -714, 0, 0, 0, 0, 213, -681, 0, 0, 0, 0, 77, -646, 0, 0, 0, 0, -34, -594, 0, 0, 0, 0, -86, -450, 0, 0, 0, 0, -86, -280, 0, 0, 0, 0, -20, -120, 0, 0, 0, 0, 63, -56, 0, 0, 0, 0, 129, -16)
 }
-point_count = 12
+point_count = 21
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5qg4s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_5qg4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_rqlqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_csuqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_5vds2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_b1xpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_dehg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_uk5k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2v0nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_m6qcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_n1qgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_jheaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_b6li7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_5jlid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ok1ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_wm32v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_4jxxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_76qor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_grklc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_t75b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_635vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ard1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_quwqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_8yaq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_2npbj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 65.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_6rmj5"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -260, -4, 0, 0, 0, 0, -471, 47, 0, 0, 0, 0, -516, 253, 0, 0, 0, 0, -513, 347, 0, 0, 0, 0, -481, 482, 0, 0, 0, 0, -512, 625, 0, 0, 0, 0, -510, 782, 0, 0, 0, 0, -487, 920, 0, 0, 0, 0, -477, 1038, 0, 0, 0, 0, -502, 1215, 0, 0, 0, 0, -613, 1199, 0, 0, 0, 0, -681, 1151, 0, 0, 0, 0, -657, 1333, 0, 0, 0, 0, -489, 1446, 0, 0, 0, 0, -320, 1472, 0, 0, 0, 0, -213, 1342, 0, 0, 0, 0, -145, 1246, 0, 0, 0, 0, -91, 1118, 0, 0, 0, 0, -22, 1043, 0, 0, 0, 0, 36, 1005, 0, 0, 0, 0, 161, 1005, 0, 0, 0, 0, 260, 1024, 0, 0, 0, 0, 315, 1047, 0, 0, 0, 0, 338, 1125, 0, 0, 0, 0, 332, 1175, 0, 0, 0, 0, 304, 1178, 0, 0, 0, 0, 278, 1177, 0, 0, 0, 0, 265, 1175, 0, 0, 0, 0, 347, 1175, 0, 0, 0, 0, 360, 1209, 0, 0, 0, 0, 351, 1250, 0, 0, 0, 0, 347, 1360, 0, 0, 0, 0, 353, 1490, 0, 0, 0, 0, 209, 1565, 0, 0, 0, 0, 123, 1537, 0, 0, 0, 0, 31, 1519, 0, 0, 0, 0, -49, 1494, 0, 0, 0, 0, -102, 1445, 0, 0, 0, 0, -209, 1372, 0, 0, 0, 0, -292, 1446, 0, 0, 0, 0, -318, 1466, 0, 0, 0, 0, -659, 1328, 0, 0, 0, 0, -476, 1042, 0, 0, 0, 0, -474, 65, 0, 0, 0, 0, -280, 6, 0, 0, 0, 0, -267, 6)
 }
 point_count = 46
+
+[sub_resource type="Curve2D" id="Curve2D_f2u8t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -128, -102, 0, 0, 0, 0, -42, -69, 0, 0, 0, 0, 120, 3, 0, 0, 0, 0, 320, 20, 0, 0, 0, 0, 548, 67, 0, 0, 0, 0, 693, 126, 0, 0, 0, 0, 617, 204, 0, 0, 0, 0, 431, 192, 0, 0, 0, 0, 149, 165, 0, 0, 0, 0, -7, 110, 0, 0, 0, 0, -91, 11, 0, 0, 0, 0, -110, -69, 0, 0, 0, 0, -118, -87)
+}
+point_count = 13
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0td1f"]
 size = Vector2(80, 147.5)
@@ -538,7 +829,7 @@ position = Vector2(-6.24976, 431.25)
 shape = SubResource("CircleShape2D_ei2s5")
 
 [node name="groundPos" parent="siren/npcSprite" index="2"]
-position = Vector2(-0.000259876, 512.5)
+position = Vector2(-31.2503, 681.25)
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(-1238, -1409)
@@ -880,7 +1171,6 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="0"]
 position = Vector2(65.611, -0.521446)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a0t2l")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="1"]
@@ -901,20 +1191,19 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="0"]
 position = Vector2(65.6111, -0.521454)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a0t2l")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="1"]
 position = Vector2(-4.28577, 57.8572)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mkmg8")
 metadata/_edit_lock_ = true
 
-[node name="WaterSpill" type="Sprite2D" parent="furniture"]
-z_index = -2775
+[node name="WaterSpill" parent="furniture" instance=ExtResource("39_rasr3")]
 position = Vector2(-1159, -1121)
-texture = ExtResource("45_g6veu")
+
+[node name="WaterSpill2" parent="furniture" instance=ExtResource("39_rasr3")]
+position = Vector2(-897, -821)
 
 [node name="storageRoom" type="Node2D" parent="furniture"]
 
@@ -1115,13 +1404,15 @@ position = Vector2(-420, 564)
 stopTimer = NodePath("Timer")
 
 [node name="AnimatedSprite2D" parent="NPCs/NPC3" index="0"]
-position = Vector2(-129, -183)
+position = Vector2(123, -7)
+sprite_frames = SubResource("SpriteFrames_rasr3")
+frame_progress = 0.0505067
 
 [node name="Path2D" parent="NPCs/NPC3" index="1"]
-curve = SubResource("Curve2D_f2u8t")
+curve = SubResource("Curve2D_ty3gb")
 
 [node name="PathFollow2D" parent="NPCs/NPC3/Path2D" index="0"]
-position = Vector2(-141, -132)
+position = Vector2(124, -7)
 rotation = -1.87097
 rotates = false
 
@@ -1138,6 +1429,7 @@ stopTimer = NodePath("Timer")
 
 [node name="AnimatedSprite2D" parent="NPCs/NPC4" index="0"]
 position = Vector2(-249, -77)
+sprite_frames = SubResource("SpriteFrames_5qg4s")
 frame_progress = 0.254907
 
 [node name="Path2D" parent="NPCs/NPC4" index="1"]
@@ -1153,6 +1445,32 @@ rotates = false
 position = Vector2(-249, -5)
 
 [node name="Timer" type="Timer" parent="NPCs/NPC4"]
+wait_time = 4.0
+one_shot = true
+
+[node name="NPC5" parent="NPCs" node_paths=PackedStringArray("stopTimer") instance=ExtResource("54_mkmg8")]
+position = Vector2(54, -877)
+stopTimer = NodePath("Timer")
+
+[node name="AnimatedSprite2D" parent="NPCs/NPC5" index="0"]
+position = Vector2(-129, -183)
+sprite_frames = SubResource("SpriteFrames_rasr3")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.999558
+
+[node name="Path2D" parent="NPCs/NPC5" index="1"]
+curve = SubResource("Curve2D_f2u8t")
+
+[node name="PathFollow2D" parent="NPCs/NPC5/Path2D" index="0"]
+position = Vector2(-128, -102)
+rotation = -1.87097
+rotates = false
+
+[node name="groundPos" parent="NPCs/NPC5" index="2"]
+position = Vector2(-129, -109)
+
+[node name="Timer" type="Timer" parent="NPCs/NPC5"]
 wait_time = 4.0
 one_shot = true
 
@@ -1178,6 +1496,7 @@ shape = SubResource("RectangleShape2D_0td1f")
 [connection signal="body_exited" from="key2/Area2D" to="key2" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="NPCs/NPC3/Timer" to="NPCs/NPC3" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/NPC4/Timer" to="NPCs/NPC4" method="_on_timer_timeout"]
+[connection signal="timeout" from="NPCs/NPC5/Timer" to="NPCs/NPC5" method="_on_timer_timeout"]
 
 [editable path="waterCooler"]
 [editable path="boss"]
@@ -1202,3 +1521,4 @@ shape = SubResource("RectangleShape2D_0td1f")
 [editable path="Asmodeus"]
 [editable path="NPCs/NPC3"]
 [editable path="NPCs/NPC4"]
+[editable path="NPCs/NPC5"]

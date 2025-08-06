@@ -3,12 +3,18 @@ extends CharacterBody2D
 var can_move : bool = true
 var SPEED = 300.0
 var energized = false
+var slide = false
+
+var slideSpeed = 500
+
+var lastInputDir : Vector2
 
 func _ready() -> void:
 	GameManager.player = self
+	
+
 
 func _physics_process(delta: float) -> void:
-	
 	self.z_index = $CollisionShape2D.global_position.y
 	var input_direction := Vector2(
 		Input.get_axis("move_left", "move_right"),
@@ -18,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	
 	if can_move:
 		if input_direction != Vector2.ZERO:
+			lastInputDir = input_direction
 			if not $AnimatedSprite2D.is_playing():
 				$AnimatedSprite2D.play("walk")
 			input_direction = input_direction.normalized()
@@ -34,7 +41,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			$AnimatedSprite2D.stop()
 			velocity = velocity.move_toward(Vector2.ZERO, SPEED)
-	
+
+		
 		move_and_slide()
 		
 		if Input.is_action_just_pressed("interact"):
@@ -43,4 +51,23 @@ func _physics_process(delta: float) -> void:
 					GameManager.closest_interactable_npc.start_dialogue()
 	else:
 		$AnimatedSprite2D.stop()
+	
+	
+	if slide == true:
+		if $slideTimer.is_stopped():
+			$slideTimer.start()
+			slideSpeed = 500
+		can_move = false
+		if slideSpeed>0:
+			slideSpeed -= 10
+		var slideDirection = lastInputDir.normalized()
+		velocity = lastInputDir * slideSpeed
+		move_and_slide()
+			
 		
+
+
+func _on_slide_timer_timeout() -> void:
+	slide = false
+	$slideTimer.stop()
+	can_move = true

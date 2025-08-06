@@ -10,7 +10,7 @@ var stop = false
 
 var lastPosition : Vector2
 
-var speed = 900.0
+var speed = 300.0
 
 func _process(delta: float) -> void:
 	if stop == true:

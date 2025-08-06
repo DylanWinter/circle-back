@@ -20,3 +20,9 @@ animation = &"walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 81)
 shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="slideTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="slideTimer" to="." method="_on_slide_timer_timeout"]

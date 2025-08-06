@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 		if animatedSprite.is_playing() == true:
 			animatedSprite.pause()
 		
-		
+	z_index = $npcSprite/groundPos.global_position.y
 	if not is_static:
 		if not GameManager.is_in_conversation:
 			lastPosition = $npcSprite.position
@@ -74,7 +74,6 @@ func _process(delta: float) -> void:
 				$npcSprite.position = $Path2D/PathFollow2D.position
 				if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
 					$npcSprite.scale.x *= -1.0
-			z_index = $npcSprite/groundPos.global_position.y
 			
 			if dialogueScenePaths.size()>0 and isStopped == true and alreadyStartedDialogue == false:
 				speechBubbleSprite.visible = true

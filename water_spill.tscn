@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c86a6h4h0x16e"]
+
+[ext_resource type="Texture2D" uid="uid://cdiii4vf3aqly" path="res://assets/Water_spill.png" id="1_576g4"]
+[ext_resource type="Script" uid="uid://cyoy5bsm0kig2" path="res://water_spill.gd" id="2_ar6jy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_576g4"]
+size = Vector2(150, 86)
+
+[node name="WaterSpill" type="Sprite2D"]
+z_index = -2775
+texture = ExtResource("1_576g4")
+script = ExtResource("2_ar6jy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_576g4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
