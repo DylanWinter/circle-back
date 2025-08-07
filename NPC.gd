@@ -34,18 +34,23 @@ func shouldFlipBasedOnMovement(lastPosition : Vector2, currentPosition : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_ended"))
+	
+	'''
 	if is_static == true:
 		isStopped = true
 	else:
 		isStopped = false
 		
+	'''
+		
 	
-	speechBubbleSprite.frame = 1
+	$npcSprite/AnimatedSprite2D.frame = 1
 	pass
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print($npcSprite/AnimatedSprite2D.frame)
 	'''
 	if coworker_title == "sadManager":
 		if GameManager.peptalkedsadmanager == true:
@@ -68,7 +73,7 @@ func _process(delta: float) -> void:
 				if coworker_title == "boss":
 					var animatedSprite : AnimatedSprite2D = $npcSprite
 					if animatedSprite.is_playing() == false:
-						animatedSprite.play("default")
+						animatedSprite.play()
 				alreadyStartedDialogue = false
 				$Path2D/PathFollow2D.progress += walkSpeed*delta
 				$npcSprite.position = $Path2D/PathFollow2D.position
@@ -104,7 +109,11 @@ func _process(delta: float) -> void:
 				$waitTimer.wait_time = howLongSecond + howLongMinute * 60
 				$waitTimer.start()
 				$npcSprite/AnimatedSprite2D.stop()
-				$npcSprite/AnimatedSprite2D.frame = 0
+				
+				if GameManager.closest_interactable_npc==self:
+					$npcSprite/AnimatedSprite2D.frame = 0
+				else:
+					$npcSprite/AnimatedSprite2D.frame = 1
 				
 				
 			elif not GameManager.is_in_conversation and $waitTimer.paused == true:
@@ -149,15 +158,15 @@ func _on_dialogue_ended(resource) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.is_in_group("Player")):
 		GameManager.closest_interactable_npc = self
-		if speechBubbleSprite.visible == true:
-			speechBubbleSprite.frame=0
+		if $npcSprite/AnimatedSprite2D.visible == true:
+			$npcSprite/AnimatedSprite2D.frame=0
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if (body.is_in_group("Player") and GameManager.closest_interactable_npc == self):
 		GameManager.closest_interactable_npc = null
-		if speechBubbleSprite.visible == true:
-			speechBubbleSprite.frame=1
+		if $npcSprite/AnimatedSprite2D.visible == true:
+			$npcSprite/AnimatedSprite2D.frame=1
 
 
 func _on_wait_timer_timeout() -> void:
