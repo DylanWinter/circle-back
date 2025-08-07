@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dra2bj6d35037"]
+[gd_scene load_steps=3 format=3 uid="uid://d3by1v0msj3vb"]
 
 [ext_resource type="PackedScene" uid="uid://croi87rtnc5xn" path="res://visualNovelOfficeScenes/visNovelScene.tscn" id="1_0cepx"]
 [ext_resource type="Resource" uid="uid://qije1b7l7vf" path="res://dialogue/meeting_room_door.dialogue" id="2_0cepx"]

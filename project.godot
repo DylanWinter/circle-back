@@ -31,6 +31,7 @@ runtime/balloon_path="uid://d2lud2a5pann6"
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

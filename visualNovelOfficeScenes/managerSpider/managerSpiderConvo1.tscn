@@ -45,7 +45,7 @@ dialogue = ExtResource("2_us5k4")
 
 [node name="Projmanagerlady" type="Sprite2D" parent="." index="1"]
 position = Vector2(10, -2)
-scale = Vector2(0.52, 0.52)
+scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_3yvgn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]

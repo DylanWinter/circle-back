@@ -50,7 +50,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print($npcSprite/AnimatedSprite2D.frame)
 	'''
 	if coworker_title == "sadManager":
 		if GameManager.peptalkedsadmanager == true:
