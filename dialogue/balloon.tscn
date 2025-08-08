@@ -186,6 +186,7 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 
 [node name="ResponseExample" type="Button" parent="ResponsesMenu"]
+z_index = 4096
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.898039, 0.937255, 0.87451, 1)
 theme_override_colors/font_color = Color(0, 0.784314, 0.729412, 1)
@@ -211,10 +212,10 @@ volume_db = -15.0
 
 [node name="CharacterLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-offset_left = -307.0
-offset_top = 245.0
-offset_right = 593.0
-offset_bottom = 434.0
+offset_left = 17.0
+offset_top = 321.0
+offset_right = 279.0
+offset_bottom = 356.0
 mouse_filter = 1
 theme_override_colors/default_color = Color(0.252028, 0.252028, 0.252028, 1)
 theme_override_font_sizes/normal_font_size = 36
@@ -224,7 +225,6 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_lock_ = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="spoke" from="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]
