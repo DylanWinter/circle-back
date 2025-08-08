@@ -309,7 +309,7 @@ size = Vector2(106.625, 371)
 size = Vector2(21, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a0t2l"]
-radius = 99.0454
+radius = 136.033
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xemgy"]
 shader = ExtResource("9_ga26y")
@@ -1127,8 +1127,7 @@ position = Vector2(3.43323e-05, 59.7222)
 shape = SubResource("RectangleShape2D_g6veu")
 
 [node name="piranhaPlant" parent="furniture/lobby" instance=ExtResource("42_a0t2l")]
-position = Vector2(672.015, 985.52)
-scale = Vector2(0.5, 0.5)
+position = Vector2(670, 947)
 
 [node name="sadPlant2" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
 position = Vector2(290, -47)
@@ -1370,7 +1369,7 @@ shape = SubResource("RectangleShape2D_qsbda")
 position = Vector2(-705, 532)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="key2/Area2D"]
-position = Vector2(-34, 249)
+position = Vector2(-34, 239)
 shape = SubResource("CircleShape2D_a0t2l")
 
 [node name="Sprite2D" type="Sprite2D" parent="key2"]
