@@ -9,7 +9,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Projmanagerlady:position")
+tracks/0/path = NodePath("CanvasLayer/Projmanagerlady:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +24,7 @@ resource_name = "bounceAnim"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Projmanagerlady:position")
+tracks/0/path = NodePath("CanvasLayer/Projmanagerlady:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -43,12 +43,12 @@ _data = {
 [node name="VisNovelScene" instance=ExtResource("1_12e0e")]
 dialogue = ExtResource("2_us5k4")
 
-[node name="Projmanagerlady" type="Sprite2D" parent="." index="1"]
+[node name="Projmanagerlady" type="Sprite2D" parent="CanvasLayer" index="1"]
 position = Vector2(10, -2)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_3yvgn")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
 &"": SubResource("AnimationLibrary_uoe24")
 }
