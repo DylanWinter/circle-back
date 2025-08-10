@@ -1,12 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://cx7s0ijh8l5ys"]
+[gd_scene load_steps=20 format=3 uid="uid://cx7s0ijh8l5ys"]
 
 [ext_resource type="Script" uid="uid://bhtmn3ikx3exu" path="res://main_menu.gd" id="1_lw4iv"]
 [ext_resource type="Texture2D" uid="uid://hirort6neh5g" path="res://assets/mainmenubg.png" id="2_lw4iv"]
 [ext_resource type="FontFile" uid="uid://ig88w7w2ch65" path="res://assets/Mabook.ttf" id="3_bjyh5"]
-[ext_resource type="Texture2D" uid="uid://cw3dssj8bnx4t" path="res://Play.png" id="4_eys0w"]
+[ext_resource type="Texture2D" uid="uid://dhlc1k2agscaf" path="res://assets/startButton.png" id="4_lw4iv"]
 [ext_resource type="Texture2D" uid="uid://q1j01lk6jxxe" path="res://assets/gmtk.png" id="5_8i00l"]
 [ext_resource type="Texture2D" uid="uid://cdjc81pg14cvv" path="res://assets/godot.png" id="6_diro3"]
 [ext_resource type="Texture2D" uid="uid://36qmdjr7flo5" path="res://Logo.png" id="7_lw4iv"]
+[ext_resource type="AudioStream" uid="uid://28jhbyvnbwfj" path="res://assets/circle back.mp3" id="8_l1r4b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dy7ct"]
 
@@ -71,11 +72,12 @@ autowrap_mode = 0
 
 [node name="play_button" type="Button" parent="."]
 z_index = 10
-layout_mode = 0
-offset_left = 108.0
-offset_top = 76.0
-offset_right = 281.0
-offset_bottom = 158.0
+layout_mode = 1
+offset_left = -19.0
+offset_top = 14.0
+offset_right = 941.0
+offset_bottom = 464.0
+scale = Vector2(0.385, 0.385)
 theme_override_fonts/font = ExtResource("3_bjyh5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dy7ct")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0o4t1")
@@ -88,7 +90,7 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g8g3n")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8u0te")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_oiatc")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mg3m2")
-icon = ExtResource("4_eys0w")
+icon = ExtResource("4_lw4iv")
 
 [node name="Gmtk" type="Sprite2D" parent="."]
 z_index = 10
@@ -107,5 +109,9 @@ z_index = 10
 position = Vector2(166, -115)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_lw4iv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_l1r4b")
+volume_db = 24.0
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
