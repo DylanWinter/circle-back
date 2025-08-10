@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=178 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://5esntqauq8yf" path="res://assets/Office assets/Cork board & conspiracy plan.png" id="16_n1y4y"]
 [ext_resource type="Texture2D" uid="uid://c0n8hbdorp30f" path="res://assets/Office assets/Cork board.png" id="17_4hetp"]
 [ext_resource type="Texture2D" uid="uid://mfhvxurx81jf" path="res://assets/Office assets/Office decoration 1.png" id="18_o3cd7"]
+[ext_resource type="Script" uid="uid://bk24vxsdhn4o0" path="res://divider_door_close.gd" id="19_d820c"]
 [ext_resource type="Texture2D" uid="uid://bqkqflcp3b1bf" path="res://assets/speechBubble/SPEECH BUBBLE Selected.png" id="20_qsbda"]
 [ext_resource type="Texture2D" uid="uid://cc2lxnn4na267" path="res://assets/speechBubble/SPEECH BUBBLE Unselected.png" id="21_8ovme"]
 [ext_resource type="PackedScene" uid="uid://bou0t365txxlo" path="res://manager_spider.tscn" id="21_jktts"]
@@ -489,6 +490,10 @@ animations = [{
 "speed": 45.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d820c"]
+radius = 593.75
+height = 1400.0
+
 [sub_resource type="Curve2D" id="Curve2D_ty3gb"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 124, -7, 0, 0, 0, 0, 291, 50, 0, 0, 0, 0, 525, 104, 0, 0, 0, 0, 746, 106, 0, 0, 0, 0, 994, 7, 0, 0, 0, 0, 1201, -101, 0, 0, 0, 0, 1296, -200, 0, 0, 0, 0, 1343, -313, 0, 0, 0, 0, 1312, -570, 0, 0, 0, 0, 1171, -693, 0, 0, 0, 0, 878, -743, 0, 0, 0, 0, 692, -747, 0, 0, 0, 0, 487, -714, 0, 0, 0, 0, 213, -681, 0, 0, 0, 0, 77, -646, 0, 0, 0, 0, -34, -594, 0, 0, 0, 0, -86, -450, 0, 0, 0, 0, -86, -280, 0, 0, 0, 0, -20, -120, 0, 0, 0, 0, 63, -56, 0, 0, 0, 0, 129, -16)
@@ -575,11 +580,19 @@ animations = [{
 "speed": 65.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcrlv"]
+radius = 518.75
+height = 1325.0
+
 [sub_resource type="Curve2D" id="Curve2D_6rmj5"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -260, -4, 0, 0, 0, 0, -471, 47, 0, 0, 0, 0, -516, 253, 0, 0, 0, 0, -513, 347, 0, 0, 0, 0, -481, 482, 0, 0, 0, 0, -512, 625, 0, 0, 0, 0, -510, 782, 0, 0, 0, 0, -487, 920, 0, 0, 0, 0, -477, 1038, 0, 0, 0, 0, -502, 1215, 0, 0, 0, 0, -613, 1199, 0, 0, 0, 0, -681, 1151, 0, 0, 0, 0, -657, 1333, 0, 0, 0, 0, -489, 1446, 0, 0, 0, 0, -320, 1472, 0, 0, 0, 0, -213, 1342, 0, 0, 0, 0, -145, 1246, 0, 0, 0, 0, -91, 1118, 0, 0, 0, 0, -22, 1043, 0, 0, 0, 0, 36, 1005, 0, 0, 0, 0, 161, 1005, 0, 0, 0, 0, 260, 1024, 0, 0, 0, 0, 315, 1047, 0, 0, 0, 0, 338, 1125, 0, 0, 0, 0, 332, 1175, 0, 0, 0, 0, 304, 1178, 0, 0, 0, 0, 278, 1177, 0, 0, 0, 0, 265, 1175, 0, 0, 0, 0, 347, 1175, 0, 0, 0, 0, 360, 1209, 0, 0, 0, 0, 351, 1250, 0, 0, 0, 0, 347, 1360, 0, 0, 0, 0, 353, 1490, 0, 0, 0, 0, 209, 1565, 0, 0, 0, 0, 123, 1537, 0, 0, 0, 0, 31, 1519, 0, 0, 0, 0, -49, 1494, 0, 0, 0, 0, -102, 1445, 0, 0, 0, 0, -209, 1372, 0, 0, 0, 0, -292, 1446, 0, 0, 0, 0, -318, 1466, 0, 0, 0, 0, -659, 1328, 0, 0, 0, 0, -476, 1042, 0, 0, 0, 0, -474, 65, 0, 0, 0, 0, -280, 6, 0, 0, 0, 0, -267, 6)
 }
 point_count = 46
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nwd8h"]
+radius = 787.5
+height = 1575.0
 
 [sub_resource type="Curve2D" id="Curve2D_f2u8t"]
 _data = {
@@ -589,6 +602,9 @@ point_count = 13
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0td1f"]
 size = Vector2(80, 147.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwd8h"]
+size = Vector2(59, 94)
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
@@ -748,6 +764,7 @@ offset_top = 45.0
 offset_right = 393.0
 offset_bottom = 85.0
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="RichTextLabel" parent="UI/Control"]
 clip_contents = false
@@ -759,6 +776,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "0:00"
 scroll_active = false
 autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="UI/Control"]
 z_index = -1
@@ -769,6 +787,7 @@ offset_right = 842.0
 offset_bottom = 399.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("49_vb8hc")
+metadata/_edit_use_anchors_ = true
 
 [node name="waterCooler" parent="." instance=ExtResource("30_5bs7n")]
 position = Vector2(179, -649)
@@ -967,6 +986,7 @@ shape = SubResource("RectangleShape2D_a0t2l")
 position = Vector2(-600, -1456)
 scale = Vector2(0.355, 0.355)
 texture = ExtResource("13_hs4kw")
+script = ExtResource("19_d820c")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="furniture/bathroom/DividerDoorClose"]
 metadata/_edit_lock_ = true
@@ -975,10 +995,14 @@ metadata/_edit_lock_ = true
 shape = SubResource("RectangleShape2D_6rmj5")
 metadata/_edit_lock_ = true
 
+[node name="groundPos" type="Node2D" parent="furniture/bathroom/DividerDoorClose"]
+position = Vector2(-2.38419e-07, 433.803)
+
 [node name="DividerDoorClose2" type="Sprite2D" parent="furniture/bathroom"]
 position = Vector2(-706, -1456)
 scale = Vector2(0.355, 0.355)
 texture = ExtResource("13_hs4kw")
+script = ExtResource("19_d820c")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="furniture/bathroom/DividerDoorClose2"]
 metadata/_edit_lock_ = true
@@ -986,6 +1010,9 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/bathroom/DividerDoorClose2/StaticBody2D"]
 shape = SubResource("RectangleShape2D_6rmj5")
 metadata/_edit_lock_ = true
+
+[node name="groundPos" type="Node2D" parent="furniture/bathroom/DividerDoorClose2"]
+position = Vector2(0, 430.986)
 
 [node name="cubicles" type="Node2D" parent="furniture"]
 
@@ -1234,9 +1261,6 @@ metadata/_edit_lock_ = true
 
 [node name="WaterSpill" parent="furniture" instance=ExtResource("39_rasr3")]
 position = Vector2(-1159, -1121)
-
-[node name="WaterSpill2" parent="furniture" instance=ExtResource("39_rasr3")]
-position = Vector2(-897, -821)
 
 [node name="storageRoom" type="Node2D" parent="furniture"]
 
@@ -1520,6 +1544,10 @@ position = Vector2(123, -7)
 sprite_frames = SubResource("SpriteFrames_rasr3")
 frame_progress = 0.0505067
 
+[node name="CollisionShape2D" parent="NPCs/NPC3/AnimatedSprite2D/Area2D" index="0"]
+position = Vector2(-18.75, 200)
+shape = SubResource("CapsuleShape2D_d820c")
+
 [node name="Path2D" parent="NPCs/NPC3" index="1"]
 curve = SubResource("Curve2D_ty3gb")
 
@@ -1543,6 +1571,10 @@ stopTimer = NodePath("Timer")
 position = Vector2(-249, -77)
 sprite_frames = SubResource("SpriteFrames_5qg4s")
 frame_progress = 0.254907
+
+[node name="CollisionShape2D" parent="NPCs/NPC4/AnimatedSprite2D/Area2D" index="0"]
+position = Vector2(-18.75, 175)
+shape = SubResource("CapsuleShape2D_rcrlv")
 
 [node name="Path2D" parent="NPCs/NPC4" index="1"]
 modulate = Color(0.740479, 0.333253, 0.0885674, 1)
@@ -1571,6 +1603,10 @@ animation = &"new_animation"
 autoplay = "new_animation"
 frame_progress = 0.999558
 
+[node name="CollisionShape2D" parent="NPCs/NPC5/AnimatedSprite2D/Area2D" index="0"]
+position = Vector2(-12.5, 468.75)
+shape = SubResource("CapsuleShape2D_nwd8h")
+
 [node name="Path2D" parent="NPCs/NPC5" index="1"]
 curve = SubResource("Curve2D_f2u8t")
 
@@ -1597,6 +1633,15 @@ script = ExtResource("57_6rmj5")
 position = Vector2(0, 25)
 shape = SubResource("RectangleShape2D_0td1f")
 
+[node name="groundPos" type="Node2D" parent="ToiletWithPie"]
+position = Vector2(-1, 48)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ToiletWithPie"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToiletWithPie/StaticBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_nwd8h")
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -1609,6 +1654,8 @@ shape = SubResource("RectangleShape2D_0td1f")
 [connection signal="timeout" from="NPCs/NPC3/Timer" to="NPCs/NPC3" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/NPC4/Timer" to="NPCs/NPC4" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/NPC5/Timer" to="NPCs/NPC5" method="_on_timer_timeout"]
+[connection signal="body_entered" from="ToiletWithPie/Area2D" to="ToiletWithPie" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ToiletWithPie/Area2D" to="ToiletWithPie" method="_on_area_2d_body_exited"]
 
 [editable path="waterCooler"]
 [editable path="boss"]

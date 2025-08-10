@@ -25,4 +25,9 @@ shape = SubResource("RectangleShape2D_4flbx")
 wait_time = 0.4
 one_shot = true
 
+[node name="knockbackSlideTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
 [connection signal="timeout" from="slideTimer" to="." method="_on_slide_timer_timeout"]
+[connection signal="timeout" from="knockbackSlideTimer" to="." method="_on_knockback_slide_timer_timeout"]

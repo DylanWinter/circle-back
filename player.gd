@@ -9,6 +9,9 @@ var slideSpeed = 500
 
 var lastInputDir : Vector2
 
+var knockbackSlide = false
+var knockbackDir : Vector2
+
 func _ready() -> void:
 	GameManager.player = self
 	
@@ -63,11 +66,28 @@ func _physics_process(delta: float) -> void:
 		var slideDirection = lastInputDir.normalized()
 		velocity = lastInputDir * slideSpeed
 		move_and_slide()
-			
 		
-
+	if knockbackSlide == true:
+		if $knockbackSlideTimer.is_stopped():
+			$knockbackSlideTimer.start()
+			slideSpeed = 500
+		
+		#can_move = false
+		
+		if slideSpeed>0:
+			slideSpeed -= 10
+		var slideDirection = knockbackDir.normalized()
+		velocity = knockbackDir * slideSpeed
+		move_and_slide()
+		
 
 func _on_slide_timer_timeout() -> void:
 	slide = false
 	$slideTimer.stop()
+	can_move = true
+
+
+func _on_knockback_slide_timer_timeout() -> void:
+	knockbackSlide = false
+	$knockbackSlideTimer.stop()
 	can_move = true

@@ -39,3 +39,24 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	stop = true
+
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		print("playerNear")
+		if body.knockbackSlide == false:
+			body.knockbackSlide = true
+			var changeInPos : Vector2 = lastPosition-$AnimatedSprite2D.position
+			
+			var knockDir = Vector2(-changeInPos.x,-changeInPos.y)
+			body.knockbackDir = knockDir.normalized()
+		
+		
+		
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		print("playerexit")
+		#body.knockbackSlide = false
+		#body.can_move = true
