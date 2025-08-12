@@ -1,4 +1,4 @@
-[gd_scene load_steps=178 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=179 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -103,6 +103,7 @@
 [ext_resource type="Texture2D" uid="uid://xtatkoo8ijbn" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_022.png" id="98_asu26"]
 [ext_resource type="Texture2D" uid="uid://btdkavt5n8fka" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_023.png" id="99_h2x2g"]
 [ext_resource type="Texture2D" uid="uid://6wmwui75u7b0" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_024.png" id="100_f34dr"]
+[ext_resource type="PackedScene" uid="uid://bc0tye6wbpkn4" path="res://Settings.tscn" id="104_rcrlv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -1641,6 +1642,10 @@ position = Vector2(-1, 48)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToiletWithPie/StaticBody2D"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_nwd8h")
+
+[node name="Settings" parent="." instance=ExtResource("104_rcrlv")]
+process_mode = 3
+visible = false
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
