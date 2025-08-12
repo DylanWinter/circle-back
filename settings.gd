@@ -20,3 +20,14 @@ func _process(delta: float) -> void:
 func _on_exit_pressed() -> void:
 	get_tree().paused = false
 	visible = false
+
+
+func _on_h_slider_value_changed(value: float) -> void:
+	var db = value
+	
+	if db <=-6.0:
+		AudioServer.set_bus_mute(0,true)
+	
+	else:
+		AudioServer.set_bus_mute(0,false)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), db)
