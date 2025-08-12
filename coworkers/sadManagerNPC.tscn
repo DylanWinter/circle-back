@@ -106,8 +106,9 @@ animations = [{
 "speed": 65.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vq0et"]
-radius = 478.659
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq0et"]
+radius = 580.524
+height = 1685.39
 
 [node name="NPC" instance=ExtResource("1_f7swi")]
 
@@ -123,8 +124,9 @@ visible = true
 position = Vector2(-33.3333, -711.111)
 
 [node name="CollisionShape2D" parent="npcSprite/Area2D" index="0"]
-position = Vector2(-11.1112, -11.1112)
-shape = SubResource("CircleShape2D_vq0et")
+position = Vector2(-22.2222, 155.556)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_vq0et")
 
 [node name="groundPos" parent="npcSprite" index="2"]
 position = Vector2(9.53674e-07, 522.222)

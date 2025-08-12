@@ -1,4 +1,4 @@
-[gd_scene load_steps=179 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=181 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -104,6 +104,7 @@
 [ext_resource type="Texture2D" uid="uid://btdkavt5n8fka" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_023.png" id="99_h2x2g"]
 [ext_resource type="Texture2D" uid="uid://6wmwui75u7b0" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_024.png" id="100_f34dr"]
 [ext_resource type="PackedScene" uid="uid://bc0tye6wbpkn4" path="res://Settings.tscn" id="104_rcrlv"]
+[ext_resource type="Shader" uid="uid://ct274yoqphj2d" path="res://crt2.gdshader" id="105_nwd8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -607,6 +608,30 @@ size = Vector2(80, 147.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwd8h"]
 size = Vector2(59, 94)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhxa3"]
+shader = ExtResource("105_nwd8h")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(960, 540)
+shader_parameter/brightness = 0.71
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 4.75e-08
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.279
+shader_parameter/pixelate = true
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 1.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
 
@@ -614,6 +639,7 @@ script = ExtResource("1_jktts")
 z_index = -2999
 position = Vector2(198, -374)
 texture = ExtResource("2_6rmj5")
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_ei2s5")]
 position = Vector2(-102, 208)
@@ -823,8 +849,7 @@ position = Vector2(-175.282, -526.004)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="boss/npcSprite/Area2D" index="0"]
-position = Vector2(-13.046, 180.276)
-metadata/_edit_lock_ = true
+position = Vector2(-21.4872, 293.609)
 
 [node name="groundPos" parent="boss/npcSprite" index="2"]
 position = Vector2(-28.09, 516.151)
@@ -1526,6 +1551,9 @@ dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1
 walkSpeed = 60
 conversationTimes = ["2:59|4:00", "2:00|0:30"]
 
+[node name="CollisionShape2D" parent="Asmodeus/npcSprite/Area2D" index="0"]
+position = Vector2(-39.5752, 324.345)
+
 [node name="Path2D" type="Path2D" parent="Asmodeus"]
 curve = SubResource("Curve2D_qsbda")
 
@@ -1647,6 +1675,14 @@ shape = SubResource("RectangleShape2D_nwd8h")
 [node name="Settings" parent="." instance=ExtResource("104_rcrlv")]
 process_mode = 3
 visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_mhxa3")
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0.948811, 0.623714, 0.847943, 1)
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
