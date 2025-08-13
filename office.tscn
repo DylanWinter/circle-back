@@ -1162,7 +1162,7 @@ position = Vector2(-537, -661)
 position = Vector2(-233, -661)
 
 [node name="vendingMachine" parent="furniture" instance=ExtResource("38_5c3wu")]
-position = Vector2(1276, 22)
+position = Vector2(1286.65, 60)
 
 [node name="lobby" type="Node2D" parent="furniture"]
 position = Vector2(-1412, -214)

@@ -1,5 +1,6 @@
 shader_type canvas_item;
 uniform vec4 outline_color : source_color = vec4(1.0);
+
 //Blinking modulates the base color.
 //Set blink_time_scale to 0 if you don't want blinking.
 uniform vec4 blink_color : source_color = vec4(1.0);
