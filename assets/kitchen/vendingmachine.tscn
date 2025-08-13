@@ -4,7 +4,7 @@
 [ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="2_ojtl7"]
 [ext_resource type="Texture2D" uid="uid://b677y2yfidgo1" path="res://assets/furniture/Vending_machine.png" id="2_xj310"]
 [ext_resource type="Script" uid="uid://0ljuua0p5yqg" path="res://assets/kitchen/vendingMachine.gd" id="3_s0sxa"]
-[ext_resource type="AudioStream" uid="uid://c1smaggivhpkt" path="res://dialogue/energized.wav" id="5_8v7um"]
+[ext_resource type="AudioStream" uid="uid://c1smaggivhpkt" path="res://soundeffects/energized.wav" id="5_8v7um"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8v7um"]
 shader = ExtResource("2_ojtl7")

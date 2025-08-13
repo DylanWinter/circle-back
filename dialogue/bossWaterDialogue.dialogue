@@ -24,7 +24,7 @@ He still hasn't noticed you, even though you’re literally standing right there
 	
 	Boss: I’m sure you’re already in the loop but-
 	You weren’t, you woke up less than three minutes ago.
-	Boss: Our RDC, Rival Demon Company, has been having record sales.
+	Boss: Our [color=#219EBC]RDC, Rival Demon Company[/color], has been having record sales.
 	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
 	Boss: If we don’t get this presentation approved by the board...
 	Boss: [shake]You’ll just have to try again[/shake].
@@ -35,7 +35,7 @@ He still hasn't noticed you, even though you’re literally standing right there
 
 	Boss: I’m sure you’re already in the loop but-
 	You weren’t, you woke up less than three minutes ago.
-	Boss: Our RDC, Rival Demon Company, has been having record sales.
+	Boss: Our [color=#219EBC]RDC, Rival Demon Company[/color], has been having record sales.
 	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
 	Boss: If we don’t get this presentation approved by the board...
 	Boss: You’ll just have to try again.
@@ -43,16 +43,6 @@ He still hasn't noticed you, even though you’re literally standing right there
 	The Boss seems like they are in a rush, best not to interupt him
 	Boss: Are you sucking up to me..? I... I love it!
 	Boss: Feline Snail thing, you are already proving yourself useful.
-	He combs his hand through his gelled fur, look quite satified
-	
-	Boss: I’m sure you’re already in the loop but-
-	You weren’t, you woke up less than three minutes ago.
-	Boss: Our RDC, Rival Demon Company, has been having record sales.
-	Now you remember! The Billy Goats Gruff, 3 of the most influential demons in this circle!
-	Boss: If we don’t get this presentation approved by the board...
-	Boss: [shake]You’ll just have to try again[/shake].
-	set GameManager.wordFoundDict["RDC - Rival Demonic Company"] = true
-	RDC means Rival Demonic Company!
-	#RDC (rival demonic company)
+	He combs his hand through his gelled fur, looking quite satified
 
 => END

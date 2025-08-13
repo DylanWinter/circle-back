@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c1smaggivhpkt"
-path="res://.godot/imported/energized.wav-9b25bf2289b32527cac5d6bc938d924b.sample"
+path="res://.godot/imported/energized.wav-78d56d88490b5ea394d2b821fa239a7e.sample"
 
 [deps]
 
-source_file="res://dialogue/energized.wav"
-dest_files=["res://.godot/imported/energized.wav-9b25bf2289b32527cac5d6bc938d924b.sample"]
+source_file="res://soundeffects/energized.wav"
+dest_files=["res://.godot/imported/energized.wav-78d56d88490b5ea394d2b821fa239a7e.sample"]
 
 [params]
 
