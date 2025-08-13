@@ -1,4 +1,4 @@
-[gd_scene load_steps=179 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=180 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -39,8 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://b0qtldd3c5iw0" path="res://assets/kitchen/cabinet_1.tscn" id="36_cu40l"]
 [ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
 [ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
+[ext_resource type="Texture2D" uid="uid://cwa5iqhiskcn0" path="res://assets/Office assets/Table 1.png" id="38_rcrlv"]
 [ext_resource type="PackedScene" uid="uid://m64jarckqopq" path="res://assets/furniture/kitchen_counter.tscn" id="39_g68bc"]
 [ext_resource type="PackedScene" uid="uid://c86a6h4h0x16e" path="res://water_spill.tscn" id="39_rasr3"]
+[ext_resource type="Texture2D" uid="uid://bp01dpysi43s2" path="res://assets/Office assets/Tables 2 flipped.png" id="39_rcrlv"]
 [ext_resource type="Texture2D" uid="uid://nytjs6m0gbui" path="res://assets/furniture/Kitchen_drawers.png" id="40_jtogi"]
 [ext_resource type="Texture2D" uid="uid://dqi4iuc448jaw" path="res://assets/furniture/fridge.png" id="41_4360s"]
 [ext_resource type="PackedScene" uid="uid://i6eshfk3woit" path="res://assets/furniture/plantWithTeeth.tscn" id="42_a0t2l"]
@@ -48,9 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
 [ext_resource type="PackedScene" uid="uid://2ixukrys0lav" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
 [ext_resource type="Texture2D" uid="uid://c7bq3jl6qs72q" path="res://assets/Illustration142.png" id="49_vb8hc"]
-[ext_resource type="Texture2D" uid="uid://cy4ictp6wb003" path="res://assets/Office assets/Table 1 flipped.png" id="50_5xppq"]
 [ext_resource type="Texture2D" uid="uid://bi6783q4vwcvj" path="res://assets/furniture/Big_box.png" id="51_f2u8t"]
-[ext_resource type="Texture2D" uid="uid://cx4syyd0c30hg" path="res://assets/Office assets/Tables 2.png" id="51_m3tm8"]
 [ext_resource type="Texture2D" uid="uid://dbgiwfwd5w3bn" path="res://assets/furniture/Small_box.png" id="52_0td1f"]
 [ext_resource type="Texture2D" uid="uid://wqewh2jlasqs" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_001.png" id="53_5qg4s"]
 [ext_resource type="PackedScene" uid="uid://c7bnx65b4lrgu" path="res://npc1.tscn" id="54_mkmg8"]
@@ -254,7 +254,7 @@ animations = [{
 size = Vector2(973.338, 759.984)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0t2l"]
-size = Vector2(59.7936, 233.243)
+size = Vector2(190, 117.143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmj5"]
 size = Vector2(33.8027, 856.338)
@@ -280,11 +280,14 @@ size = Vector2(104, 160)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6veu"]
 size = Vector2(32.247, 44.6363)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhxa3"]
+size = Vector2(188.572, 114.286)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2u8t"]
-size = Vector2(190, 118.572)
+size = Vector2(60.2142, 91.4291)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmg8"]
-size = Vector2(182.857, 115.714)
+size = Vector2(61.4282, 117.143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d820c"]
 size = Vector2(84, 112)
@@ -330,7 +333,7 @@ shader_parameter/blink_time_scale = 0.0
 
 [sub_resource type="Curve2D" id="Curve2D_qsbda"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -6.10352e-05, 0, 0, 0, 0, 0, -119.663, -51.1236, 0, 0, 0, 0, -173.034, -51.1236, 0, 0, 0, 0, -256.18, -19.6629, 0, 0, 0, 0, -306.742, 13.4831, 0, 0, 0, 0, -366.292, 55.618, 0, 0, 0, 0, -410.112, 75.8427, 0, 0, 0, 0, -429.775, 82.5843, 0, 0, 0, 0, -462.921, 84.8315, 0, 0, 0, 0, -505.618, 86.5168, 0, 0, 0, 0, -650, 79.7753, 0, 0, 0, 0, -754.494, 79.7753, 0, 0, 0, 0, -837.641, 71.9101, 0, 0, 0, 0, -905.618, 60.1123, 0, 0, 0, 0, -953.371, 50.5618, 0, 0, 0, 0, -1023.03, 34.8315, 0, 0, 0, 0, -1088.2, 4.49435, 0, 0, 0, 0, -1148.88, -42.1348, 0, 0, 0, 0, -1170.22, -113.483, 0, 0, 0, 0, -1198.31, -146.629, 0, 0, 0, 0, -1235.39, -182.584, 0, 0, 0, 0, -1274.72, -200)
+"points": PackedVector2Array(0, 0, 0, 0, -6.10352e-05, 0, 0, 0, 0, 0, -119.663, -51.1236, 0, 0, 0, 0, -173.034, -51.1236, 0, 0, 0, 0, -256.18, -19.6629, 0, 0, 0, 0, -306.742, 13.4831, 0, 0, 0, 0, -334.831, 82.0225, 0, 0, 0, 0, -373.596, 106.742, 0, 0, 0, 0, -424.719, 131.461, 0, 0, 0, 0, -593.82, 148.315, 0, 0, 0, 0, -741.011, 140.449, 0, 0, 0, 0, -915.169, 140.449, 0, 0, 0, 0, -1033.15, 143.82, 0, 0, 0, 0, -1039.89, 117.978, 0, 0, 0, 0, -1066.85, 78.0899, 0, 0, 0, 0, -1080.34, 53.3708, 0, 0, 0, 0, -1094.38, 28.6517, 0, 0, 0, 0, -1126.97, -5.0562, 0, 0, 0, 0, -1148.88, -42.1348, 0, 0, 0, 0, -1170.22, -113.483, 0, 0, 0, 0, -1198.31, -146.629, 0, 0, 0, 0, -1235.39, -182.584, 0, 0, 0, 0, -1274.72, -200)
 }
 point_count = 22
 
@@ -838,13 +841,13 @@ rotation = 2.81449
 loop = false
 
 [node name="siren" parent="." instance=ExtResource("6_4i814")]
-position = Vector2(-1039, -33)
+position = Vector2(-1056, -59)
 coworker_title = "siren"
 dialogueScenePaths = ["res://visualNovelOfficeScenes/siren/sirenConvo1.tscn"]
 conversationTimes = ["2:50|0:30"]
 
 [node name="npcSprite" parent="siren" index="0"]
-position = Vector2(-137, 13)
+position = Vector2(-129, 20)
 scale = Vector2(0.16, 0.16)
 sprite_frames = SubResource("SpriteFrames_1g0dp")
 autoplay = "default"
@@ -853,13 +856,19 @@ autoplay = "default"
 visible = true
 z_index = 3930
 position = Vector2(-6.25, -256.25)
+metadata/_edit_lock_ = true
+
+[node name="Area2D" parent="siren/npcSprite" index="1"]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="siren/npcSprite/Area2D" index="0"]
 position = Vector2(-6.24976, 431.25)
 shape = SubResource("CircleShape2D_ei2s5")
+metadata/_edit_lock_ = true
 
 [node name="groundPos" parent="siren/npcSprite" index="2"]
 position = Vector2(-31.2503, 681.25)
+metadata/_edit_lock_ = true
 
 [node name="janitor" parent="." instance=ExtResource("7_4i814")]
 position = Vector2(-1238, -1409)
@@ -1227,29 +1236,33 @@ position = Vector2(-3.50903, 70.2025)
 shape = SubResource("RectangleShape2D_2prrh")
 
 [node name="lobbyDesk1" parent="furniture/lobby" instance=ExtResource("34_5bs7n")]
-position = Vector2(306, 166)
+position = Vector2(197, 305)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("51_m3tm8")
+texture = ExtResource("38_rcrlv")
 
 [node name="groundPos" parent="furniture/lobby/lobbyDesk1" index="0"]
 position = Vector2(-4.28571, -141.429)
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" parent="furniture/lobby/lobbyDesk1" index="1"]
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="0"]
-position = Vector2(65.611, -0.521446)
-shape = SubResource("RectangleShape2D_a0t2l")
+position = Vector2(0, 58.5714)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_mhxa3")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="1"]
-position = Vector2(0.5, -57.857)
+position = Vector2(-64.3927, -44.2855)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_f2u8t")
+metadata/_edit_lock_ = true
 
 [node name="lobbyDesk2" parent="furniture/lobby" instance=ExtResource("34_5bs7n")]
-position = Vector2(306, 328)
+position = Vector2(197, 163)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("50_5xppq")
+texture = ExtResource("39_rcrlv")
 
 [node name="groundPos" parent="furniture/lobby/lobbyDesk2" index="0"]
 position = Vector2(-4.28572, -372.857)
@@ -1258,12 +1271,13 @@ position = Vector2(-4.28572, -372.857)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="0"]
-position = Vector2(65.6111, -0.521454)
+position = Vector2(-2.14282, -58.5715)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a0t2l")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="1"]
-position = Vector2(-4.28577, 57.8572)
+position = Vector2(-65, 58.5715)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mkmg8")
 metadata/_edit_lock_ = true
 
