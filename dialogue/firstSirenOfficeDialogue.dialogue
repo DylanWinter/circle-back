@@ -51,7 +51,7 @@ You can hear the sounds of laughter as the conversation continues.
 
 	# Combine with Continue to listen silently
 	
-Siren: Our client’s SDR, successful demon ritual, hasn’t been too hot. But they’ll be on FIRE with the new product!
+Siren: Our client’s [color=#219EBC]SDR, successful demon ritual[/color], hasn’t been too hot. But they’ll be on FIRE with the new product!
 set GameManager.wordFoundDict["SDR - Successful Demon Ritual"] = true
 Siren: Babes, everyone on the sales and data team won’t shut up about it. Ahhh! I really want to win that sample…
 

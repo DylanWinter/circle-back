@@ -1,7 +1,7 @@
 ~ start
 #Player picks up key and opens door*
 
-After the door creaks open, you see one of the managers. She’s an older spider, having been at SCS, Styx Corporate Soulutions, for years.
+After the door creaks open, you see one of the managers. She’s an older spider, having been at [color=#219EBC]SCS, Styx Corporate Soulutions[/color], for years.
 
 set GameManager.wordFoundDict["SCS - Styx Corporate Soulutions"] = true
 
@@ -41,7 +41,7 @@ Charlotte: Finally! The door’s open. Geez, took someone long enough. I’ve be
 	Charlotte: You aren’t as useless as the last one. Just don’t tell anyone else about this.
 
 
-	Charlotte: Just don’t forget that about the BHBBQ next Friday!
+	Charlotte: Just don’t forget that about the [color=#219EBC]BHBBQ[/color] next Friday!
 
 	set GameManager.wordFoundDict["BHBBQ - Big human BBQ"] = true
 

@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 		shader_material.set_shader_parameter("blink_time_scale",0)
 
 
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		playerNear = true
