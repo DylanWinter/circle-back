@@ -1,9 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://d2lud2a5pann6"]
+[gd_scene load_steps=28 format=3 uid="uid://d2lud2a5pann6"]
 
 [ext_resource type="Script" uid="uid://b55dhame4x35f" path="res://dialogue/balloon.gd" id="1_36de5"]
-[ext_resource type="Texture2D" uid="uid://b1yygpfosio7q" path="res://assets/textbox.png" id="2_0hx7h"]
+[ext_resource type="Texture2D" uid="uid://cyp1h3y7k7fh7" path="res://assets/dialogueScenes/newDialogueBox.png" id="2_267us"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="FontFile" uid="uid://vkbny0rusatk" path="res://some fonts/Handgoal.otf" id="3_5t74j"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://sxnrsad7s143" path="res://some fonts/Handgoal.ttf" id="3_af48w"]
 [ext_resource type="AudioStream" uid="uid://pmp15b6r4fty" path="res://sound/talk.wav" id="4_3fodd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fud8g"]
@@ -55,6 +57,7 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 20
+Button/fonts/font = null
 Button/styles/disabled = SubResource("StyleBoxFlat_fud8g")
 Button/styles/focus = SubResource("StyleBoxFlat_3fodd")
 Button/styles/hover = SubResource("StyleBoxFlat_0hx7h")
@@ -66,11 +69,17 @@ MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_267us")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_267us"]
-texture = ExtResource("2_0hx7h")
+texture = ExtResource("2_267us")
 expand_margin_left = 30.0
-expand_margin_top = 425.0
+expand_margin_top = 30.0
 expand_margin_right = 30.0
-expand_margin_bottom = 15.0
+
+[sub_resource type="FontVariation" id="FontVariation_5t74j"]
+base_font = ExtResource("3_af48w")
+
+[sub_resource type="FontVariation" id="FontVariation_4kiea"]
+base_font = SubResource("FontVariation_5t74j")
+spacing_glyph = -4
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hp0b2"]
 
@@ -114,6 +123,11 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="FontVariation" id="FontVariation_w8vuf"]
+base_font = ExtResource("3_5t74j")
+spacing_glyph = -5
+spacing_top = -5
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
@@ -130,14 +144,15 @@ theme = SubResource("Theme_qq3yp")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -169.0
-offset_right = -1.0
-offset_bottom = 50.0
+offset_left = -354.0
+offset_top = -185.0
+offset_right = 355.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -147,21 +162,37 @@ layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_267us")
 
-[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon"]
 layout_mode = 2
-theme_override_constants/margin_right = 200
+offset_left = 172.0
+offset_top = 405.0
+offset_right = 797.0
+offset_bottom = 475.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0.25098, 0.25098, 0.25098, 1)
-theme_override_font_sizes/normal_font_size = 28
+theme_override_colors/default_color = Color(0.796078, 0.756863, 0.752941, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_4kiea")
+theme_override_font_sizes/normal_font_size = 18
 text = "Dialogue..."
 seconds_per_step = 0.012
+
+[node name="MarginContainer2" type="MarginContainer" parent="Balloon"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -338.0
+offset_top = -150.0
+offset_right = 336.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_right = 200
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="." node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
@@ -212,13 +243,14 @@ volume_db = -15.0
 
 [node name="CharacterLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-offset_left = 17.0
-offset_top = 321.0
-offset_right = 279.0
-offset_bottom = 356.0
+offset_left = 136.0
+offset_top = 339.0
+offset_right = 443.0
+offset_bottom = 393.0
 mouse_filter = 1
-theme_override_colors/default_color = Color(0.252028, 0.252028, 0.252028, 1)
-theme_override_font_sizes/normal_font_size = 36
+theme_override_colors/default_color = Color(0.882353, 0.313726, 0.2, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_w8vuf")
+theme_override_font_sizes/normal_font_size = 21
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -227,5 +259,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="spoke" from="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]
+[connection signal="spoke" from="Balloon/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]
 [connection signal="response_selected" from="ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

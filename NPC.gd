@@ -13,7 +13,7 @@ var lastPosition : Vector2
 
 var isStopped : bool = true
 var alreadyStartedDialogue : bool = false
-
+var canFlip = true
 
 # string time array
 @export var conversationTimes : Array
@@ -50,12 +50,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	'''
-	if coworker_title == "sadManager":
-		if GameManager.peptalkedsadmanager == true:
-			conversationTimes[0] = "2:30|0:01"
-			conversationTimes[1] = "2:00|0:30"
-	'''
 	if GameManager.is_in_conversation:
 		$waitTimer.paused = true
 		var animatedSprite : AnimatedSprite2D = $npcSprite
@@ -76,7 +70,7 @@ func _process(delta: float) -> void:
 				alreadyStartedDialogue = false
 				$Path2D/PathFollow2D.progress += walkSpeed*delta
 				$npcSprite.position = $Path2D/PathFollow2D.position
-				if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite):
+				if shouldFlipBasedOnMovement(lastPosition, $npcSprite.position,$npcSprite) and canFlip:
 					$npcSprite.scale.x *= -1.0
 			
 			if dialogueScenePaths.size()>0 and isStopped == true and alreadyStartedDialogue == false:
@@ -88,6 +82,8 @@ func _process(delta: float) -> void:
 			if ($Path2D/PathFollow2D.progress_ratio == 1):
 				if coworker_title != "sadManager":
 					self.queue_free()
+				else:
+					canFlip = false
 			
 	
 		# format: time of arrival | how long they stay

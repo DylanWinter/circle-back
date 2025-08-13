@@ -1,4 +1,4 @@
-[gd_scene load_steps=179 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=181 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -104,6 +104,7 @@
 [ext_resource type="Texture2D" uid="uid://btdkavt5n8fka" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_023.png" id="99_h2x2g"]
 [ext_resource type="Texture2D" uid="uid://6wmwui75u7b0" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_024.png" id="100_f34dr"]
 [ext_resource type="PackedScene" uid="uid://bc0tye6wbpkn4" path="res://Settings.tscn" id="104_rcrlv"]
+[ext_resource type="Shader" uid="uid://1tdckk6lq3by" path="res://colorBlind.gdshader" id="105_nwd8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -606,6 +607,10 @@ size = Vector2(80, 147.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwd8h"]
 size = Vector2(59, 94)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhxa3"]
+shader = ExtResource("105_nwd8h")
+shader_parameter/color_deficiency_type = 0
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
@@ -1562,7 +1567,7 @@ rotation = -1.87097
 rotates = false
 
 [node name="groundPos" parent="NPCs/NPC3" index="2"]
-position = Vector2(-129, -109)
+position = Vector2(122, 73)
 
 [node name="Timer" type="Timer" parent="NPCs/NPC3"]
 wait_time = 4.0
@@ -1621,9 +1626,35 @@ rotation = -1.87097
 rotates = false
 
 [node name="groundPos" parent="NPCs/NPC5" index="2"]
-position = Vector2(-129, -109)
+position = Vector2(-130, -101)
 
 [node name="Timer" type="Timer" parent="NPCs/NPC5"]
+wait_time = 4.0
+one_shot = true
+
+[node name="NPC6" parent="NPCs" node_paths=PackedStringArray("stopTimer") instance=ExtResource("54_mkmg8")]
+position = Vector2(1008, -534)
+stopTimer = NodePath("Timer")
+
+[node name="AnimatedSprite2D" parent="NPCs/NPC6" index="0"]
+position = Vector2(123, -7)
+sprite_frames = SubResource("SpriteFrames_rasr3")
+frame_progress = 0.0505067
+
+[node name="CollisionShape2D" parent="NPCs/NPC6/AnimatedSprite2D/Area2D" index="0"]
+visible = false
+position = Vector2(-18.75, 200)
+shape = SubResource("CapsuleShape2D_d820c")
+
+[node name="PathFollow2D" parent="NPCs/NPC6/Path2D" index="0"]
+position = Vector2(124, -7)
+rotation = -1.87097
+rotates = false
+
+[node name="groundPos" parent="NPCs/NPC6" index="2"]
+position = Vector2(122, 73)
+
+[node name="Timer" type="Timer" parent="NPCs/NPC6"]
 wait_time = 4.0
 one_shot = true
 
@@ -1651,6 +1682,15 @@ shape = SubResource("RectangleShape2D_nwd8h")
 process_mode = 3
 visible = false
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_mhxa3")
+offset_left = -3937.0
+offset_top = -3407.0
+offset_right = 4212.0
+offset_bottom = 2222.0
+
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
@@ -1663,6 +1703,7 @@ visible = false
 [connection signal="timeout" from="NPCs/NPC3/Timer" to="NPCs/NPC3" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/NPC4/Timer" to="NPCs/NPC4" method="_on_timer_timeout"]
 [connection signal="timeout" from="NPCs/NPC5/Timer" to="NPCs/NPC5" method="_on_timer_timeout"]
+[connection signal="timeout" from="NPCs/NPC6/Timer" to="NPCs/NPC6" method="_on_timer_timeout"]
 [connection signal="body_entered" from="ToiletWithPie/Area2D" to="ToiletWithPie" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="ToiletWithPie/Area2D" to="ToiletWithPie" method="_on_area_2d_body_exited"]
 
@@ -1698,3 +1739,4 @@ visible = false
 [editable path="NPCs/NPC3"]
 [editable path="NPCs/NPC4"]
 [editable path="NPCs/NPC5"]
+[editable path="NPCs/NPC6"]
