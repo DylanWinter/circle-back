@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b027epx0nipbj"]
+
+[ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="1_n5bub"]
+[ext_resource type="Texture2D" uid="uid://skf0bbgr5nq" path="res://assets/furniture/Library.png" id="2_b70xu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b70xu"]
+size = Vector2(125, 48)
+
+[node name="bookshelf" instance=ExtResource("1_n5bub")]
+texture = ExtResource("2_b70xu")
+
+[node name="groundPos" parent="." index="0"]
+position = Vector2(0, 98)
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 75)
+shape = SubResource("RectangleShape2D_b70xu")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=180 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=189 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://c0oebgjkm7aeg" path="res://assets/furniture/chair2.png" id="32_qt548"]
 [ext_resource type="PackedScene" uid="uid://cv4rpy6thdyod" path="res://assets/furniture/toilet1.tscn" id="34_5bs7n"]
 [ext_resource type="Texture2D" uid="uid://4qft48ryavin" path="res://assets/furniture/toilet.png" id="34_26ul0"]
+[ext_resource type="PackedScene" uid="uid://b027epx0nipbj" path="res://bookshelf1.tscn" id="34_nwd8h"]
 [ext_resource type="PackedScene" uid="uid://b0qtldd3c5iw0" path="res://assets/kitchen/cabinet_1.tscn" id="36_cu40l"]
 [ext_resource type="PackedScene" uid="uid://bx3hio8slriti" path="res://assets/kitchen/cabinet_3.tscn" id="37_qt548"]
 [ext_resource type="PackedScene" uid="uid://ch15jhapqaru2" path="res://assets/kitchen/vendingmachine.tscn" id="38_5c3wu"]
@@ -50,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://crbc0srh8tyxa" path="res://assets/furniture/happyPlant.png" id="43_xemgy"]
 [ext_resource type="PackedScene" uid="uid://2ixukrys0lav" path="res://coworkers/sadManagerNPC.tscn" id="47_qsbda"]
 [ext_resource type="Texture2D" uid="uid://c7bq3jl6qs72q" path="res://assets/Illustration142.png" id="49_vb8hc"]
+[ext_resource type="Texture2D" uid="uid://cy4ictp6wb003" path="res://assets/Office assets/Table 1 flipped.png" id="50_5xppq"]
 [ext_resource type="Texture2D" uid="uid://bi6783q4vwcvj" path="res://assets/furniture/Big_box.png" id="51_f2u8t"]
 [ext_resource type="Texture2D" uid="uid://dbgiwfwd5w3bn" path="res://assets/furniture/Small_box.png" id="52_0td1f"]
 [ext_resource type="Texture2D" uid="uid://wqewh2jlasqs" path="res://assets/MINI_NPC1_Walk/MINI_NPC1_Walk_001.png" id="53_5qg4s"]
@@ -209,7 +211,7 @@ size = Vector2(161.269, 92.5314)
 
 [sub_resource type="Curve2D" id="Curve2D_rcrlv"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1.18005, 0, 0, 0, 0, 0, -110.82, 38, 0, 0, 0, 0, -279.82, 38, 0, 0, 0, 0, -531.82, 53, 0, 0, 0, 0, -738.82, 85, 0, 0, 0, 0, -953.82, 129, 0, 0, 0, 0, -1176.82, 111, 0, 0, 0, 0, -1463.82, 97, 0, 0, 0, 0, -1799.82, -25, 0, 0, 0, 0, -2065.82, -29, 0, 0, 0, 0, -2205.82, -57, 0, 0, 0, 0, -2315.82, -93, 0, 0, 0, 0, -2428.82, -259, 0, 0, 0, 0, -2466.82, -353, 0, 0, 0, 0, -2446.82, -204, 0, 0, 0, 0, -2395.82, -52, 0, 0, 0, 0, -2148.82, -23, 0, 0, 0, 0, -2053.82, -199, 0, 0, 0, 0, -1982.82, -342, 0, 0, 0, 0, -1906.82, -521, 0, 0, 0, 0, -1746.82, -597, 0, 0, 0, 0, -1599.82, -704, 0, 0, 0, 0, -1468.82, -801, 0, 0, 0, 0, -1311.82, -847, 0, 0, 0, 0, -1339.82, -925, 0, 0, 0, 0, -1286.82, -915, 0, 0, 0, 0, -1268.82, -890, 0, 0, 0, 0, -1174.82, -858, 0, 0, 0, 0, -1077.82, -865, 0, 0, 0, 0, -1006.82, -943, 0, 0, 0, 0, -1009.82, -971, 0, 0, 0, 0, -1032.82, -1023)
+"points": PackedVector2Array(0, 0, 0, 0, 1.18005, 0, 0, 0, 0, 0, -110.82, 38, 0, 0, 0, 0, -279.82, 38, 0, 0, 0, 0, -531.82, 53, 0, 0, 0, 0, -738.82, 85, 0, 0, 0, 0, -953.82, 129, 0, 0, 0, 0, -1202.82, -113, 0, 0, 0, 0, -1473.82, -131, 0, 0, 0, 0, -1832.82, -122, 0, 0, 0, 0, -2073.82, -107, 0, 0, 0, 0, -2205.82, -57, 0, 0, 0, 0, -2315.82, -93, 0, 0, 0, 0, -2428.82, -259, 0, 0, 0, 0, -2466.82, -353, 0, 0, 0, 0, -2446.82, -204, 0, 0, 0, 0, -2395.82, -52, 0, 0, 0, 0, -2148.82, -23, 0, 0, 0, 0, -1615.82, -44, 0, 0, 0, 0, -1608.82, -407, 0, 0, 0, 0, -1612.82, -497, 0, 0, 0, 0, -1610.82, -550, 0, 0, 0, 0, -1599.82, -704, 0, 0, 0, 0, -1453.82, -772, 0, 0, 0, 0, -1311.82, -847, 0, 0, 0, 0, -1305.82, -892, 0, 0, 0, 0, -1286.82, -915, 0, 0, 0, 0, -1268.82, -890, 0, 0, 0, 0, -1174.82, -858, 0, 0, 0, 0, -1077.82, -865, 0, 0, 0, 0, -1006.82, -943, 0, 0, 0, 0, -1009.82, -971, 0, 0, 0, 0, -1032.82, -1023)
 }
 point_count = 32
 
@@ -229,7 +231,7 @@ radius = 611.111
 
 [sub_resource type="Curve2D" id="Curve2D_jktts"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -13, 76, 0, 0, 0, 0, -16, 117, 0, 0, 0, 0, -11, 157, 0, 0, 0, 0, -5, 205, 0, 0, 0, 0, 14, 264, 0, 0, 0, 0, 39, 298, 0, 0, 0, 0, 184, 356, 0, 0, 0, 0, 229, 362, 0, 0, 0, 0, 245, 1151, 0, 0, 0, 0, 296, 1067, 0, 0, 0, 0, 307, 837, 0, 0, 0, 0, 311, 621, 0, 0, 0, 0, 301, 479, 0, 0, 0, 0, 335, 436, 0, 0, 0, 0, 374, 1104, 0, 0, 0, 0, 399, 450, 0, 0, 0, 0, 414, 403, 0, 0, 0, 0, 618, 324)
+"points": PackedVector2Array(0, 0, 0, 0, -13, 76, 0, 0, 0, 0, -16, 117, 0, 0, 0, 0, -11, 157, 0, 0, 0, 0, -5, 205, 0, 0, 0, 0, 14, 264, 0, 0, 0, 0, 39, 298, 0, 0, 0, 0, 184, 356, 0, 0, 0, 0, 229, 362, 0, 0, 0, 0, 302, 769, 0, 0, 0, 0, 296, 1067, 0, 0, 0, 0, 307, 837, 0, 0, 0, 0, 311, 621, 0, 0, 0, 0, 301, 479, 0, 0, 0, 0, 335, 436, 0, 0, 0, 0, 374, 1104, 0, 0, 0, 0, 342, 725, 0, 0, 0, 0, 414, 403, 0, 0, 0, 0, 618, 324)
 }
 point_count = 18
 
@@ -274,8 +276,20 @@ size = Vector2(189, 79)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rasr3"]
 size = Vector2(261.217, 155)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42dtf"]
+size = Vector2(103, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcfgb"]
+size = Vector2(60, 231.429)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75n5i"]
+size = Vector2(190, 115.714)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcl6j"]
+size = Vector2(190, 115.714)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2prrh"]
-size = Vector2(104, 160)
+size = Vector2(59, 66)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6veu"]
 size = Vector2(32.247, 44.6363)
@@ -289,8 +303,17 @@ size = Vector2(60.2142, 91.4291)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmg8"]
 size = Vector2(61.4282, 117.143)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5llg"]
+size = Vector2(104, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uskqc"]
+size = Vector2(100, 156)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d820c"]
 size = Vector2(84, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5u4q"]
+size = Vector2(104, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcrlv"]
 size = Vector2(76, 61.5)
@@ -333,7 +356,7 @@ shader_parameter/blink_time_scale = 0.0
 
 [sub_resource type="Curve2D" id="Curve2D_qsbda"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -6.10352e-05, 0, 0, 0, 0, 0, -119.663, -51.1236, 0, 0, 0, 0, -173.034, -51.1236, 0, 0, 0, 0, -256.18, -19.6629, 0, 0, 0, 0, -306.742, 13.4831, 0, 0, 0, 0, -334.831, 82.0225, 0, 0, 0, 0, -373.596, 106.742, 0, 0, 0, 0, -424.719, 131.461, 0, 0, 0, 0, -593.82, 148.315, 0, 0, 0, 0, -741.011, 140.449, 0, 0, 0, 0, -915.169, 140.449, 0, 0, 0, 0, -1033.15, 143.82, 0, 0, 0, 0, -1039.89, 117.978, 0, 0, 0, 0, -1066.85, 78.0899, 0, 0, 0, 0, -1080.34, 53.3708, 0, 0, 0, 0, -1094.38, 28.6517, 0, 0, 0, 0, -1126.97, -5.0562, 0, 0, 0, 0, -1148.88, -42.1348, 0, 0, 0, 0, -1170.22, -113.483, 0, 0, 0, 0, -1198.31, -146.629, 0, 0, 0, 0, -1235.39, -182.584, 0, 0, 0, 0, -1274.72, -200)
+"points": PackedVector2Array(0, 0, 0, 0, -6.10352e-05, 0, 0, 0, 0, 0, -119.663, -51.1236, 0, 0, 0, 0, -173.034, -51.1236, 0, 0, 0, 0, -256.18, -19.6629, 0, 0, 0, 0, -306.742, 13.4831, 0, 0, 0, 0, -334.831, 82.0225, 0, 0, 0, 0, -373.596, 106.742, 0, 0, 0, 0, -424.719, 131.461, 0, 0, 0, 0, -602.809, 156.18, 0, 0, 0, 0, -753.371, 152.247, 0, 0, 0, 0, -925.843, 157.865, 0, 0, 0, 0, -1014.04, 147.191, 0, 0, 0, 0, -1043.82, 98.3146, 0, 0, 0, 0, -1066.85, 78.0899, 0, 0, 0, 0, -1080.34, 53.3708, 0, 0, 0, 0, -1094.38, 28.6517, 0, 0, 0, 0, -1126.97, -5.0562, 0, 0, 0, 0, -1148.88, -42.1348, 0, 0, 0, 0, -1170.22, -113.483, 0, 0, 0, 0, -1198.31, -146.629, 0, 0, 0, 0, -1235.39, -182.584, 0, 0, 0, 0, -1274.72, -200)
 }
 point_count = 22
 
@@ -500,9 +523,9 @@ height = 1400.0
 
 [sub_resource type="Curve2D" id="Curve2D_ty3gb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 358, -227, 0, 0, 0, 0, 659, -231, 0, 0, 0, 0, 761, -46, 0, 0, 0, 0, 865, -22, 0, 0, 0, 0, 994, 7, 0, 0, 0, 0, 1201, -101, 0, 0, 0, 0, 1296, -200, 0, 0, 0, 0, 1343, -313, 0, 0, 0, 0, 1312, -570, 0, 0, 0, 0, 1171, -693, 0, 0, 0, 0, 878, -743, 0, 0, 0, 0, 692, -747, 0, 0, 0, 0, 487, -714, 0, 0, 0, 0, 218, -726, 0, 0, 0, 0, 69, -731, 0, 0, 0, 0, -81, -688, 0, 0, 0, 0, -155, -479, 0, 0, 0, 0, -132, -320, 0, 0, 0, 0, -63, -253, 0, 0, 0, 0, 71, -253, 0, 0, 0, 0, 358, -227)
+"points": PackedVector2Array(0, 0, 0, 0, 339, -235, 0, 0, 0, 0, 579, -235, 0, 0, 0, 0, 671, -229, 0, 0, 0, 0, 761, -46, 0, 0, 0, 0, 865, -22, 0, 0, 0, 0, 994, 7, 0, 0, 0, 0, 1201, -101, 0, 0, 0, 0, 1296, -200, 0, 0, 0, 0, 1343, -313, 0, 0, 0, 0, 1312, -570, 0, 0, 0, 0, 1171, -693, 0, 0, 0, 0, 878, -743, 0, 0, 0, 0, 692, -747, 0, 0, 0, 0, 489, -688, 0, 0, 0, 0, 365, -670, 0, 0, 0, 0, 272, -660, 0, 0, 0, 0, 273, -614, 0, 0, 0, 0, 282, -487, 0, 0, 0, 0, 293, -315, 0, 0, 0, 0, 292, -264, 0, 0, 0, 0, 301, -242, 0, 0, 0, 0, 330, -232)
 }
-point_count = 21
+point_count = 22
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5qg4s"]
 animations = [{
@@ -590,9 +613,9 @@ height = 1325.0
 
 [sub_resource type="Curve2D" id="Curve2D_6rmj5"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -260, -4, 0, 0, 0, 0, -471, 47, 0, 0, 0, 0, -516, 253, 0, 0, 0, 0, -513, 347, 0, 0, 0, 0, -481, 482, 0, 0, 0, 0, -512, 625, 0, 0, 0, 0, -510, 782, 0, 0, 0, 0, -487, 920, 0, 0, 0, 0, -477, 1038, 0, 0, 0, 0, -502, 1215, 0, 0, 0, 0, -613, 1199, 0, 0, 0, 0, -681, 1151, 0, 0, 0, 0, -657, 1333, 0, 0, 0, 0, -489, 1446, 0, 0, 0, 0, -320, 1472, 0, 0, 0, 0, -213, 1342, 0, 0, 0, 0, -145, 1246, 0, 0, 0, 0, -91, 1118, 0, 0, 0, 0, -22, 1043, 0, 0, 0, 0, 36, 1005, 0, 0, 0, 0, 161, 1005, -10, -27.2727, 10, 27.2727, 217, 1026, 0, 0, 0, 0, 227, 1114, 0, 0, 0, 0, 214, 1257, 0, 0, 0, 0, 230, 1299, 0, 0, 0, 0, 206, 1393, 0, 0, 0, 0, 192, 1403, 0, 0, 0, 0, 96, 1408, 0, 0, 0, 0, 23, 1405, 0, 0, 0, 0, -61, 1417, 0, 0, 0, 0, -100, 1417, 0, 0, 0, 0, -209, 1372, 0, 0, 0, 0, -292, 1446, 0, 0, 0, 0, -318, 1466, 0, 0, 0, 0, -659, 1328, 0, 0, 0, 0, -476, 1042, 0, 0, 0, 0, -474, 65, 0, 0, 0, 0, -280, 6, 0, 0, 0, 0, -267, 6)
+"points": PackedVector2Array(0, 0, 0, 0, -494, 61, 0, 0, 0, 0, -552, 250, 0, 0, 0, 0, -552, 360, 0, 0, 0, 0, -560, 632, 0, 0, 0, 0, -487, 920, 0, 0, 0, 0, -502, 1215, 0, 0, 0, 0, -613, 1199, 0, 0, 0, 0, -681, 1151, 0, 0, 0, 0, -657, 1333, 0, 0, 0, 0, -489, 1446, 0, 0, 0, 0, -320, 1472, 0, 0, 0, 0, -170, 1424, 0, 0, 0, 0, -37, 1429, 0, 0, 0, 0, 112, 1414, 0, 0, 0, 0, 207, 1415, 0, 0, 0, 0, 218, 1193, 0, 0, 0, 0, 199, 1050, -10, -27.2727, 10, 27.2727, 217, 1026, 0, 0, 0, 0, 227, 1114, 0, 0, 0, 0, 243, 1256, 243.573, 38.599, -243.573, -38.599, 23, 1405, 0, 0, 0, 0, -209, 1372, 0, 0, 0, 0, -292, 1446, 0, 0, 0, 0, -318, 1466, 0, 0, 0, 0, -659, 1328, 0, 0, 0, 0, -476, 1042, 0, 0, 0, 0, -549, 441, 0, 0, 0, 0, -510, 116, -268.238, 60.8503, 268.238, -60.8503, -267, 6, 0, 0, 0, 0, -495, 61)
 }
-point_count = 39
+point_count = 30
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nwd8h"]
 radius = 787.5
@@ -1028,13 +1051,13 @@ position = Vector2(0, 430.986)
 [node name="cubicles" type="Node2D" parent="furniture"]
 
 [node name="Cubicle" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
-position = Vector2(-343, 191)
+position = Vector2(-330, 88)
 
 [node name="Cubicle2" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
-position = Vector2(65, 191)
+position = Vector2(65, 88)
 
 [node name="Cubicle3" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
-position = Vector2(477, 191)
+position = Vector2(477, 88)
 
 [node name="Cubicle4" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(-341, 599)
@@ -1046,7 +1069,7 @@ position = Vector2(66, 599)
 script = ExtResource("15_o3cd7")
 
 [node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/cubicleDecor"]
-position = Vector2(-430, 171)
+position = Vector2(-413, 65)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("16_n1y4y")
 
@@ -1054,7 +1077,7 @@ texture = ExtResource("16_n1y4y")
 position = Vector2(-8.57145, 81.4286)
 
 [node name="CorkBoard" type="Sprite2D" parent="furniture/cubicleDecor"]
-position = Vector2(154, 169)
+position = Vector2(148, 67)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("17_4hetp")
 
@@ -1062,7 +1085,7 @@ texture = ExtResource("17_4hetp")
 position = Vector2(-8.57145, 81.4286)
 
 [node name="OfficeDecoration1" type="Sprite2D" parent="furniture/cubicleDecor"]
-position = Vector2(186, 184)
+position = Vector2(182, 85)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("18_o3cd7")
 
@@ -1171,6 +1194,72 @@ position = Vector2(-537, -661)
 [node name="libraryWithBooks2" parent="furniture/officeTopLeftCorner" instance=ExtResource("37_qt548")]
 position = Vector2(-233, -661)
 
+[node name="libraryWithBooks3" parent="furniture/officeTopLeftCorner" instance=ExtResource("37_qt548")]
+position = Vector2(-685, -4)
+
+[node name="bookshelf" parent="furniture/officeTopLeftCorner" instance=ExtResource("34_nwd8h")]
+position = Vector2(-556, -4)
+
+[node name="box2" parent="furniture/officeTopLeftCorner" instance=ExtResource("30_5bs7n")]
+position = Vector2(2156, 902)
+texture = ExtResource("51_f2u8t")
+
+[node name="groundPos" parent="furniture/officeTopLeftCorner/box2" index="0"]
+position = Vector2(-1.5974e-05, 76)
+
+[node name="StaticBody2D" parent="furniture/officeTopLeftCorner/box2" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/officeTopLeftCorner/box2/StaticBody2D" index="0"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_42dtf")
+metadata/_edit_lock_ = true
+
+[node name="lobbyDesk2" parent="furniture/officeTopLeftCorner" instance=ExtResource("34_5bs7n")]
+position = Vector2(-483, -410)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("50_5xppq")
+
+[node name="groundPos" parent="furniture/officeTopLeftCorner/lobbyDesk2" index="0"]
+position = Vector2(-4.28572, -372.857)
+
+[node name="StaticBody2D" parent="furniture/officeTopLeftCorner/lobbyDesk2" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk2/StaticBody2D" index="0"]
+position = Vector2(64.2856, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_fcfgb")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk2/StaticBody2D" index="1"]
+position = Vector2(-0.714294, 57.8571)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_75n5i")
+metadata/_edit_lock_ = true
+
+[node name="lobbyDesk3" parent="furniture/officeTopLeftCorner" instance=ExtResource("34_5bs7n")]
+position = Vector2(-181, -410)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("50_5xppq")
+
+[node name="groundPos" parent="furniture/officeTopLeftCorner/lobbyDesk3" index="0"]
+position = Vector2(-4.28572, -372.857)
+
+[node name="StaticBody2D" parent="furniture/officeTopLeftCorner/lobbyDesk3" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk3/StaticBody2D" index="0"]
+position = Vector2(64.2856, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_fcfgb")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk3/StaticBody2D" index="1"]
+position = Vector2(-0.714294, 57.8571)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_lcl6j")
+
 [node name="vendingMachine" parent="furniture" instance=ExtResource("38_5c3wu")]
 position = Vector2(1286.65, 60)
 
@@ -1274,12 +1363,226 @@ metadata/_edit_lock_ = true
 position = Vector2(-2.14282, -58.5715)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a0t2l")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="1"]
 position = Vector2(-65, 58.5715)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mkmg8")
 metadata/_edit_lock_ = true
+
+[node name="sadPlant4" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(697, 269)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant4" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant4" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant4/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant3" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(887, 261)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant3" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant3" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant3/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="happyPlant3" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(419, -457)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant3" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant3" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant3/StaticBody2D" index="0"]
+position = Vector2(-3.50903, 70.2025)
+shape = SubResource("RectangleShape2D_2prrh")
+
+[node name="happyPlant4" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(579, -451)
+scale = Vector2(-1, 1)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant4" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant4" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant4/StaticBody2D" index="0"]
+position = Vector2(-1.5, 59)
+shape = SubResource("RectangleShape2D_2prrh")
+
+[node name="happyPlant5" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(1408, -227)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant5" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant5" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant5/StaticBody2D" index="0"]
+position = Vector2(-3.50903, 70.2025)
+shape = SubResource("RectangleShape2D_2prrh")
+
+[node name="sadPlant5" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(1404, 8)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant5" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant5" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant5/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant6" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(2567, 283)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant6" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant6" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant6/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant7" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(2826, 289)
+scale = Vector2(-1, 1)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant7" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant7" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant7/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant8" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(2373, 1018)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant8" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant8" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant8/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant9" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(1922, 1026)
+scale = Vector2(-1, 1)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant9" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant9" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant9/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="happyPlant6" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(1932, 1302)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant6" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant6" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant6/StaticBody2D" index="0"]
+position = Vector2(-3.50903, 70.2025)
+shape = SubResource("RectangleShape2D_2prrh")
+
+[node name="sadPlant10" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(2597, 1320)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant10" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant10" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant10/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant11" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(3200, 1058)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant11" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant11" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant11/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="sadPlant12" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(3200, 1326)
+texture = ExtResource("43_a0t2l")
+
+[node name="groundPos" parent="furniture/lobby/sadPlant12" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/sadPlant12" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/sadPlant12/StaticBody2D" index="0"]
+position = Vector2(3.43323e-05, 59.7222)
+shape = SubResource("RectangleShape2D_g6veu")
+
+[node name="happyPlant7" parent="furniture/lobby" instance=ExtResource("30_5bs7n")]
+position = Vector2(2094, 351)
+texture = ExtResource("43_xemgy")
+
+[node name="groundPos" parent="furniture/lobby/happyPlant7" index="0"]
+position = Vector2(1.3889, 69.4444)
+
+[node name="StaticBody2D" parent="furniture/lobby/happyPlant7" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="furniture/lobby/happyPlant7/StaticBody2D" index="0"]
+position = Vector2(-3.50903, 70.2025)
+shape = SubResource("RectangleShape2D_2prrh")
 
 [node name="WaterSpill" parent="furniture" instance=ExtResource("39_rasr3")]
 position = Vector2(-1159, -1121)
@@ -1298,11 +1601,11 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/storageRoom/box/StaticBody2D" index="0"]
 position = Vector2(0, 0)
-shape = SubResource("RectangleShape2D_2prrh")
+shape = SubResource("RectangleShape2D_q5llg")
 metadata/_edit_lock_ = true
 
 [node name="box2" parent="furniture/storageRoom" instance=ExtResource("30_5bs7n")]
-position = Vector2(2156, 902)
+position = Vector2(-11, -619)
 texture = ExtResource("51_f2u8t")
 
 [node name="groundPos" parent="furniture/storageRoom/box2" index="0"]
@@ -1312,8 +1615,8 @@ position = Vector2(-1.5974e-05, 76)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/storageRoom/box2/StaticBody2D" index="0"]
-position = Vector2(0, 0)
-shape = SubResource("RectangleShape2D_2prrh")
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_uskqc")
 metadata/_edit_lock_ = true
 
 [node name="box5" parent="furniture/storageRoom" instance=ExtResource("30_5bs7n")]
@@ -1372,8 +1675,8 @@ position = Vector2(-1.5974e-05, 76)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/storageRoom/box7/StaticBody2D" index="0"]
-position = Vector2(0, 0)
-shape = SubResource("RectangleShape2D_2prrh")
+position = Vector2(0, 41)
+shape = SubResource("RectangleShape2D_g5u4q")
 metadata/_edit_lock_ = true
 
 [node name="Chair31" type="Sprite2D" parent="furniture/storageRoom"]
@@ -1405,8 +1708,8 @@ position = Vector2(2617, 858)
 texture = ExtResource("32_qt548")
 
 [node name="CorkBoard&ConspiracyPlan" type="Sprite2D" parent="furniture/storageRoom"]
-position = Vector2(2409, 624)
-scale = Vector2(3.48, 3.48)
+position = Vector2(2478, 721)
+scale = Vector2(1, 1.117)
 texture = ExtResource("16_n1y4y")
 
 [node name="box6" parent="furniture/storageRoom" instance=ExtResource("30_5bs7n")]
@@ -1580,7 +1883,7 @@ position = Vector2(-6.25, 481.25)
 curve = SubResource("Curve2D_ty3gb")
 
 [node name="PathFollow2D" parent="NPCs/NPC3/Path2D" index="0"]
-position = Vector2(358, -227)
+position = Vector2(339, -235)
 rotation = -1.87097
 rotates = false
 
@@ -1606,7 +1909,7 @@ modulate = Color(0.740479, 0.333253, 0.0885674, 1)
 curve = SubResource("Curve2D_6rmj5")
 
 [node name="PathFollow2D" parent="NPCs/NPC4/Path2D" index="0"]
-position = Vector2(-260, -4)
+position = Vector2(-494, 61)
 rotation = -1.87097
 rotates = false
 
@@ -1615,7 +1918,7 @@ wait_time = 4.0
 one_shot = true
 
 [node name="NPC5" parent="NPCs" node_paths=PackedStringArray("stopTimer") instance=ExtResource("54_mkmg8")]
-position = Vector2(54, -877)
+position = Vector2(777, -114)
 stopTimer = NodePath("Timer")
 
 [node name="AnimatedSprite2D" parent="NPCs/NPC5" index="0"]
@@ -1624,10 +1927,12 @@ sprite_frames = SubResource("SpriteFrames_rasr3")
 animation = &"new_animation"
 autoplay = "new_animation"
 frame_progress = 0.999558
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="NPCs/NPC5/AnimatedSprite2D/Area2D" index="0"]
 position = Vector2(-12.5, 468.75)
 shape = SubResource("CapsuleShape2D_nwd8h")
+metadata/_edit_lock_ = true
 
 [node name="Path2D" parent="NPCs/NPC5" index="1"]
 curve = SubResource("Curve2D_f2u8t")
@@ -1719,12 +2024,30 @@ visible = false
 [editable path="furniture/kitchen/fridge"]
 [editable path="furniture/kitchen/Chair3"]
 [editable path="furniture/officeTopLeftCorner/libraryWithBooks2"]
+[editable path="furniture/officeTopLeftCorner/box2"]
+[editable path="furniture/officeTopLeftCorner/lobbyDesk2"]
+[editable path="furniture/officeTopLeftCorner/lobbyDesk3"]
 [editable path="furniture/lobby/happyPlant"]
 [editable path="furniture/lobby/sadPlant"]
 [editable path="furniture/lobby/sadPlant2"]
 [editable path="furniture/lobby/happyPlant2"]
 [editable path="furniture/lobby/lobbyDesk1"]
 [editable path="furniture/lobby/lobbyDesk2"]
+[editable path="furniture/lobby/sadPlant4"]
+[editable path="furniture/lobby/sadPlant3"]
+[editable path="furniture/lobby/happyPlant3"]
+[editable path="furniture/lobby/happyPlant4"]
+[editable path="furniture/lobby/happyPlant5"]
+[editable path="furniture/lobby/sadPlant5"]
+[editable path="furniture/lobby/sadPlant6"]
+[editable path="furniture/lobby/sadPlant7"]
+[editable path="furniture/lobby/sadPlant8"]
+[editable path="furniture/lobby/sadPlant9"]
+[editable path="furniture/lobby/happyPlant6"]
+[editable path="furniture/lobby/sadPlant10"]
+[editable path="furniture/lobby/sadPlant11"]
+[editable path="furniture/lobby/sadPlant12"]
+[editable path="furniture/lobby/happyPlant7"]
 [editable path="furniture/storageRoom/box"]
 [editable path="furniture/storageRoom/box2"]
 [editable path="furniture/storageRoom/box5"]
