@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ch15jhapqaru2"]
+[gd_scene load_steps=9 format=3 uid="uid://ch15jhapqaru2"]
 
 [ext_resource type="PackedScene" uid="uid://bl5mmdtq3bjtp" path="res://assets/furniture/furniture.tscn" id="1_y3xqc"]
 [ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="2_ojtl7"]
 [ext_resource type="Texture2D" uid="uid://b677y2yfidgo1" path="res://assets/furniture/Vending_machine.png" id="2_xj310"]
 [ext_resource type="Script" uid="uid://0ljuua0p5yqg" path="res://assets/kitchen/vendingMachine.gd" id="3_s0sxa"]
+[ext_resource type="AudioStream" uid="uid://c1smaggivhpkt" path="res://dialogue/energized.wav" id="5_8v7um"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8v7um"]
 shader = ExtResource("2_ojtl7")
@@ -39,6 +40,10 @@ script = ExtResource("3_s0sxa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-1, 95)
 shape = SubResource("CapsuleShape2D_xj310")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D" index="1"]
+stream = ExtResource("5_8v7um")
+volume_db = 12.041
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

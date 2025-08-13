@@ -1,4 +1,4 @@
-[gd_scene load_steps=181 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=179 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -104,7 +104,6 @@
 [ext_resource type="Texture2D" uid="uid://btdkavt5n8fka" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_023.png" id="99_h2x2g"]
 [ext_resource type="Texture2D" uid="uid://6wmwui75u7b0" path="res://assets/MINI_NPC2_Walk/MINI_NPC2_Walk_024.png" id="100_f34dr"]
 [ext_resource type="PackedScene" uid="uid://bc0tye6wbpkn4" path="res://Settings.tscn" id="104_rcrlv"]
-[ext_resource type="Shader" uid="uid://1tdckk6lq3by" path="res://colorBlind.gdshader" id="105_nwd8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -607,10 +606,6 @@ size = Vector2(80, 147.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nwd8h"]
 size = Vector2(59, 94)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mhxa3"]
-shader = ExtResource("105_nwd8h")
-shader_parameter/color_deficiency_type = 0
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_jktts")
@@ -1679,17 +1674,7 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_nwd8h")
 
 [node name="Settings" parent="." instance=ExtResource("104_rcrlv")]
-process_mode = 3
 visible = false
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_mhxa3")
-offset_left = -3937.0
-offset_top = -3407.0
-offset_right = 4212.0
-offset_bottom = 2222.0
 
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]

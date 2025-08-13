@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 		
 	if playerNear == true and Input.is_action_pressed("interact") and GameManager.player.energized == false:
 		GameManager.player.energized=true
+		$AudioStreamPlayer.play()
 		var shader_material : ShaderMaterial = get_parent().material
 		shader_material.set_shader_parameter("blink_time_scale",0)
 		
