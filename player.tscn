@@ -29,5 +29,9 @@ one_shot = true
 wait_time = 0.4
 one_shot = true
 
+[node name="moveTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="slideTimer" to="." method="_on_slide_timer_timeout"]
 [connection signal="timeout" from="knockbackSlideTimer" to="." method="_on_knockback_slide_timer_timeout"]
+[connection signal="timeout" from="moveTimer" to="." method="_on_move_timer_timeout"]

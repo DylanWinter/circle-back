@@ -12,6 +12,7 @@ var lastInputDir : Vector2
 var knockbackSlide = false
 var knockbackDir : Vector2
 
+
 func _ready() -> void:
 	GameManager.player = self
 	
@@ -79,7 +80,6 @@ func _physics_process(delta: float) -> void:
 		var slideDirection = knockbackDir.normalized()
 		velocity = knockbackDir * slideSpeed
 		move_and_slide()
-		
 
 func _on_slide_timer_timeout() -> void:
 	slide = false
@@ -91,3 +91,53 @@ func _on_knockback_slide_timer_timeout() -> void:
 	knockbackSlide = false
 	$knockbackSlideTimer.stop()
 	can_move = true
+
+func releaseAllButtons():
+	Input.action_release("move_left")
+	Input.action_release("move_up")
+	Input.action_release("move_right")
+	Input.action_release("move_down")
+
+func _on_right_pressed() -> void:
+	releaseAllButtons()
+	Input.action_press("move_right")
+	$moveTimer.start(0.0)
+	
+
+
+func _on_left_pressed() -> void:
+	releaseAllButtons()
+	Input.action_press("move_left")
+	$moveTimer.start(0.0)
+
+func _on_up_pressed() -> void:
+	releaseAllButtons()
+	Input.action_press("move_up")
+	$moveTimer.start(0.0)
+
+func _on_down_pressed() -> void:
+	releaseAllButtons()
+	Input.action_press("move_down")
+	$moveTimer.start(0.0)
+
+func _on_left_button_up() -> void:
+	#Input.action_release("move_left")
+	pass
+
+
+func _on_up_button_up() -> void:
+	#Input.action_release("move_up")
+	pass	
+
+func _on_right_button_up() -> void:
+	#Input.action_release("move_right")
+	pass
+
+func _on_down_button_up() -> void:
+	#Input.action_release("move_down")
+	pass
+
+
+func _on_move_timer_timeout() -> void:
+	releaseAllButtons()
+	

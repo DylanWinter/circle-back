@@ -1,4 +1,4 @@
-[gd_scene load_steps=201 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=205 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -11,8 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://dy84vpqqtjrs1" path="res://assets/sirenSmall.png" id="7_2k2f6"]
 [ext_resource type="PackedScene" uid="uid://caqx2v8k3kjnb" path="res://coworkers/janitorNPC.tscn" id="7_4i814"]
 [ext_resource type="Texture2D" uid="uid://df52y1k7v6a7u" path="res://assets/furniture/water cooler.png" id="7_8ovme"]
+[ext_resource type="Texture2D" uid="uid://dxatqnnralkgj" path="res://assets/settings/W.png" id="7_75n5i"]
+[ext_resource type="Texture2D" uid="uid://sfibq31ot75s" path="res://assets/settings/A.png" id="7_f675c"]
 [ext_resource type="PackedScene" uid="uid://d0i4ffr1jntbo" path="res://coworkers/managerSpiderNPC.tscn" id="8_o3cd7"]
 [ext_resource type="Shader" uid="uid://1hu4qip5mexk" path="res://outline.gdshader" id="9_ga26y"]
+[ext_resource type="Texture2D" uid="uid://cp5paftkhlpmx" path="res://assets/settings/S.png" id="9_r72o0"]
+[ext_resource type="Texture2D" uid="uid://ddthl7r1hwio8" path="res://assets/settings/D.png" id="10_lg4fv"]
 [ext_resource type="PackedScene" uid="uid://bd2ym0b2i014k" path="res://npc.tscn" id="11_70x1r"]
 [ext_resource type="Texture2D" uid="uid://8inslpyiufks" path="res://assets/Key.png" id="11_jktts"]
 [ext_resource type="Texture2D" uid="uid://d377ctbnko4ww" path="res://assets/Divider_Door_close.png" id="13_hs4kw"]
@@ -856,6 +860,38 @@ scale = Vector2(0.23, 0.23)
 texture = ExtResource("49_vb8hc")
 metadata/_edit_use_anchors_ = true
 
+[node name="UImove buttons" type="Node2D" parent="UI"]
+position = Vector2(103, 321)
+scale = Vector2(0.26, 0.26)
+
+[node name="left" type="TextureButton" parent="UI/UImove buttons"]
+offset_left = -153.846
+offset_top = 429.635
+offset_right = 14.1538
+offset_bottom = 596.635
+texture_normal = ExtResource("7_f675c")
+
+[node name="up" type="TextureButton" parent="UI/UImove buttons"]
+offset_left = 18.0
+offset_top = 257.0
+offset_right = 186.0
+offset_bottom = 424.0
+texture_normal = ExtResource("7_75n5i")
+
+[node name="down" type="TextureButton" parent="UI/UImove buttons"]
+offset_left = 18.0
+offset_top = 429.25
+offset_right = 186.0
+offset_bottom = 596.25
+texture_normal = ExtResource("9_r72o0")
+
+[node name="right" type="TextureButton" parent="UI/UImove buttons"]
+offset_left = 192.308
+offset_top = 429.635
+offset_right = 360.308
+offset_bottom = 596.635
+texture_normal = ExtResource("10_lg4fv")
+
 [node name="waterCooler" parent="." instance=ExtResource("30_5bs7n")]
 position = Vector2(179, -649)
 scale = Vector2(0.497, 0.497)
@@ -1061,6 +1097,7 @@ position = Vector2(-330, 88)
 
 [node name="Cubicle2" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(65, 88)
+metadata/_edit_lock_ = true
 
 [node name="Cubicle3" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(477, 88)
@@ -1070,6 +1107,7 @@ position = Vector2(-341, 599)
 
 [node name="Cubicle5" parent="furniture/cubicles" instance=ExtResource("15_2uxut")]
 position = Vector2(66, 599)
+metadata/_edit_lock_ = true
 
 [node name="cubicleDecor" type="Node2D" parent="furniture"]
 script = ExtResource("15_o3cd7")
@@ -1771,6 +1809,7 @@ dialogue = ExtResource("47_g5u4q")
 [node name="CollisionShape2D" parent="furniture/ItemDialogue2/Area2D" index="0"]
 position = Vector2(-218.5, -16.25)
 shape = SubResource("RectangleShape2D_f675c")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/ItemDialogue2/Area2D" index="1"]
 position = Vector2(-624.5, -27)
@@ -1779,6 +1818,7 @@ shape = SubResource("RectangleShape2D_r72o0")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="furniture/ItemDialogue2/Area2D" index="2"]
 position = Vector2(-220.75, -540)
 shape = SubResource("RectangleShape2D_lg4fv")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="furniture/ItemDialogue2/Area2D" index="3"]
 position = Vector2(193, -536)
@@ -2175,6 +2215,14 @@ dialogue = ExtResource("108_42dtf")
 [node name="CollisionShape2D" parent="fridgeDialogue/Area2D" index="0"]
 shape = SubResource("CircleShape2D_uskqc")
 
+[connection signal="button_up" from="UI/UImove buttons/left" to="Player" method="_on_left_button_up"]
+[connection signal="pressed" from="UI/UImove buttons/left" to="Player" method="_on_left_pressed"]
+[connection signal="button_up" from="UI/UImove buttons/up" to="Player" method="_on_up_button_up"]
+[connection signal="pressed" from="UI/UImove buttons/up" to="Player" method="_on_up_pressed"]
+[connection signal="button_up" from="UI/UImove buttons/down" to="Player" method="_on_down_button_up"]
+[connection signal="pressed" from="UI/UImove buttons/down" to="Player" method="_on_down_pressed"]
+[connection signal="button_up" from="UI/UImove buttons/right" to="Player" method="_on_right_button_up"]
+[connection signal="pressed" from="UI/UImove buttons/right" to="Player" method="_on_right_pressed"]
 [connection signal="mouse_entered" from="boss/npcSprite/Area2D" to="boss" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="siren/npcSprite/Area2D" to="siren" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="janitor/npcSprite/Area2D" to="janitor" method="_on_area_2d_mouse_entered"]
