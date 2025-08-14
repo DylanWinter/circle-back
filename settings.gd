@@ -25,9 +25,33 @@ func _on_exit_pressed() -> void:
 func _on_h_slider_value_changed(value: float) -> void:
 	var db = value
 	
-	if db <=-6.0:
-		AudioServer.set_bus_mute(0,true)
+	if db <=-30.0:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"),true)
 	
 	else:
-		AudioServer.set_bus_mute(0,false)
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"),false)
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), db)
+		
+		
+
+
+func _on_soundfx_slider_value_changed(value: float) -> void:
+	var db = value
+	
+	if db <=-30.0:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("SoundFX"),true)
+	
+	else:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("SoundFX"),false)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundFX"), db)
+
+
+func _on_music_slider_value_changed(value: float) -> void:
+	var db = value
+	
+	if db <=-30.0:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"),true)
+	
+	else:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"),false)
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), db)

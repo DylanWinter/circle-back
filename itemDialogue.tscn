@@ -1,16 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bflssayfiehxv"]
+[gd_scene load_steps=2 format=3 uid="uid://bflssayfiehxv"]
 
 [ext_resource type="Script" uid="uid://bipuimakp1rou" path="res://item_dialogue.gd" id="1_4fuos"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpgfp"]
-
 [node name="ItemDialogue" type="Node2D"]
+z_index = 4096
 script = ExtResource("1_4fuos")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_qpgfp")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

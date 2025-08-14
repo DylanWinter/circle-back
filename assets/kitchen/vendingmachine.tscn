@@ -9,7 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8v7um"]
 shader = ExtResource("2_ojtl7")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/blink_color = Color(0.389287, 0.389287, 0.389287, 1)
+shader_parameter/blink_color = Color(0.654902, 0.843137, 0.796078, 1)
 shader_parameter/blink_time_scale = 2.8
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0sxa"]
@@ -44,6 +44,7 @@ shape = SubResource("CapsuleShape2D_xj310")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D" index="1"]
 stream = ExtResource("5_8v7um")
 volume_db = 12.041
+bus = &"SoundFX"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bkorl5luammew"
+path="res://.godot/imported/cubicleDialogue.dialogue-54788248e98f3a6b32843f60807570b0.tres"
+
+[deps]
+
+source_file="res://dialogue/cubicleDialogue.dialogue"
+dest_files=["res://.godot/imported/cubicleDialogue.dialogue-54788248e98f3a6b32843f60807570b0.tres"]
+
+[params]
+
+defaults=true
