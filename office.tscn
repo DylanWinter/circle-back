@@ -1279,13 +1279,11 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk2/StaticBody2D" index="0"]
 position = Vector2(64.2856, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fcfgb")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk2/StaticBody2D" index="1"]
 position = Vector2(-0.714294, 57.8571)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_75n5i")
 metadata/_edit_lock_ = true
 
@@ -1302,13 +1300,11 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk3/StaticBody2D" index="0"]
 position = Vector2(64.2856, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fcfgb")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/officeTopLeftCorner/lobbyDesk3/StaticBody2D" index="1"]
 position = Vector2(-0.714294, 57.8571)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_lcl6j")
 
 [node name="vendingMachine" parent="furniture" instance=ExtResource("38_5c3wu")]
@@ -1389,7 +1385,6 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk1/StaticBody2D" index="0"]
 position = Vector2(0, 58.5714)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mhxa3")
 metadata/_edit_lock_ = true
 
@@ -1412,13 +1407,11 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="0"]
 position = Vector2(-2.14282, -58.5715)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a0t2l")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/lobby/lobbyDesk2/StaticBody2D" index="1"]
 position = Vector2(-65, 58.5715)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mkmg8")
 metadata/_edit_lock_ = true
 

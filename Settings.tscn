@@ -53,6 +53,7 @@ position = Vector2(531.5, 349.5)
 texture = ExtResource("2_2fv1l")
 
 [node name="Credits" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 522.619
 offset_top = 291.27
 offset_right = 1246.62
@@ -70,6 +71,7 @@ texture_normal = ExtResource("3_mx4kw")
 texture_hover = ExtResource("6_xffxv")
 
 [node name="Exit" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = 476.19
 offset_top = -176.587
 offset_right = 1074.19
@@ -119,6 +121,7 @@ max_value = 6.0
 value = -12.0
 
 [node name="musicSlider" type="HSlider" parent="Control"]
+layout_mode = 0
 offset_left = -304.0
 offset_top = 351.984
 offset_right = 368.0
