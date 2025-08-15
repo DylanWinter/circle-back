@@ -2238,10 +2238,12 @@ texture = ExtResource("117_lg4fv")
 
 [node name="energyDrink6" parent="decor" instance=ExtResource("30_5bs7n")]
 position = Vector2(6, -78)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("118_5068w")
 
 [node name="energyDrink8" parent="decor" instance=ExtResource("30_5bs7n")]
 position = Vector2(-207, -402)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("119_fqkuf")
 
 [node name="energyDrink9" parent="decor" instance=ExtResource("30_5bs7n")]
