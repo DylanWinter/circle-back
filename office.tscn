@@ -1,4 +1,4 @@
-[gd_scene load_steps=205 format=4 uid="uid://dicqxqywyogt3"]
+[gd_scene load_steps=211 format=4 uid="uid://dicqxqywyogt3"]
 
 [ext_resource type="Texture2D" uid="uid://ck5sxjub2uqcd" path="res://assets/Illustration137.png" id="1_2uxut"]
 [ext_resource type="PackedScene" uid="uid://q4wofjpvnanm" path="res://player.tscn" id="1_ei2s5"]
@@ -115,6 +115,12 @@
 [ext_resource type="PackedScene" uid="uid://bflssayfiehxv" path="res://itemDialogue.tscn" id="106_mhxa3"]
 [ext_resource type="Resource" uid="uid://deq3koskou1ga" path="res://dialogue/chairDialogue.dialogue" id="107_uskqc"]
 [ext_resource type="Resource" uid="uid://ei4s0v6cx58x" path="res://dialogue/fridgeDialogue.dialogue" id="108_42dtf"]
+[ext_resource type="Texture2D" uid="uid://4j2tl4e4ptxu" path="res://assets/furniture/Black_energy_drink.png" id="116_r72o0"]
+[ext_resource type="Texture2D" uid="uid://bcs47nbv5jryk" path="res://assets/furniture/Pink_energy_drink.png" id="117_lg4fv"]
+[ext_resource type="Texture2D" uid="uid://cx8jgy3faa2sx" path="res://assets/furniture/laptop1.png" id="118_5068w"]
+[ext_resource type="Texture2D" uid="uid://cd6ocwo7ad606" path="res://assets/furniture/laptop2.png" id="119_fqkuf"]
+[ext_resource type="Texture2D" uid="uid://bh47f3exjrvqw" path="res://assets/furniture/Plate.png" id="120_7ho6h"]
+[ext_resource type="Texture2D" uid="uid://t73f3irj81b8" path="res://assets/furniture/Pizza_slice.png" id="121_gv6tn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8nhc"]
 size = Vector2(406, 29)
@@ -1126,15 +1132,15 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("17_4hetp")
 
 [node name="groundPos" type="Node2D" parent="furniture/cubicleDecor/CorkBoard"]
-position = Vector2(-8.57145, 81.4286)
+position = Vector2(-7.14286, 42.8571)
 
 [node name="OfficeDecoration1" type="Sprite2D" parent="furniture/cubicleDecor"]
-position = Vector2(182, 85)
+position = Vector2(181, 75)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("18_o3cd7")
 
 [node name="groundPos" type="Node2D" parent="furniture/cubicleDecor/OfficeDecoration1"]
-position = Vector2(-1.90735e-05, 70)
+position = Vector2(2.4523e-05, 51.4286)
 
 [node name="kitchen" type="Node2D" parent="furniture"]
 
@@ -2208,6 +2214,50 @@ dialogue = ExtResource("108_42dtf")
 [node name="CollisionShape2D" parent="fridgeDialogue/Area2D" index="0"]
 shape = SubResource("CircleShape2D_uskqc")
 
+[node name="decor" type="Node2D" parent="."]
+
+[node name="energyDrink" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(511, 201)
+texture = ExtResource("116_r72o0")
+
+[node name="energyDrink3" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(-302, 115)
+texture = ExtResource("116_r72o0")
+
+[node name="energyDrink2" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(94, -57)
+texture = ExtResource("116_r72o0")
+
+[node name="energyDrink4" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(446, 113)
+texture = ExtResource("117_lg4fv")
+
+[node name="energyDrink5" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(96, 187)
+texture = ExtResource("117_lg4fv")
+
+[node name="energyDrink6" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(6, -78)
+texture = ExtResource("118_5068w")
+
+[node name="energyDrink8" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(-207, -402)
+texture = ExtResource("119_fqkuf")
+
+[node name="energyDrink9" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(-481, -385)
+texture = ExtResource("120_7ho6h")
+
+[node name="groundPos" parent="decor/energyDrink9" index="0"]
+position = Vector2(-7, 46)
+
+[node name="energyDrink10" parent="decor" instance=ExtResource("30_5bs7n")]
+position = Vector2(-480, -390)
+texture = ExtResource("121_gv6tn")
+
+[node name="groundPos" parent="decor/energyDrink10" index="0"]
+position = Vector2(-6, 55)
+
 [connection signal="button_up" from="UI/UImove buttons/left" to="Player" method="_on_left_button_up"]
 [connection signal="pressed" from="UI/UImove buttons/left" to="Player" method="_on_left_pressed"]
 [connection signal="button_up" from="UI/UImove buttons/up" to="Player" method="_on_up_button_up"]
@@ -2293,3 +2343,5 @@ shape = SubResource("CircleShape2D_uskqc")
 [editable path="NPCs/NPC5"]
 [editable path="NPCs/NPC6"]
 [editable path="fridgeDialogue"]
+[editable path="decor/energyDrink9"]
+[editable path="decor/energyDrink10"]
