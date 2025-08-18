@@ -1161,7 +1161,7 @@ rotation = -1.53589
 shape = SubResource("RectangleShape2D_5jjrr")
 
 [node name="Chair1" parent="furniture/kitchen" instance=ExtResource("30_5bs7n")]
-position = Vector2(1112, 552)
+position = Vector2(1109, 597)
 texture = ExtResource("31_cu40l")
 
 [node name="CollisionShape2D" parent="furniture/kitchen/Chair1/StaticBody2D" index="0"]
@@ -1190,6 +1190,13 @@ position = Vector2(-3.85046, 42.5751)
 rotation = -1.53589
 shape = SubResource("RectangleShape2D_q30t1")
 
+[node name="chairDialogue" parent="furniture/kitchen/Chair2" instance=ExtResource("106_mhxa3")]
+dialogue = ExtResource("107_uskqc")
+
+[node name="CollisionShape2D" parent="furniture/kitchen/Chair2/chairDialogue/Area2D" index="0"]
+position = Vector2(-11.6563, 11.2031)
+shape = SubResource("RectangleShape2D_y0po8")
+
 [node name="kitchenCounter" parent="furniture/kitchen" instance=ExtResource("39_g68bc")]
 position = Vector2(1769, 131)
 
@@ -1210,7 +1217,7 @@ position = Vector2(-0.5, 109.5)
 shape = SubResource("RectangleShape2D_xemgy")
 
 [node name="Table2" type="Sprite2D" parent="furniture/kitchen"]
-position = Vector2(1441, 293)
+position = Vector2(1511, 300)
 scale = Vector2(1.003, 1)
 texture = ExtResource("28_nl0r1")
 script = ExtResource("29_26ul0")
@@ -1227,12 +1234,19 @@ shape = SubResource("RectangleShape2D_rasr3")
 metadata/_edit_lock_ = true
 
 [node name="Chair3" parent="furniture/kitchen" instance=ExtResource("30_5bs7n")]
-position = Vector2(1259, 234)
+position = Vector2(1336, 259)
 texture = ExtResource("31_cu40l")
 
 [node name="CollisionShape2D" parent="furniture/kitchen/Chair3/StaticBody2D" index="0"]
 position = Vector2(2.5, 44.5)
 shape = SubResource("RectangleShape2D_3igeq")
+
+[node name="chairDialogue" parent="furniture/kitchen/Chair3" instance=ExtResource("106_mhxa3")]
+dialogue = ExtResource("107_uskqc")
+
+[node name="CollisionShape2D" parent="furniture/kitchen/Chair3/chairDialogue/Area2D" index="0"]
+position = Vector2(-11.6563, 11.2031)
+shape = SubResource("RectangleShape2D_y0po8")
 
 [node name="officeTopLeftCorner" type="Node2D" parent="furniture"]
 
@@ -1928,6 +1942,9 @@ dialogueScenePaths = ["res://visualNovelOfficeScenes/sadManager/sadManagerConvo1
 walkSpeed = 60
 conversationTimes = ["2:59|4:00", "2:00|0:30"]
 
+[node name="AnimatedSprite2D" parent="Asmodeus/npcSprite" index="0"]
+metadata/_edit_lock_ = true
+
 [node name="CollisionShape2D" parent="Asmodeus/npcSprite/Area2D" index="0"]
 position = Vector2(-39.5752, 324.345)
 
@@ -2301,8 +2318,10 @@ position = Vector2(-6, 55)
 [editable path="meeting_room_door"]
 [editable path="furniture/kitchen/Chair1"]
 [editable path="furniture/kitchen/Chair1/chairDialogue"]
+[editable path="furniture/kitchen/Chair2/chairDialogue"]
 [editable path="furniture/kitchen/fridge"]
 [editable path="furniture/kitchen/Chair3"]
+[editable path="furniture/kitchen/Chair3/chairDialogue"]
 [editable path="furniture/officeTopLeftCorner/libraryWithBooks2"]
 [editable path="furniture/officeTopLeftCorner/box2"]
 [editable path="furniture/officeTopLeftCorner/lobbyDesk2"]
